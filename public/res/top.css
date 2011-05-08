@@ -1,0 +1,35 @@
+body {
+    font-size: 14px;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+a.mnu {
+    color:#ffffff;
+	text-decoration : underline;
+	letter-spacing : 2px;
+}
+
+a:hover  {
+        text-decoration : underline;
+}
+
+input {
+   width:100%;
+}
+
+textarea {
+  width:100%;
+}
+
+.w100 {
+   width:100px;
+}
+
+a.mo {
+  color : #ffffff;
+  text-decoration : none;
+  font-size : 16px;
+  font-weight : bold;
+}

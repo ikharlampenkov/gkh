@@ -1,0 +1,70 @@
+RewriteEngine On
+
+RewriteRule ^reguser/ ?action=reguser
+RewriteRule ^logout/ ?logout
+
+RewriteRule ^project/add/ /project/?add
+RewriteRule ^project/activ/([0-9]*)/ /project/?activ=$1
+RewriteRule ^project/edit/([0-9]*)/ /project/?edit=$1
+RewriteRule ^project/del/([0-9]*)/ /project/?del=$1
+
+
+RewriteRule ^fm/sales_plan/form/ /fm/?page=sales_plan&form
+
+RewriteRule ^fm/sales_plan/add_product/ /fm/?page=sales_plan&add_product
+RewriteRule ^fm/sales_plan/edit_product/([0-9]*)/ /fm/?page=sales_plan&edit_product=$1
+RewriteRule ^fm/sales_plan/del_product/([0-9]*)/ /fm/?page=sales_plan&del_product=$1
+RewriteRule ^fm/sales_plan/ /fm/?page=sales_plan
+
+
+RewriteRule ^fm/staffing_plan/form/ /fm/?page=staffing_plan&form
+
+RewriteRule ^fm/staffing_plan/add_staff/ /fm/?page=staffing_plan&add_staff
+RewriteRule ^fm/staffing_plan/edit_staff/([0-9]*)/ /fm/?page=staffing_plan&edit_staff=$1
+RewriteRule ^fm/staffing_plan/del_staff/([0-9]*)/ /fm/?page=staffing_plan&del_staff=$1
+RewriteRule ^fm/staffing_plan/ /fm/?page=staffing_plan
+
+
+RewriteRule ^fm/departmental_expenses/form/ /fm/?page=departmental_expenses&form
+
+RewriteRule ^fm/departmental_expenses/add_expenses/ /fm/?page=departmental_expenses&add_expenses
+RewriteRule ^fm/departmental_expenses/edit_expenses/([0-9]*)/ /fm/?page=departmental_expenses&edit_expenses=$1
+RewriteRule ^fm/departmental_expenses/del_expenses/([0-9]*)/ /fm/?page=departmental_expenses&del_expenses=$1
+RewriteRule ^fm/departmental_expenses/ /fm/?page=departmental_expenses
+
+
+RewriteRule ^fm/p_l/ /fm/?page=p_l
+
+RewriteRule ^fm/cash_flow/ /fm/?page=cash_flow
+
+
+RewriteRule ^anketa/category/add/ /anketa/?page=category&add
+RewriteRule ^anketa/category/edit/([0-9]*)/ /anketa/?page=category&edit=$1
+RewriteRule ^anketa/category/del/([0-9]*)/ /anketa/?page=category&del=$1
+RewriteRule ^anketa/category/ /anketa/?page=category
+
+
+RewriteRule ^anketa/question/add/ /anketa/?page=question&add
+RewriteRule ^anketa/question/edit/([0-9]*)/ /anketa/?page=question&edit=$1
+RewriteRule ^anketa/question/del/([0-9]*)/ /anketa/?page=question&del=$1
+RewriteRule ^anketa/question/export/ /anketa/?page=question&export
+RewriteRule ^anketa/question/ /anketa/?page=question
+
+
+RewriteRule ^anketa/question_w/add/ /anketa/?page=question_w&add
+RewriteRule ^anketa/question_w/edit/([0-9]*)/ /anketa/?page=question_w&edit=$1
+RewriteRule ^anketa/question_w/del/([0-9]*)/ /anketa/?page=question_w&del=$1
+RewriteRule ^anketa/question_w/ /anketa/?page=question_w
+
+
+RewriteRule ^anketa/qlink/ /anketa/?page=qlink
+
+
+RewriteRule ^anketa/rule/ /anketa/?page=rule
+
+
+RewriteRule ^anketa/create/([0-9]*)/ /anketa/?page=create&q_num=$1
+RewriteRule ^anketa/create/ /anketa/?page=create
+
+
+RewriteRule ^anketa/preview/ /anketa/?page=preview
