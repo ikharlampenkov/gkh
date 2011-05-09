@@ -71,6 +71,7 @@ textarea {
                     <a href="?page=city">Города</a><br /><br />
                     <a href="?page=reu">РЭУ</a><br /><br />
                     <a href="?page=support">Тех. поддержка</a><br /><br />
+                    <a href="?page=news">Новости</a><br /><br />
 
                 </td>
                 <td>
@@ -87,6 +88,9 @@ textarea {
                         {/if}
                         {if $page=="support"}
                             {include file="admin/support.tpl"}
+                        {/if}
+                        {if $page=="news"}
+                            {include file="admin/news.tpl"}
                         {/if}
                     {/if}
 

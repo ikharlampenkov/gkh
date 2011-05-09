@@ -4137,3 +4137,365 @@ info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  03.05.201
 info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  03.05.2011 22:42
 info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  03.05.2011 22:42
 info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  03.05.2011 22:42
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  09.05.2011 19:39
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  09.05.2011 19:39
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  09.05.2011 19:39
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  09.05.2011 20:01
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  09.05.2011 20:01
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  09.05.2011 20:01
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  09.05.2011 20:08
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  09.05.2011 20:08
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  09.05.2011 20:08
+info   SELECT id, login, password, role FROM user WHERE login="admin"  09.05.2011 20:15
+info   SELECT id, login, password, role FROM user WHERE role="admin"  09.05.2011 20:15
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  09.05.2011 20:15
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  09.05.2011 20:15
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  09.05.2011 20:15
+info   SELECT id, login, password, role FROM user WHERE login="admin"  09.05.2011 20:15
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  09.05.2011 20:15
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  09.05.2011 20:15
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  09.05.2011 20:15
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 20:15
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 20:15
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 20:54
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 20:54
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 20:59
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, reu.title as reu_title
+                         FROM tech_support_ticket, reu
+                         WHERE tech_support_ticket.reu_id=reu.id ORDER BY is_complete, date DESC  09.05.2011 20:59
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 20:59
+info   SELECT reu.id, reu.title as title, email, city_id, city.title as city_title, is_moderated 
+                    FROM reu, city 
+                    WHERE reu.city_id=city.id 
+                    ORDER BY is_moderated  09.05.2011 20:59
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 20:59
+info   SELECT * FROM city  09.05.2011 20:59
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 20:59
+info   SELECT * FROM content_page  09.05.2011 20:59
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 20:59
+info   SELECT * FROM city  09.05.2011 20:59
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:00
+info   SELECT reu.id, reu.title as title, email, city_id, city.title as city_title, is_moderated 
+                    FROM reu, city 
+                    WHERE reu.city_id=city.id 
+                    ORDER BY is_moderated  09.05.2011 21:00
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:00
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, reu.title as reu_title
+                         FROM tech_support_ticket, reu
+                         WHERE tech_support_ticket.reu_id=reu.id ORDER BY is_complete, date DESC  09.05.2011 21:00
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:00
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:00
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, reu.title as reu_title
+                         FROM tech_support_ticket, reu
+                         WHERE tech_support_ticket.reu_id=reu.id ORDER BY is_complete, date DESC  09.05.2011 21:00
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:00
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:01
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:02
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:03
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:08
+info   SELECT * FROM news_category  09.05.2011 21:08
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:12
+info   SELECT * FROM news_category  09.05.2011 21:12
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:12
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:18
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:18
+info   INSERT INTO news_category(title) VALUES("Все новости")  09.05.2011 21:18
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:18
+info   SELECT * FROM news_category  09.05.2011 21:18
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:18
+info   SELECT * FROM news_category WHERE id=1  09.05.2011 21:18
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:18
+info   UPDATE news_category SET title="Все новости" WHERE id=1  09.05.2011 21:18
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:18
+info   SELECT * FROM news_category  09.05.2011 21:18
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:18
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:19
+info   INSERT INTO news_category(title) VALUES("Новости компании")  09.05.2011 21:19
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:19
+info   SELECT * FROM news_category  09.05.2011 21:19
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:19
+info   SELECT * FROM news_category WHERE id=2  09.05.2011 21:19
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:19
+info   UPDATE news_category SET title="Новости компании 2" WHERE id=2  09.05.2011 21:19
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:19
+info   SELECT * FROM news_category  09.05.2011 21:19
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:19
+info   DELETE FROM news_category WHERE id=2  09.05.2011 21:19
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:19
+info   SELECT * FROM news_category  09.05.2011 21:19
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:22
+info   SELECT * FROM news_category  09.05.2011 21:22
+info   SELECT * FROM news, news_category WHERE news.news_category_id=news_category.id  09.05.2011 21:22
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:26
+info   SELECT * FROM news_category  09.05.2011 21:26
+info   SELECT * FROM news, news_category WHERE news.news_category_id=news_category.id  09.05.2011 21:26
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:28
+info   SELECT * FROM news_category  09.05.2011 21:28
+info   SELECT * FROM news, news_category WHERE news.news_category_id=news_category.id  09.05.2011 21:28
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:48
+info   SELECT * FROM news_category  09.05.2011 21:48
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:51
+info   SELECT * FROM news_category  09.05.2011 21:51
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:51
+info   SELECT * FROM news_category  09.05.2011 21:51
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:53
+info   SELECT * FROM news_category  09.05.2011 21:53
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:58
+info   SELECT * FROM news_category  09.05.2011 21:58
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:58
+info   INSERT INTO news(news_category_id, date, title, short_text, full_text) 
+                              VALUES(1, "2011-05-09", 
+                                    "Первая новость", "Самая первая новость", 
+                                    "<br />\r\n<b>Notice</b>:  Undefined variable: news in <b>H:\\www\\gkh\\private\\classes\\smarty\\sysplugins\\smarty_internal_data.php</b> on line <b>291</b><br />\r\n")  09.05.2011 21:58
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 21:58
+info   SELECT * FROM news_category  09.05.2011 21:58
+info   SELECT * FROM news, news_category WHERE news.news_category_id=news_category.id  09.05.2011 21:58
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:00
+info   SELECT * FROM news_category  09.05.2011 22:00
+info   SELECT * FROM news, news_category WHERE news.news_category_id=news_category.id  09.05.2011 22:00
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:05
+info   SELECT * FROM news_category  09.05.2011 22:05
+info   SELECT * FROM news, news_category WHERE news.news_category_id=news_category.id  09.05.2011 22:05
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:05
+info   SELECT * FROM news_category  09.05.2011 22:05
+info   SELECT * FROM news, news_category WHERE news.news_category_id=news_category.id  09.05.2011 22:05
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:05
+info   SELECT * FROM news_category  09.05.2011 22:05
+info   SELECT * FROM news, news_category WHERE news.news_category_id=news_category.id  09.05.2011 22:05
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:21
+info   SELECT * FROM news_category  09.05.2011 22:21
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id 
+                    ORDER BY date DESC  09.05.2011 22:21
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:21
+info   SELECT * FROM news_category  09.05.2011 22:21
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id 
+                    ORDER BY date DESC  09.05.2011 22:21
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:21
+info   SELECT * FROM news_category  09.05.2011 22:21
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id 
+                    ORDER BY date DESC  09.05.2011 22:21
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:24
+info   SELECT * FROM news_category  09.05.2011 22:24
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id 
+                    ORDER BY date DESC  09.05.2011 22:24
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:24
+info   SELECT * FROM news_category  09.05.2011 22:24
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id 
+                    ORDER BY date DESC  09.05.2011 22:24
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:24
+info   SELECT * FROM news_category  09.05.2011 22:24
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id 
+                    ORDER BY date DESC  09.05.2011 22:24
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:24
+info   SELECT * FROM news WHERE id=1  09.05.2011 22:24
+info   SELECT * FROM news_category  09.05.2011 22:24
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:27
+info   UPDATE news 
+                    SET news_category_id=1, date="2011-05-09", 
+                        title="Первая новость 2", short_text="Самая первая новость", 
+                        full_text="<br />\r\n<b>Notice</b>:  Undefined variable: news in <b>H:\\www\\gkh\\private\\classes\\smarty\\sysplugins\\smarty_internal_data.php</b> on line <b>291</b><br />\r\n" 
+                    WHERE id=0  09.05.2011 22:27
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:27
+info   SELECT * FROM news_category  09.05.2011 22:27
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id 
+                    ORDER BY date DESC  09.05.2011 22:27
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:27
+info   SELECT * FROM news WHERE id=1  09.05.2011 22:27
+info   SELECT * FROM news_category  09.05.2011 22:27
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:27
+info   UPDATE news 
+                    SET news_category_id=1, date="2011-05-09", 
+                        title="Первая новость 2", short_text="Самая первая новость", 
+                        full_text="<br />\r\n<b>Notice</b>:  Undefined variable: news in <b>H:\\www\\gkh\\private\\classes\\smarty\\sysplugins\\smarty_internal_data.php</b> on line <b>291</b><br />\r\n" 
+                    WHERE id=0  09.05.2011 22:27
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:27
+info   SELECT * FROM news_category  09.05.2011 22:27
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id 
+                    ORDER BY date DESC  09.05.2011 22:27
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:28
+info   SELECT * FROM news WHERE id=1  09.05.2011 22:28
+info   SELECT * FROM news_category  09.05.2011 22:28
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:29
+info   UPDATE news 
+                    SET news_category_id=1, date="2011-05-09", 
+                        title="Первая новость 2", short_text="Самая первая новость", 
+                        full_text="<br />\r\n<b>Notice</b>:  Undefined variable: news in <b>H:\\www\\gkh\\private\\classes\\smarty\\sysplugins\\smarty_internal_data.php</b> on line <b>291</b><br />\r\n" 
+                    WHERE id=0  09.05.2011 22:29
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:29
+info   SELECT * FROM news_category  09.05.2011 22:29
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id 
+                    ORDER BY date DESC  09.05.2011 22:29
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:30
+info   SELECT * FROM news WHERE id=1  09.05.2011 22:30
+info   SELECT * FROM news_category  09.05.2011 22:30
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:31
+info   SELECT * FROM news WHERE id=1  09.05.2011 22:31
+info   SELECT * FROM news_category  09.05.2011 22:31
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:31
+info   UPDATE news 
+                    SET news_category_id=1, date="2011-05-09", 
+                        title="Первая новость 2", short_text="Самая первая новость", 
+                        full_text="<br />\r\n<b>Notice</b>:  Undefined variable: news in <b>H:\\www\\gkh\\private\\classes\\smarty\\sysplugins\\smarty_internal_data.php</b> on line <b>291</b><br />\r\n" 
+                    WHERE id=1  09.05.2011 22:31
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:31
+info   SELECT * FROM news_category  09.05.2011 22:31
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id 
+                    ORDER BY date DESC  09.05.2011 22:31
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:31
+info   SELECT * FROM news WHERE id=1  09.05.2011 22:31
+info   SELECT * FROM news_category  09.05.2011 22:31
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:32
+info   UPDATE news 
+                    SET news_category_id=1, date="2011-05-09", 
+                        title="Новый дизайн", short_text="Скоро будет обновлен дизайн сайта ЖКХИНФОРМ.РФ", 
+                        full_text="" 
+                    WHERE id=1  09.05.2011 22:32
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:32
+info   SELECT * FROM news_category  09.05.2011 22:32
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id 
+                    ORDER BY date DESC  09.05.2011 22:32
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:35
+info   SELECT * FROM news_category  09.05.2011 22:35
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id 
+                    ORDER BY date DESC  09.05.2011 22:35
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:40
+info   DELETE FROM news WHERE id=27  09.05.2011 22:40
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:40
+info   SELECT * FROM news_category  09.05.2011 22:40
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id 
+                    ORDER BY date DESC  09.05.2011 22:40
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:49
+info   SELECT * FROM news_category  09.05.2011 22:49
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC   09.05.2011 22:49
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:51
+info   SELECT * FROM news_category  09.05.2011 22:51
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC   09.05.2011 22:51
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 22:52
+info   SELECT * FROM news_category  09.05.2011 22:52
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC   09.05.2011 22:52
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 23:05
+info   SELECT * FROM news_category  09.05.2011 23:05
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  09.05.2011 23:05
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 23:05
+info   SELECT * FROM news_category  09.05.2011 23:05
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  09.05.2011 23:05
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 23:05
+info   SELECT * FROM news_category  09.05.2011 23:05
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  09.05.2011 23:05
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 23:06
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 23:06
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 23:07
+info   SELECT * FROM news_category  09.05.2011 23:07
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  09.05.2011 23:07
+info   SELECT COUNT(news.id) FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id   09.05.2011 23:07
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 23:07
+info   SELECT * FROM news_category  09.05.2011 23:07
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  09.05.2011 23:07
+info   SELECT COUNT(news.id) FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id   09.05.2011 23:07
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 23:08
+info   SELECT * FROM news_category  09.05.2011 23:08
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  09.05.2011 23:08
+info   SELECT COUNT(news.id) FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id   09.05.2011 23:08
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 23:08
+info   SELECT * FROM news_category  09.05.2011 23:08
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 20, 20  09.05.2011 23:08
+info   SELECT COUNT(news.id) FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id   09.05.2011 23:08
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 23:08
+info   SELECT * FROM news_category  09.05.2011 23:08
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  09.05.2011 23:08
+info   SELECT COUNT(news.id) FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id   09.05.2011 23:08
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 23:08
+info   SELECT * FROM news_category  09.05.2011 23:08
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 20, 20  09.05.2011 23:08
+info   SELECT COUNT(news.id) FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id   09.05.2011 23:08
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 23:08
+info   SELECT * FROM news_category  09.05.2011 23:08
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  09.05.2011 23:08
+info   SELECT COUNT(news.id) FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id   09.05.2011 23:08
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 23:09
+info   SELECT * FROM news_category  09.05.2011 23:09
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  09.05.2011 23:09
+info   SELECT COUNT(news.id) FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id   09.05.2011 23:09
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 23:09
+info   SELECT * FROM news_category  09.05.2011 23:09
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  09.05.2011 23:09
+info   SELECT COUNT(news.id) FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id   09.05.2011 23:09
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 23:10
+info   SELECT * FROM news_category  09.05.2011 23:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 20, 20  09.05.2011 23:10
+info   SELECT COUNT(news.id) FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id   09.05.2011 23:10
+info   SELECT password FROM user WHERE login="admin"  09.05.2011 23:10
+info   SELECT * FROM news_category  09.05.2011 23:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  09.05.2011 23:10
+info   SELECT COUNT(news.id) FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id   09.05.2011 23:10

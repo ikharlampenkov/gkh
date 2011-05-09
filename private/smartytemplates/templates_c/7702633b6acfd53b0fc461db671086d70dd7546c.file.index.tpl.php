@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-04-14 00:10:03
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-09 20:54:01
          compiled from "H:/www/gkh/private/smartytemplates/templates/admin/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:74514da5d8eb5ade44-02219903%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:96484dc7f1f9b15929-80323118%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7702633b6acfd53b0fc461db671086d70dd7546c' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates/templates/admin/index.tpl',
-      1 => 1302714600,
+      1 => 1304949161,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '74514da5d8eb5ade44-02219903',
+  'nocache_hash' => '96484dc7f1f9b15929-80323118',
   'function' => 
   array (
   ),
@@ -93,6 +93,7 @@ textarea {
                     <a href="?page=city">Города</a><br /><br />
                     <a href="?page=reu">РЭУ</a><br /><br />
                     <a href="?page=support">Тех. поддержка</a><br /><br />
+                    <a href="?page=news">Новости</a><br /><br />
 
                 </td>
                 <td>
@@ -112,6 +113,10 @@ textarea {
                         <?php }?>
                         <?php if ($_smarty_tpl->getVariable('page')->value=="support"){?>
                             <?php $_template = new Smarty_Internal_Template("admin/support.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
+ echo $_template->getRenderedTemplate();?><?php unset($_template);?>
+                        <?php }?>
+                        <?php if ($_smarty_tpl->getVariable('page')->value=="news"){?>
+                            <?php $_template = new Smarty_Internal_Template("admin/news.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
  echo $_template->getRenderedTemplate();?><?php unset($_template);?>
                         <?php }?>
                     <?php }?>

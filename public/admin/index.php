@@ -57,7 +57,6 @@ if ($page == 'city') {
             exit;
         }
 
-        $o_smarty->assign('conpage', '');
         $o_smarty->assign('txt', 'Добавить город');
     } elseif ($action == 'edit' && isset($_GET['id'])) {
 
@@ -89,7 +88,6 @@ if ($page == 'reu') {
             exit;
         }
 
-        $o_smarty->assign('conpage', '');
         $o_smarty->assign('txt', 'Добавить РЭУ');
         $o_smarty->assign('city_list', $o_city->getAllCity());
     } elseif ($action == 'edit' && isset($_GET['id'])) {
@@ -146,14 +144,78 @@ if ($page == 'support') {
     }
 }
 
+if ($page == 'news') {
+
+    $o_news = new gkh_news();
+
+    if ($action == 'add_category') {
+        if (isset($_POST['data'])) {
+            $o_news->addNewsCategory($_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('txt', 'Добавить категорию новостей');
+    } elseif ($action == 'edit_category' && isset($_GET['id'])) {
+
+        if (isset($_POST['data'])) {
+            $o_news->updateNewsCategory($_GET['id'], $_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('txt', 'Редактировать категорию новостей');
+        $o_smarty->assign('news_category', $o_news->getNewsCategory($_GET['id']));
+    } elseif ($action == 'del_category') {
+        $o_news->deleteNewsCategory($_GET['id']);
+        simo_functions::chLocation('?page=' . $page);
+    } elseif ($action == 'add_news') {
+        if (isset($_POST['data'])) {
+            $o_news->addNews($_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('news_category_list', $o_news->getAllNewsCategory());
+        $o_smarty->assign('txt', 'Добавить новость');
+    } elseif ($action == 'edit_news' && isset($_GET['id'])) {
+
+        if (isset($_POST['data'])) {
+            $o_news->updateNews($_GET['id'], $_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('txt', 'Редактировать новость');
+        $o_smarty->assign('news', $o_news->getNews($_GET['id']));
+        $o_smarty->assign('news_category_list', $o_news->getAllNewsCategory());
+    } elseif ($action == 'del_news') {
+        $o_news->deleteNews($_GET['id']);
+        simo_functions::chLocation('?page=' . $page);
+    } else {
+
+        if (isset($_GET['pager'])) {
+            $cur_page = $_GET['pager'];
+        } else {
+            $cur_page = 0;
+        }
+        $o_smarty->assign('cur_page', $cur_page);
+        
+
+        $o_smarty->assign('news_category_list', $o_news->getAllNewsCategory());
+        $o_smarty->assign('news_list', $o_news->getAllNews(gkh_news::ANY_CATEGORY, $cur_page));
+        $o_smarty->assign('page_info', $o_news->getPageInfo(gkh_news::ANY_CATEGORY, $cur_page));
+    }
+}
+
 if ($action == 'logoin_as_reu') {
     $o_reu = new gkh_reu();
     $temp_reu = $o_reu->getReu($_GET['id']);
-    
+
     $o_fmuser->logIn($temp_reu['user']['login'], $temp_reu['user']['password']);
-    
+
     simo_functions::chLocation('');
-    exit; 
+    exit;
 }
 
 $o_smarty->display('admin/index.tpl');
