@@ -30,8 +30,15 @@ if ($o_fmuser->isLogin()) {
     } else {
         $page = '';
     }
-    
+
+    if (isset($_GET['action'])) {
+        $action = $_GET['action'];
+    } else {
+        $action = '';
+    }
+
     $o_smarty->assign('page', $page);
+    $o_smarty->assign('action', $action);
 
     if (isset($_POST['login']) && isset($_POST['psw'])) {
         if ($o_fmuser->logIn($_POST['login'], $_POST['psw'])) {
@@ -46,7 +53,7 @@ if ($o_fmuser->isLogin()) {
             simo_functions::chLocation('');
             exit;
         }
-        
+
         $o_city = new gkh_city();
         $o_smarty->assign('city_list', $o_city->getAllCity());
     } elseif ($page == 'recover_password') {
@@ -55,13 +62,37 @@ if ($o_fmuser->isLogin()) {
             $o_reu->recoverPassword($_POST['data']);
             simo_functions::chLocation('');
             exit;
-        }        
+        }
+    }
+
+    if ($page == 'news') {
+
+        $o_news = new gkh_news();
+
+        if ($action == 'view_news' && isset($_GET['id'])) {
+            $o_smarty->assign('news', $o_news->getNews($_GET['id']));
+            
+        } else {
+
+        if (isset($_GET['pager'])) {
+            $cur_page = $_GET['pager'];
+        } else {
+            $cur_page = 0;
+        }
+        $o_smarty->assign('cur_page', $cur_page);
+
+        $o_smarty->assign('news_list_full', $o_news->getAllNews(gkh_news::ANY_CATEGORY, $cur_page));
+        $o_smarty->assign('page_info', $o_news->getPageInfo(gkh_news::ANY_CATEGORY, $cur_page));
+        }
     }
 
     $o_content_page = new gkh_content_page();
     $o_smarty->assign('about', $o_content_page->getContentPage('about'));
     $o_smarty->assign('how_connect', $o_content_page->getContentPage('how_connect'));
     $o_smarty->assign('how_much', $o_content_page->getContentPage('how_much'));
+
+    $o_news = new gkh_news();
+    $o_smarty->assign('news_list', $o_news->getTopNews(gkh_news::ANY_CATEGORY));
 
     $o_smarty->display('index.tpl');
 }

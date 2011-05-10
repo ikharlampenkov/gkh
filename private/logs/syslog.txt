@@ -4499,3 +4499,165 @@ info   SELECT news.id, news_category_id, date, news.title, short_text, full_text
                     WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  09.05.2011 23:10
 info   SELECT COUNT(news.id) FROM news, news_category 
                     WHERE news.news_category_id=news_category.id   09.05.2011 23:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  10.05.2011 22:37
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  10.05.2011 22:37
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  10.05.2011 22:37
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  10.05.2011 22:47
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  10.05.2011 22:47
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  10.05.2011 22:47
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  10.05.2011 22:49
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  10.05.2011 22:49
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  10.05.2011 22:49
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  10.05.2011 22:49
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  10.05.2011 22:49
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  10.05.2011 22:49
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  10.05.2011 22:57
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  10.05.2011 22:57
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  10.05.2011 22:57
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC 
+                      LIMIT 5  10.05.2011 22:57
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  10.05.2011 22:58
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  10.05.2011 22:58
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  10.05.2011 22:58
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC 
+                      LIMIT 5  10.05.2011 22:58
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  10.05.2011 22:59
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  10.05.2011 22:59
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  10.05.2011 22:59
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC 
+                      LIMIT 5  10.05.2011 22:59
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  10.05.2011 23:09
+info   SELECT COUNT(news.id) FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id   10.05.2011 23:09
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  10.05.2011 23:09
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  10.05.2011 23:09
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  10.05.2011 23:09
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC 
+                      LIMIT 5  10.05.2011 23:09
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  10.05.2011 23:09
+info   SELECT COUNT(news.id) FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id   10.05.2011 23:09
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  10.05.2011 23:09
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  10.05.2011 23:09
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  10.05.2011 23:09
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC 
+                      LIMIT 5  10.05.2011 23:09
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  10.05.2011 23:10
+info   SELECT COUNT(news.id) FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id   10.05.2011 23:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  10.05.2011 23:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  10.05.2011 23:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  10.05.2011 23:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC 
+                      LIMIT 5  10.05.2011 23:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 20, 20  10.05.2011 23:10
+info   SELECT COUNT(news.id) FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id   10.05.2011 23:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  10.05.2011 23:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  10.05.2011 23:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  10.05.2011 23:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC 
+                      LIMIT 5  10.05.2011 23:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  10.05.2011 23:10
+info   SELECT COUNT(news.id) FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id   10.05.2011 23:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  10.05.2011 23:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  10.05.2011 23:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  10.05.2011 23:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC 
+                      LIMIT 5  10.05.2011 23:10
+info   SELECT * FROM news WHERE id=2  10.05.2011 23:10
+info   SELECT * FROM news WHERE id=2  10.05.2011 23:11
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  10.05.2011 23:11
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  10.05.2011 23:11
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  10.05.2011 23:11
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC 
+                      LIMIT 5  10.05.2011 23:11
+info   SELECT * FROM news WHERE id=2  10.05.2011 23:13
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  10.05.2011 23:13
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  10.05.2011 23:13
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  10.05.2011 23:13
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC 
+                      LIMIT 5  10.05.2011 23:13
+info   SELECT * FROM news WHERE id=2  10.05.2011 23:14
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  10.05.2011 23:14
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  10.05.2011 23:14
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  10.05.2011 23:14
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC 
+                      LIMIT 5  10.05.2011 23:14
+info   SELECT * FROM news WHERE id=2  10.05.2011 23:14
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  10.05.2011 23:14
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  10.05.2011 23:14
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  10.05.2011 23:14
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC 
+                      LIMIT 5  10.05.2011 23:14
+info   SELECT * FROM news WHERE id=2  10.05.2011 23:14
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  10.05.2011 23:14
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  10.05.2011 23:14
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  10.05.2011 23:14
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC 
+                      LIMIT 5  10.05.2011 23:14
+info   SELECT * FROM news WHERE id=2  10.05.2011 23:16
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  10.05.2011 23:16
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  10.05.2011 23:16
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  10.05.2011 23:16
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC 
+                      LIMIT 5  10.05.2011 23:16
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  10.05.2011 23:16
+info   SELECT COUNT(news.id) FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id   10.05.2011 23:16
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  10.05.2011 23:16
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  10.05.2011 23:16
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  10.05.2011 23:16
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC 
+                      LIMIT 5  10.05.2011 23:16
+info   SELECT * FROM news WHERE id=2  10.05.2011 23:16
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  10.05.2011 23:16
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  10.05.2011 23:16
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  10.05.2011 23:16
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
+                    FROM news, news_category 
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC 
+                      LIMIT 5  10.05.2011 23:16

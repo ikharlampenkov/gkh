@@ -129,13 +129,17 @@ class gkh_news extends gkh {
         }
     }
     
-    public function getTopNews() {
+    public function getTopNews($category_id) {
         try {
             $sql = 'SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title 
                     FROM news, news_category 
-                    WHERE news.news_category_id=news_category.id           
-                    ORDER BY date DESC 
-                    LIMIT 5';
+                    WHERE news.news_category_id=news_category.id ';
+            if ($category_id != gkh_news::ANY_CATEGORY) {
+                $sql .= ' AND news_category_id=' . $category_id;
+            }
+            
+            $sql .= ' ORDER BY date DESC 
+                      LIMIT 5';
             
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
