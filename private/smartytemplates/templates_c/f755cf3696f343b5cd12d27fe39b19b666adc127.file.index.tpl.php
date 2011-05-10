@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-10 23:09:08
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-10 23:48:53
          compiled from "H:/www/gkh/private/smartytemplates/templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:216504dc963245aa8c6-35885365%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:27884dc96c758c20a2-61290516%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'f755cf3696f343b5cd12d27fe39b19b666adc127' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates/templates/index.tpl',
-      1 => 1305043574,
+      1 => 1305046130,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '216504dc963245aa8c6-35885365',
+  'nocache_hash' => '27884dc96c758c20a2-61290516',
   'function' => 
   array (
   ),
@@ -36,7 +36,14 @@ $_smarty_tpl->decodeProperties(array (
 
             textarea {
     width: 99%;
+    height: 200px;
 }
+
+#save {
+    width: 100px;
+}
+            
+            
         </style>
 
         <title><?php echo $_smarty_tpl->getVariable('title')->value;?>

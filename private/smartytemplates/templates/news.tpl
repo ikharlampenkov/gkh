@@ -6,6 +6,30 @@
 <div>{$news.full_text}</div>
 
 <br/><br/>
+
+<div>Комментарии:</div>
+
+{foreach from=$news_comment_list item="news_comment"}
+<div>{$news_comment.date|date_format:"%d.%m.%Y"}&nbsp;{$news_comment.nickname}</div><br />
+<div>{$news_comment.text}</div>
+{/foreach}
+
+<div>Добавить комментарий:</div>
+<form action="?page={$page}&action={$action}&id={$news.id}" method="post">
+    <table width="100%">
+        <tr>
+            <td width="200">Имя</td>
+            <td><input name="data[nickname]" value="" /></td>
+        </tr>
+        <tr>
+            <td>Комментарий</td>
+            <td><textarea name="data[text]"></textarea></td>
+        </tr>
+    </table>
+    <input id="save" name="save" type="submit" value="Сохранить" />
+</form>
+
+<br/><br/>
 <a href="{$siteurl}?page=news" >Все новости</a>
 
 {else}

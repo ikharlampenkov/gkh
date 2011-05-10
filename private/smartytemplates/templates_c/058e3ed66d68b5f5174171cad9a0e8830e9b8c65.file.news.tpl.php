@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-10 23:16:24
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-10 23:48:53
          compiled from "H:/www/gkh/private/smartytemplates/templates/news.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:13584dc964d8913e47-44933896%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:253784dc96c75a0da74-95359363%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '058e3ed66d68b5f5174171cad9a0e8830e9b8c65' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates/templates/news.tpl',
-      1 => 1305044182,
+      1 => 1305046089,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '13584dc964d8913e47-44933896',
+  'nocache_hash' => '253784dc96c75a0da74-95359363',
   'function' => 
   array (
   ),
@@ -27,6 +27,40 @@ $_smarty_tpl->decodeProperties(array (
 </div><br />
 <div><?php echo $_smarty_tpl->getVariable('news')->value['full_text'];?>
 </div>
+
+<br/><br/>
+
+<div>Комментарии:</div>
+
+<?php  $_smarty_tpl->tpl_vars["news_comment"] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('news_comment_list')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars["news_comment"]->key => $_smarty_tpl->tpl_vars["news_comment"]->value){
+?>
+<div><?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('news_comment')->value['date'],"%d.%m.%Y");?>
+&nbsp;<?php echo $_smarty_tpl->getVariable('news_comment')->value['nickname'];?>
+</div><br />
+<div><?php echo $_smarty_tpl->getVariable('news_comment')->value['text'];?>
+</div>
+<?php }} ?>
+
+<div>Добавить комментарий:</div>
+<form action="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+&action=<?php echo $_smarty_tpl->getVariable('action')->value;?>
+&id=<?php echo $_smarty_tpl->getVariable('news')->value['id'];?>
+" method="post">
+    <table width="100%">
+        <tr>
+            <td width="200">Имя</td>
+            <td><input name="data[nickname]" value="" /></td>
+        </tr>
+        <tr>
+            <td>Комментарий</td>
+            <td><textarea name="data[text]"></textarea></td>
+        </tr>
+    </table>
+    <input id="save" name="save" type="submit" value="Сохранить" />
+</form>
 
 <br/><br/>
 <a href="<?php echo $_smarty_tpl->getVariable('siteurl')->value;?>

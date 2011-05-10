@@ -70,8 +70,15 @@ if ($o_fmuser->isLogin()) {
         $o_news = new gkh_news();
 
         if ($action == 'view_news' && isset($_GET['id'])) {
-            $o_smarty->assign('news', $o_news->getNews($_GET['id']));
             
+            if (isset($_POST['data'])) {
+                $o_news->addComment($_GET['id'], $_POST['data']);
+                simo_functions::chLocation('?page=news&action=view_news&id=' . $_GET['id']);
+                exit;
+            }
+            
+            $o_smarty->assign('news', $o_news->getNews($_GET['id']));
+            $o_smarty->assign('news_comment_list', $o_news->getAllCommentByNews($_GET['id'], gkh_news::IS_MODERATED));            
         } else {
 
         if (isset($_GET['pager'])) {

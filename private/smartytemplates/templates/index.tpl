@@ -14,7 +14,14 @@
 
             textarea {
     width: 99%;
+    height: 200px;
 }
+
+#save {
+    width: 100px;
+}
+            
+            
         </style>
 
         <title>{$title}</title>
