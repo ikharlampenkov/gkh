@@ -192,6 +192,23 @@ if ($page == 'news') {
     } elseif ($action == 'del_news') {
         $o_news->deleteNews($_GET['id']);
         simo_functions::chLocation('?page=' . $page);
+    } elseif ($action == 'edit_news_comment' && isset($_GET['id'])) {
+
+        if (isset($_POST['data'])) {
+            $o_news->updateComment($_GET['news_id'], $_GET['id'], $_POST['data']);
+            simo_functions::chLocation('?page=' . $page . '&action=show_comment&id=' . $_GET['news_id']);
+            exit;
+        }
+
+        $o_smarty->assign('txt', 'Редактировать комментарий для новости: ');
+        $o_smarty->assign('news', $o_news->getNews($_GET['news_id']));
+        $o_smarty->assign('news_comment', $o_news->getComment($_GET['news_id'], $_GET['id']));
+    } elseif ($action == 'del_news_comment') {
+        $o_news->deleteComment($_GET['news_id'], $_GET['id']);
+        simo_functions::chLocation('?page=' . $page . '&action=show_comment&id=' . $_GET['news_id']);
+    } elseif ($action == 'show_comment') {
+        $o_smarty->assign('news', $o_news->getNews($_GET['id']));  
+        $o_smarty->assign('news_comment_list', $o_news->getAllCommentByNews($_GET['id'], gkh_news::ANY_COMMENT));
     } else {
 
         if (isset($_GET['pager'])) {

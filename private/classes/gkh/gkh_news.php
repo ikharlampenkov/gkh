@@ -252,6 +252,22 @@ class gkh_news extends gkh {
             simo_exception::registrMsg($e, $this->_debug);
         }
     }
+    
+    public function getComment($news_id, $id) {
+        try {
+            $sql = 'SELECT *
+                    FROM news_comment
+                    WHERE news_id=' . (int)$news_id . ' AND id=' . (int)$id;
+
+            $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
+            if (isset($result[0])) {
+                return $result[0];
+            } else
+                return false;
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+        }
+    }
 
     public function addComment($news_id, $data) {
         try {

@@ -50,6 +50,50 @@
     <input id="save" name="save" type="submit" value="Сохранить" />
 </form>
 
+{elseif $action=="show_comment"}
+
+<div>{$news.date|date_format:"%d.%m.%Y"}&nbsp;{$news.title}</div><br />
+
+{if $news_comment_list!==false}
+<table>
+{foreach from=$news_comment_list item=news_comment}
+    <tr>
+        <td>{$news_comment.date|date_format:"%d.%m.%Y"}</td>
+        <td>{$news_comment.nickname}</td>
+        <td>{$news_comment.text|trancate:100}</td>
+        <td><a href="?page={$page}&action=edit_news_comment&id={$news_comment.id}&news_id={$news.id}">редактировать</a><br />
+            <a href="?page={$page}&action=del_news_comment&id={$news_comment.id}&news_id={$news.id}">удалить</a> </td>
+    </tr>
+{/foreach}
+</table>
+{/if}
+
+{elseif $action="edit_news_comment"}
+
+<h2>{$txt}{$news.title}</h2>
+
+<form action="?page={$page}&action=edit_news_comment&id={$news_comment.id}&news_id={$news.id}" method="post">
+    <table>
+        <tr>
+            <td width="200">Дата</td>
+            <td><input name="data[date]" value="{$news_comment.date|date_format:"%d.%m.%Y"}" /></td>
+        </tr>
+        <tr>
+            <td width="200">Имя</td>
+            <td><input name="data[nickname]" value="{$news_comment.nickname}" /></td>
+        </tr>
+        <tr>
+            <td width="200">Комментарий</td>
+            <td><textarea name="data[text]">{$news_comment.text}</textarea></td>
+        </tr>
+        <tr>
+            <td>Модерировать</td>
+            <td><input type="checkbox" name="data[is_moderated]" {if $news_comment.is_moderated}checked="checked"{/if} style="width: 14px;" /></td>
+        </tr>
+    </table>
+    <input id="save" name="save" type="submit" value="Сохранить" />
+</form>
+
 {else}
 
 
@@ -93,7 +137,8 @@
         <td>{$news.title}</td>
         <td>{$news.category_title}</td>
         <td>{$news.short_text|strip_tags:false|truncate:50}</td>
-        <td><a href="?page={$page}&action=edit_news&id={$news.id}">редактировать</a><br />
+        <td><a href="?page={$page}&action=show_comment&id={$news.id}">просмотреть комментарии</a><br />
+            <a href="?page={$page}&action=edit_news&id={$news.id}">редактировать</a><br />
             <a href="?page={$page}&action=del_news&id={$news.id}">удалить</a> </td>
     </tr>
 {/foreach}
