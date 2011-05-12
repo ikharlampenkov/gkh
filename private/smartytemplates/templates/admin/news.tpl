@@ -60,7 +60,7 @@
     <tr>
         <td>{$news_comment.date|date_format:"%d.%m.%Y"}</td>
         <td>{$news_comment.nickname}</td>
-        <td>{$news_comment.text|trancate:100}</td>
+        <td>{$news_comment.text|truncate:100}</td>
         <td><a href="?page={$page}&action=edit_news_comment&id={$news_comment.id}&news_id={$news.id}">редактировать</a><br />
             <a href="?page={$page}&action=del_news_comment&id={$news_comment.id}&news_id={$news.id}">удалить</a> </td>
     </tr>
@@ -68,7 +68,7 @@
 </table>
 {/if}
 
-{elseif $action="edit_news_comment"}
+{elseif $action=="edit_news_comment"}
 
 <h2>{$txt}{$news.title}</h2>
 

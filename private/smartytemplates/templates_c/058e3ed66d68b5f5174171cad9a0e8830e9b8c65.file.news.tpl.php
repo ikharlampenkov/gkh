@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-10 23:48:53
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-12 23:21:04
          compiled from "H:/www/gkh/private/smartytemplates/templates/news.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:253784dc96c75a0da74-95359363%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:268594dcc08f077d8d9-52490760%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '058e3ed66d68b5f5174171cad9a0e8830e9b8c65' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates/templates/news.tpl',
-      1 => 1305046089,
+      1 => 1305217260,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '253784dc96c75a0da74-95359363',
+  'nocache_hash' => '268594dcc08f077d8d9-52490760',
   'function' => 
   array (
   ),
@@ -30,7 +30,7 @@ $_smarty_tpl->decodeProperties(array (
 
 <br/><br/>
 
-<div>Комментарии:</div>
+<div>Комментарии:</div><br />
 
 <?php  $_smarty_tpl->tpl_vars["news_comment"] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('news_comment_list')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -39,9 +39,9 @@ if ($_smarty_tpl->_count($_from) > 0){
 ?>
 <div><?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('news_comment')->value['date'],"%d.%m.%Y");?>
 &nbsp;<?php echo $_smarty_tpl->getVariable('news_comment')->value['nickname'];?>
-</div><br />
-<div><?php echo $_smarty_tpl->getVariable('news_comment')->value['text'];?>
 </div>
+<div><?php echo $_smarty_tpl->getVariable('news_comment')->value['text'];?>
+</div><br /><br />
 <?php }} ?>
 
 <div>Добавить комментарий:</div>

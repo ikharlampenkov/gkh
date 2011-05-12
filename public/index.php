@@ -74,7 +74,7 @@ if ($o_fmuser->isLogin()) {
             if (isset($_POST['data'])) {
                 $o_news->addComment($_GET['id'], $_POST['data']);
                 simo_functions::chLocation('?page=news&action=view_news&id=' . $_GET['id']);
-                exit;
+                exit; 
             }
             
             $o_smarty->assign('news', $o_news->getNews($_GET['id']));

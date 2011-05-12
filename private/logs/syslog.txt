@@ -4793,3 +4793,413 @@ info   SELECT news.id, news_category_id, date, news.title, short_text, full_text
                     FROM news, news_category
                     WHERE news.news_category_id=news_category.id  ORDER BY date DESC
                       LIMIT 5  10.05.2011 23:54
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  12.05.2011 23:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  12.05.2011 23:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  12.05.2011 23:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  12.05.2011 23:10
+info   SELECT id, login, password, role FROM user WHERE login="admin"  12.05.2011 23:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  12.05.2011 23:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  12.05.2011 23:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  12.05.2011 23:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  12.05.2011 23:10
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:10
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:10
+info   SELECT * FROM news_category  12.05.2011 23:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  12.05.2011 23:10
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   12.05.2011 23:10
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:11
+info   SELECT * FROM news_category  12.05.2011 23:11
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  12.05.2011 23:11
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   12.05.2011 23:11
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:11
+info   SELECT * FROM news_category  12.05.2011 23:11
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  12.05.2011 23:11
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   12.05.2011 23:11
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:13
+info   SELECT * FROM news_category  12.05.2011 23:13
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  12.05.2011 23:13
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   12.05.2011 23:13
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:14
+info   SELECT * FROM news WHERE id=1  12.05.2011 23:14
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=1 ORDER BY is_moderated, date DESC   12.05.2011 23:14
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:14
+info   SELECT * FROM news_category  12.05.2011 23:14
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  12.05.2011 23:14
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   12.05.2011 23:14
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:14
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:14
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 ORDER BY is_moderated, date DESC   12.05.2011 23:14
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:14
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:14
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND id=1  12.05.2011 23:14
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:14
+info   UPDATE news_comment 
+                    SET date="1970-01-01", nickname="Борис", 
+                        text="В новости содержится ошибка", is_moderated=1 
+                    WHERE news_id=2 AND id=1  12.05.2011 23:14
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:14
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:14
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 ORDER BY is_moderated, date DESC   12.05.2011 23:14
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:14
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:14
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND id=1  12.05.2011 23:14
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:14
+info   UPDATE news_comment 
+                    SET date="1970-01-01", nickname="Борис", 
+                        text="В новости содержится ошибка", is_moderated=1 
+                    WHERE news_id=2 AND id=1  12.05.2011 23:14
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:14
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:14
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 ORDER BY is_moderated, date DESC   12.05.2011 23:14
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:14
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:14
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND id=1  12.05.2011 23:14
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:16
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:16
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND id=1  12.05.2011 23:16
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:18
+info   UPDATE news_comment 
+                    SET date="2011-05-12", nickname="Борис", 
+                        text="В новости содержится ошибка", is_moderated=1 
+                    WHERE news_id=2 AND id=1  12.05.2011 23:18
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:18
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND id=1  12.05.2011 23:18
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:18
+info   UPDATE news_comment 
+                    SET date="2011-05-12", nickname="Борис", 
+                        text="В новости содержится ошибка", is_moderated=1 
+                    WHERE news_id=2 AND id=1  12.05.2011 23:18
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:18
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND id=1  12.05.2011 23:18
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:18
+info   SELECT * FROM news_category  12.05.2011 23:18
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  12.05.2011 23:18
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   12.05.2011 23:18
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:18
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:18
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 ORDER BY is_moderated, date DESC   12.05.2011 23:18
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:18
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:18
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND id=1  12.05.2011 23:18
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:19
+info   UPDATE news_comment 
+                    SET date="2011-05-12", nickname="Борис", 
+                        text="В новости содержится ошибка", is_moderated=1 
+                    WHERE news_id=2 AND id=1  12.05.2011 23:19
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:19
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND id=1  12.05.2011 23:19
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:19
+info   UPDATE news_comment 
+                    SET date="2011-05-12", nickname="Борис", 
+                        text="В новости содержится ошибка", is_moderated=1 
+                    WHERE news_id=2 AND id=1  12.05.2011 23:19
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:19
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND id=1  12.05.2011 23:19
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:19
+info   SELECT * FROM news_category  12.05.2011 23:19
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  12.05.2011 23:19
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   12.05.2011 23:19
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:19
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:19
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 ORDER BY is_moderated, date DESC   12.05.2011 23:19
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:19
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:19
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND id=1  12.05.2011 23:19
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:19
+info   UPDATE news_comment 
+                    SET date="2011-05-12", nickname="Борис", 
+                        text="В новости содержится ошибка", is_moderated=1 
+                    WHERE news_id=2 AND id=1  12.05.2011 23:19
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:19
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND id=1  12.05.2011 23:19
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:19
+info   UPDATE news_comment 
+                    SET date="2011-05-12", nickname="Борис", 
+                        text="В новости содержится ошибка", is_moderated=1 
+                    WHERE news_id=2 AND id=1  12.05.2011 23:19
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:19
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:19
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 ORDER BY is_moderated, date DESC   12.05.2011 23:19
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:19
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  12.05.2011 23:19
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  12.05.2011 23:19
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  12.05.2011 23:19
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  12.05.2011 23:19
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:19
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND is_moderated=1 ORDER BY is_moderated, date DESC   12.05.2011 23:19
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  12.05.2011 23:19
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  12.05.2011 23:19
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  12.05.2011 23:19
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  12.05.2011 23:19
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:21
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND is_moderated=1 ORDER BY is_moderated, date DESC   12.05.2011 23:21
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  12.05.2011 23:21
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  12.05.2011 23:21
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  12.05.2011 23:21
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  12.05.2011 23:21
+info   INSERT INTO news_comment(news_id, date, nickname, text, is_moderated)
+                              VALUES(2, "1970-01-01",
+                                    "Иван", "Еще одна ошибка", 0)  12.05.2011 23:21
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:21
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND is_moderated=1 ORDER BY is_moderated, date DESC   12.05.2011 23:21
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  12.05.2011 23:21
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  12.05.2011 23:21
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  12.05.2011 23:21
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  12.05.2011 23:21
+info   INSERT INTO news_comment(news_id, date, nickname, text, is_moderated)
+                              VALUES(2, "1970-01-01",
+                                    "Иван", "Вот теперь правильно", 0)  12.05.2011 23:22
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:22
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND is_moderated=1 ORDER BY is_moderated, date DESC   12.05.2011 23:22
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  12.05.2011 23:22
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  12.05.2011 23:22
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  12.05.2011 23:22
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  12.05.2011 23:22
+info   INSERT INTO news_comment(news_id, date, nickname, text, is_moderated)
+                              VALUES(2, "2011-05-12",
+                                    "Иван", "Теперь точно правильно", 0)  12.05.2011 23:23
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:23
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND is_moderated=1 ORDER BY is_moderated, date DESC   12.05.2011 23:23
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  12.05.2011 23:23
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  12.05.2011 23:23
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  12.05.2011 23:23
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  12.05.2011 23:23
+info   SELECT id, login, password, role FROM user WHERE login="admin"  12.05.2011 23:23
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:23
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND is_moderated=1 ORDER BY is_moderated, date DESC   12.05.2011 23:23
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  12.05.2011 23:23
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  12.05.2011 23:23
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  12.05.2011 23:23
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  12.05.2011 23:23
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:23
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:23
+info   SELECT * FROM news_category  12.05.2011 23:23
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  12.05.2011 23:23
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   12.05.2011 23:23
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:23
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:23
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 ORDER BY is_moderated, date DESC   12.05.2011 23:23
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:23
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:23
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND id=4  12.05.2011 23:23
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:23
+info   UPDATE news_comment 
+                    SET date="2011-05-12", nickname="Иван", 
+                        text="Теперь точно правильно", is_moderated=1 
+                    WHERE news_id=2 AND id=4  12.05.2011 23:23
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:23
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:23
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 ORDER BY is_moderated, date DESC   12.05.2011 23:23
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:23
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  12.05.2011 23:23
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  12.05.2011 23:23
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  12.05.2011 23:23
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  12.05.2011 23:23
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:23
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND is_moderated=1 ORDER BY is_moderated, date DESC   12.05.2011 23:23
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  12.05.2011 23:23
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  12.05.2011 23:23
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  12.05.2011 23:23
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  12.05.2011 23:23
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:24
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND is_moderated=1 ORDER BY is_moderated, date  12.05.2011 23:24
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  12.05.2011 23:24
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  12.05.2011 23:24
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  12.05.2011 23:24
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  12.05.2011 23:24
+info   SELECT id, login, password, role FROM user WHERE login="admin"  12.05.2011 23:24
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:24
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND is_moderated=1 ORDER BY is_moderated, date  12.05.2011 23:24
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  12.05.2011 23:24
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  12.05.2011 23:24
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  12.05.2011 23:24
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  12.05.2011 23:24
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:24
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:24
+info   SELECT * FROM news_category  12.05.2011 23:24
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  12.05.2011 23:24
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   12.05.2011 23:24
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:24
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:24
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 ORDER BY is_moderated, date  12.05.2011 23:24
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:24
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:24
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND id=2  12.05.2011 23:24
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:25
+info   UPDATE news_comment 
+                    SET date="2011-05-11", nickname="Иван", 
+                        text="Еще одна ошибка", is_moderated=1 
+                    WHERE news_id=2 AND id=2  12.05.2011 23:25
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:25
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:25
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 ORDER BY is_moderated, date  12.05.2011 23:25
+info   SELECT password FROM user WHERE login="admin"  12.05.2011 23:25
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  12.05.2011 23:25
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  12.05.2011 23:25
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  12.05.2011 23:25
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  12.05.2011 23:25
+info   SELECT * FROM news WHERE id=2  12.05.2011 23:25
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 AND is_moderated=1 ORDER BY is_moderated, date  12.05.2011 23:25
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  12.05.2011 23:25
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  12.05.2011 23:25
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  12.05.2011 23:25
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  12.05.2011 23:25
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  12.05.2011 23:25
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   12.05.2011 23:25
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  12.05.2011 23:25
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  12.05.2011 23:25
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  12.05.2011 23:25
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  12.05.2011 23:25
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  12.05.2011 23:25
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  12.05.2011 23:25
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  12.05.2011 23:25
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  12.05.2011 23:25

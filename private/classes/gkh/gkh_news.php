@@ -241,7 +241,7 @@ class gkh_news extends gkh {
                 $sql .= ' AND is_moderated=' . $is_moderated;
             }
 
-            $sql .= ' ORDER BY is_moderated, date DESC ';
+            $sql .= ' ORDER BY is_moderated, date';
 
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
@@ -275,7 +275,7 @@ class gkh_news extends gkh {
 
             if (!empty($data['text'])) {
 
-                $data['date'] = date('Y-m-d', strtotime($data['date']));
+                $data['date'] = date('Y-m-d');
 
                 $sql = 'INSERT INTO news_comment(news_id, date, nickname, text, is_moderated)
                               VALUES(' . $news_id . ', "' . $data['date'] . '",
@@ -296,7 +296,7 @@ class gkh_news extends gkh {
             } else {
                $data['is_moderated'] = 0; 
             }
-            
+
             $data['date'] = date('Y-m-d', strtotime($data['date']));
 
             $sql = 'UPDATE news_comment 

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-09 23:09:57
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-12 23:13:57
          compiled from "H:/www/gkh/private/smartytemplates/templates/admin/news.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:325854dc811d586ea87-30987977%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:114254dcc07455551a5-65558921%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '55ba315861e9cf54b38ee91c09f45c5dfceb4bee' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates/templates/admin/news.tpl',
-      1 => 1304957395,
+      1 => 1305216834,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '325854dc811d586ea87-30987977',
+  'nocache_hash' => '114254dcc07455551a5-65558921',
   'function' => 
   array (
   ),
@@ -86,6 +86,73 @@ if ($_smarty_tpl->_count($_from) > 0){
             <td width="200">Текст новости</td>
             <td><textarea name="data[full_text]"><?php echo $_smarty_tpl->getVariable('news')->value['full_text'];?>
 </textarea></td>
+        </tr>
+    </table>
+    <input id="save" name="save" type="submit" value="Сохранить" />
+</form>
+
+<?php }elseif($_smarty_tpl->getVariable('action')->value=="show_comment"){?>
+
+<div><?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('news')->value['date'],"%d.%m.%Y");?>
+&nbsp;<?php echo $_smarty_tpl->getVariable('news')->value['title'];?>
+</div><br />
+
+<?php if ($_smarty_tpl->getVariable('news_comment_list')->value!==false){?>
+<table>
+<?php  $_smarty_tpl->tpl_vars['news_comment'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('news_comment_list')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['news_comment']->key => $_smarty_tpl->tpl_vars['news_comment']->value){
+?>
+    <tr>
+        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['news_comment']->value['date'],"%d.%m.%Y");?>
+</td>
+        <td><?php echo $_smarty_tpl->tpl_vars['news_comment']->value['nickname'];?>
+</td>
+        <td><?php echo smarty_modifier_truncate($_smarty_tpl->tpl_vars['news_comment']->value['text'],100);?>
+</td>
+        <td><a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+&action=edit_news_comment&id=<?php echo $_smarty_tpl->tpl_vars['news_comment']->value['id'];?>
+&news_id=<?php echo $_smarty_tpl->getVariable('news')->value['id'];?>
+">редактировать</a><br />
+            <a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+&action=del_news_comment&id=<?php echo $_smarty_tpl->tpl_vars['news_comment']->value['id'];?>
+&news_id=<?php echo $_smarty_tpl->getVariable('news')->value['id'];?>
+">удалить</a> </td>
+    </tr>
+<?php }} ?>
+</table>
+<?php }?>
+
+<?php }elseif($_smarty_tpl->getVariable('action')->value=="edit_news_comment"){?>
+
+<h2><?php echo $_smarty_tpl->getVariable('txt')->value;?>
+<?php echo $_smarty_tpl->getVariable('news')->value['title'];?>
+</h2>
+
+<form action="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+&action=edit_news_comment&id=<?php echo $_smarty_tpl->getVariable('news_comment')->value['id'];?>
+&news_id=<?php echo $_smarty_tpl->getVariable('news')->value['id'];?>
+" method="post">
+    <table>
+        <tr>
+            <td width="200">Дата</td>
+            <td><input name="data[date]" value="<?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('news_comment')->value['date'],"%d.%m.%Y");?>
+" /></td>
+        </tr>
+        <tr>
+            <td width="200">Имя</td>
+            <td><input name="data[nickname]" value="<?php echo $_smarty_tpl->getVariable('news_comment')->value['nickname'];?>
+" /></td>
+        </tr>
+        <tr>
+            <td width="200">Комментарий</td>
+            <td><textarea name="data[text]"><?php echo $_smarty_tpl->getVariable('news_comment')->value['text'];?>
+</textarea></td>
+        </tr>
+        <tr>
+            <td>Модерировать</td>
+            <td><input type="checkbox" name="data[is_moderated]" <?php if ($_smarty_tpl->getVariable('news_comment')->value['is_moderated']){?>checked="checked"<?php }?> style="width: 14px;" /></td>
         </tr>
     </table>
     <input id="save" name="save" type="submit" value="Сохранить" />
@@ -187,6 +254,9 @@ if ($_smarty_tpl->_count($_from) > 0){
         <td><?php echo smarty_modifier_truncate(strip_tags($_smarty_tpl->tpl_vars['news']->value['short_text']),50);?>
 </td>
         <td><a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+&action=show_comment&id=<?php echo $_smarty_tpl->tpl_vars['news']->value['id'];?>
+">просмотреть комментарии</a><br />
+            <a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
 &action=edit_news&id=<?php echo $_smarty_tpl->tpl_vars['news']->value['id'];?>
 ">редактировать</a><br />
             <a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>

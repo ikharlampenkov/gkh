@@ -7,11 +7,11 @@
 
 <br/><br/>
 
-<div>Комментарии:</div>
+<div>Комментарии:</div><br />
 
 {foreach from=$news_comment_list item="news_comment"}
-<div>{$news_comment.date|date_format:"%d.%m.%Y"}&nbsp;{$news_comment.nickname}</div><br />
-<div>{$news_comment.text}</div>
+<div>{$news_comment.date|date_format:"%d.%m.%Y"}&nbsp;{$news_comment.nickname}</div>
+<div>{$news_comment.text}</div><br /><br />
 {/foreach}
 
 <div>Добавить комментарий:</div>
