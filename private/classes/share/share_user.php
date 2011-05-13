@@ -131,6 +131,7 @@ class share_user extends share {
             } return false;
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
+            return false;
         }
     }
 
