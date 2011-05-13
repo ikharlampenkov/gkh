@@ -138,6 +138,7 @@ if ($page == 'support') {
             exit;
         }
         $o_smarty->assign('reu_info', $o_reu->getReu($_GET['reu_id']));
+        $o_smarty->assign('ticket_status_list', $o_tech_support_post->getAllTicketStatus());
         $o_smarty->assign('ticket', $o_tech_support_post->getTicket($_GET['id'], $_GET['reu_id']));
     } elseif ($action == 'add_status') {
         if (isset($_POST['data'])) {

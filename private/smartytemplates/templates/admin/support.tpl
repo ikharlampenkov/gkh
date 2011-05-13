@@ -83,7 +83,7 @@
         <td>
             <form action="?page={$page}&action={$action}&id={$ticket.id}&reu_id={$ticket.reu_id}" method="post">
 		Ответ<br />
-                <textarea name="data[answer]">{$post.answer}</textarea>
+                <textarea name="data[answer]">{$post.answer}</textarea><br />
 
                 Прикрепит файл<br />
                 <div id="file_list">
@@ -91,6 +91,13 @@
                 </div>
                 <input type="hidden" id="file_count" value="2" />
                 <a href="#" onclick="addFile('file_list', 'file_count')">Прикрепить еще один файл</a><br /><br />
+                
+                Статус<br />
+                <select name="data[tech_support_ticket_status_id]">
+                    {foreach from=$ticket_status_list item=ticket_status}
+                    <option value="{$ticket_status.id}" {if $ticket.tech_support_ticket_status_id== $ticket_status.id}selected="selected"{/if}>{$ticket_status.title}</option>
+                    {/foreach}
+                </select><br /><br />
 
                 <input name="data[id]" type="hidden" value="{$post.id}" />
                 <input id="save" name="save" type="submit" value="Сохранить" />
@@ -161,8 +168,9 @@
 {foreach from=$ticket_list item=ticket}
     <tr style="background-color: {if $ticket.is_complete}#ccffcc{else}#ffd2ba{/if}">
         <td>{$ticket.date|date_format:"%d.%m.%Y %H:%M"}</td>
-		<td>{$ticket.reu_title}</td>
+	<td>{$ticket.reu_title}</td>
         <td>{$ticket.title|strip_tags:false|truncate:30:""}</td>
+        <td>{$ticket.status}</td>
         <td><a href="?page={$page}&action=view_ticket&id={$ticket.id}&reu_id={$ticket.reu_id}">ответить</a><br /> </td>
     </tr>
 {/foreach}

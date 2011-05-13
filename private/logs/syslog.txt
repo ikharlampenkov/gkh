@@ -5203,3 +5203,227 @@ info   SELECT news.id, news_category_id, date, news.title, short_text, full_text
                     FROM news, news_category
                     WHERE news.news_category_id=news_category.id  ORDER BY date DESC
                       LIMIT 5  12.05.2011 23:25
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  13.05.2011 22:27
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  13.05.2011 22:27
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  13.05.2011 22:27
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  13.05.2011 22:27
+info   SELECT id, login, password, role FROM user WHERE login="admin"  13.05.2011 22:27
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  13.05.2011 22:27
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  13.05.2011 22:27
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  13.05.2011 22:27
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  13.05.2011 22:27
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:27
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:27
+info   SELECT * FROM tech_support_ticket_status  13.05.2011 22:27
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, reu.title as reu_title, tech_support_ticket_status.title as status 
+                         FROM tech_support_ticket, tech_support_ticket_status, reu
+                         WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND tech_support_ticket.reu_id=reu.id ORDER BY rating DESC, date DESC  13.05.2011 22:27
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:28
+info   SELECT * FROM tech_support_ticket_status  13.05.2011 22:28
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, reu.title as reu_title, tech_support_ticket_status.title as status 
+                         FROM tech_support_ticket, tech_support_ticket_status, reu
+                         WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND tech_support_ticket.reu_id=reu.id ORDER BY rating DESC, date DESC  13.05.2011 22:28
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:28
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:28
+info   INSERT INTO tech_support_ticket_status(title, rating) VALUES("Завершено", 0)  13.05.2011 22:28
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:28
+info   SELECT * FROM tech_support_ticket_status  13.05.2011 22:28
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, reu.title as reu_title, tech_support_ticket_status.title as status 
+                         FROM tech_support_ticket, tech_support_ticket_status, reu
+                         WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND tech_support_ticket.reu_id=reu.id ORDER BY rating DESC, date DESC  13.05.2011 22:28
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:29
+info   SELECT reu.id, reu.title as title, email, city_id, city.title as city_title, is_moderated 
+                    FROM reu, city 
+                    WHERE reu.city_id=city.id 
+                    ORDER BY is_moderated  13.05.2011 22:29
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:30
+info   SELECT * FROM tech_support_ticket_status  13.05.2011 22:30
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, reu.title as reu_title, tech_support_ticket_status.title as status 
+                         FROM tech_support_ticket, tech_support_ticket_status, reu
+                         WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND tech_support_ticket.reu_id=reu.id ORDER BY rating DESC, date DESC  13.05.2011 22:30
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:30
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  13.05.2011 22:30
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  13.05.2011 22:30
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  13.05.2011 22:30
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  13.05.2011 22:30
+info   SELECT id, login, password, role FROM user WHERE login="user_reu_7"  13.05.2011 22:31
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  13.05.2011 22:31
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  13.05.2011 22:31
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  13.05.2011 22:31
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  13.05.2011 22:31
+info   SELECT password FROM user WHERE login="user_reu_7"  13.05.2011 22:31
+info   SELECT id FROM reu WHERE user_id=2  13.05.2011 22:31
+info   SELECT password FROM user WHERE login="user_reu_7"  13.05.2011 22:31
+info   SELECT id FROM reu WHERE user_id=2  13.05.2011 22:31
+info   SELECT * FROM reu WHERE id=1  13.05.2011 22:31
+info   SELECT * FROM user WHERE id=2 OR login="2"  13.05.2011 22:31
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND reu_id=1 ORDER BY rating DESC, date DESC  13.05.2011 22:31
+info   SELECT password FROM user WHERE login="user_reu_7"  13.05.2011 22:31
+info   SELECT id FROM reu WHERE user_id=2  13.05.2011 22:31
+info   SELECT password FROM user WHERE login="user_reu_7"  13.05.2011 22:32
+info   SELECT id FROM reu WHERE user_id=2  13.05.2011 22:32
+info   INSERT INTO tech_support_ticket(reu_id, title, date, is_complete) 
+                        VALUES(1, "Самый первый вопрос", "2011-05-13 22:32:05", 1)  13.05.2011 22:32
+error   Can`t complit query: INSERT INTO tech_support_ticket(reu_id, title, date, is_complete) 
+                        VALUES(1, "Самый первый вопрос", "2011-05-13 22:32:05", 1) No error: 1364:: Error msg: Field 'tech_support_ticket_status_id' doesn't have a default value ;  13.05.2011 22:32
+info   SELECT password FROM user WHERE login="user_reu_7"  13.05.2011 22:32
+info   SELECT id FROM reu WHERE user_id=2  13.05.2011 22:32
+info   SELECT * FROM reu WHERE id=1  13.05.2011 22:32
+info   SELECT * FROM user WHERE id=2 OR login="2"  13.05.2011 22:32
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND reu_id=1 ORDER BY rating DESC, date DESC  13.05.2011 22:32
+info   SELECT password FROM user WHERE login="user_reu_7"  13.05.2011 22:33
+info   SELECT id FROM reu WHERE user_id=2  13.05.2011 22:33
+info   SELECT password FROM user WHERE login="user_reu_7"  13.05.2011 22:33
+info   SELECT id FROM reu WHERE user_id=2  13.05.2011 22:33
+info   INSERT INTO tech_support_ticket(reu_id, title, date, is_complete, tech_support_ticket_status_id) 
+                        VALUES(1, "Первый вопрос", "2011-05-13 22:33:34", 0, 1)  13.05.2011 22:33
+info   SELECT LAST_INSERT_ID()  13.05.2011 22:33
+info   INSERT INTO tech_support_post(ticket_id, question, date_question, file) 
+                        VALUES(1, "Первый вопрос", "2011-05-13 22:33:34", "")  13.05.2011 22:33
+info   SELECT password FROM user WHERE login="user_reu_7"  13.05.2011 22:33
+info   SELECT id FROM reu WHERE user_id=2  13.05.2011 22:33
+info   SELECT * FROM reu WHERE id=1  13.05.2011 22:33
+info   SELECT * FROM user WHERE id=2 OR login="2"  13.05.2011 22:33
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND reu_id=1 ORDER BY rating DESC, date DESC  13.05.2011 22:33
+info   SELECT password FROM user WHERE login="user_reu_7"  13.05.2011 22:33
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  13.05.2011 22:33
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  13.05.2011 22:33
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  13.05.2011 22:33
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  13.05.2011 22:33
+info   SELECT id, login, password, role FROM user WHERE login="admin"  13.05.2011 22:33
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  13.05.2011 22:33
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  13.05.2011 22:33
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  13.05.2011 22:33
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  13.05.2011 22:33
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:33
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:34
+info   SELECT * FROM tech_support_ticket_status  13.05.2011 22:34
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, reu.title as reu_title, tech_support_ticket_status.title as status 
+                         FROM tech_support_ticket, tech_support_ticket_status, reu
+                         WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND tech_support_ticket.reu_id=reu.id ORDER BY rating DESC, date DESC  13.05.2011 22:34
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:34
+info   SELECT * FROM reu WHERE id=1  13.05.2011 22:34
+info   SELECT * FROM user WHERE id=2 OR login="2"  13.05.2011 22:34
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND id=1 AND reu_id=1  13.05.2011 22:34
+error   Can`t complit query: SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND id=1 AND reu_id=1 No error: 1052:: Error msg: Column 'id' in where clause is ambiguous ;  13.05.2011 22:34
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:35
+info   SELECT * FROM reu WHERE id=1  13.05.2011 22:35
+info   SELECT * FROM user WHERE id=2 OR login="2"  13.05.2011 22:35
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND tech_support_ticket.id=1 AND reu_id=1  13.05.2011 22:35
+info   SELECT * FROM tech_support_post WHERE ticket_id=1 ORDER BY date_question  13.05.2011 22:35
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:35
+info   UPDATE tech_support_post SET answer="Первый ответ", date_answer=NOW(), answer_file="" WHERE ticket_id=1 AND id=1  13.05.2011 22:35
+info   UPDATE tech_support_ticket SET is_complete=1, tech_support_ticket_status_id= WHERE id=1  13.05.2011 22:35
+error   Can`t complit query: UPDATE tech_support_ticket SET is_complete=1, tech_support_ticket_status_id= WHERE id=1 No error: 1064:: Error msg: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id=1' at line 1 ;  13.05.2011 22:35
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:35
+info   SELECT * FROM tech_support_ticket_status  13.05.2011 22:35
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, reu.title as reu_title, tech_support_ticket_status.title as status 
+                         FROM tech_support_ticket, tech_support_ticket_status, reu
+                         WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND tech_support_ticket.reu_id=reu.id ORDER BY rating DESC, date DESC  13.05.2011 22:35
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:36
+info   SELECT * FROM reu WHERE id=1  13.05.2011 22:36
+info   SELECT * FROM user WHERE id=2 OR login="2"  13.05.2011 22:36
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND tech_support_ticket.id=1 AND reu_id=1  13.05.2011 22:36
+info   SELECT * FROM tech_support_post WHERE ticket_id=1 ORDER BY date_question  13.05.2011 22:36
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:41
+info   SELECT * FROM reu WHERE id=1  13.05.2011 22:41
+info   SELECT * FROM user WHERE id=2 OR login="2"  13.05.2011 22:41
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND tech_support_ticket.id=1 AND reu_id=1  13.05.2011 22:41
+info   SELECT * FROM tech_support_post WHERE ticket_id=1 ORDER BY date_question  13.05.2011 22:41
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:42
+info   SELECT * FROM reu WHERE id=1  13.05.2011 22:42
+info   SELECT * FROM user WHERE id=2 OR login="2"  13.05.2011 22:42
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND tech_support_ticket.id=1 AND reu_id=1  13.05.2011 22:42
+info   SELECT * FROM tech_support_post WHERE ticket_id=1 ORDER BY date_question  13.05.2011 22:42
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:43
+info   SELECT * FROM reu WHERE id=1  13.05.2011 22:43
+info   SELECT * FROM user WHERE id=2 OR login="2"  13.05.2011 22:43
+info   SELECT * FROM tech_support_ticket_status  13.05.2011 22:43
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND tech_support_ticket.id=1 AND reu_id=1  13.05.2011 22:43
+info   SELECT * FROM tech_support_post WHERE ticket_id=1 ORDER BY date_question  13.05.2011 22:43
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:45
+info   SELECT * FROM reu WHERE id=1  13.05.2011 22:45
+info   SELECT * FROM user WHERE id=2 OR login="2"  13.05.2011 22:45
+info   SELECT * FROM tech_support_ticket_status  13.05.2011 22:45
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, tech_support_ticket_status_id, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND tech_support_ticket.id=1 AND reu_id=1  13.05.2011 22:45
+info   SELECT * FROM tech_support_post WHERE ticket_id=1 ORDER BY date_question  13.05.2011 22:45
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:45
+info   SELECT * FROM reu WHERE id=1  13.05.2011 22:45
+info   SELECT * FROM user WHERE id=2 OR login="2"  13.05.2011 22:45
+info   SELECT * FROM tech_support_ticket_status  13.05.2011 22:45
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, tech_support_ticket_status_id, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND tech_support_ticket.id=1 AND reu_id=1  13.05.2011 22:45
+info   SELECT * FROM tech_support_post WHERE ticket_id=1 ORDER BY date_question  13.05.2011 22:45
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:45
+info   SELECT * FROM reu WHERE id=1  13.05.2011 22:45
+info   SELECT * FROM user WHERE id=2 OR login="2"  13.05.2011 22:45
+info   SELECT * FROM tech_support_ticket_status  13.05.2011 22:45
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, tech_support_ticket_status_id, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND tech_support_ticket.id=1 AND reu_id=1  13.05.2011 22:45
+info   SELECT * FROM tech_support_post WHERE ticket_id=1 ORDER BY date_question  13.05.2011 22:45
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:45
+info   SELECT * FROM reu WHERE id=1  13.05.2011 22:45
+info   SELECT * FROM user WHERE id=2 OR login="2"  13.05.2011 22:45
+info   SELECT * FROM tech_support_ticket_status  13.05.2011 22:45
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, tech_support_ticket_status_id, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND tech_support_ticket.id=1 AND reu_id=1  13.05.2011 22:45
+info   SELECT * FROM tech_support_post WHERE ticket_id=1 ORDER BY date_question  13.05.2011 22:45
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:45
+info   UPDATE tech_support_post SET answer="Первый ответ", date_answer=NOW(), answer_file="" WHERE ticket_id=1 AND id=1  13.05.2011 22:45
+info   UPDATE tech_support_ticket SET is_complete=1, tech_support_ticket_status_id=2 WHERE id=1  13.05.2011 22:45
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:45
+info   SELECT * FROM tech_support_ticket_status  13.05.2011 22:45
+info   SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, reu.title as reu_title, tech_support_ticket_status.title as status 
+                         FROM tech_support_ticket, tech_support_ticket_status, reu
+                         WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND tech_support_ticket.reu_id=reu.id ORDER BY rating DESC, date DESC  13.05.2011 22:45
+info   SELECT password FROM user WHERE login="admin"  13.05.2011 22:46
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  13.05.2011 22:46
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  13.05.2011 22:46
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  13.05.2011 22:46
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  13.05.2011 22:46

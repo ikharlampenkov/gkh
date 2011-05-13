@@ -67,9 +67,9 @@ class gkh_tech_support_post extends gkh {
 
     public function getTicket($id, $reu_id = 0) {
         try {
-            $sql = 'SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, tech_support_ticket_status.title as status 
+            $sql = 'SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, tech_support_ticket_status_id, tech_support_ticket_status.title as status 
                     FROM tech_support_ticket, tech_support_ticket_status  
-                    WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND id=' . (int)$id;
+                    WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND tech_support_ticket.id=' . (int)$id;
             if ($reu_id != 0) $sql.= ' AND reu_id=' . (int)$reu_id;
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
@@ -127,8 +127,8 @@ class gkh_tech_support_post extends gkh {
                 $date = date('Y-m-d H:i:s');
                 $title = substr($data['question'], 0, 255);			
 
-                $sql = 'INSERT INTO tech_support_ticket(reu_id, title, date, is_complete) 
-                        VALUES(' . $reu_id . ', "' . $title . '", "' . $date . '", ' . gkh_tech_support_post::NEW_TICKET_STATUS . ')';
+                $sql = 'INSERT INTO tech_support_ticket(reu_id, title, date, is_complete, tech_support_ticket_status_id) 
+                        VALUES(' . $reu_id . ', "' . $title . '", "' . $date . '", 0, ' . gkh_tech_support_post::NEW_TICKET_STATUS . ')';
                 $this->_db->query($sql);
 
                 $sql = 'SELECT LAST_INSERT_ID()';
@@ -176,7 +176,7 @@ class gkh_tech_support_post extends gkh {
             $sql .= ' WHERE ticket_id=' . (int)$ticket_id . ' AND id=' . (int)$id;
             $this->_db->query($sql);
 
-            $this->_changeTicketStatus($ticket_id, 1);
+            $this->_changeTicketStatus($ticket_id, 1, $data['tech_support_ticket_status_id']);
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
         }
@@ -184,7 +184,7 @@ class gkh_tech_support_post extends gkh {
     
     public function getAllTicketStatus() {
         try {
-            $sql .= 'SELECT * FROM tech_support_ticket_status';
+            $sql = 'SELECT * FROM tech_support_ticket_status';
             
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
