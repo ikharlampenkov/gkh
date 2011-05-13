@@ -21,6 +21,13 @@ CREATE TABLE IF NOT EXISTS `tech_support_post` (
   PRIMARY KEY (`id`),
   KEY `fk_tech_support_post_tech_support_ticket1` (`tech_support_ticket_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+ * 
+ CREATE  TABLE IF NOT EXISTS `tech_support_ticket_status` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(45) NOT NULL,
+  `rating` INT UNSIGNED NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) )
+ ENGINE = InnoDB; 
  */
 
 /**
@@ -30,6 +37,8 @@ CREATE TABLE IF NOT EXISTS `tech_support_post` (
  */
 class gkh_tech_support_post extends gkh {
 
+    const NEW_TICKET_STATUS = 1;
+    
     public function  __construct() {
         parent::__construct();
     }
@@ -38,13 +47,15 @@ class gkh_tech_support_post extends gkh {
         try {
             $sql = '';
             if ($reu_id != 0) {
-                $sql .= 'SELECT * FROM tech_support_ticket WHERE reu_id=' . (int)$reu_id;
+                $sql .= 'SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND reu_id=' . (int)$reu_id;
             } else {
-                $sql .= 'SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, reu.title as reu_title
-                         FROM tech_support_ticket, reu
-                         WHERE tech_support_ticket.reu_id=reu.id';
+                $sql .= 'SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, reu.title as reu_title, tech_support_ticket_status.title as status 
+                         FROM tech_support_ticket, tech_support_ticket_status, reu
+                         WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND tech_support_ticket.reu_id=reu.id';
             }
-            $sql .= ' ORDER BY is_complete, date DESC';
+            $sql .= ' ORDER BY rating DESC, date DESC';
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
                 return $result;
@@ -56,7 +67,9 @@ class gkh_tech_support_post extends gkh {
 
     public function getTicket($id, $reu_id = 0) {
         try {
-            $sql = 'SELECT * FROM tech_support_ticket WHERE id=' . (int)$id;
+            $sql = 'SELECT tech_support_ticket.id, reu_id, tech_support_ticket.title, date, is_complete, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id AND id=' . (int)$id;
             if ($reu_id != 0) $sql.= ' AND reu_id=' . (int)$reu_id;
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
@@ -114,7 +127,8 @@ class gkh_tech_support_post extends gkh {
                 $date = date('Y-m-d H:i:s');
                 $title = substr($data['question'], 0, 255);			
 
-                $sql = 'INSERT INTO tech_support_ticket(reu_id, title, date, is_complete) VALUES(' . $reu_id . ', "' . $title . '", "' . $date . '", 0)';
+                $sql = 'INSERT INTO tech_support_ticket(reu_id, title, date, is_complete) 
+                        VALUES(' . $reu_id . ', "' . $title . '", "' . $date . '", ' . gkh_tech_support_post::NEW_TICKET_STATUS . ')';
                 $this->_db->query($sql);
 
                 $sql = 'SELECT LAST_INSERT_ID()';
@@ -122,7 +136,8 @@ class gkh_tech_support_post extends gkh {
 
                 $file = $this->_uploadFile($tempTicket[0][0]);
 
-                $sql = 'INSERT INTO tech_support_post(ticket_id, question, date_question, file) VALUES(' . $tempTicket[0][0] . ', "' . $data['question'] . '", "' . $date . '", "' . $file . '")';
+                $sql = 'INSERT INTO tech_support_post(ticket_id, question, date_question, file) 
+                        VALUES(' . $tempTicket[0][0] . ', "' . $data['question'] . '", "' . $date . '", "' . $file . '")';
                 $this->_db->query($sql);
             }
         } catch (Exception $e) {
@@ -166,10 +181,67 @@ class gkh_tech_support_post extends gkh {
             simo_exception::registrMsg($e, $this->_debug);
         }
     }
-
-    private function _changeTicketStatus($id, $status) {
+    
+    public function getAllTicketStatus() {
         try {
-            $this->_db->query('UPDATE tech_support_ticket SET is_complete=' . $status . ' WHERE id=' . (int)$id);
+            $sql .= 'SELECT * FROM tech_support_ticket_status';
+            
+            $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
+            if (isset($result[0])) {
+                return $result;
+            } else return false;
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+        }
+    }
+
+    public function getTicketStatus($id) {
+        try {
+            $sql = 'SELECT * FROM tech_support_ticket_status WHERE id=' . (int)$id;
+          
+            $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
+            if (isset($result[0])) {
+                return $result[0];
+            } else return false;
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+        }
+    }
+    
+    public function addTicketStatus($data) {
+        try {
+            $data = $this->_db->prepareArray($data);
+
+            $sql = 'INSERT INTO tech_support_ticket_status(title, rating) VALUES("' . $data['title'] . '", ' . $data['rating'] . ')';
+            $this->_db->query($sql);
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+        }
+    }
+
+    public function updateTicketStatus($id, $data) {
+        try {
+            $data = $this->_db->prepareArray($data);
+            $sql = 'UPDATE tech_support_ticket_status 
+                    SET title="' . $data['title'] . '", rating=' . $data['rating'] . ' WHERE id=' . (int) $id;
+            $this->_db->query($sql);
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+        }
+    }
+
+    public function deleteTicketStatus($id) {
+        try {
+            $sql = 'DELETE FROM tech_support_ticket_status WHERE id=' . (int) $id;
+            $this->_db->query($sql);
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+        }
+    }
+ 
+    private function _changeTicketStatus($id, $status, $status_id) {
+        try {
+            $this->_db->query('UPDATE tech_support_ticket SET is_complete=' . $status . ', tech_support_ticket_status_id=' . $status_id . ' WHERE id=' . (int)$id);
 
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);

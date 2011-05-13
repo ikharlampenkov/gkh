@@ -139,7 +139,29 @@ if ($page == 'support') {
         }
         $o_smarty->assign('reu_info', $o_reu->getReu($_GET['reu_id']));
         $o_smarty->assign('ticket', $o_tech_support_post->getTicket($_GET['id'], $_GET['reu_id']));
+    } elseif ($action == 'add_status') {
+        if (isset($_POST['data'])) {
+            $o_tech_support_post->addTicketStatus($_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('txt', 'Добавить cтатус заявки');
+    } elseif ($action == 'edit_status' && isset($_GET['id'])) {
+
+        if (isset($_POST['data'])) {
+            $o_tech_support_post->updateTicketStatus($_GET['id'], $_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('txt', 'Редактировать cтатус заявки');
+        $o_smarty->assign('ticket_status', $o_tech_support_post->getTicketStatus($_GET['id']));
+    } elseif ($action == 'del_status') {
+        $o_tech_support_post->deleteTicketStatus($_GET['id']);
+        simo_functions::chLocation('?page=' . $page);    
     } else {
+        $o_smarty->assign('ticket_status_list', $o_tech_support_post->getAllTicketStatus());
         $o_smarty->assign('ticket_list', $o_tech_support_post->getAllTicket());
     }
 }

@@ -115,7 +115,46 @@
 </table>
 {/if}
 
+{elseif $action=="add_status" || $action=="edit_status"}
+
+<h2>{$txt}</h2>
+
+<form action="?page={$page}&action={$action}{if edit}&id={$ticket_status.id}{/if}" method="post">
+    <table>
+        <tr>
+            <td width="200">Название</td>
+            <td><input name="data[title]" value="{$ticket_status.title}" /></td>
+        </tr>
+        <tr>
+            <td width="200">Рейтинг</td>
+            <td><input name="data[rating]" value="{$ticket_status.rating}" /></td>
+        </tr>
+    </table>
+    <input id="save" name="save" type="submit" value="Сохранить" />
+</form>
+
 {else}
+
+<h4>Статусы заявок</h4>
+
+{if $ticket_status_list!==false}
+<table>
+{foreach from=$ticket_status_list item=ticket_status}
+    <tr>
+        <td>{$ticket_status.title}</td>
+        <td>{$ticket_status.rating}</td>
+        <td><a href="?page={$page}&action=edit_status&id={$ticket_status.id}">редактировать</a><br />
+            <a href="?page={$page}&action=del_status&id={$ticket_status.id}">удалить</a> </td>
+    </tr>
+{/foreach}
+</table>
+{/if}
+
+<a href="?page={$page}&action=add_status">добавить статус заявки</a>
+
+<hr width="100%" size="1" />
+
+<h4>Заявки</h4>
 
 {if $ticket_list!==false}
 <table>
