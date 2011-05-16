@@ -50,6 +50,8 @@
  */
 class share_user_site extends share_user {
 
+    
+    
     public function __construct() {
         parent::__construct();
     }
