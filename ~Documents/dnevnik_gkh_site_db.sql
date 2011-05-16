@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Май 14 2011 г., 00:03
+-- Время создания: Май 17 2011 г., 00:12
 -- Версия сервера: 5.1.50
 -- Версия PHP: 5.3.5
 
@@ -124,6 +124,7 @@ DROP TABLE IF EXISTS `meters`;
 CREATE TABLE IF NOT EXISTS `meters` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(45) DEFAULT NULL,
+  `rate` decimal(12,2) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
@@ -131,10 +132,10 @@ CREATE TABLE IF NOT EXISTS `meters` (
 -- Дамп данных таблицы `meters`
 --
 
-INSERT INTO `meters` (`id`, `title`) VALUES
-(1, 'Электроэнергия'),
-(2, 'Горячая вода'),
-(3, 'Холодная вода');
+INSERT INTO `meters` (`id`, `title`, `rate`) VALUES
+(1, 'Электроэнергия', '70.00'),
+(2, 'Горячая вода', '15.00'),
+(3, 'Холодная вода', '10.00');
 
 -- --------------------------------------------------------
 
@@ -154,6 +155,10 @@ CREATE TABLE IF NOT EXISTS `meters_to_account` (
 -- Дамп данных таблицы `meters_to_account`
 --
 
+INSERT INTO `meters_to_account` (`personal_account_id`, `meters_id`) VALUES
+(1, 1),
+(1, 2),
+(1, 3);
 
 -- --------------------------------------------------------
 
@@ -175,6 +180,10 @@ CREATE TABLE IF NOT EXISTS `meters_value` (
 -- Дамп данных таблицы `meters_value`
 --
 
+INSERT INTO `meters_value` (`personal_account_id`, `meters_id`, `date`, `value`) VALUES
+(1, 1, '2011-05-16', '100.000'),
+(1, 2, '2011-05-16', '5.000'),
+(1, 3, '2011-05-16', '6.500');
 
 -- --------------------------------------------------------
 
@@ -224,7 +233,7 @@ CREATE TABLE IF NOT EXISTS `personal_account` (
 --
 
 INSERT INTO `personal_account` (`id`, `management_company_id`, `fio`, `password`, `user_id`) VALUES
-(1, 1, 'Тестовый жилец', '123', 0);
+(1, 1, 'Тестовый жилец', '123', 2);
 
 -- --------------------------------------------------------
 
@@ -244,12 +253,15 @@ CREATE TABLE IF NOT EXISTS `tech_support_post` (
   `answer_file` text,
   PRIMARY KEY (`id`),
   KEY `fk_tech_support_post_tech_support_ticket1` (`ticket_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Дамп данных таблицы `tech_support_post`
 --
 
+INSERT INTO `tech_support_post` (`id`, `ticket_id`, `question`, `date_question`, `answer`, `date_answer`, `file`, `answer_file`) VALUES
+(1, 1, 'Бежит батарея', '2011-05-16 23:58:03', NULL, NULL, '', NULL),
+(2, 2, 'Почему редко вывозят мусор с территории?', '2011-05-16 23:58:36', NULL, NULL, '', NULL);
 
 -- --------------------------------------------------------
 
@@ -260,22 +272,23 @@ CREATE TABLE IF NOT EXISTS `tech_support_post` (
 DROP TABLE IF EXISTS `tech_support_ticket`;
 CREATE TABLE IF NOT EXISTS `tech_support_ticket` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `management_company_id` int(10) unsigned NOT NULL,
   `personal_account_id` int(10) unsigned NOT NULL,
   `title` varchar(255) NOT NULL,
   `date` datetime NOT NULL,
-  `category` int(11) DEFAULT NULL,
-  `ticket_state_id` int(10) unsigned NOT NULL,
+  `category` varchar(20) DEFAULT NULL,
+  `ticket_status_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_tech_support_ticket_management_company1` (`management_company_id`),
   KEY `fk_tech_support_ticket_personal_account1` (`personal_account_id`),
-  KEY `fk_tech_support_ticket_ticket_state1` (`ticket_state_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+  KEY `fk_tech_support_ticket_ticket_state1` (`ticket_status_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Дамп данных таблицы `tech_support_ticket`
 --
 
+INSERT INTO `tech_support_ticket` (`id`, `personal_account_id`, `title`, `date`, `category`, `ticket_status_id`) VALUES
+(1, 1, 'Бежит батарея', '2011-05-16 23:58:03', 'request_master', 1),
+(2, 1, 'Почему редко вывозят мусор с территории?', '2011-05-16 23:58:36', 'question', 1);
 
 -- --------------------------------------------------------
 
@@ -289,14 +302,15 @@ CREATE TABLE IF NOT EXISTS `tech_support_ticket_status` (
   `title` varchar(45) NOT NULL,
   `rating` int(10) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Дамп данных таблицы `tech_support_ticket_status`
 --
 
 INSERT INTO `tech_support_ticket_status` (`id`, `title`, `rating`) VALUES
-(1, 'Новая заявка', 10000);
+(1, 'Новая заявка', 10000),
+(2, 'Завершено', 0);
 
 -- --------------------------------------------------------
 
@@ -313,14 +327,15 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `login_UNIQUE` (`login`),
   KEY `role` (`role`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Дамп данных таблицы `user`
 --
 
 INSERT INTO `user` (`id`, `login`, `password`, `role`) VALUES
-(1, 'admin', '123', 'admin');
+(1, 'admin', '123', 'admin'),
+(2, 'ten', '321', 'tenant');
 
 -- --------------------------------------------------------
 
@@ -341,7 +356,8 @@ CREATE TABLE IF NOT EXISTS `user_role` (
 
 INSERT INTO `user_role` (`title`, `ru_title`) VALUES
 ('admin', 'Администратор'),
-('simple_user', 'Посетитель сайта');
+('simple_user', 'Посетитель сайта'),
+('tenant', 'Жилец дома');
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц
@@ -364,9 +380,9 @@ ALTER TABLE `license`
 -- Ограничения внешнего ключа таблицы `menu`
 --
 ALTER TABLE `menu`
-  ADD CONSTRAINT `fk_menu_module` FOREIGN KEY (`module_id`) REFERENCES `module` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_menu_management_company1` FOREIGN KEY (`management_company_id`) REFERENCES `management_company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_menu_menu1` FOREIGN KEY (`parent_id`) REFERENCES `menu` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_menu_management_company1` FOREIGN KEY (`management_company_id`) REFERENCES `management_company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_menu_module` FOREIGN KEY (`module_id`) REFERENCES `module` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Ограничения внешнего ключа таблицы `meters_to_account`
@@ -386,8 +402,8 @@ ALTER TABLE `meters_value`
 -- Ограничения внешнего ключа таблицы `personal_account`
 --
 ALTER TABLE `personal_account`
-  ADD CONSTRAINT `fk_personal_account_management_company1` FOREIGN KEY (`management_company_id`) REFERENCES `management_company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_personal_account_user1` FOREIGN KEY (`user_id`) REFERENCES `gkh_db`.`user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `personal_account_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_personal_account_management_company1` FOREIGN KEY (`management_company_id`) REFERENCES `management_company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Ограничения внешнего ключа таблицы `tech_support_post`
@@ -399,9 +415,8 @@ ALTER TABLE `tech_support_post`
 -- Ограничения внешнего ключа таблицы `tech_support_ticket`
 --
 ALTER TABLE `tech_support_ticket`
-  ADD CONSTRAINT `fk_tech_support_ticket_ticket_state1` FOREIGN KEY (`ticket_state_id`) REFERENCES `tech_support_ticket_status` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_tech_support_ticket_management_company1` FOREIGN KEY (`management_company_id`) REFERENCES `management_company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_tech_support_ticket_personal_account1` FOREIGN KEY (`personal_account_id`) REFERENCES `personal_account` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_tech_support_ticket_personal_account1` FOREIGN KEY (`personal_account_id`) REFERENCES `personal_account` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_tech_support_ticket_ticket_state1` FOREIGN KEY (`ticket_status_id`) REFERENCES `tech_support_ticket_status` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Ограничения внешнего ключа таблицы `user`

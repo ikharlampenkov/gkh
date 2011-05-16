@@ -154,7 +154,7 @@ class gkh_tech_support_post extends gkh {
                 $sql = 'INSERT INTO tech_support_post(ticket_id, question, date_question, file) VALUES(' . $ticket_id . ', "' . $data['question'] . '", NOW(), "' . $file . '")';
                 $this->_db->query($sql);
 
-                $this->_changeTicketStatus($ticket_id, 0);
+                //$this->_changeTicketStatus($ticket_id, 0);
             }
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
@@ -248,7 +248,7 @@ class gkh_tech_support_post extends gkh {
         }
     }
 	
-    private function _uploadFile($ticked_id) {
+    protected function _uploadFile($ticked_id) {
         global $__cfg;
         $resstr = '';
 
