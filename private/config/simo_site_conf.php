@@ -34,7 +34,8 @@ $__cfg['site.dir'] = $__cfg['site.main.dir'] . 'public/site_gkh';
 $__cfg['site.url'] = 'http://www.site.gkh/';
 
 $__cfg['temp.dir'] = $__cfg['site.main.dir'] . 'private/temp/';
-$__cfg['temp.support.dir'] = $__cfg['site.main.dir'] . 'public/temp_support/';
+$__cfg['temp.support.dir'] = $__cfg['site.main.dir'] . 'public/site_gkh/temp_support/';
+$__cfg['temp.public.dir'] = $__cfg['site.main.dir'] . 'public/site_gkh/temp_files/';
 
 $__cfg['sms.login'] = 'sibdnevnik';
 $__cfg['sms.password'] = 'kirill604';

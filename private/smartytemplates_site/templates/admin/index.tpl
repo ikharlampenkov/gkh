@@ -47,7 +47,7 @@ textarea {
         <table width="100%" height="150" cellpadding="0" cellspacing="0" border="0">
             <tr>
                 <td>Сайт управляющей компании
-                    <br /><br /><b>Личный кабинет</b>
+                    <br /><br /><b>Административный раздел</b>
                 </td>
                 <td width="300">
 
@@ -69,35 +69,32 @@ textarea {
             <tr>
                 <td width="230">
 
-                    <a href="?page=receipt">Электронная квитанция</a><br /><br />
-                    <a href="?page=balance">Баланс платежей</a><br /><br />
-                    <a href="?page=meters">Показания счетчиков</a><br /><br />
+                    <a href="?page=content_page">Контентная страница</a><br /><br />
+                    <a href="?page=news">Новости</a><br /><br />
+                    <a href="?page=meters">Счетчики</a><br /><br />
                     <a href="?page=support&category=request_master">Заявка на вызов мастера</a><br /><br />
                     <a href="?page=support&category=question">Задать вопрос</a><br /><br />
                     <a href="?page=appointment">Записаться на прием</a><br /><br />
-                    <a href="?page=payment">Оплата услуг</a><br /><br />
+                       
 
                 </td>
                 <td>
 
                     {if isset($page)}
-                        {if $page=="receipt"}
-                            {include file="cabinet/receipt.tpl"}
+                        {if $page=="content_page"}
+                            {include file="admin/content_page.tpl"}
                         {/if}
-                        {if $page=="balance"}
-                            {include file="cabinet/balance.tpl"}
+                        {if $page=="news"}
+                            {include file="admin/news.tpl"}
                         {/if}
                         {if $page=="meters"}
-                            {include file="cabinet/meters.tpl"}
+                            {include file="admin/meters.tpl"}
                         {/if}
                         {if $page=="support"}
-                            {include file="cabinet/support.tpl"}
+                            {include file="admin/support.tpl"}
                         {/if}
                         {if $page=="appointment"}
-                            {include file="cabinet/appointment.tpl"}
-                        {/if}
-                        {if $page=="payment"}
-                            {include file="cabinet/payment.tpl"}
+                            {include file="admin/appointment.tpl"}
                         {/if}
                     {/if}
 
