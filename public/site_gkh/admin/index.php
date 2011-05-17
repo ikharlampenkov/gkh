@@ -4,7 +4,7 @@ $management_company = 1;
 
 if ($page == 'content_page') {
 
-    $o_content_page = new gkh_content_page();
+    $o_content_page = new gkh_content_page_site();
 
     if ($action == 'add') {
         if (isset($_POST['data'])) {
@@ -28,6 +28,9 @@ if ($page == 'content_page') {
     } elseif ($action == 'del') {
         $o_content_page->deleteContentPage($_GET['id']);
         simo_functions::chLocation('?page=' . $page);
+    } elseif ($action == 'del_pic') {
+        $o_content_page->deleteFile($_GET['id']);
+        simo_functions::chLocation('?page=' . $page . '&action=edit&id=' . $_GET['id']);        
     } else {
         $o_smarty->assign('conpage_list', $o_content_page->getAllContentPage());
     }
@@ -111,6 +114,83 @@ if ($page == 'news') {
         $o_smarty->assign('news_category_list', $o_news->getAllNewsCategory());
         $o_smarty->assign('news_list', $o_news->getAllNews(gkh_news::ANY_CATEGORY, $cur_page));
         $o_smarty->assign('page_info', $o_news->getPageInfo(gkh_news::ANY_CATEGORY, $cur_page));
+    }
+}
+
+if ($page == 'support') {
+    
+    if (isset($_GET['category'])) {
+        $category = $_GET['category'];
+    } else {
+        $category = gkh_tech_support_post_site::CATEGORY_REQUEST_MASTER;
+    }
+    
+    if ($category == gkh_tech_support_post_site::CATEGORY_REQUEST_MASTER) {
+        $o_smarty->assign('module_title', 'Заявки на вызов мастера');
+        $o_smarty->assign('action_title', 'Подать заявку');
+        $o_smarty->assign('ticket_title', 'Заявка');
+        $o_smarty->assign('txt', 'Подать заявку');
+    } else {
+        $o_smarty->assign('module_title', 'Вопросы');
+        $o_smarty->assign('action_title', 'Задать вопрос');
+        $o_smarty->assign('ticket_title', 'Вопрос');
+        $o_smarty->assign('txt', 'Задать вопрос');
+    }
+
+    $o_smarty->assign('category', $category);
+
+    $o_tech_support_post = new gkh_tech_support_post_site(0);
+    $o_pa = new gkh_personal_account_site();
+
+    
+    if ($action == 'answer') {
+        if (isset($_POST['data'])) {
+            $o_tech_support_post->answerQuestion($_GET['id'], $_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('tech_support_post', $o_tech_support_post->getSupportPost($_GET['id']));
+    } elseif ($action == 'question') {
+        if (isset($_POST['data'])) {
+            $o_tech_support_post->askQuestion($_POST['data']['personal_account_id'], $_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+        $o_smarty->assign('pa_list', $o_pa->getAllPA());
+    } elseif ($action == 'view_ticket') {
+        if (isset($_POST['data'])) {
+            $o_tech_support_post->answerQuestion($_GET['id'], $_POST['data']['id'], $_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+        $o_smarty->assign('pa_info', $o_pa->getPA($_GET['pa_id']));
+        $o_smarty->assign('ticket_status_list', $o_tech_support_post->getAllTicketStatus());
+        $o_smarty->assign('ticket', $o_tech_support_post->getTicket($_GET['id'], $category));
+    } elseif ($action == 'add_status') {
+        if (isset($_POST['data'])) {
+            $o_tech_support_post->addTicketStatus($_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('txt', 'Добавить cтатус заявки');
+    } elseif ($action == 'edit_status' && isset($_GET['id'])) {
+
+        if (isset($_POST['data'])) {
+            $o_tech_support_post->updateTicketStatus($_GET['id'], $_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('txt', 'Редактировать cтатус заявки');
+        $o_smarty->assign('ticket_status', $o_tech_support_post->getTicketStatus($_GET['id']));
+    } elseif ($action == 'del_status') {
+        $o_tech_support_post->deleteTicketStatus($_GET['id']);
+        simo_functions::chLocation('?page=' . $page);    
+    } else {
+        $o_smarty->assign('ticket_status_list', $o_tech_support_post->getAllTicketStatus());
+        $o_smarty->assign('ticket_list', $o_tech_support_post->getAllTicket($category));
     }
 }
 

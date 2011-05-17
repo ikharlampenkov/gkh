@@ -6628,3 +6628,543 @@ info   SELECT password FROM user WHERE login="ten"  17.05.2011 00:06
 info   SELECT * FROM personal_account WHERE user_id=2  17.05.2011 00:06
 info   SELECT password FROM user WHERE login="ten"  17.05.2011 00:10
 info   SELECT * FROM personal_account WHERE user_id=2  17.05.2011 00:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  17.05.2011 22:11
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  17.05.2011 22:11
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  17.05.2011 22:11
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  17.05.2011 22:11
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="admin"  17.05.2011 22:11
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:11
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:12
+info   SELECT * FROM news_category  17.05.2011 22:12
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  17.05.2011 22:12
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   17.05.2011 22:12
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:12
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:12
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:12
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:12
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:12
+info   SELECT * FROM content_page  17.05.2011 22:12
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:12
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:18
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:20
+info   INSERT INTO content_page(page_title, title, content) VALUES("eltechrab", "Электротехнические работы", "Список Электротехнических работ\r\n1. \r\n2. \r\n3. \r\n")  17.05.2011 22:20
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:20
+info   SELECT * FROM content_page  17.05.2011 22:20
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:20
+info   SELECT * FROM content_page WHERE id=1 OR page_title="1"  17.05.2011 22:20
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:31
+info   UPDATE content_page SET page_title="eltechrab", title="Электротехнические работы", content="Список Электротехнических работ\r\n1. \r\n2. \r\n3. \r\n" WHERE id=1  17.05.2011 22:31
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:31
+info   SELECT * FROM content_page  17.05.2011 22:31
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:31
+info   SELECT * FROM content_page WHERE id=1 OR page_title="1"  17.05.2011 22:31
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:32
+info   UPDATE content_page SET page_title="eltechrab", title="Электротехнические работы", content="Список Электротехнических работ\r\n1. \r\n2. \r\n3. \r\n" WHERE id=1  17.05.2011 22:32
+info   UPDATE content_page 
+                    SET file="1_17-05-2011-22-32-09_0.odt;" WHERE id=1  17.05.2011 22:32
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:32
+info   SELECT * FROM content_page  17.05.2011 22:32
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:33
+info   SELECT * FROM content_page WHERE id=1 OR page_title="1"  17.05.2011 22:33
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:34
+info   SELECT * FROM content_page WHERE id=1 OR page_title="1"  17.05.2011 22:34
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:34
+info   UPDATE content_page SET page_title="eltechrab", title="Электротехнические работы", content="Список Электротехнических работ\r\n1. \r\n2. \r\n3. \r\n" WHERE id=1  17.05.2011 22:34
+info   UPDATE content_page 
+                    SET file="1_17-05-2011-22-34-32_0.odt" WHERE id=1  17.05.2011 22:34
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:34
+info   SELECT * FROM content_page  17.05.2011 22:34
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:34
+info   SELECT * FROM content_page WHERE id=1 OR page_title="1"  17.05.2011 22:34
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:42
+info   SELECT * FROM content_page WHERE id=1 OR page_title="1"  17.05.2011 22:42
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:42
+info   SELECT * FROM content_page  17.05.2011 22:42
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:42
+info   SELECT * FROM content_page WHERE id=1 OR page_title="1"  17.05.2011 22:42
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:44
+info   SELECT * FROM content_page WHERE id=1 OR page_title="1"  17.05.2011 22:44
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:45
+info   SELECT * FROM content_page WHERE id=1 OR page_title="1"  17.05.2011 22:45
+info   Удален файл: H:/www/gkh/public/site_gkh/temp_files/1_17-05-2011-22-34-32_0.odt  17.05.2011 22:45
+info   UPDATE content_page 
+                    SET file=NULL WHERE id=1  17.05.2011 22:45
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:45
+info   SELECT * FROM content_page WHERE id=1 OR page_title="1"  17.05.2011 22:45
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:45
+info   UPDATE content_page SET page_title="eltechrab", title="Электротехнические работы", content="Список Электротехнических работ\r\n1. \r\n2. \r\n3. \r\n" WHERE id=1  17.05.2011 22:45
+info   UPDATE content_page 
+                    SET file="1_17-05-2011-22-45-47_0.odt" WHERE id=1  17.05.2011 22:45
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:45
+info   SELECT * FROM content_page  17.05.2011 22:45
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:45
+info   SELECT * FROM news_category  17.05.2011 22:45
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  17.05.2011 22:45
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   17.05.2011 22:45
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:46
+info   SELECT * FROM news_category  17.05.2011 22:46
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  17.05.2011 22:46
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   17.05.2011 22:46
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:46
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:46
+info   INSERT INTO news_category(title) VALUES("Объявления")  17.05.2011 22:46
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:46
+info   SELECT * FROM news_category  17.05.2011 22:46
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  17.05.2011 22:46
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   17.05.2011 22:46
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:47
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:47
+info   INSERT INTO news_category(title) VALUES("Отключения")  17.05.2011 22:47
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:47
+info   SELECT * FROM news_category  17.05.2011 22:47
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  17.05.2011 22:47
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   17.05.2011 22:47
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:47
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:47
+info   INSERT INTO news_category(title) VALUES("Подключения")  17.05.2011 22:47
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:47
+info   SELECT * FROM news_category  17.05.2011 22:47
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  17.05.2011 22:47
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   17.05.2011 22:47
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:47
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:48
+info   INSERT INTO news_category(title) VALUES("Согласования")  17.05.2011 22:48
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:48
+info   SELECT * FROM news_category  17.05.2011 22:48
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  17.05.2011 22:48
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   17.05.2011 22:48
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:48
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:48
+info   INSERT INTO news_category(title) VALUES("Законодательства")  17.05.2011 22:48
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:48
+info   SELECT * FROM news_category  17.05.2011 22:48
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  17.05.2011 22:48
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   17.05.2011 22:48
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:48
+info   SELECT * FROM news_category  17.05.2011 22:48
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:48
+info   SELECT * FROM news_category  17.05.2011 22:48
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  17.05.2011 22:48
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   17.05.2011 22:48
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:48
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:48
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:48
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:48
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:50
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:55
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:58
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 22:58
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                         FROM tech_support_ticket, tech_support_ticket_status
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND category="" ORDER BY rating DESC, date DESC  17.05.2011 22:58
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:58
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 22:58
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                         FROM tech_support_ticket, tech_support_ticket_status
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND category="" ORDER BY rating DESC, date DESC  17.05.2011 22:58
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:59
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 22:59
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                         FROM tech_support_ticket, tech_support_ticket_status
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 22:59
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:59
+info   SELECT * FROM tech_support_ticket_status WHERE id=1  17.05.2011 22:59
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:59
+info   UPDATE tech_support_ticket_status 
+                    SET title="Новая заявка", rating=10000 WHERE id=1  17.05.2011 22:59
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:59
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 22:59
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                         FROM tech_support_ticket, tech_support_ticket_status
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 22:59
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:59
+info   SELECT * FROM tech_support_ticket_status WHERE id=2  17.05.2011 22:59
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:59
+info   UPDATE tech_support_ticket_status 
+                    SET title="Завершено", rating=0 WHERE id=2  17.05.2011 22:59
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:59
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 22:59
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                         FROM tech_support_ticket, tech_support_ticket_status
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 22:59
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:59
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 22:59
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 22:59
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                         FROM tech_support_ticket, tech_support_ticket_status
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 22:59
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:01
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:01
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                         FROM tech_support_ticket, tech_support_ticket_status
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:01
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:02
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:02
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                         FROM tech_support_ticket, tech_support_ticket_status
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:02
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:05
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:05
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:05
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:05
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:05
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:05
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:05
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:05
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:05
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:05
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:05
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:06
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:06
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:06
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:13
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:13
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:13
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:13
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:13
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:13
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:14
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:14
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:14
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:14
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:14
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:14
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:14
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:14
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:14
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:14
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:14
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="question" ORDER BY rating DESC, date DESC  17.05.2011 23:14
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:14
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:14
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:14
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:14
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:14
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="question" ORDER BY rating DESC, date DESC  17.05.2011 23:14
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:14
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:14
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:14
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:14
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:18
+info   SELECT * FROM personal_account  17.05.2011 23:18
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:20
+info   SELECT * FROM personal_account  17.05.2011 23:20
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:20
+info   SELECT * FROM personal_account  17.05.2011 23:20
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:21
+info   SELECT * FROM personal_account  17.05.2011 23:21
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:21
+info   SELECT * FROM personal_account  17.05.2011 23:21
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:22
+info   SELECT * FROM personal_account  17.05.2011 23:22
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:22
+info   SELECT * FROM personal_account  17.05.2011 23:22
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:22
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:22
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:22
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:22
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:24
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:24
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:24
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:24
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:24
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:24
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:24
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:24
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:24
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:24
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:24
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:24
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:26
+info   SELECT * FROM personal_account WHERE id=1  17.05.2011 23:26
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:26
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                      AND tech_support_ticket.id=1 AND category="1"   17.05.2011 23:26
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:28
+info   SELECT * FROM personal_account WHERE id=1  17.05.2011 23:28
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:28
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                      AND tech_support_ticket.id=1 AND category="1"   17.05.2011 23:28
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:30
+info   SELECT * FROM personal_account WHERE id=1  17.05.2011 23:30
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:30
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                      AND tech_support_ticket.id=1 AND category="request_master"   17.05.2011 23:30
+info   SELECT * FROM tech_support_post WHERE ticket_id=1 ORDER BY date_question  17.05.2011 23:30
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:31
+info   SELECT * FROM personal_account WHERE id=1  17.05.2011 23:31
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:31
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                      AND tech_support_ticket.id=1 AND category="request_master"   17.05.2011 23:31
+info   SELECT * FROM tech_support_post WHERE ticket_id=1 ORDER BY date_question  17.05.2011 23:31
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:32
+info   SELECT * FROM personal_account WHERE id=1  17.05.2011 23:32
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:32
+info   SELECT tech_support_ticket.id, personal_account_id, ticket_status_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                      AND tech_support_ticket.id=1 AND category="request_master"   17.05.2011 23:32
+info   SELECT * FROM tech_support_post WHERE ticket_id=1 ORDER BY date_question  17.05.2011 23:32
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:32
+info   UPDATE tech_support_post SET answer="Разберемся", date_answer=NOW(), answer_file="" WHERE ticket_id=1 AND id=1  17.05.2011 23:32
+info   UPDATE tech_support_ticket SET is_complete=1, tech_support_ticket_status_id=1 WHERE id=1  17.05.2011 23:32
+error   Can`t complit query: UPDATE tech_support_ticket SET is_complete=1, tech_support_ticket_status_id=1 WHERE id=1 No error: 1054:: Error msg: Unknown column 'is_complete' in 'field list' ;  17.05.2011 23:32
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:32
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:32
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:32
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:33
+info   SELECT * FROM personal_account WHERE id=1  17.05.2011 23:33
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:33
+info   SELECT tech_support_ticket.id, personal_account_id, ticket_status_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                      AND tech_support_ticket.id=1 AND category="request_master"   17.05.2011 23:33
+info   SELECT * FROM tech_support_post WHERE ticket_id=1 ORDER BY date_question  17.05.2011 23:33
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:33
+info   UPDATE tech_support_post SET answer="Разберемся", date_answer=NOW(), answer_file="" WHERE ticket_id=1 AND id=1  17.05.2011 23:33
+info   UPDATE tech_support_ticket SET tech_support_ticket_status_id=1 WHERE id=1  17.05.2011 23:33
+error   Can`t complit query: UPDATE tech_support_ticket SET tech_support_ticket_status_id=1 WHERE id=1 No error: 1054:: Error msg: Unknown column 'tech_support_ticket_status_id' in 'field list' ;  17.05.2011 23:33
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:33
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:33
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:33
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:34
+info   SELECT * FROM personal_account WHERE id=1  17.05.2011 23:34
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:34
+info   SELECT tech_support_ticket.id, personal_account_id, ticket_status_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                      AND tech_support_ticket.id=1 AND category="request_master"   17.05.2011 23:34
+info   SELECT * FROM tech_support_post WHERE ticket_id=1 ORDER BY date_question  17.05.2011 23:34
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:34
+info   UPDATE tech_support_post SET answer="Разберемся", date_answer=NOW(), answer_file="" WHERE ticket_id=1 AND id=1  17.05.2011 23:34
+info   UPDATE tech_support_ticket SET ticket_status_id=1 WHERE id=1  17.05.2011 23:34
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:34
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:34
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:34
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:34
+info   SELECT * FROM personal_account WHERE id=1  17.05.2011 23:34
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:34
+info   SELECT tech_support_ticket.id, personal_account_id, ticket_status_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                      AND tech_support_ticket.id=1 AND category="request_master"   17.05.2011 23:34
+info   SELECT * FROM tech_support_post WHERE ticket_id=1 ORDER BY date_question  17.05.2011 23:34
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:34
+info   UPDATE tech_support_post SET answer="Разберемся", date_answer=NOW(), answer_file="" WHERE ticket_id=1 AND id=1  17.05.2011 23:34
+info   UPDATE tech_support_ticket SET ticket_status_id=2 WHERE id=1  17.05.2011 23:34
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:34
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:34
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:34
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:35
+info   SELECT * FROM personal_account  17.05.2011 23:35
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:35
+info   INSERT INTO tech_support_ticket(personal_account_id, title, date, category, ticket_status_id) 
+                        VALUES(0, "1", "2011-05-17 23:35:17", "Array", 1)  17.05.2011 23:35
+error   Can`t complit query: INSERT INTO tech_support_ticket(personal_account_id, title, date, category, ticket_status_id) 
+                        VALUES(0, "1", "2011-05-17 23:35:17", "Array", 1) No error: 1452:: Error msg: Cannot add or update a child row: a foreign key constraint fails (`dnevnik_gkh_site_db`.`tech_support_ticket`, CONSTRAINT `fk_tech_support_ticket_personal_account1` FOREIGN KEY (`personal_account_id`) REFERENCES `personal_account` (`id`) ON DELETE NO ACTION ) ;  17.05.2011 23:35
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:35
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:35
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:35
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:36
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:36
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="question" ORDER BY rating DESC, date DESC  17.05.2011 23:36
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:36
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:36
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:36
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:36
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:36
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="question" ORDER BY rating DESC, date DESC  17.05.2011 23:36
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:37
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:37
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="question" ORDER BY rating DESC, date DESC  17.05.2011 23:37
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:37
+info   SELECT * FROM personal_account WHERE id=1  17.05.2011 23:37
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:37
+info   SELECT tech_support_ticket.id, personal_account_id, ticket_status_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                      AND tech_support_ticket.id=2 AND category="question"   17.05.2011 23:37
+info   SELECT * FROM tech_support_post WHERE ticket_id=2 ORDER BY date_question  17.05.2011 23:37
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:37
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:37
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:37
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:37
+info   SELECT * FROM personal_account WHERE id=1  17.05.2011 23:37
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:37
+info   SELECT tech_support_ticket.id, personal_account_id, ticket_status_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                      AND tech_support_ticket.id=1 AND category="request_master"   17.05.2011 23:37
+info   SELECT * FROM tech_support_post WHERE ticket_id=1 ORDER BY date_question  17.05.2011 23:37
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:38
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:38
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 23:38
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:38
+info   SELECT * FROM personal_account  17.05.2011 23:38
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:38
+info   SELECT * FROM tech_support_ticket_status  17.05.2011 23:38
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="question" ORDER BY rating DESC, date DESC  17.05.2011 23:38
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:38
+info   SELECT * FROM personal_account  17.05.2011 23:38

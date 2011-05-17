@@ -241,7 +241,7 @@ class gkh_tech_support_post extends gkh {
  
     private function _changeTicketStatus($id, $status, $status_id) {
         try {
-            $this->_db->query('UPDATE tech_support_ticket SET is_complete=' . $status . ', tech_support_ticket_status_id=' . $status_id . ' WHERE id=' . (int)$id);
+            $this->_db->query('UPDATE tech_support_ticket SET ticket_status_id=' . $status_id . ' WHERE id=' . (int)$id);
 
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);

@@ -5,7 +5,7 @@
 
 <h2>{$txt}</h2>
 
-<form action="?page={$page}&action={$action}{if edit}&id={$conpage.id}{/if}" method="post">
+<form action="?page={$page}&action={$action}{if edit}&id={$conpage.id}{/if}" method="post" enctype="multipart/form-data">
     <table>
         <tr>
             <td width="200">Название страницы (англ)</td>
@@ -18,6 +18,14 @@
         <tr>
             <td>Текст</td>
             <td><textarea name="data[content]">{$conpage.content}</textarea></td>
+        </tr>
+        <tr>
+            <td>Прикрепить файл</td>
+            <td>
+                {if $conpage.file}<a href="{$siteurl}temp_files/{$conpage.file}" target="_blank">Файл</a>&nbsp;<a href="?page={$page}&action=del_pic&id={$conpage.id}">удалить</a> {/if}
+                <input type="file" name="file" />
+            </td>
+        
         </tr>
     </table>
     <input id="save" name="save" type="submit" value="Сохранить" />

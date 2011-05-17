@@ -2,7 +2,6 @@
 /* 
  CREATE TABLE IF NOT EXISTS `content_page` (
   `id` int(11) NOT NULL,
-  `management_company_id` ,
   `page_title` varchar(40) NOT NULL DEFAULT 'английское название для системы',
   `title` varchar(255) NOT NULL,
   `content` text,
@@ -13,26 +12,10 @@
 
  */
 
-class gkh_content_page_site extends gkh {
+class gkh_content_page_site extends gkh_content_page {
 
-    protected $_management_company;
-
-    public function  __construct($management_company) {
+    public function  __construct() {
         parent::__construct();
-        
-        $this->_management_company = $management_company;
-    }
-
-    public function getAllContentPage() {
-        try {
-            $sql = 'SELECT * FROM content_page WHERE management_company_id=' . $this->_management_company;
-            $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
-            if (isset($result[0])) {
-                return $result;
-            } else return false;
-        } catch (Exception $e) {
-            simo_exception::registrMsg($e, $this->_debug);
-        }
     }
 
     public function getContentPage($id) {
@@ -48,12 +31,9 @@ class gkh_content_page_site extends gkh {
     }
 
     public function addContentPage($data) {
+        parent::addContentPage($data);
         try {
-            $data = $this->_db->prepareArray($data);
-            $sql = 'INSERT INTO content_page(management_company_id, page_title, title, content) 
-                    VALUES(' . $this->_management_company . ', "' . $data['page_title'] . '", "' . $data['title'] . '", "' . $data['content'] . '")';
-            $this->_db->query($sql);
-            
+                        
             $sql = 'SELECT LAST_INSERT_ID()';
             $temp_id = $this->_db->query($sql);
 
@@ -61,7 +41,7 @@ class gkh_content_page_site extends gkh {
             
             if ($file != 'NULL') {
                 $sql = 'UPDATE content_page SET file="' . $file . '" 
-                        WHERE management_company_id=' . $this->_management_company . ' AND id=' . (int)$temp_id[0][0];
+                        WHERE id=' . (int)$temp_id[0][0];
                 $this->_db->query($sql);
             }            
         } catch (Exception $e) {
@@ -70,29 +50,29 @@ class gkh_content_page_site extends gkh {
     }
 
     public function updateContentPage($id, $data) {
-        try {
-            $data = $this->_db->prepareArray($data);
-            
+        parent::updateContentPage($id, $data);
+        try {            
             $file = $this->_uploadFile($id);
-            
-            $sql = 'UPDATE content_page 
-                    SET page_title="' . $data['page_title'] . '", title="' . $data['title'] . '", content="' . $data['content'] . '" ';
-            
             if ($file != 'NULL') {
-                $sql .= ', file="' . $file . '" ';
-            }
-            
-            $sql .= ' WHERE management_company_id=' . $this->_management_company . ' AND id=' . (int)$id;
+            $sql = 'UPDATE content_page 
+                    SET file="' . $file . '" WHERE id=' . (int)$id;
             
             $this->_db->query($sql);
+            }
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
         }
     }
-
-    public function deleteContentPage($id) {
+    
+    public function deleteFile($id) {
+        global $__cfg;
         try {
-            $sql = 'DELETE FROM content_page WHERE management_company_id=' . $this->_management_company . ' AND id=' . (int)$id;
+            $temp = $this->getContentPage($id);
+            simo_functions::_delFile($__cfg['temp.public.dir'] . $temp['file']);
+            
+            $sql = 'UPDATE content_page 
+                    SET file=NULL WHERE id=' . (int)$id;
+            
             $this->_db->query($sql);
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
@@ -113,7 +93,7 @@ class gkh_content_page_site extends gkh {
                     $result = copy($file['tmp_name'], $__cfg['temp.public.dir'] . $temp_file_name);
                     chmod($__cfg['temp.public.dir'] . $temp_file_name, 0766);
 
-                    $resstr .= $temp_file_name . ';';
+                    $resstr .= $temp_file_name;
                     $i++;
                 }
             }

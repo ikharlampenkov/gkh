@@ -43,9 +43,10 @@ class gkh_tech_support_post_site extends gkh_tech_support_post {
                            AND personal_account_id=' . $this->_personal_account .' 
                            AND category="' . $category . '"';
             } else {
-                $sql .= 'SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
-                         FROM tech_support_ticket, tech_support_ticket_status
+                $sql .= 'SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
                          WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
                            AND category="' . $category . '"';
             }
             $sql .= ' ORDER BY rating DESC, date DESC';
@@ -60,7 +61,7 @@ class gkh_tech_support_post_site extends gkh_tech_support_post {
 
     public function getTicket($id, $category) {
         try {
-            $sql = 'SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+            $sql = 'SELECT tech_support_ticket.id, personal_account_id, ticket_status_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
                     FROM tech_support_ticket, tech_support_ticket_status  
                     WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
                       AND tech_support_ticket.id=' . (int)$id . ' AND category="' . $category . '" ';

@@ -23,12 +23,13 @@ class simo_functions
 
   static public function _delFile($fname){
     global $__cfg;
-    if (file_exists($__cfg['site.dir'] . $fname) && is_file($__cfg['site.dir'] . $fname)) {
+    if (file_exists($fname) && is_file($fname)) {
       simo_log::logMsg('Удален файл: ' . $fname, simo_log::SIMO_LOG_INFO);
-      unlink($__cfg['site.dir'] . $fname);
+      unlink($fname);
       return true;
+    } else {
+        throw Exception('Не возможно удалить файл');
     }
-    return false;
   }
 
   static public function generateUniq($number = 8, $type = 'str'){
