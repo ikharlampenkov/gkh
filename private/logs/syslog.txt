@@ -5427,3 +5427,1204 @@ info   SELECT news.id, news_category_id, date, news.title, short_text, full_text
                     FROM news, news_category
                     WHERE news.news_category_id=news_category.id  ORDER BY date DESC
                       LIMIT 5  13.05.2011 22:46
+error   Can`t select db dnevnik_gkh_site_dbNo error: 1044:: Error msg: Access denied for user 'gkx_user'@'localhost' to database 'dnevnik_gkh_site_db' ;  16.05.2011 20:46
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="ten"  16.05.2011 20:48
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 20:48
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 21:16
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 21:16
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 21:16
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 21:16
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 21:30
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 21:31
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 21:31
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 21:32
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:36
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:36
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=  16.05.2011 22:36
+error   Can`t complit query: SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id= No error: 1064:: Error msg: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 3 ;  16.05.2011 22:36
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:38
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:38
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:38
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:38
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:38
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:38
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:39
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:39
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:39
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:39
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:39
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:39
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:39
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:39
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:39
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:41
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:41
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:41
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:41
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:41
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:41
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:41
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:41
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:41
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:42
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:42
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:42
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:42
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:42
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:42
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:42
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:42
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:42
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:42
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:42
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:42
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:42
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:42
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:42
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:45
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:45
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:45
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:45
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1", "%Y-%m")  16.05.2011 22:45
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:45
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:45
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:45
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:45
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:45
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:45
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:45
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:45
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:46
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:46
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:46
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:46
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:46
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:46
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:46
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:46
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:46
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:46
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:46
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:46
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:47
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:47
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:47
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("1302886800", "%Y-%m")  16.05.2011 22:47
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:48
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:48
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:48
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:48
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:48
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:48
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:48
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:48
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:48
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:48
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:48
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:48
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:48
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:48
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:48
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:48
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:50
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:50
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:50
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:50
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:50
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:51
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:51
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:51
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:51
+info   REPLACE meters_value(personal_account_id, meters_id, date, value) 
+                                      VALUES(1, 1, "2011-05-16", 100)  16.05.2011 22:51
+info   REPLACE meters_value(personal_account_id, meters_id, date, value) 
+                                      VALUES(1, 2, "2011-05-16", 5)  16.05.2011 22:51
+info   REPLACE meters_value(personal_account_id, meters_id, date, value) 
+                                      VALUES(1, 3, "2011-05-16", 6)  16.05.2011 22:51
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:51
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:51
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:51
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:51
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:51
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:51
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:51
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:51
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:51
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:51
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:51
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:51
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:51
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:51
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:51
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:51
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:52
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:52
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:52
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:52
+info   REPLACE meters_value(personal_account_id, meters_id, date, value) 
+                                      VALUES(1, 1, "2011-05-16", 100.000)  16.05.2011 22:52
+info   REPLACE meters_value(personal_account_id, meters_id, date, value) 
+                                      VALUES(1, 2, "2011-05-16", 5.000)  16.05.2011 22:52
+info   REPLACE meters_value(personal_account_id, meters_id, date, value) 
+                                      VALUES(1, 3, "2011-05-16", 6.500)  16.05.2011 22:52
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:52
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:52
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 22:52
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 22:52
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-16", "%Y-%m")  16.05.2011 22:52
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:13
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:13
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:25
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:25
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="" ORDER BY rating DESC, date DESC  16.05.2011 23:25
+error   Can`t complit query: SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="" ORDER BY rating DESC, date DESC No error: 1054:: Error msg: Unknown column 'tech_support_ticket.tech_support_ticket_status_id' in 'where clause' ;  16.05.2011 23:25
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:30
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:30
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="reqaest_master" ORDER BY rating DESC, date DESC  16.05.2011 23:30
+error   Can`t complit query: SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="reqaest_master" ORDER BY rating DESC, date DESC No error: 1054:: Error msg: Unknown column 'tech_support_ticket.tech_support_ticket_status_id' in 'where clause' ;  16.05.2011 23:30
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:30
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:30
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="reqaest_master" ORDER BY rating DESC, date DESC  16.05.2011 23:30
+error   Can`t complit query: SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.tech_support_ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="reqaest_master" ORDER BY rating DESC, date DESC No error: 1054:: Error msg: Unknown column 'tech_support_ticket.tech_support_ticket_status_id' in 'where clause' ;  16.05.2011 23:30
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:33
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:33
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="reqaest_master" ORDER BY rating DESC, date DESC  16.05.2011 23:33
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:34
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:34
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="reqaest_master" ORDER BY rating DESC, date DESC  16.05.2011 23:34
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:39
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:39
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="reqaest_master" ORDER BY rating DESC, date DESC  16.05.2011 23:39
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:39
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:39
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:39
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:39
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="reqaest_master" ORDER BY rating DESC, date DESC  16.05.2011 23:39
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:39
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:39
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="question" ORDER BY rating DESC, date DESC  16.05.2011 23:39
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:39
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:39
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  16.05.2011 23:39
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:40
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:40
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:40
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:40
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  16.05.2011 23:40
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:48
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:48
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  16.05.2011 23:48
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:48
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:48
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="question" ORDER BY rating DESC, date DESC  16.05.2011 23:48
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:48
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:48
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  16.05.2011 23:48
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:49
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:49
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  16.05.2011 23:49
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:49
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:49
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:49
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:49
+info   INSERT INTO tech_support_ticket(personal_account_id, title, date, category, tech_support_ticket_status_id) 
+                        VALUES(1, "Бежит батарея", "2011-05-16 23:49:52", request_master, 1)  16.05.2011 23:49
+error   Can`t complit query: INSERT INTO tech_support_ticket(personal_account_id, title, date, category, tech_support_ticket_status_id) 
+                        VALUES(1, "Бежит батарея", "2011-05-16 23:49:52", request_master, 1) No error: 1054:: Error msg: Unknown column 'tech_support_ticket_status_id' in 'field list' ;  16.05.2011 23:49
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:49
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:49
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  16.05.2011 23:49
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:50
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:50
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:50
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:50
+info   INSERT INTO tech_support_ticket(personal_account_id, title, date, category, tech_support_ticket_status_id) 
+                        VALUES(1, "Бежит батарея", "2011-05-16 23:50:27", "request_master", 1)  16.05.2011 23:50
+error   Can`t complit query: INSERT INTO tech_support_ticket(personal_account_id, title, date, category, tech_support_ticket_status_id) 
+                        VALUES(1, "Бежит батарея", "2011-05-16 23:50:27", "request_master", 1) No error: 1054:: Error msg: Unknown column 'tech_support_ticket_status_id' in 'field list' ;  16.05.2011 23:50
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:50
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:50
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  16.05.2011 23:50
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:50
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:50
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:51
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:51
+info   INSERT INTO tech_support_ticket(personal_account_id, title, date, category, ticket_status_id) 
+                        VALUES(1, "Бежит батарея", "2011-05-16 23:51:04", "request_master", 1)  16.05.2011 23:51
+error   Can`t complit query: INSERT INTO tech_support_ticket(personal_account_id, title, date, category, ticket_status_id) 
+                        VALUES(1, "Бежит батарея", "2011-05-16 23:51:04", "request_master", 1) No error: 1366:: Error msg: Incorrect integer value: 'request_master' for column 'category' at row 1 ;  16.05.2011 23:51
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:51
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:51
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  16.05.2011 23:51
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:52
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:52
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  16.05.2011 23:52
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:52
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:52
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                      AND tech_support_ticket.id=1 AND category="request_master"  AND personal_account_id=1  16.05.2011 23:52
+info   SELECT * FROM tech_support_post WHERE ticket_id=1 ORDER BY date_question  16.05.2011 23:52
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:52
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:52
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  16.05.2011 23:52
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:53
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:53
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  16.05.2011 23:53
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:55
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:55
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  16.05.2011 23:55
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:55
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:55
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="question" ORDER BY rating DESC, date DESC  16.05.2011 23:55
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:55
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:55
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:55
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:55
+info   INSERT INTO tech_support_ticket(personal_account_id, title, date, category, ticket_status_id) 
+                        VALUES(1, "Первый вопрос", "2011-05-16 23:55:32", "question", 1)  16.05.2011 23:55
+info   SELECT LAST_INSERT_ID()  16.05.2011 23:55
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:56
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:56
+info   INSERT INTO tech_support_ticket(personal_account_id, title, date, category, ticket_status_id) 
+                        VALUES(1, "Первый вопрос", "2011-05-16 23:56:10", "question", 1)  16.05.2011 23:56
+info   SELECT LAST_INSERT_ID()  16.05.2011 23:56
+info   INSERT INTO tech_support_post(ticket_id, question, date_question, file) 
+                        VALUES(3, "Первый вопрос", "2011-05-16 23:56:10", "")  16.05.2011 23:56
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:56
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:56
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  16.05.2011 23:56
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:56
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:56
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  16.05.2011 23:56
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:56
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:56
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  16.05.2011 23:56
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:56
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:56
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="question" ORDER BY rating DESC, date DESC  16.05.2011 23:56
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:57
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:57
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  16.05.2011 23:57
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:57
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:57
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:58
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:58
+info   INSERT INTO tech_support_ticket(personal_account_id, title, date, category, ticket_status_id) 
+                        VALUES(1, "Бежит батарея", "2011-05-16 23:58:03", "request_master", 1)  16.05.2011 23:58
+info   SELECT LAST_INSERT_ID()  16.05.2011 23:58
+info   INSERT INTO tech_support_post(ticket_id, question, date_question, file) 
+                        VALUES(1, "Бежит батарея", "2011-05-16 23:58:03", "")  16.05.2011 23:58
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:58
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:58
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  16.05.2011 23:58
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:58
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:58
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="question" ORDER BY rating DESC, date DESC  16.05.2011 23:58
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:58
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:58
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:58
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:58
+info   INSERT INTO tech_support_ticket(personal_account_id, title, date, category, ticket_status_id) 
+                        VALUES(1, "Почему редко вывозят мусор с территории?", "2011-05-16 23:58:36", "question", 1)  16.05.2011 23:58
+info   SELECT LAST_INSERT_ID()  16.05.2011 23:58
+info   INSERT INTO tech_support_post(ticket_id, question, date_question, file) 
+                        VALUES(2, "Почему редко вывозят мусор с территории?", "2011-05-16 23:58:36", "")  16.05.2011 23:58
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:58
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:58
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  16.05.2011 23:58
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:59
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:59
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  16.05.2011 23:59
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:59
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:59
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                      AND tech_support_ticket.id=1 AND category="request_master"  AND personal_account_id=1  16.05.2011 23:59
+info   SELECT * FROM tech_support_post WHERE ticket_id=1 ORDER BY date_question  16.05.2011 23:59
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:59
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:59
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:59
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:59
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  16.05.2011 23:59
+info   SELECT password FROM user WHERE login="ten"  16.05.2011 23:59
+info   SELECT * FROM personal_account WHERE user_id=2  16.05.2011 23:59
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                      AND tech_support_ticket.id=1 AND category="request_master"  AND personal_account_id=1  16.05.2011 23:59
+info   SELECT * FROM tech_support_post WHERE ticket_id=1 ORDER BY date_question  16.05.2011 23:59
+info   SELECT password FROM user WHERE login="ten"  17.05.2011 00:00
+info   SELECT * FROM personal_account WHERE user_id=2  17.05.2011 00:00
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="question" ORDER BY rating DESC, date DESC  17.05.2011 00:00
+info   SELECT password FROM user WHERE login="ten"  17.05.2011 00:00
+info   SELECT * FROM personal_account WHERE user_id=2  17.05.2011 00:00
+info   SELECT password FROM user WHERE login="ten"  17.05.2011 00:00
+info   SELECT * FROM personal_account WHERE user_id=2  17.05.2011 00:00
+info   SELECT password FROM user WHERE login="ten"  17.05.2011 00:06
+info   SELECT * FROM personal_account WHERE user_id=2  17.05.2011 00:06
+info   SELECT password FROM user WHERE login="ten"  17.05.2011 00:06
+info   SELECT * FROM personal_account WHERE user_id=2  17.05.2011 00:06
+info   SELECT password FROM user WHERE login="ten"  17.05.2011 00:06
+info   SELECT * FROM personal_account WHERE user_id=2  17.05.2011 00:06
+info   SELECT password FROM user WHERE login="ten"  17.05.2011 00:06
+info   SELECT * FROM personal_account WHERE user_id=2  17.05.2011 00:06
+info   SELECT password FROM user WHERE login="ten"  17.05.2011 00:06
+info   SELECT * FROM personal_account WHERE user_id=2  17.05.2011 00:06
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  17.05.2011 00:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-17", "%Y-%m")  17.05.2011 00:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-17", "%Y-%m")  17.05.2011 00:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-17", "%Y-%m")  17.05.2011 00:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-17", "%Y-%m")  17.05.2011 00:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-17", "%Y-%m")  17.05.2011 00:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-17", "%Y-%m")  17.05.2011 00:06
+info   SELECT password FROM user WHERE login="ten"  17.05.2011 00:06
+info   SELECT * FROM personal_account WHERE user_id=2  17.05.2011 00:06
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  17.05.2011 00:06
+info   SELECT password FROM user WHERE login="ten"  17.05.2011 00:06
+info   SELECT * FROM personal_account WHERE user_id=2  17.05.2011 00:06
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="question" ORDER BY rating DESC, date DESC  17.05.2011 00:06
+info   SELECT password FROM user WHERE login="ten"  17.05.2011 00:06
+info   SELECT * FROM personal_account WHERE user_id=2  17.05.2011 00:06
+info   SELECT password FROM user WHERE login="ten"  17.05.2011 00:06
+info   SELECT * FROM personal_account WHERE user_id=2  17.05.2011 00:06
+info   SELECT password FROM user WHERE login="ten"  17.05.2011 00:06
+info   SELECT * FROM personal_account WHERE user_id=2  17.05.2011 00:06
+info   SELECT password FROM user WHERE login="ten"  17.05.2011 00:10
+info   SELECT * FROM personal_account WHERE user_id=2  17.05.2011 00:10

@@ -171,6 +171,14 @@ class share_user_site extends share_user {
             return false;
         }
     }
+    
+    static public function getUserId() {
+        if (simo_session::existVar('id', 'user')) {
+            return simo_session::getVar('id', 'user');
+        } else {
+            return 0;
+        }
+    } 
 
     public function __destruct() {
         parent::__destruct();
