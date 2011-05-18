@@ -29,7 +29,7 @@ if ($page == 'content_page') {
         $o_content_page->deleteContentPage($_GET['id']);
         simo_functions::chLocation('?page=' . $page);
     } elseif ($action == 'del_pic') {
-        $o_content_page->deleteFile($_GET['id']);
+        $o_content_page->deleteFile($_GET['id'], $_GET['fname']);
         simo_functions::chLocation('?page=' . $page . '&action=edit&id=' . $_GET['id']);        
     } else {
         $o_smarty->assign('conpage_list', $o_content_page->getAllContentPage());
@@ -114,6 +114,36 @@ if ($page == 'news') {
         $o_smarty->assign('news_category_list', $o_news->getAllNewsCategory());
         $o_smarty->assign('news_list', $o_news->getAllNews(gkh_news::ANY_CATEGORY, $cur_page));
         $o_smarty->assign('page_info', $o_news->getPageInfo(gkh_news::ANY_CATEGORY, $cur_page));
+    }
+}
+
+if ($page == 'meters') {
+
+    $o_meters = new gkh_meters(0);
+
+    if ($action == 'add') {
+        if (isset($_POST['data'])) {
+            $o_meters->addMeters($_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('txt', 'Добавить счетчик');
+    } elseif ($action == 'edit' && isset($_GET['id'])) {
+
+        if (isset($_POST['data'])) {
+            $o_meters->updateMeters($_GET['id'], $_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('txt', 'Редактировать счетчик');
+        $o_smarty->assign('meter', $o_meters->getMeters($_GET['id']));
+    } elseif ($action == 'del') {
+        $o_meters->deleteMeters($_GET['id']);
+        simo_functions::chLocation('?page=' . $page);
+    } else {
+        $o_smarty->assign('meters_list', $o_meters->getAllMeters());
     }
 }
 

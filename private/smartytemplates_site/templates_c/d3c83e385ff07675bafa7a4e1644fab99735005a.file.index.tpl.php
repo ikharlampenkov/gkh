@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-17 22:11:58
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-18 12:20:43
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/admin/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:84624dd2903edfb097-35844895%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:198464dd3572be59511-03897938%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd3c83e385ff07675bafa7a4e1644fab99735005a' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/admin/index.tpl',
-      1 => 1305640724,
+      1 => 1305695103,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '84624dd2903edfb097-35844895',
+  'nocache_hash' => '198464dd3572be59511-03897938',
   'function' => 
   array (
   ),
@@ -95,34 +95,13 @@ textarea {
                     <a href="?page=news">Новости</a><br /><br />
                     <a href="?page=meters">Счетчики</a><br /><br />
                     <a href="?page=support&category=request_master">Заявка на вызов мастера</a><br /><br />
-                    <a href="?page=support&category=question">Задать вопрос</a><br /><br />
-                    <a href="?page=appointment">Записаться на прием</a><br /><br />
-                       
-
+                    <a href="?page=support&category=question">Задать вопрос</a><br /><br />                   
                 </td>
                 <td>
 
-                    <?php if (isset($_smarty_tpl->getVariable('page',null,true,false)->value)){?>
-                        <?php if ($_smarty_tpl->getVariable('page')->value=="content_page"){?>
-                            <?php $_template = new Smarty_Internal_Template("admin/content_page.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
- echo $_template->getRenderedTemplate();?><?php unset($_template);?>
-                        <?php }?>
-                        <?php if ($_smarty_tpl->getVariable('page')->value=="news"){?>
-                            <?php $_template = new Smarty_Internal_Template("admin/news.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
- echo $_template->getRenderedTemplate();?><?php unset($_template);?>
-                        <?php }?>
-                        <?php if ($_smarty_tpl->getVariable('page')->value=="meters"){?>
-                            <?php $_template = new Smarty_Internal_Template("admin/meters.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
- echo $_template->getRenderedTemplate();?><?php unset($_template);?>
-                        <?php }?>
-                        <?php if ($_smarty_tpl->getVariable('page')->value=="support"){?>
-                            <?php $_template = new Smarty_Internal_Template("admin/support.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
- echo $_template->getRenderedTemplate();?><?php unset($_template);?>
-                        <?php }?>
-                        <?php if ($_smarty_tpl->getVariable('page')->value=="appointment"){?>
-                            <?php $_template = new Smarty_Internal_Template("admin/appointment.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
- echo $_template->getRenderedTemplate();?><?php unset($_template);?>
-                        <?php }?>
+                    <?php if (isset($_smarty_tpl->getVariable('page',null,true,false)->value)&&!empty($_smarty_tpl->getVariable('page',null,true,false)->value)){?>
+                        <?php $_template = new Smarty_Internal_Template("admin/".($_smarty_tpl->getVariable('page')->value).".tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
+ echo $_template->getRenderedTemplate();?><?php unset($_template);?>                        
                     <?php }?>
 
                 </td>

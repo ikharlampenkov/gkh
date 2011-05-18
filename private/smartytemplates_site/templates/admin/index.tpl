@@ -73,29 +73,12 @@ textarea {
                     <a href="?page=news">Новости</a><br /><br />
                     <a href="?page=meters">Счетчики</a><br /><br />
                     <a href="?page=support&category=request_master">Заявка на вызов мастера</a><br /><br />
-                    <a href="?page=support&category=question">Задать вопрос</a><br /><br />
-                    <a href="?page=appointment">Записаться на прием</a><br /><br />
-                       
-
+                    <a href="?page=support&category=question">Задать вопрос</a><br /><br />                   
                 </td>
                 <td>
 
-                    {if isset($page)}
-                        {if $page=="content_page"}
-                            {include file="admin/content_page.tpl"}
-                        {/if}
-                        {if $page=="news"}
-                            {include file="admin/news.tpl"}
-                        {/if}
-                        {if $page=="meters"}
-                            {include file="admin/meters.tpl"}
-                        {/if}
-                        {if $page=="support"}
-                            {include file="admin/support.tpl"}
-                        {/if}
-                        {if $page=="appointment"}
-                            {include file="admin/appointment.tpl"}
-                        {/if}
+                    {if isset($page) && !empty($page)}
+                        {include file="admin/$page.tpl"}                        
                     {/if}
 
                 </td>

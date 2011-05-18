@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-17 00:06:39
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-18 12:04:10
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/cabinet/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:165844dd1599fb91998-27627543%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:23264dd3534a589020-97789359%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ee775e62a317cd52355306397de7f90039ef34c1' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/cabinet/index.tpl',
-      1 => 1305565241,
+      1 => 1305695047,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '165844dd1599fb91998-27627543',
+  'nocache_hash' => '23264dd3534a589020-97789359',
   'function' => 
   array (
   ),
@@ -94,39 +94,15 @@ textarea {
                     <a href="?page=receipt">Электронная квитанция</a><br /><br />
                     <a href="?page=balance">Баланс платежей</a><br /><br />
                     <a href="?page=meters">Показания счетчиков</a><br /><br />
+                    <a href="?page=payment">Оплата услуг</a><br /><br />
                     <a href="?page=support&category=request_master">Заявка на вызов мастера</a><br /><br />
                     <a href="?page=support&category=question">Задать вопрос</a><br /><br />
-                    <a href="?page=appointment">Записаться на прием</a><br /><br />
-                    <a href="?page=payment">Оплата услуг</a><br /><br />
-
                 </td>
                 <td>
 
-                    <?php if (isset($_smarty_tpl->getVariable('page',null,true,false)->value)){?>
-                        <?php if ($_smarty_tpl->getVariable('page')->value=="receipt"){?>
-                            <?php $_template = new Smarty_Internal_Template("cabinet/receipt.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
- echo $_template->getRenderedTemplate();?><?php unset($_template);?>
-                        <?php }?>
-                        <?php if ($_smarty_tpl->getVariable('page')->value=="balance"){?>
-                            <?php $_template = new Smarty_Internal_Template("cabinet/balance.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
- echo $_template->getRenderedTemplate();?><?php unset($_template);?>
-                        <?php }?>
-                        <?php if ($_smarty_tpl->getVariable('page')->value=="meters"){?>
-                            <?php $_template = new Smarty_Internal_Template("cabinet/meters.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
- echo $_template->getRenderedTemplate();?><?php unset($_template);?>
-                        <?php }?>
-                        <?php if ($_smarty_tpl->getVariable('page')->value=="support"){?>
-                            <?php $_template = new Smarty_Internal_Template("cabinet/support.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
- echo $_template->getRenderedTemplate();?><?php unset($_template);?>
-                        <?php }?>
-                        <?php if ($_smarty_tpl->getVariable('page')->value=="appointment"){?>
-                            <?php $_template = new Smarty_Internal_Template("cabinet/appointment.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
- echo $_template->getRenderedTemplate();?><?php unset($_template);?>
-                        <?php }?>
-                        <?php if ($_smarty_tpl->getVariable('page')->value=="payment"){?>
-                            <?php $_template = new Smarty_Internal_Template("cabinet/payment.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
- echo $_template->getRenderedTemplate();?><?php unset($_template);?>
-                        <?php }?>
+                    <?php if (isset($_smarty_tpl->getVariable('page',null,true,false)->value)&&!empty($_smarty_tpl->getVariable('page',null,true,false)->value)){?>
+                        <?php $_template = new Smarty_Internal_Template("cabinet/".($_smarty_tpl->getVariable('page')->value).".tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
+ echo $_template->getRenderedTemplate();?><?php unset($_template);?>                        
                     <?php }?>
 
                 </td>

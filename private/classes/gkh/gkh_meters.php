@@ -72,6 +72,62 @@ class gkh_meters extends gkh {
 
         $this->_personal_account = $personal_account;
     }
+    
+    public function getAllMeters() {
+        try {
+            $sql = 'SELECT * FROM meters';
+            $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
+            if (isset($result[0])) {
+                return $result;
+            } else
+                return false;
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+        }
+    }
+
+    public function getMeters($id) {
+        try {
+            $sql = 'SELECT * FROM meters WHERE id=' . (int) $id;
+            $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
+            if (isset($result[0])) {
+                return $result[0];
+            } else
+                return false;
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+        }
+    }
+
+    public function addMeters($data) {
+        try {
+            $data = $this->_db->prepareArray($data);
+
+            $sql = 'INSERT INTO meters(title, rate) VALUES("' . $data['title'] . '", ' . $data['rate'] . ')';
+            $this->_db->query($sql);
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+        }
+    }
+
+    public function updateMeters($id, $data) {
+        try {
+            $data = $this->_db->prepareArray($data);
+            $sql = 'UPDATE meters SET title="' . $data['title'] . '", rate=' . $data['rate'] . ' WHERE id=' . (int) $id;
+            $this->_db->query($sql);
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+        }
+    }
+
+    public function deleteMeters($id) {
+        try {
+            $sql = 'DELETE FROM meters WHERE id=' . (int) $id;
+            $this->_db->query($sql);
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+        }
+    }
 
     public function getMetersByUser($date) {
         try {

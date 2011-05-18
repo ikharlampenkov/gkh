@@ -7168,3 +7168,235 @@ info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.t
                            AND category="question" ORDER BY rating DESC, date DESC  17.05.2011 23:38
 info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:38
 info   SELECT * FROM personal_account  17.05.2011 23:38
+info   SELECT password FROM user WHERE login="admin"  17.05.2011 23:40
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  18.05.2011 10:47
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  18.05.2011 10:47
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  18.05.2011 10:47
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  18.05.2011 10:47
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="admin"  18.05.2011 11:53
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 11:53
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 11:53
+info   SELECT * FROM content_page  18.05.2011 11:53
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 11:53
+info   SELECT * FROM news_category  18.05.2011 11:53
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  18.05.2011 11:53
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   18.05.2011 11:53
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 12:01
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 12:01
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 12:03
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 12:03
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 12:03
+info   SELECT * FROM tech_support_ticket_status  18.05.2011 12:03
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  18.05.2011 12:03
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 12:03
+info   SELECT * FROM tech_support_ticket_status  18.05.2011 12:03
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="question" ORDER BY rating DESC, date DESC  18.05.2011 12:03
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 12:03
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="ten"  18.05.2011 12:03
+info   SELECT password FROM user WHERE login="ten"  18.05.2011 12:03
+info   SELECT * FROM personal_account WHERE user_id=2  18.05.2011 12:03
+info   SELECT password FROM user WHERE login="ten"  18.05.2011 12:03
+info   SELECT * FROM personal_account WHERE user_id=2  18.05.2011 12:03
+info   SELECT password FROM user WHERE login="ten"  18.05.2011 12:03
+info   SELECT * FROM personal_account WHERE user_id=2  18.05.2011 12:03
+info   SELECT password FROM user WHERE login="ten"  18.05.2011 12:03
+info   SELECT * FROM personal_account WHERE user_id=2  18.05.2011 12:03
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  18.05.2011 12:03
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-18", "%Y-%m")  18.05.2011 12:03
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-18", "%Y-%m")  18.05.2011 12:03
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-18", "%Y-%m")  18.05.2011 12:03
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-18", "%Y-%m")  18.05.2011 12:03
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-18", "%Y-%m")  18.05.2011 12:03
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-18", "%Y-%m")  18.05.2011 12:03
+info   SELECT password FROM user WHERE login="ten"  18.05.2011 12:04
+info   SELECT * FROM personal_account WHERE user_id=2  18.05.2011 12:04
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  18.05.2011 12:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-18", "%Y-%m")  18.05.2011 12:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-18", "%Y-%m")  18.05.2011 12:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-18", "%Y-%m")  18.05.2011 12:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-18", "%Y-%m")  18.05.2011 12:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-18", "%Y-%m")  18.05.2011 12:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-18", "%Y-%m")  18.05.2011 12:04
+info   SELECT password FROM user WHERE login="ten"  18.05.2011 12:04
+info   SELECT * FROM personal_account WHERE user_id=2  18.05.2011 12:04
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  18.05.2011 12:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-18", "%Y-%m")  18.05.2011 12:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-18", "%Y-%m")  18.05.2011 12:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-18", "%Y-%m")  18.05.2011 12:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-18", "%Y-%m")  18.05.2011 12:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-18", "%Y-%m")  18.05.2011 12:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-18", "%Y-%m")  18.05.2011 12:04
+info   SELECT password FROM user WHERE login="ten"  18.05.2011 12:04
+info   SELECT * FROM personal_account WHERE user_id=2  18.05.2011 12:04
+info   SELECT password FROM user WHERE login="ten"  18.05.2011 12:20
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="admin"  18.05.2011 12:20
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 12:20
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 12:20
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 12:20
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 12:22
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 12:25
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 12:25
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  18.05.2011 12:25
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 12:52
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 12:56
+info   SELECT * FROM meters  18.05.2011 12:56
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 12:58
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 12:59
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 13:01
+info   INSERT INTO meters(title, rate) VALUES("Новый счетчик", 100)  18.05.2011 13:01
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 13:01
+info   SELECT * FROM meters  18.05.2011 13:01
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 13:01
+info   SELECT * FROM meters WHERE id=4  18.05.2011 13:01
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 13:01
+info   UPDATE meters SET title="Новый счетчик", rate=150 WHERE id=4  18.05.2011 13:01
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 13:01
+info   SELECT * FROM meters  18.05.2011 13:01
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 13:01
+info   DELETE FROM meters WHERE id=4  18.05.2011 13:01
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 13:01
+info   SELECT * FROM meters  18.05.2011 13:01
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 13:10
+info   SELECT * FROM content_page  18.05.2011 13:10
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 13:10
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 13:15
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 13:17
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:20
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:21
+info   INSERT INTO content_page(page_title, title, content) VALUES("santechrab", "Сантехнические работы", "Список сантехнических работ")  18.05.2011 17:21
+info   SELECT LAST_INSERT_ID()  18.05.2011 17:21
+info   UPDATE content_page SET file="2_18-05-2011-17-21-59_0.csv;2_18-05-2011-17-21-59_1.odt;" 
+                        WHERE id=2  18.05.2011 17:21
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:21
+info   SELECT * FROM content_page  18.05.2011 17:21
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:22
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:22
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:24
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:24
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:27
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:27
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:29
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:29
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:29
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:29
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:29
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:29
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:30
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:30
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:30
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:30
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:31
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:31
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:33
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:33
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:33
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:33
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:34
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:34
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:34
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:34
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:35
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:35
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:35
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:35
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:36
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:36
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:37
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:37
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:37
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:37
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:38
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:38
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:38
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:38
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:38
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:38
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:39
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:39
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:53
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:53
+info   Удален файл: H:/www/gkh/public/site_gkh/temp_files/2_18-05-2011-17-21-59_1.odt  18.05.2011 17:53
+info   UPDATE content_page 
+                        SET file="2_18-05-2011-17-21-59_0.csv" WHERE id=2  18.05.2011 17:53
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:53
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:53
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:53
+info   UPDATE content_page SET page_title="santechrab", title="Сантехнические работы", content="Список сантехнических работ" WHERE id=2  18.05.2011 17:53
+info   UPDATE content_page 
+                    SET file="2_18-05-2011-17-53-34_0.mwb" WHERE id=2  18.05.2011 17:53
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:53
+info   SELECT * FROM content_page  18.05.2011 17:53
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:53
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:53
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:56
+info   UPDATE content_page SET page_title="santechrab", title="Сантехнические работы", content="Список сантехнических работ" WHERE id=2  18.05.2011 17:56
+info   UPDATE content_page 
+                    SET file=CONCAT(file, ";2_18-05-2011-17-56-09_0.csv") WHERE id=2  18.05.2011 17:56
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:56
+info   SELECT * FROM content_page  18.05.2011 17:56
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:56
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:56
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:56
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:56
+info   Удален файл: H:/www/gkh/public/site_gkh/temp_files/2_18-05-2011-17-53-34_0.mwb  18.05.2011 17:56
+info   UPDATE content_page 
+                        SET file="2_18-05-2011-17-56-09_0.csv" WHERE id=2  18.05.2011 17:56
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:56
+info   SELECT * FROM content_page WHERE id=2 OR page_title="2"  18.05.2011 17:56
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:56
+info   UPDATE content_page SET page_title="santechrab", title="Сантехнические работы", content="Список сантехнических работ" WHERE id=2  18.05.2011 17:56
+info   UPDATE content_page 
+                    SET file=CONCAT(file, ";2_18-05-2011-17-56-42_0.mwb;2_18-05-2011-17-56-42_1.txt") WHERE id=2  18.05.2011 17:56
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:56
+info   SELECT * FROM content_page  18.05.2011 17:56
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:58
+info   SELECT * FROM content_page  18.05.2011 17:58
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:58
+info   SELECT * FROM news_category  18.05.2011 17:58
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  18.05.2011 17:58
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   18.05.2011 17:58
+info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:58
+info   SELECT * FROM meters  18.05.2011 17:58

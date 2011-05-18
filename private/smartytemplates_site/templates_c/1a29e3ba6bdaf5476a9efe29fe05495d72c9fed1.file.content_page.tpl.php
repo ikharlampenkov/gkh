@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-17 22:34:10
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-18 17:39:07
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/admin/content_page.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:62864dd29572703602-63407882%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:112214dd3a1cb584d19-05329502%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1a29e3ba6bdaf5476a9efe29fe05495d72c9fed1' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/admin/content_page.tpl',
-      1 => 1305646399,
+      1 => 1305715144,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '62864dd29572703602-63407882',
+  'nocache_hash' => '112214dd3a1cb584d19-05329502',
   'function' => 
   array (
   ),
@@ -48,12 +48,29 @@ $_smarty_tpl->decodeProperties(array (
         <tr>
             <td>Прикрепить файл</td>
             <td>
-                <?php if ($_smarty_tpl->getVariable('conpage')->value['file']){?><a href="<?php echo $_smarty_tpl->getVariable('siteurl')->value;?>
-temp_files/<?php echo $_smarty_tpl->getVariable('conpage')->value['file'];?>
-" target="_blank">Файл</a>&nbsp;<a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+                <?php if (isset($_smarty_tpl->getVariable('conpage',null,true,false)->value['file_list'])&&$_smarty_tpl->getVariable('conpage')->value['file_list']!==false){?>
+                <?php  $_smarty_tpl->tpl_vars['file'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('conpage')->value['file_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_smarty_tpl->tpl_vars['smarty']->value['foreach']['_file']['iteration']=0;
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['file']->key => $_smarty_tpl->tpl_vars['file']->value){
+ $_smarty_tpl->tpl_vars['smarty']->value['foreach']['_file']['iteration']++;
+?>
+                <a href="<?php echo $_smarty_tpl->getVariable('siteurl')->value;?>
+temp_files/<?php echo $_smarty_tpl->tpl_vars['file']->value;?>
+" target="_blank">Файл <?php echo $_smarty_tpl->getVariable('smarty')->value['foreach']['_file']['iteration'];?>
+</a>&nbsp;<a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
 &action=del_pic&id=<?php echo $_smarty_tpl->getVariable('conpage')->value['id'];?>
-">удалить</a> <?php }?>
-                <input type="file" name="file" />
+&fname=<?php echo $_smarty_tpl->tpl_vars['file']->value;?>
+">удалить</a><br /> 
+                <?php }} ?>
+                <?php }?>
+                
+                <div id="file_list">
+		<input type="file" name="file1" />
+		</div>
+		<input type="hidden" id="file_count" value="2" />
+		<a href="#" onclick="addFile('file_list', 'file_count')">Прикрепить еще один файл</a>
             </td>
         
         </tr>

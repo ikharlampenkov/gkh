@@ -72,33 +72,14 @@ textarea {
                     <a href="?page=receipt">Электронная квитанция</a><br /><br />
                     <a href="?page=balance">Баланс платежей</a><br /><br />
                     <a href="?page=meters">Показания счетчиков</a><br /><br />
+                    <a href="?page=payment">Оплата услуг</a><br /><br />
                     <a href="?page=support&category=request_master">Заявка на вызов мастера</a><br /><br />
                     <a href="?page=support&category=question">Задать вопрос</a><br /><br />
-                    <a href="?page=appointment">Записаться на прием</a><br /><br />
-                    <a href="?page=payment">Оплата услуг</a><br /><br />
-
                 </td>
                 <td>
 
-                    {if isset($page)}
-                        {if $page=="receipt"}
-                            {include file="cabinet/receipt.tpl"}
-                        {/if}
-                        {if $page=="balance"}
-                            {include file="cabinet/balance.tpl"}
-                        {/if}
-                        {if $page=="meters"}
-                            {include file="cabinet/meters.tpl"}
-                        {/if}
-                        {if $page=="support"}
-                            {include file="cabinet/support.tpl"}
-                        {/if}
-                        {if $page=="appointment"}
-                            {include file="cabinet/appointment.tpl"}
-                        {/if}
-                        {if $page=="payment"}
-                            {include file="cabinet/payment.tpl"}
-                        {/if}
+                    {if isset($page) && !empty($page)}
+                        {include file="cabinet/$page.tpl"}                        
                     {/if}
 
                 </td>

@@ -22,8 +22,17 @@
         <tr>
             <td>Прикрепить файл</td>
             <td>
-                {if $conpage.file}<a href="{$siteurl}temp_files/{$conpage.file}" target="_blank">Файл</a>&nbsp;<a href="?page={$page}&action=del_pic&id={$conpage.id}">удалить</a> {/if}
-                <input type="file" name="file" />
+                {if isset($conpage.file_list) && $conpage.file_list !== false}
+                {foreach from=$conpage.file_list item=file name=_file}
+                <a href="{$siteurl}temp_files/{$file}" target="_blank">Файл {$smarty.foreach._file.iteration}</a>&nbsp;<a href="?page={$page}&action=del_pic&id={$conpage.id}&fname={$file}">удалить</a><br /> 
+                {/foreach}
+                {/if}
+                
+                <div id="file_list">
+		<input type="file" name="file1" />
+		</div>
+		<input type="hidden" id="file_count" value="2" />
+		<a href="#" onclick="addFile('file_list', 'file_count')">Прикрепить еще один файл</a>
             </td>
         
         </tr>
