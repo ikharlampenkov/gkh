@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Май 17 2011 г., 00:12
+-- Время создания: Май 18 2011 г., 18:56
 -- Версия сервера: 5.1.50
 -- Версия PHP: 5.3.5
 
@@ -44,17 +44,64 @@ INSERT INTO `acl` (`menu_id`, `role`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `content_page`
+--
+
+DROP TABLE IF EXISTS `content_page`;
+CREATE TABLE IF NOT EXISTS `content_page` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `page_title` varchar(40) NOT NULL COMMENT 'английское название для системы',
+  `title` varchar(255) NOT NULL,
+  `content` text,
+  `file` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `page_title_UNIQUE` (`page_title`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Дамп данных таблицы `content_page`
+--
+
+INSERT INTO `content_page` (`id`, `page_title`, `title`, `content`, `file`) VALUES
+(1, 'eltechrab', 'Электротехнические работы', 'Список Электротехнических работ\r\n1. \r\n2. \r\n3. \r\n', '1_17-05-2011-22-45-47_0.odt'),
+(2, 'santechrab', 'Сантехнические работы', 'Список сантехнических работ', '2_18-05-2011-17-56-09_0.csv;2_18-05-2011-17-56-42_0.mwb;2_18-05-2011-17-56-42_1.txt');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `house`
+--
+
+DROP TABLE IF EXISTS `house`;
+CREATE TABLE IF NOT EXISTS `house` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `street` varchar(50) NOT NULL,
+  `number` int(10) unsigned NOT NULL,
+  `subnumber` varchar(3) DEFAULT NULL,
+  `area` decimal(9,2) unsigned DEFAULT NULL,
+  `file_repair_plan` varchar(255) DEFAULT NULL,
+  `file_costs_income` varchar(255) DEFAULT NULL,
+  `file_performed_repair` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Дамп данных таблицы `house`
+--
+
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `license`
 --
 
 DROP TABLE IF EXISTS `license`;
 CREATE TABLE IF NOT EXISTS `license` (
   `id` int(11) NOT NULL,
-  `management_company_id` int(10) unsigned NOT NULL,
   `description` varchar(255) NOT NULL,
   `img` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_license_management_company1` (`management_company_id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -95,7 +142,6 @@ DROP TABLE IF EXISTS `menu`;
 CREATE TABLE IF NOT EXISTS `menu` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `module_id` int(10) unsigned NOT NULL,
-  `management_company_id` int(10) unsigned NOT NULL,
   `title` varchar(45) NOT NULL,
   `eng_title` varchar(45) NOT NULL,
   `param_name` varchar(45) DEFAULT NULL,
@@ -103,7 +149,6 @@ CREATE TABLE IF NOT EXISTS `menu` (
   `parent_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_menu_module` (`module_id`),
-  KEY `fk_menu_management_company1` (`management_company_id`),
   KEY `fk_menu_menu1` (`parent_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
@@ -111,8 +156,8 @@ CREATE TABLE IF NOT EXISTS `menu` (
 -- Дамп данных таблицы `menu`
 --
 
-INSERT INTO `menu` (`id`, `module_id`, `management_company_id`, `title`, `eng_title`, `param_name`, `param_value`, `parent_id`) VALUES
-(1, 2, 1, 'Лицензии', 'license', NULL, NULL, 0);
+INSERT INTO `menu` (`id`, `module_id`, `title`, `eng_title`, `param_name`, `param_value`, `parent_id`) VALUES
+(1, 2, 'Лицензии', 'license', NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -126,7 +171,7 @@ CREATE TABLE IF NOT EXISTS `meters` (
   `title` varchar(45) DEFAULT NULL,
   `rate` decimal(12,2) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Дамп данных таблицы `meters`
@@ -213,27 +258,98 @@ INSERT INTO `module` (`id`, `title`, `eng_title`, `files`, `db_tables`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `news`
+--
+
+DROP TABLE IF EXISTS `news`;
+CREATE TABLE IF NOT EXISTS `news` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `news_category_id` int(10) unsigned NOT NULL,
+  `date` datetime NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `short_text` text,
+  `full_text` text,
+  PRIMARY KEY (`id`),
+  KEY `fk_news_news_category1` (`news_category_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Дамп данных таблицы `news`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `news_category`
+--
+
+DROP TABLE IF EXISTS `news_category`;
+CREATE TABLE IF NOT EXISTS `news_category` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+--
+-- Дамп данных таблицы `news_category`
+--
+
+INSERT INTO `news_category` (`id`, `title`) VALUES
+(1, 'Объявления'),
+(2, 'Отключения'),
+(3, 'Подключения'),
+(4, 'Согласования'),
+(5, 'Законодательства');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `news_comment`
+--
+
+DROP TABLE IF EXISTS `news_comment`;
+CREATE TABLE IF NOT EXISTS `news_comment` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `news_id` int(10) unsigned NOT NULL,
+  `date` datetime NOT NULL,
+  `nickname` varchar(15) DEFAULT NULL,
+  `text` text NOT NULL,
+  `is_moderated` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`,`news_id`),
+  KEY `fk_news_comment_news1` (`news_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Дамп данных таблицы `news_comment`
+--
+
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `personal_account`
 --
 
 DROP TABLE IF EXISTS `personal_account`;
 CREATE TABLE IF NOT EXISTS `personal_account` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `management_company_id` int(10) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `house_id` int(10) unsigned NOT NULL,
+  `apartment` int(10) unsigned DEFAULT NULL,
   `fio` varchar(45) DEFAULT NULL,
   `password` varchar(45) DEFAULT NULL,
-  `user_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_personal_account_management_company1` (`management_company_id`),
-  KEY `fk_personal_account_user1` (`user_id`)
+  KEY `fk_personal_account_user1` (`user_id`),
+  KEY `fk_personal_account_house1` (`house_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Дамп данных таблицы `personal_account`
 --
 
-INSERT INTO `personal_account` (`id`, `management_company_id`, `fio`, `password`, `user_id`) VALUES
-(1, 1, 'Тестовый жилец', '123', 2);
+INSERT INTO `personal_account` (`id`, `user_id`, `house_id`, `apartment`, `fio`, `password`) VALUES
+(1, 2, 0, NULL, 'Тестовый жилец', '123');
 
 -- --------------------------------------------------------
 
@@ -260,7 +376,7 @@ CREATE TABLE IF NOT EXISTS `tech_support_post` (
 --
 
 INSERT INTO `tech_support_post` (`id`, `ticket_id`, `question`, `date_question`, `answer`, `date_answer`, `file`, `answer_file`) VALUES
-(1, 1, 'Бежит батарея', '2011-05-16 23:58:03', NULL, NULL, '', NULL),
+(1, 1, 'Бежит батарея', '2011-05-16 23:58:03', 'Разберемся', '2011-05-17 23:34:19', '', ''),
 (2, 2, 'Почему редко вывозят мусор с территории?', '2011-05-16 23:58:36', NULL, NULL, '', NULL);
 
 -- --------------------------------------------------------
@@ -287,7 +403,7 @@ CREATE TABLE IF NOT EXISTS `tech_support_ticket` (
 --
 
 INSERT INTO `tech_support_ticket` (`id`, `personal_account_id`, `title`, `date`, `category`, `ticket_status_id`) VALUES
-(1, 1, 'Бежит батарея', '2011-05-16 23:58:03', 'request_master', 1),
+(1, 1, 'Бежит батарея', '2011-05-16 23:58:03', 'request_master', 2),
 (2, 1, 'Почему редко вывозят мусор с территории?', '2011-05-16 23:58:36', 'question', 1);
 
 -- --------------------------------------------------------
@@ -371,16 +487,9 @@ ALTER TABLE `acl`
   ADD CONSTRAINT `fk_acl_user_role1` FOREIGN KEY (`role`) REFERENCES `user_role` (`title`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Ограничения внешнего ключа таблицы `license`
---
-ALTER TABLE `license`
-  ADD CONSTRAINT `fk_license_management_company1` FOREIGN KEY (`management_company_id`) REFERENCES `management_company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
 -- Ограничения внешнего ключа таблицы `menu`
 --
 ALTER TABLE `menu`
-  ADD CONSTRAINT `fk_menu_management_company1` FOREIGN KEY (`management_company_id`) REFERENCES `management_company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_menu_menu1` FOREIGN KEY (`parent_id`) REFERENCES `menu` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_menu_module` FOREIGN KEY (`module_id`) REFERENCES `module` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
@@ -399,11 +508,23 @@ ALTER TABLE `meters_value`
   ADD CONSTRAINT `fk_meters_value_personal_account1` FOREIGN KEY (`personal_account_id`) REFERENCES `personal_account` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
+-- Ограничения внешнего ключа таблицы `news`
+--
+ALTER TABLE `news`
+  ADD CONSTRAINT `fk_news_news_category1` FOREIGN KEY (`news_category_id`) REFERENCES `news_category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Ограничения внешнего ключа таблицы `news_comment`
+--
+ALTER TABLE `news_comment`
+  ADD CONSTRAINT `fk_news_comment_news1` FOREIGN KEY (`news_id`) REFERENCES `news` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
 -- Ограничения внешнего ключа таблицы `personal_account`
 --
 ALTER TABLE `personal_account`
-  ADD CONSTRAINT `personal_account_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_personal_account_management_company1` FOREIGN KEY (`management_company_id`) REFERENCES `management_company` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_personal_account_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_personal_account_house1` FOREIGN KEY (`house_id`) REFERENCES `house` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Ограничения внешнего ключа таблицы `tech_support_post`
