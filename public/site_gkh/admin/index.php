@@ -147,6 +147,40 @@ if ($page == 'meters') {
     }
 }
 
+if ($page == 'house') {
+
+    $o_house = new gkh_house();
+
+    if ($action == 'add') {
+        if (isset($_POST['data'])) {
+            $o_house->addHouse($_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('txt', 'Добавить дом');
+    } elseif ($action == 'edit' && isset($_GET['id'])) {
+
+        if (isset($_POST['data'])) {
+            $o_house->updateHouse($_GET['id'], $_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('txt', 'Редактировать дом');
+        $o_smarty->assign('house', $o_house->getHouse($_GET['id']));
+    } elseif ($action == 'del') {
+        $o_house->deleteHouse($_GET['id']);
+        simo_functions::chLocation('?page=' . $page);
+        exit;
+    } elseif ($action == 'del_file') {
+        $o_house->deleteFile($_GET['id'], $_GET['field']);
+        simo_functions::chLocation('?page=' . $page . '&action=edit&id=' . $_GET['id']);
+    } else {
+        $o_smarty->assign('house_list', $o_house->getAllHouse());
+    }
+}
+
 if ($page == 'support') {
     
     if (isset($_GET['category'])) {

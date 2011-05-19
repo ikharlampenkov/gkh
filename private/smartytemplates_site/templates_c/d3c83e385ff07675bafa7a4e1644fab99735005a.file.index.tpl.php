@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-18 12:20:43
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-19 21:01:03
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/admin/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:198464dd3572be59511-03897938%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:275094dd5229f4411c6-94027424%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd3c83e385ff07675bafa7a4e1644fab99735005a' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/admin/index.tpl',
-      1 => 1305695103,
+      1 => 1305813553,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '198464dd3572be59511-03897938',
+  'nocache_hash' => '275094dd5229f4411c6-94027424',
   'function' => 
   array (
   ),
@@ -94,6 +94,7 @@ textarea {
                     <a href="?page=content_page">Контентная страница</a><br /><br />
                     <a href="?page=news">Новости</a><br /><br />
                     <a href="?page=meters">Счетчики</a><br /><br />
+                    <a href="?page=house">Дома</a><br /><br />
                     <a href="?page=support&category=request_master">Заявка на вызов мастера</a><br /><br />
                     <a href="?page=support&category=question">Задать вопрос</a><br /><br />                   
                 </td>

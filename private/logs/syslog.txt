@@ -7400,3 +7400,194 @@ info   SELECT COUNT(news.id) FROM news, news_category
                     WHERE news.news_category_id=news_category.id   18.05.2011 17:58
 info   SELECT password FROM user WHERE login="admin"  18.05.2011 17:58
 info   SELECT * FROM meters  18.05.2011 17:58
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="admin"  19.05.2011 21:01
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:01
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:01
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:01
+info   SELECT * FROM house  19.05.2011 21:01
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:15
+info   SELECT * FROM house  19.05.2011 21:15
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:29
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:29
+info   SELECT * FROM house  19.05.2011 21:29
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:29
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:30
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:30
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:31
+info   INSERT INTO house(street, number, subnumber, area) 
+                    VALUES("ул. Сибиряков-Гвардейцев", 16, "", )  19.05.2011 21:31
+error   Can`t complit query: INSERT INTO house(street, number, subnumber, area) 
+                    VALUES("ул. Сибиряков-Гвардейцев", 16, "", ) No error: 1064:: Error msg: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 2 ;  19.05.2011 21:31
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:31
+info   SELECT * FROM house  19.05.2011 21:31
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:32
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:32
+info   INSERT INTO house(street, number, subnumber, area) 
+                    VALUES("ул. Сибиряков-Гвардейцев", 16, "", "")  19.05.2011 21:32
+error   Can`t complit query: INSERT INTO house(street, number, subnumber, area) 
+                    VALUES("ул. Сибиряков-Гвардейцев", 16, "", "") No error: 1366:: Error msg: Incorrect decimal value: '' for column 'area' at row 1 ;  19.05.2011 21:32
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:32
+info   SELECT * FROM house  19.05.2011 21:32
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:34
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:34
+info   INSERT INTO house(street, number, subnumber, area) 
+                    VALUES("ул. Сибиряков-Гвардейцев", 16, "", 0)  19.05.2011 21:34
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:34
+info   SELECT * FROM house  19.05.2011 21:34
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:35
+info   SELECT * FROM house  19.05.2011 21:35
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:35
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:36
+info   INSERT INTO house(street, number, subnumber, area) 
+                    VALUES("ул. Сибиряков-Гвардейцев", 11, "", 0)  19.05.2011 21:36
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:36
+info   SELECT * FROM house  19.05.2011 21:36
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:36
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:36
+info   INSERT INTO house(street, number, subnumber, area) 
+                    VALUES("ул. Пролетарская", 17, "а", 0)  19.05.2011 21:36
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:36
+info   SELECT * FROM house  19.05.2011 21:36
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:37
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:37
+info   INSERT INTO house(street, number, subnumber, area) 
+                    VALUES("ул. Пролетарская", 17, "б", 0)  19.05.2011 21:37
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:37
+info   SELECT * FROM house  19.05.2011 21:37
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:37
+info   SELECT * FROM house  19.05.2011 21:37
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:38
+info   SELECT * FROM house ORDER BY street, number, subnumber  19.05.2011 21:38
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:38
+info   SELECT * FROM house WHERE id=3  19.05.2011 21:38
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:39
+info   SELECT * FROM house WHERE id=3  19.05.2011 21:39
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 21:44
+info   SELECT * FROM house WHERE id=3  19.05.2011 21:44
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:31
+info   SELECT * FROM house WHERE id=3  19.05.2011 22:31
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:31
+info   UPDATE house 
+                    SET street="ул. Пролетарская", number=17, 
+                        subnumber="а", area=0.00 
+                    WHERE id=3  19.05.2011 22:31
+info   UPDATE content_page 
+                    SET file_repair_plan="" WHERE id=3  19.05.2011 22:31
+error   Can`t complit query: UPDATE content_page 
+                    SET file_repair_plan="" WHERE id=3 No error: 1054:: Error msg: Unknown column 'file_repair_plan' in 'field list' ;  19.05.2011 22:31
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:31
+info   SELECT * FROM house ORDER BY street, number, subnumber  19.05.2011 22:31
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:31
+info   SELECT * FROM house WHERE id=3  19.05.2011 22:31
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:32
+info   UPDATE house 
+                    SET street="ул. Пролетарская", number=17, 
+                        subnumber="а", area=0.00 
+                    WHERE id=3  19.05.2011 22:32
+info   UPDATE content_page 
+                    SET file_repair_plan="" WHERE id=3  19.05.2011 22:32
+error   Can`t complit query: UPDATE content_page 
+                    SET file_repair_plan="" WHERE id=3 No error: 1054:: Error msg: Unknown column 'file_repair_plan' in 'field list' ;  19.05.2011 22:32
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:32
+info   SELECT * FROM house ORDER BY street, number, subnumber  19.05.2011 22:32
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:34
+info   SELECT * FROM house WHERE id=3  19.05.2011 22:34
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:34
+info   UPDATE house 
+                    SET street="ул. Пролетарская", number=17, 
+                        subnumber="а", area=0.00 
+                    WHERE id=3  19.05.2011 22:34
+info   UPDATE house 
+                    SET file_repair_plan="" WHERE id=3  19.05.2011 22:34
+info   UPDATE house 
+                    SET file_costs_income="" WHERE id=3  19.05.2011 22:34
+info   UPDATE house 
+                    SET file_performed_repair="" WHERE id=3  19.05.2011 22:34
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:35
+info   UPDATE house 
+                    SET street="ул. Пролетарская", number=17, 
+                        subnumber="а", area=0.00 
+                    WHERE id=3  19.05.2011 22:35
+info   UPDATE house 
+                    SET file_repair_plan="" WHERE id=3  19.05.2011 22:35
+info   UPDATE house 
+                    SET file_costs_income="" WHERE id=3  19.05.2011 22:35
+info   UPDATE house 
+                    SET file_performed_repair="" WHERE id=3  19.05.2011 22:35
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:35
+info   SELECT * FROM house WHERE id=3  19.05.2011 22:35
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:35
+info   UPDATE house 
+                    SET street="ул. Пролетарская", number=17, 
+                        subnumber="а", area=0.00 
+                    WHERE id=3  19.05.2011 22:35
+info   UPDATE house 
+                    SET file_repair_plan="" WHERE id=3  19.05.2011 22:35
+info   UPDATE house 
+                    SET file_costs_income="" WHERE id=3  19.05.2011 22:35
+info   UPDATE house 
+                    SET file_performed_repair="" WHERE id=3  19.05.2011 22:35
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:40
+info   SELECT * FROM house WHERE id=3  19.05.2011 22:40
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:40
+info   UPDATE house 
+                    SET street="ул. Пролетарская", number=17, 
+                        subnumber="а", area=0.00 
+                    WHERE id=3  19.05.2011 22:40
+info   UPDATE house 
+                    SET file_repair_plan="" WHERE id=3  19.05.2011 22:40
+info   UPDATE house 
+                    SET file_costs_income="" WHERE id=3  19.05.2011 22:40
+info   UPDATE house 
+                    SET file_performed_repair="" WHERE id=3  19.05.2011 22:40
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:40
+info   SELECT * FROM house ORDER BY street, number, subnumber  19.05.2011 22:40
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:40
+info   SELECT * FROM house WHERE id=3  19.05.2011 22:40
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:42
+info   SELECT * FROM house WHERE id=3  19.05.2011 22:42
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:42
+info   UPDATE house 
+                    SET street="ул. Пролетарская", number=17, 
+                        subnumber="а", area=0.00 
+                    WHERE id=3  19.05.2011 22:42
+info   UPDATE house 
+                    SET file_repair_plan="3_19-05-2011-22-42-25_.pdf" WHERE id=3  19.05.2011 22:42
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:42
+info   SELECT * FROM house ORDER BY street, number, subnumber  19.05.2011 22:42
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:42
+info   SELECT * FROM house WHERE id=3  19.05.2011 22:42
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:49
+info   SELECT * FROM house WHERE id=3  19.05.2011 22:49
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:50
+info   UPDATE house 
+                    SET street="ул. Пролетарская", number=17, 
+                        subnumber="а", area=0.00 
+                    WHERE id=3  19.05.2011 22:50
+info   UPDATE house 
+                    SET file_costs_income="3_19-05-2011-22-50-31_.csv" WHERE id=3  19.05.2011 22:50
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:50
+info   SELECT * FROM house ORDER BY street, number, subnumber  19.05.2011 22:50
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:50
+info   SELECT * FROM house WHERE id=3  19.05.2011 22:50
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:50
+info   UPDATE house 
+                    SET street="ул. Пролетарская", number=17, 
+                        subnumber="а", area=0.00 
+                    WHERE id=3  19.05.2011 22:50
+info   UPDATE house 
+                    SET file_performed_repair="3_19-05-2011-22-50-48_.xls" WHERE id=3  19.05.2011 22:50
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:50
+info   SELECT * FROM house ORDER BY street, number, subnumber  19.05.2011 22:50
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:52
+info   SELECT * FROM house WHERE id=3  19.05.2011 22:52
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:52
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:53
+info   SELECT * FROM house WHERE id=3  19.05.2011 22:53
+info   Удален файл: H:/www/gkh/public/site_gkh/temp_files/3_19-05-2011-22-50-48_.xls  19.05.2011 22:53
+info   UPDATE house 
+                        SET file_performed_repair=NULL WHERE id=3  19.05.2011 22:53
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:53
+info   SELECT * FROM house WHERE id=3  19.05.2011 22:53
+info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:53
+info   SELECT * FROM house ORDER BY street, number, subnumber  19.05.2011 22:53

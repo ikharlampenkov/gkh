@@ -72,6 +72,7 @@ textarea {
                     <a href="?page=content_page">Контентная страница</a><br /><br />
                     <a href="?page=news">Новости</a><br /><br />
                     <a href="?page=meters">Счетчики</a><br /><br />
+                    <a href="?page=house">Дома</a><br /><br />
                     <a href="?page=support&category=request_master">Заявка на вызов мастера</a><br /><br />
                     <a href="?page=support&category=question">Задать вопрос</a><br /><br />                   
                 </td>
