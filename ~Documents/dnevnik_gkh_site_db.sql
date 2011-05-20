@@ -3,10 +3,11 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Май 18 2011 г., 18:56
+-- Время создания: Май 19 2011 г., 22:56
 -- Версия сервера: 5.1.50
 -- Версия PHP: 5.3.5
 
+SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 
@@ -83,12 +84,17 @@ CREATE TABLE IF NOT EXISTS `house` (
   `file_costs_income` varchar(255) DEFAULT NULL,
   `file_performed_repair` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Дамп данных таблицы `house`
 --
 
+INSERT INTO `house` (`id`, `street`, `number`, `subnumber`, `area`, `file_repair_plan`, `file_costs_income`, `file_performed_repair`) VALUES
+(1, 'ул. Сибиряков-Гвардейцев', 16, '', '0.00', NULL, NULL, NULL),
+(2, 'ул. Сибиряков-Гвардейцев', 11, '', '0.00', NULL, NULL, NULL),
+(3, 'ул. Пролетарская', 17, 'а', '0.00', '3_19-05-2011-22-42-25_.pdf', '3_19-05-2011-22-50-31_.csv', NULL),
+(4, 'ул. Пролетарская', 17, 'б', '0.00', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -171,7 +177,7 @@ CREATE TABLE IF NOT EXISTS `meters` (
   `title` varchar(45) DEFAULT NULL,
   `rate` decimal(12,2) unsigned DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Дамп данных таблицы `meters`
@@ -523,8 +529,8 @@ ALTER TABLE `news_comment`
 -- Ограничения внешнего ключа таблицы `personal_account`
 --
 ALTER TABLE `personal_account`
-  ADD CONSTRAINT `fk_personal_account_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_personal_account_house1` FOREIGN KEY (`house_id`) REFERENCES `house` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_personal_account_house1` FOREIGN KEY (`house_id`) REFERENCES `house` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_personal_account_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Ограничения внешнего ключа таблицы `tech_support_post`
@@ -544,3 +550,4 @@ ALTER TABLE `tech_support_ticket`
 --
 ALTER TABLE `user`
   ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`role`) REFERENCES `user_role` (`title`);
+SET FOREIGN_KEY_CHECKS=1;

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-19 22:49:42
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-20 22:02:43
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/admin/house.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:214264dd53c161cb236-59029594%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:160154dd682938a7123-85495578%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd4c404d98445026607d325cb9d5699a41fd18c12' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/admin/house.tpl',
-      1 => 1305820179,
+      1 => 1305821093,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '214264dd53c161cb236-59029594',
+  'nocache_hash' => '160154dd682938a7123-85495578',
   'function' => 
   array (
   ),

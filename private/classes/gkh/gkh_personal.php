@@ -34,6 +34,9 @@ class gkh_personal extends gkh {
             }
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
+                foreach ($result as &$res) {
+                    $res['img_prew'] = $res['foto'];
+                }
                 return $result;
             } else
                 return false;
@@ -47,6 +50,7 @@ class gkh_personal extends gkh {
             $sql = 'SELECT * FROM personal WHERE id=' . (int)$id;
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
+                $result[0]['img_prew'] = $result[0]['foto'];
                 return $result[0];
             } else
                 return false;

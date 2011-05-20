@@ -14,7 +14,7 @@ ENGINE = InnoDB
  *
  * @author Administrator
  */
-class gkh_licencse extends gkh {
+class gkh_license extends gkh {
     
     public function __construct() {
         parent::__construct();
@@ -25,6 +25,9 @@ class gkh_licencse extends gkh {
             $sql = 'SELECT * FROM license';
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
+                foreach ($result as &$res) {
+                    $res['img_prew'] = $res['img'];
+                }
                 return $result;
             } else
                 return false;
@@ -38,6 +41,7 @@ class gkh_licencse extends gkh {
             $sql = 'SELECT * FROM license WHERE id=' . (int)$id;
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
+                $result[0]['img_prew'] = $result[0]['img'];
                 return $result[0];
             } else
                 return false;
@@ -50,8 +54,8 @@ class gkh_licencse extends gkh {
         try {
             $data = $this->_db->prepareArray($data);
             
-            $sql = 'INSERT INTO license(description) 
-                    VALUES("' . $data['description'] . '")';
+            $sql = 'INSERT INTO license(img, description) 
+                    VALUES("", "' . $data['description'] . '")';
             $this->_db->query($sql);
             
             $temp_id = $this->_db->query('SELECT LAST_INSERT_ID()');

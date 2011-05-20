@@ -7591,3 +7591,124 @@ info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:53
 info   SELECT * FROM house WHERE id=3  19.05.2011 22:53
 info   SELECT password FROM user WHERE login="admin"  19.05.2011 22:53
 info   SELECT * FROM house ORDER BY street, number, subnumber  19.05.2011 22:53
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  20.05.2011 20:22
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  20.05.2011 20:22
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  20.05.2011 20:22
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  20.05.2011 20:22
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="admin"  20.05.2011 20:22
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 20:22
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:02
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:02
+info   SELECT * FROM house ORDER BY street, number, subnumber  20.05.2011 22:02
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:02
+info   SELECT * FROM house ORDER BY street, number, subnumber  20.05.2011 22:02
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:02
+info   SELECT * FROM house ORDER BY street, number, subnumber  20.05.2011 22:02
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:02
+info   SELECT * FROM house ORDER BY street, number, subnumber  20.05.2011 22:02
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:03
+info   SELECT * FROM house ORDER BY street, number, subnumber  20.05.2011 22:03
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:03
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:03
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:03
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:03
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:03
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:03
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:03
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:03
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:03
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:04
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:05
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:05
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:05
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:05
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:06
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:06
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:06
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:07
+info   SELECT * FROM license  20.05.2011 22:07
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:07
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:09
+info   INSERT INTO license(description) 
+                    VALUES("Самая первая лицензия")  20.05.2011 22:09
+error   Can`t complit query: INSERT INTO license(description) 
+                    VALUES("Самая первая лицензия") No error: 1364:: Error msg: Field 'id' doesn't have a default value ;  20.05.2011 22:09
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:09
+info   SELECT * FROM license  20.05.2011 22:09
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:10
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:10
+info   INSERT INTO license(img, description) 
+                    VALUES("", Самая первая лицензия")  20.05.2011 22:10
+error   Can`t complit query: INSERT INTO license(img, description) 
+                    VALUES("", Самая первая лицензия") No error: 1064:: Error msg: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'первая лицензия")' at line 2 ;  20.05.2011 22:10
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:10
+info   SELECT * FROM license  20.05.2011 22:10
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:11
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:12
+info   INSERT INTO license(img, description) 
+                    VALUES("", Самая первая лицензия\r\n")  20.05.2011 22:12
+error   Can`t complit query: INSERT INTO license(img, description) 
+                    VALUES("", Самая первая лицензия\r\n") No error: 1064:: Error msg: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'первая лицензия\r\n")' at line 2 ;  20.05.2011 22:12
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:12
+info   SELECT * FROM license  20.05.2011 22:12
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:12
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:13
+info   INSERT INTO license(img, description) 
+                    VALUES("", "Самая первая лицензия\r\n")  20.05.2011 22:13
+error   Can`t complit query: INSERT INTO license(img, description) 
+                    VALUES("", "Самая первая лицензия\r\n") No error: 1364:: Error msg: Field 'id' doesn't have a default value ;  20.05.2011 22:13
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:13
+info   SELECT * FROM license  20.05.2011 22:13
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:14
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:14
+info   INSERT INTO license(img, description) 
+                    VALUES("", "Самая первая лицензия")  20.05.2011 22:14
+info   SELECT LAST_INSERT_ID()  20.05.2011 22:14
+info   UPDATE license 
+                    SET img="1_20-05-2011-22-14-59_.jpg" WHERE id=1  20.05.2011 22:14
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:15
+info   SELECT * FROM license  20.05.2011 22:15
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:15
+info   SELECT * FROM personal  20.05.2011 22:15
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:19
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:19
+info   INSERT INTO personal(fio, is_leaders, department, position, email, sometext) 
+                    VALUES("Петров Петр Сергеевич", 1, "АУП", 
+                           "Директор", "", "Кое-что обо мне")  20.05.2011 22:19
+info   SELECT LAST_INSERT_ID()  20.05.2011 22:19
+info   UPDATE personal 
+                    SET foto="1_20-05-2011-22-19-54_.jpg" WHERE id=1  20.05.2011 22:19
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:19
+info   SELECT * FROM personal  20.05.2011 22:19
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:20
+info   SELECT * FROM personal WHERE id=1  20.05.2011 22:20
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:21
+info   SELECT * FROM personal WHERE id=1  20.05.2011 22:21
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:21
+info   SELECT * FROM personal WHERE id=1  20.05.2011 22:21
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:21
+info   SELECT * FROM personal WHERE id=1  20.05.2011 22:21
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:22
+info   SELECT * FROM personal WHERE id=1  20.05.2011 22:22
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:22
+info   UPDATE personal 
+                    SET fio="Петров Петр Сергеевич", is_leaders=0, 
+                        department="АУП", position="Директор", 
+                        email="", sometext="Кое-что обо мне"  
+                    WHERE id=1  20.05.2011 22:22
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:22
+info   SELECT * FROM personal  20.05.2011 22:22
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:22
+info   SELECT * FROM license  20.05.2011 22:22
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:22
+info   SELECT * FROM house ORDER BY street, number, subnumber  20.05.2011 22:22
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:25
+info   SELECT * FROM personal  20.05.2011 22:25
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:25
+info   SELECT * FROM license  20.05.2011 22:25
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:25
+info   SELECT * FROM house ORDER BY street, number, subnumber  20.05.2011 22:25
+info   SELECT password FROM user WHERE login="admin"  20.05.2011 22:25

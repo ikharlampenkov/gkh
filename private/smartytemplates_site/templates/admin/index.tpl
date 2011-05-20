@@ -73,6 +73,8 @@ textarea {
                     <a href="?page=news">Новости</a><br /><br />
                     <a href="?page=meters">Счетчики</a><br /><br />
                     <a href="?page=house">Дома</a><br /><br />
+                    <a href="?page=license">Лицензии</a><br /><br />
+                    <a href="?page=personal">Персонал</a><br /><br />
                     <a href="?page=support&category=request_master">Заявка на вызов мастера</a><br /><br />
                     <a href="?page=support&category=question">Задать вопрос</a><br /><br />                   
                 </td>
