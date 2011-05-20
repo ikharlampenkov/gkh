@@ -47,7 +47,50 @@ if ($o_user->isLogin()) {
         } else {
             $o_smarty->assign('login_fail', '1');
         }
-    }    
+    }   
+    
+    if ($page == 'news') {
+        
+        if (isset($_GET['category'])) {
+            $category = $_GET['category'];
+        } else {
+            $category = gkh_news::ANY_CATEGORY;
+        }
+
+        $o_news = new gkh_news();
+
+        if ($action == 'view_news' && isset($_GET['id'])) {
+            
+            if (isset($_POST['data'])) {
+                $o_news->addComment($_GET['id'], $_POST['data']);
+                simo_functions::chLocation('?page=news&action=view_news&id=' . $_GET['id'] . '&category=' . $category);
+                exit; 
+            }
+            
+            $o_smarty->assign('news', $o_news->getNews($_GET['id']));
+            $o_smarty->assign('news_comment_list', $o_news->getAllCommentByNews($_GET['id'], gkh_news::IS_MODERATED));            
+        } else {
+
+        if (isset($_GET['pager'])) {
+            $cur_page = $_GET['pager'];
+        } else {
+            $cur_page = 0;
+        }
+        $o_smarty->assign('cur_page', $cur_page);
+
+        $o_smarty->assign('news_list_full', $o_news->getAllNews($category, $cur_page));
+        $o_smarty->assign('page_info', $o_news->getPageInfo($category, $cur_page));
+        }
+    }
+    
+    if ($page == 'content_page' && isset($_GET['title'])) {
+        
+        $o_content_page = new gkh_content_page_site();
+        $o_smarty->assign('conpage', $o_content_page->getContentPage($_GET['title']));
+    }
+    
+    $o_news = new gkh_news();
+    $o_smarty->assign('news_list', $o_news->getTopNews(gkh_news::ANY_CATEGORY));
     
     $o_smarty->display('index.tpl');
 }
