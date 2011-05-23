@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-20 23:02:58
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-23 20:43:50
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:90194dd690b23172c2-21551654%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:114754dda649660ab03-18620626%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '06f23a46aed9fc3af496589adff00c09fe8f7897' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/index.tpl',
-      1 => 1305907374,
+      1 => 1306158220,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '90194dd690b23172c2-21551654',
+  'nocache_hash' => '114754dda649660ab03-18620626',
   'function' => 
   array (
   ),
@@ -28,6 +28,8 @@ $_smarty_tpl->decodeProperties(array (
 "></meta>
         <meta name="author-corporate" content=""></meta>
         <meta name="publisher-email" content=""></meta>
+        <script type="text/javascript" language="javascript" src="/js/jquery.js"></script>
+        <script type="text/javascript" language="javascript" src="/js/main.js" ></script>
 
         <style >
             input {
@@ -87,6 +89,8 @@ $_smarty_tpl->decodeProperties(array (
                                 
                                 <a href="?page=content_page&title=eltechrab">Электротехнические работы</a><br /><br/>
                                 <a href="?page=content_page&title=santechrab">Сантехнические работы</a><br /><br/>
+                                <a href="?page=house">Дома</a><br /><br/>
+                                <a href="?page=document">Документы</a><br /><br />
                             <?php }?>
                             </td>
                             <td width="250">

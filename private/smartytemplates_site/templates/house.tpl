@@ -24,9 +24,9 @@
 
 {foreach from=$house_list item=street name=_house_list}
 <div>
-    <span>{$street.street}</span><span><a href="javascript:showHouse({$smarty.foreach._house_list.index})">дома</a></span>
+    <span>{$street.street}</span>&nbsp;<span><a href="javascript:showHouse({$smarty.foreach._house_list.index})">дома</a></span>
 </div>
-<div id="{$smarty.foreach._house_list.index}">
+<div id="house_{$smarty.foreach._house_list.index}" style="display: none;">
 {foreach from=$street.houses item=house}
     <div><a href="?page={$page}&action=view&id={$house.id}">{$house.number}{$house.subnumber}</a></div>
 {/foreach}

@@ -99,6 +99,25 @@ if ($o_user->isLogin()) {
         }
     }
     
+    if ($page == 'document') {
+        
+        if (isset($_GET['root'])) {
+            $root = $_GET['root'];
+        } else {
+            $root = 0;
+        }
+        
+        $o_document = new gkh_document();
+        
+        if ($root != 0) {
+           $o_smarty->assign('document', $o_document->getDocument($root)); 
+        } else {
+           $o_smarty->assign('document', false); 
+        }
+        
+        $o_smarty->assign('document_list', $o_document->getDocumentCatalog($root));
+    }
+    
     $o_news = new gkh_news();
     $o_smarty->assign('news_list', $o_news->getTopNews(gkh_news::ANY_CATEGORY));
     

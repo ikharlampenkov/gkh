@@ -18,3 +18,11 @@ function correctPager() {
         ;
     } 
 }
+
+function showHouse(id) {
+    if ($("#house_" + id).css("display") == "none") {
+        $("#house_" + id).css("display", "block");
+    } else {
+        $("#house_" + id).css("display", "none");
+    }
+}

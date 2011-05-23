@@ -6,6 +6,8 @@
         <meta name="keywords" content="{$keywords}"></meta>
         <meta name="author-corporate" content=""></meta>
         <meta name="publisher-email" content=""></meta>
+        <script type="text/javascript" language="javascript" src="/js/jquery.js"></script>
+        <script type="text/javascript" language="javascript" src="/js/main.js" ></script>
 
         <style >
             input {
@@ -65,6 +67,8 @@
                                 
                                 <a href="?page=content_page&title=eltechrab">Электротехнические работы</a><br /><br/>
                                 <a href="?page=content_page&title=santechrab">Сантехнические работы</a><br /><br/>
+                                <a href="?page=house">Дома</a><br /><br/>
+                                <a href="?page=document">Документы</a><br /><br />
                             {/if}
                             </td>
                             <td width="250">

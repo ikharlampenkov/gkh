@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Май 19 2011 г., 22:56
+-- Время создания: Май 20 2011 г., 23:26
 -- Версия сервера: 5.1.50
 -- Версия PHP: 5.3.5
 
@@ -104,16 +104,18 @@ INSERT INTO `house` (`id`, `street`, `number`, `subnumber`, `area`, `file_repair
 
 DROP TABLE IF EXISTS `license`;
 CREATE TABLE IF NOT EXISTS `license` (
-  `id` int(11) NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `description` varchar(255) NOT NULL,
-  `img` varchar(255) NOT NULL,
+  `img` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Дамп данных таблицы `license`
 --
 
+INSERT INTO `license` (`id`, `description`, `img`) VALUES
+(1, 'Самая первая лицензия', '1_20-05-2011-22-14-59_.jpg');
 
 -- --------------------------------------------------------
 
@@ -334,6 +336,32 @@ CREATE TABLE IF NOT EXISTS `news_comment` (
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `personal`
+--
+
+DROP TABLE IF EXISTS `personal`;
+CREATE TABLE IF NOT EXISTS `personal` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `fio` varchar(100) NOT NULL,
+  `foto` varchar(255) DEFAULT NULL,
+  `is_leaders` tinyint(1) NOT NULL DEFAULT '0',
+  `department` varchar(255) DEFAULT NULL,
+  `position` varchar(255) DEFAULT NULL,
+  `email` varchar(60) DEFAULT NULL,
+  `sometext` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Дамп данных таблицы `personal`
+--
+
+INSERT INTO `personal` (`id`, `fio`, `foto`, `is_leaders`, `department`, `position`, `email`, `sometext`) VALUES
+(1, 'Петров Петр Сергеевич', '1_20-05-2011-22-19-54_.jpg', 0, 'АУП', 'Директор', '', 'Кое-что обо мне');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `personal_account`
 --
 
@@ -529,8 +557,8 @@ ALTER TABLE `news_comment`
 -- Ограничения внешнего ключа таблицы `personal_account`
 --
 ALTER TABLE `personal_account`
-  ADD CONSTRAINT `fk_personal_account_house1` FOREIGN KEY (`house_id`) REFERENCES `house` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_personal_account_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_personal_account_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_personal_account_house1` FOREIGN KEY (`house_id`) REFERENCES `house` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Ограничения внешнего ключа таблицы `tech_support_post`

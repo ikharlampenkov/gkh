@@ -326,5 +326,45 @@ if ($page == 'support') {
     }
 }
 
+if ($page == 'document') {
+
+    $o_document = new gkh_document();
+
+    if ($action == 'add_folder' || $action == 'edit_folder') {
+        $what = 'папку';
+    } else {
+        $what = 'документ';
+    }
+    
+    if ($action == 'add' || $action == 'add_folder') {
+        if (isset($_POST['data'])) {
+            $o_document->addDocument($_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('folder_list', $o_document->getFolderList());
+        $o_smarty->assign('txt', 'Добавить ' . $what);
+    } elseif ($action == 'edit' || $action == 'edit_folder' && isset($_GET['id'])) {
+
+        if (isset($_POST['data'])) {
+            $o_document->updateDocument($_GET['id'], $_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('txt', 'Редактировать ' . $what);
+        $o_smarty->assign('document', $o_document->getDocument($_GET['id']));
+        $o_smarty->assign('folder_list', $o_document->getFolderList());
+    } elseif ($action == 'del') {
+        $o_document->deleteNews($_GET['id']);
+        simo_functions::chLocation('?page=' . $page);
+    } else {
+      
+
+        $o_smarty->assign('document_list', $o_document->getAllDocument());
+    }
+}
+
 $o_smarty->display('admin/index.tpl');
 ?>

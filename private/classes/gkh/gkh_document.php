@@ -56,33 +56,28 @@ class gkh_document extends gkh {
         }
     }
 
-    public function getDocumentCatalog() {
+    public function getDocumentCatalog($root) {
         try {
-            $sql = 'SELECT * FROM document ORDER BY street, number, subnumber';
+            $sql = 'SELECT * 
+                    FROM document 
+                    WHERE parrent_id=' . $root . ' 
+                    ORDER BY is_folder DESC, title';
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
-                $retArray = array();
-                $i = 0;
-                $j = 0;
-                $idstreet = $result[0]['street'];
-
-                foreach ($result as $res) {
-                    if ($res['street'] != $idstreet) {
-                        $idstreet = $res['street'];
-                        $i++;
-                        $j = 0;
-                    }
-
-                    $retArray[$i]['street'] = $res['street'];
-                    $retArray[$i]['documents'][$j]['number'] = $res['number'];
-                    $retArray[$i]['documents'][$j]['subnumber'] = $res['subnumber'];
-                    $retArray[$i]['documents'][$j]['subnumber'] = $res['subnumber'];
-                    $retArray[$i]['documents'][$j]['id'] = $res['id'];
-
-                    $j++;
-                }
-
-                return $retArray;
+                return $result;
+            } else
+                return false;
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+        }
+    }
+    
+    public function getFolderList() {
+        try {
+            $sql = 'SELECT * FROM document WHERE is_folder=' . gkh_document::IS_FOLDER;
+            $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
+            if (isset($result[0])) {
+                return $result;
             } else
                 return false;
         } catch (Exception $e) {
@@ -101,7 +96,7 @@ class gkh_document extends gkh {
             $sql = 'SELECT LAST_INSERT_ID()';
             $temp_id = $this->_db->query($sql);
 
-            $file = $this->_uploadFile($temp_id[0][0]);
+            $file = $this->_uploadFile($temp_id[0][0], 'file');
 
             if ($file != 'NULL') {
                 $sql = 'UPDATE document SET file="' . $file . '" 
