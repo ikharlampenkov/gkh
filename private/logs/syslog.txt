@@ -280,3 +280,65 @@ info   SELECT news.id, news_category_id, date, news.title, short_text, full_text
                     FROM news, news_category
                     WHERE news.news_category_id=news_category.id  ORDER BY date DESC
                       LIMIT 5  23.05.2011 22:19
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  23.05.2011 22:47
+info   SELECT * FROM house ORDER BY street, number, subnumber  23.05.2011 22:47
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  23.05.2011 22:48
+info   SELECT * FROM house ORDER BY street, number, subnumber  23.05.2011 22:48
+info   SELECT user_id FROM personal_account WHERE house_id=4 AND apartment=14  23.05.2011 22:49
+info   SELECT * FROM user WHERE id=3 OR login="3"  23.05.2011 22:49
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="user_tenant_3"  23.05.2011 22:49
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  23.05.2011 22:49
+info   SELECT * FROM house ORDER BY street, number, subnumber  23.05.2011 22:49
+info   SELECT password FROM user WHERE login="user_tenant_3"  23.05.2011 22:49
+info   SELECT * FROM personal_account WHERE user_id=3  23.05.2011 22:49
+info   SELECT password FROM user WHERE login="user_tenant_3"  23.05.2011 22:49
+info   SELECT * FROM personal_account WHERE user_id=3  23.05.2011 22:49
+info   SELECT password FROM user WHERE login="user_tenant_3"  23.05.2011 22:49
+info   SELECT * FROM personal_account WHERE user_id=3  23.05.2011 22:49
+info   SELECT password FROM user WHERE login="user_tenant_3"  23.05.2011 22:49
+info   SELECT * FROM personal_account WHERE user_id=3  23.05.2011 22:49
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=2  23.05.2011 22:49
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=2 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-23", "%Y-%m")  23.05.2011 22:49
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=2 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-23", "%Y-%m")  23.05.2011 22:49
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=2 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-23", "%Y-%m")  23.05.2011 22:49
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=2 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-23", "%Y-%m")  23.05.2011 22:49
+info   SELECT password FROM user WHERE login="user_tenant_3"  23.05.2011 22:49
+info   SELECT * FROM personal_account WHERE user_id=3  23.05.2011 22:49
+info   REPLACE meters_value(personal_account_id, meters_id, date, value) 
+                                      VALUES(2, 2, "2011-05-23", 25)  23.05.2011 22:49
+info   REPLACE meters_value(personal_account_id, meters_id, date, value) 
+                                      VALUES(2, 3, "2011-05-23", 0)  23.05.2011 22:49
+info   SELECT password FROM user WHERE login="user_tenant_3"  23.05.2011 22:49
+info   SELECT * FROM personal_account WHERE user_id=3  23.05.2011 22:49
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=2  23.05.2011 22:49
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=2 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-23", "%Y-%m")  23.05.2011 22:49
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=2 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-23", "%Y-%m")  23.05.2011 22:49
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=2 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-23", "%Y-%m")  23.05.2011 22:49
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=2 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-23", "%Y-%m")  23.05.2011 22:49
+info   SELECT password FROM user WHERE login="user_tenant_3"  23.05.2011 22:49
+info   SELECT * FROM personal_account WHERE user_id=3  23.05.2011 22:49
+info   SELECT password FROM user WHERE login="user_tenant_3"  23.05.2011 22:49
+info   SELECT * FROM personal_account WHERE user_id=3  23.05.2011 22:49
+info   SELECT password FROM user WHERE login="user_tenant_3"  23.05.2011 22:49
+info   SELECT * FROM personal_account WHERE user_id=3  23.05.2011 22:49

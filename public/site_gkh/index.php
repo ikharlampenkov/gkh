@@ -42,7 +42,14 @@ if ($o_user->isLogin()) {
     $o_smarty->assign('login', false);
     
     if (isset($_POST['login']) && isset($_POST['psw'])) {
-        if ($o_user->logIn($_POST['login'], $_POST['psw'])) {
+        
+        if (isset($_POST['apartment'])) {
+            $login = gkh_personal_account_site::getUserByAddress($_POST['login'], $_POST['apartment']);
+        } else {
+            $login = $_POST['login'];
+        }
+        
+        if ($o_user->logIn($login, $_POST['psw'])) {
             header("Location: /");
         } else {
             $o_smarty->assign('login_fail', '1');
@@ -120,6 +127,9 @@ if ($o_user->isLogin()) {
     
     $o_news = new gkh_news();
     $o_smarty->assign('news_list', $o_news->getTopNews(gkh_news::ANY_CATEGORY));
+    
+    $o_house = new gkh_house();
+    $o_smarty->assign('house_login_list', $o_house->getAllHouse());
     
     $o_smarty->display('index.tpl');
 }

@@ -120,6 +120,28 @@ class gkh_personal_account_site extends gkh {
         }
     }
     
+    static function getUserByAddress($house_id, $apartment) {
+        try {
+            $db = simo_db::getInstance();
+            $apartment = $db->prepareString($apartment);
+            
+            $sql = 'SELECT user_id FROM personal_account WHERE house_id=' . $house_id . ' AND apartment=' . $apartment;
+            $result = $db->query($sql);
+            
+            if (isset($result[0][0])) {
+                $temp_user = new share_user_site();
+                $user = $temp_user->getUser($result[0][0]);
+                return $user['login'];
+            } else {
+                return false;
+            }
+            
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+        }
+    }
+
+
     public function __destruct() {
         parent::__destruct();
     }

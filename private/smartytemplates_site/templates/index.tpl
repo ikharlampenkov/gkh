@@ -39,7 +39,12 @@
                                     <div style="border:1px solid black; width:250px; height:120px; padding:10px; text-align:left;">
 {if isset($login_fail)}<div style="color:red; font-weight:bold; font-size:12px;">Вы ввели неправильный логин и пароль!</div>{/if}
                                         <form method="post" style="margin:0px; padding:0px;">
-                                            <div><span style="width:70px">Логин: </span><input name="login" type="text" style="width:150px;"></div>
+                                            <div><span style="width:70px">Дом: </span><select name="login" style="width:160px;">
+                                                  {foreach from=$house_login_list item=house}
+                                                  <option value="{$house.id}">{$house.street}, {$house.number}{$house.subnumber}</option>
+                                                  {/foreach}                                    
+                                                </select></div>
+                                            <div><span style="width:70px">Квартира: </span><input name="apartment" type="text" style="width:150px;"></div>
                                             <div><span style="width:70px">Пароль: </span><input name="psw" type="password" style="width:150px;"></div>
                                             <div><input type="submit" value="Войти" style="width:70px;"></div>
                                         </form>
@@ -64,7 +69,7 @@
                                 {include file="$page.tpl"}  
                             {else}
                                 Главная страница<br /><br/><br /><br/>
-                                
+
                                 <a href="?page=content_page&title=eltechrab">Электротехнические работы</a><br /><br/>
                                 <a href="?page=content_page&title=santechrab">Сантехнические работы</a><br /><br/>
                                 <a href="?page=house">Дома</a><br /><br/>

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-23 20:43:50
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-23 22:48:03
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:114754dda649660ab03-18620626%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:106584dda81b3e69fc9-32597937%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '06f23a46aed9fc3af496589adff00c09fe8f7897' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/index.tpl',
-      1 => 1306158220,
+      1 => 1306165679,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '114754dda649660ab03-18620626',
+  'nocache_hash' => '106584dda81b3e69fc9-32597937',
   'function' => 
   array (
   ),
@@ -62,7 +62,20 @@ $_smarty_tpl->decodeProperties(array (
                                     <div style="border:1px solid black; width:250px; height:120px; padding:10px; text-align:left;">
 <?php if (isset($_smarty_tpl->getVariable('login_fail',null,true,false)->value)){?><div style="color:red; font-weight:bold; font-size:12px;">Вы ввели неправильный логин и пароль!</div><?php }?>
                                         <form method="post" style="margin:0px; padding:0px;">
-                                            <div><span style="width:70px">Логин: </span><input name="login" type="text" style="width:150px;"></div>
+                                            <div><span style="width:70px">Дом: </span><select name="login" style="width:160px;">
+                                                  <?php  $_smarty_tpl->tpl_vars['house'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('house_login_list')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['house']->key => $_smarty_tpl->tpl_vars['house']->value){
+?>
+                                                  <option value="<?php echo $_smarty_tpl->tpl_vars['house']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['house']->value['street'];?>
+, <?php echo $_smarty_tpl->tpl_vars['house']->value['number'];?>
+<?php echo $_smarty_tpl->tpl_vars['house']->value['subnumber'];?>
+</option>
+                                                  <?php }} ?>                                    
+                                                </select></div>
+                                            <div><span style="width:70px">Квартира: </span><input name="apartment" type="text" style="width:150px;"></div>
                                             <div><span style="width:70px">Пароль: </span><input name="psw" type="password" style="width:150px;"></div>
                                             <div><input type="submit" value="Войти" style="width:70px;"></div>
                                         </form>
@@ -86,7 +99,7 @@ $_smarty_tpl->decodeProperties(array (
  echo $_template->getRenderedTemplate();?><?php unset($_template);?>  
                             <?php }else{ ?>
                                 Главная страница<br /><br/><br /><br/>
-                                
+
                                 <a href="?page=content_page&title=eltechrab">Электротехнические работы</a><br /><br/>
                                 <a href="?page=content_page&title=santechrab">Сантехнические работы</a><br /><br/>
                                 <a href="?page=house">Дома</a><br /><br/>
