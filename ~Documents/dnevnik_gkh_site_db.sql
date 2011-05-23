@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Май 20 2011 г., 23:26
+-- Время создания: Май 23 2011 г., 23:29
 -- Версия сервера: 5.1.50
 -- Версия PHP: 5.3.5
 
@@ -66,6 +66,51 @@ CREATE TABLE IF NOT EXISTS `content_page` (
 INSERT INTO `content_page` (`id`, `page_title`, `title`, `content`, `file`) VALUES
 (1, 'eltechrab', 'Электротехнические работы', 'Список Электротехнических работ\r\n1. \r\n2. \r\n3. \r\n', '1_17-05-2011-22-45-47_0.odt'),
 (2, 'santechrab', 'Сантехнические работы', 'Список сантехнических работ', '2_18-05-2011-17-56-09_0.csv;2_18-05-2011-17-56-42_0.mwb;2_18-05-2011-17-56-42_1.txt');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `document`
+--
+
+DROP TABLE IF EXISTS `document`;
+CREATE TABLE IF NOT EXISTS `document` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `parrent_id` int(10) unsigned NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `short_text` text,
+  `file` varchar(255) DEFAULT NULL,
+  `is_folder` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_document_document1` (`parrent_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Дамп данных таблицы `document`
+--
+
+INSERT INTO `document` (`id`, `parrent_id`, `title`, `short_text`, `file`, `is_folder`) VALUES
+(3, 0, 'Законы Кемеровской области', '', NULL, 1),
+(4, 3, 'Закон о ЖКХ', 'Основной закон\r\n', '4_23-05-2011-20-36-23_.pdf', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `faq`
+--
+
+DROP TABLE IF EXISTS `faq`;
+CREATE TABLE IF NOT EXISTS `faq` (
+  `id` int(11) NOT NULL,
+  `question` text NOT NULL,
+  `answer` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `faq`
+--
+
 
 -- --------------------------------------------------------
 
@@ -211,7 +256,9 @@ CREATE TABLE IF NOT EXISTS `meters_to_account` (
 INSERT INTO `meters_to_account` (`personal_account_id`, `meters_id`) VALUES
 (1, 1),
 (1, 2),
-(1, 3);
+(2, 2),
+(1, 3),
+(2, 3);
 
 -- --------------------------------------------------------
 
@@ -236,7 +283,9 @@ CREATE TABLE IF NOT EXISTS `meters_value` (
 INSERT INTO `meters_value` (`personal_account_id`, `meters_id`, `date`, `value`) VALUES
 (1, 1, '2011-05-16', '100.000'),
 (1, 2, '2011-05-16', '5.000'),
-(1, 3, '2011-05-16', '6.500');
+(1, 3, '2011-05-16', '6.500'),
+(2, 2, '2011-05-23', '25.000'),
+(2, 3, '2011-05-23', '0.000');
 
 -- --------------------------------------------------------
 
@@ -336,6 +385,28 @@ CREATE TABLE IF NOT EXISTS `news_comment` (
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `payments_debt`
+--
+
+DROP TABLE IF EXISTS `payments_debt`;
+CREATE TABLE IF NOT EXISTS `payments_debt` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `date` date NOT NULL,
+  `payment` decimal(8,2) DEFAULT NULL,
+  `debt` decimal(8,2) DEFAULT NULL,
+  `personal_account_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_payments_debt_personal_account1` (`personal_account_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Дамп данных таблицы `payments_debt`
+--
+
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `personal`
 --
 
@@ -376,14 +447,15 @@ CREATE TABLE IF NOT EXISTS `personal_account` (
   PRIMARY KEY (`id`),
   KEY `fk_personal_account_user1` (`user_id`),
   KEY `fk_personal_account_house1` (`house_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Дамп данных таблицы `personal_account`
 --
 
 INSERT INTO `personal_account` (`id`, `user_id`, `house_id`, `apartment`, `fio`, `password`) VALUES
-(1, 2, 0, NULL, 'Тестовый жилец', '123');
+(1, 2, 2, 10, 'Макимов Петр Аркадьевич', '123'),
+(2, 3, 4, 14, 'Петров Геннадий Александрович', '0851');
 
 -- --------------------------------------------------------
 
@@ -477,7 +549,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `login_UNIQUE` (`login`),
   KEY `role` (`role`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Дамп данных таблицы `user`
@@ -485,7 +557,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`id`, `login`, `password`, `role`) VALUES
 (1, 'admin', '123', 'admin'),
-(2, 'ten', '321', 'tenant');
+(2, 'ten', '321', 'tenant'),
+(3, 'user_tenant_3', '0851', 'tenant');
 
 -- --------------------------------------------------------
 
@@ -554,11 +627,17 @@ ALTER TABLE `news_comment`
   ADD CONSTRAINT `fk_news_comment_news1` FOREIGN KEY (`news_id`) REFERENCES `news` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
+-- Ограничения внешнего ключа таблицы `payments_debt`
+--
+ALTER TABLE `payments_debt`
+  ADD CONSTRAINT `fk_payments_debt_personal_account1` FOREIGN KEY (`personal_account_id`) REFERENCES `personal_account` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
 -- Ограничения внешнего ключа таблицы `personal_account`
 --
 ALTER TABLE `personal_account`
-  ADD CONSTRAINT `fk_personal_account_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_personal_account_house1` FOREIGN KEY (`house_id`) REFERENCES `house` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_personal_account_house1` FOREIGN KEY (`house_id`) REFERENCES `house` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_personal_account_user1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Ограничения внешнего ключа таблицы `tech_support_post`
