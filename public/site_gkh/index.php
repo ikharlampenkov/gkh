@@ -89,6 +89,16 @@ if ($o_user->isLogin()) {
         $o_smarty->assign('conpage', $o_content_page->getContentPage($_GET['title']));
     }
     
+    if ($page == 'house') {
+        $o_house = new gkh_house();
+        
+        if ($action == 'view') {
+            $o_smarty->assign('house', $o_house->getHouse($_GET['id']));
+        } else {        
+            $o_smarty->assign('house_list', $o_house->getHouseCatalog());
+        }
+    }
+    
     $o_news = new gkh_news();
     $o_smarty->assign('news_list', $o_news->getTopNews(gkh_news::ANY_CATEGORY));
     

@@ -50,6 +50,40 @@ class gkh_house extends gkh {
             simo_exception::registrMsg($e, $this->_debug);
         }
     }
+    
+    public function getHouseCatalog() {
+        try {
+            $sql = 'SELECT * FROM house ORDER BY street, number, subnumber';
+            $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
+            if (isset($result[0])) {
+                $retArray = array();
+                $i = 0;
+                $j = 0;
+                $idstreet = $result[0]['street'];
+                
+                foreach ($result as $res) {
+                    if ($res['street'] != $idstreet) {
+                       $idstreet = $res['street'];
+                       $i++;
+                       $j = 0;
+                    }
+                    
+                    $retArray[$i]['street'] = $res['street'];
+                    $retArray[$i]['houses'][$j]['number'] = $res['number'];
+                    $retArray[$i]['houses'][$j]['subnumber'] = $res['subnumber'];
+                    $retArray[$i]['houses'][$j]['subnumber'] = $res['subnumber'];
+                    $retArray[$i]['houses'][$j]['id'] = $res['id'];
+                    
+                    $j++;
+                }              
+                
+                return $retArray;
+            } else
+                return false;
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+        }
+    }
 
     public function addHouse($data) {
         try {
