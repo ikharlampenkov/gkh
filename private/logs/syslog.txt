@@ -136,3 +136,147 @@ info   SELECT news.id, news_category_id, date, news.title, short_text, full_text
                     FROM news, news_category
                     WHERE news.news_category_id=news_category.id  ORDER BY date DESC
                       LIMIT 5  23.05.2011 20:54
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="admin"  23.05.2011 21:16
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  23.05.2011 21:16
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 21:16
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 21:16
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 21:20
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 21:20
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 21:21
+info   SELECT * FROM personal_account  23.05.2011 21:21
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 21:21
+info   SELECT * FROM personal_account WHERE id=1  23.05.2011 21:21
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 21:21
+info   SELECT * FROM personal_account  23.05.2011 21:21
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 21:23
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 21:23
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 21:27
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 21:27
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 21:28
+info   SELECT * FROM house ORDER BY street, number, subnumber  23.05.2011 21:28
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 21:28
+info   SELECT * FROM personal_account  23.05.2011 21:28
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 21:29
+info   SELECT * FROM personal_account WHERE id=1  23.05.2011 21:29
+info   SELECT * FROM house ORDER BY street, number, subnumber  23.05.2011 21:29
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 21:29
+info   SELECT * FROM personal_account  23.05.2011 21:29
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 21:52
+info   SELECT * FROM house ORDER BY street, number, subnumber  23.05.2011 21:52
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 21:53
+info   SELECT MAX(id)+1 FROM user  23.05.2011 21:53
+info   INSERT INTO user(login, password, role) VALUES("user_tenant_3", "0851", "tenant")  23.05.2011 21:53
+info   SELECT LAST_INSERT_ID()  23.05.2011 21:53
+info   INSERT INTO personal_account(user_id, house_id, apartment, fio, password) 
+                    VALUES(3, 4, 
+                           14, "Петров Геннадий Александрович", "0851")  23.05.2011 21:53
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 21:53
+info   SELECT * FROM personal_account  23.05.2011 21:53
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 21:53
+info   SELECT * FROM meters  23.05.2011 21:53
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 21:53
+info   SELECT * FROM personal_account  23.05.2011 21:53
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:05
+info   SELECT * FROM personal_account  23.05.2011 22:05
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:06
+info   SELECT * FROM personal_account  23.05.2011 22:06
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:06
+info   SELECT * FROM personal_account  23.05.2011 22:06
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:06
+info   SELECT * FROM personal_account  23.05.2011 22:06
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:07
+info   SELECT * FROM personal_account WHERE id=1  23.05.2011 22:07
+info   SELECT * FROM meters  23.05.2011 22:07
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:07
+info   SELECT * FROM personal_account WHERE id=1  23.05.2011 22:07
+info   SELECT * FROM meters  23.05.2011 22:07
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:10
+info   SELECT * FROM personal_account WHERE id=1  23.05.2011 22:10
+info   SELECT * FROM meters  23.05.2011 22:10
+info   SELECT *   
+                    FROM meters_to_account 
+                    WHERE personal_account_id=1  23.05.2011 22:10
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:12
+info   SELECT * FROM personal_account WHERE id=1  23.05.2011 22:12
+info   SELECT * FROM meters  23.05.2011 22:12
+info   SELECT *   
+                    FROM meters_to_account 
+                    WHERE personal_account_id=1  23.05.2011 22:12
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:12
+info   SELECT * FROM personal_account  23.05.2011 22:12
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:12
+info   SELECT * FROM personal_account WHERE id=2  23.05.2011 22:12
+info   SELECT * FROM meters  23.05.2011 22:12
+info   SELECT *   
+                    FROM meters_to_account 
+                    WHERE personal_account_id=2  23.05.2011 22:12
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:12
+info   SELECT * FROM personal_account WHERE id=2  23.05.2011 22:12
+info   SELECT * FROM meters  23.05.2011 22:12
+info   SELECT *   
+                    FROM meters_to_account 
+                    WHERE personal_account_id=2  23.05.2011 22:12
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:12
+info   SELECT * FROM personal_account WHERE id=2  23.05.2011 22:12
+info   SELECT * FROM meters  23.05.2011 22:12
+info   SELECT *   
+                    FROM meters_to_account 
+                    WHERE personal_account_id=2  23.05.2011 22:12
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:12
+info   SELECT * FROM personal_account WHERE id=2  23.05.2011 22:12
+info   SELECT * FROM meters  23.05.2011 22:12
+info   SELECT *   
+                    FROM meters_to_account 
+                    WHERE personal_account_id=2  23.05.2011 22:12
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:12
+info   SELECT * FROM personal_account WHERE id=2  23.05.2011 22:12
+info   SELECT * FROM meters  23.05.2011 22:12
+info   SELECT *   
+                    FROM meters_to_account 
+                    WHERE personal_account_id=2  23.05.2011 22:12
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:17
+info   SELECT * FROM personal_account WHERE id=2  23.05.2011 22:17
+info   SELECT * FROM meters  23.05.2011 22:17
+info   SELECT *   
+                    FROM meters_to_account 
+                    WHERE personal_account_id=2  23.05.2011 22:17
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:17
+info   SELECT * FROM personal_account WHERE id=2  23.05.2011 22:17
+info   SELECT * FROM meters  23.05.2011 22:17
+info   SELECT *   
+                    FROM meters_to_account 
+                    WHERE personal_account_id=2  23.05.2011 22:17
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:18
+info   DELETE FROM meters_to_account WHERE personal_account_id=2  23.05.2011 22:18
+info   INSERT INTO meters_to_account(personal_account_id, meters_id) 
+                                      VALUES(2, 2)  23.05.2011 22:18
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:18
+info   SELECT * FROM personal_account  23.05.2011 22:18
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:18
+info   SELECT * FROM personal_account WHERE id=2  23.05.2011 22:18
+info   SELECT * FROM meters  23.05.2011 22:18
+info   SELECT *   
+                    FROM meters_to_account 
+                    WHERE personal_account_id=2  23.05.2011 22:18
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:18
+info   DELETE FROM meters_to_account WHERE personal_account_id=2  23.05.2011 22:18
+info   INSERT INTO meters_to_account(personal_account_id, meters_id) 
+                                      VALUES(2, 2)  23.05.2011 22:18
+info   INSERT INTO meters_to_account(personal_account_id, meters_id) 
+                                      VALUES(2, 3)  23.05.2011 22:18
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:18
+info   SELECT * FROM personal_account  23.05.2011 22:18
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:18
+info   SELECT * FROM personal_account WHERE id=2  23.05.2011 22:18
+info   SELECT * FROM meters  23.05.2011 22:18
+info   SELECT *   
+                    FROM meters_to_account 
+                    WHERE personal_account_id=2  23.05.2011 22:18
+info   SELECT password FROM user WHERE login="admin"  23.05.2011 22:19
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  23.05.2011 22:19

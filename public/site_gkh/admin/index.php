@@ -366,5 +366,50 @@ if ($page == 'document') {
     }
 }
 
+if ($page == 'personal_account') {
+
+    $o_pa = new gkh_personal_account_site();
+    $o_house = new gkh_house();
+
+    if ($action == 'add') {
+        if (isset($_POST['data'])) {
+            $o_pa->addPA($_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('txt', 'Добавить лицевой счет');
+        $o_smarty->assign('house_list', $o_house->getAllHouse());
+    } elseif ($action == 'edit' && isset($_GET['id'])) {
+
+        if (isset($_POST['data'])) {
+            $o_pa->updatePA($_GET['id'], $_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('txt', 'Редактировать лицевой счет');
+        $o_smarty->assign('pa', $o_pa->getPA($_GET['id']));
+        $o_smarty->assign('house_list', $o_house->getAllHouse());
+    } elseif ($action == 'del') {
+        $o_pa->deletePA($_GET['id']);
+        simo_functions::chLocation('?page=' . $page);
+    } elseif ($action == 'meters') {
+        $o_meters = new gkh_meters($_GET['id']);
+        
+        if (isset($_POST['data'])) {
+            $o_meters->setMetersForUser($_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+        
+        $o_smarty->assign('pa', $o_pa->getPA($_GET['id']));
+        $o_smarty->assign('meters_list', $o_meters->getAllMeters()); 
+        $o_smarty->assign('pa_meters', $o_meters->getMetersListByUser());
+    } else {
+        $o_smarty->assign('pa_list', $o_pa->getAllPA());
+    }
+}
+
 $o_smarty->display('admin/index.tpl');
 ?>

@@ -12,7 +12,7 @@
   ENGINE = InnoDB;
 
 
-id, title, rate
+  id, title, rate
 
   -- -----------------------------------------------------
   -- Table `dnevnik_gkh_site_db`.`meters_to_account`
@@ -72,7 +72,7 @@ class gkh_meters extends gkh {
 
         $this->_personal_account = $personal_account;
     }
-    
+
     public function getAllMeters() {
         try {
             $sql = 'SELECT * FROM meters';
@@ -88,7 +88,7 @@ class gkh_meters extends gkh {
 
     public function getMeters($id) {
         try {
-            $sql = 'SELECT * FROM meters WHERE id=' . (int) $id;
+            $sql = 'SELECT * FROM meters WHERE id=' . (int)$id;
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
                 return $result[0];
@@ -113,7 +113,7 @@ class gkh_meters extends gkh {
     public function updateMeters($id, $data) {
         try {
             $data = $this->_db->prepareArray($data);
-            $sql = 'UPDATE meters SET title="' . $data['title'] . '", rate=' . $data['rate'] . ' WHERE id=' . (int) $id;
+            $sql = 'UPDATE meters SET title="' . $data['title'] . '", rate=' . $data['rate'] . ' WHERE id=' . (int)$id;
             $this->_db->query($sql);
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
@@ -122,7 +122,7 @@ class gkh_meters extends gkh {
 
     public function deleteMeters($id) {
         try {
-            $sql = 'DELETE FROM meters WHERE id=' . (int) $id;
+            $sql = 'DELETE FROM meters WHERE id=' . (int)$id;
             $this->_db->query($sql);
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
@@ -138,57 +138,92 @@ class gkh_meters extends gkh {
             if (!empty($result[0])) {
                 $temp_date = date_parse($date);
                 $prev_date = date('Y-m-d', mktime(0, 0, 0, $temp_date['month'] - 1, $temp_date['day'], $temp_date['year']));
-                
+
                 foreach ($result as &$meter) {
                     $meter['cur_value'] = $this->_getMeterValueByDate($meter['id'], $date);
-                    
-                    $meter['prev_value'] = $this->_getMeterValueByDate($meter['id'], $prev_date); 
-                }   
+
+                    $meter['prev_value'] = $this->_getMeterValueByDate($meter['id'], $prev_date);
+                }
                 return $result;
             } else {
-                return false;    
-            }            
+                return false;
+            }
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
             return false;
         }
     }
-    
+
+    public function getMetersListByUser() {
+        try {
+            $sql = 'SELECT *   
+                    FROM meters_to_account 
+                    WHERE personal_account_id=' . $this->_personal_account;
+            $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
+            if (!empty($result[0])) {
+                $retArray = array();
+                foreach ($result as $res) {
+                    $retArray[] = $res['meters_id'];
+                }
+                return $retArray;
+            } else {
+                return array();
+            }
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+            return false;
+        }
+    }
+
     public function setMetersValue($data) {
         try {
             $data = $this->_db->prepareArray($data);
-            
+
             foreach ($data as $meter_id => $value) {
                 $value['date'] = date('Y-m-d', strtotime($value['date']));
                 $sql = 'REPLACE meters_value(personal_account_id, meters_id, date, value) 
                                       VALUES(' . $this->_personal_account . ', ' . $meter_id . ', "' . $value['date'] . '", ' . $value['value'] . ')';
                 $this->_db->query($sql);
-            }         
-            
+            }
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
             return false;
         }
     }
-    
+
+    public function setMetersForUser($data) {
+        try {
+            $data = $this->_db->prepareArray($data);
+
+            $this->_db->query('DELETE FROM meters_to_account WHERE personal_account_id=' . $this->_personal_account);
+            if (!empty($data['meters'])) {
+                foreach ($data['meters'] as $meter => $value) {
+                    $sql = 'INSERT INTO meters_to_account(personal_account_id, meters_id) 
+                                      VALUES(' . $this->_personal_account . ', ' . $meter . ')';
+                    $this->_db->query($sql);
+                }
+            }
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+            return false;
+        }
+    }
+
     protected function _getMeterValueByDate($meter_id, $date) {
         try {
             $sql = 'SELECT * FROM meters_value 
                     WHERE personal_account_id=' . $this->_personal_account . ' AND meters_id=' . $meter_id . ' AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("' . $date . '", "%Y-%m")';
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (!empty($result[0])) {
-                return $result[0];               
+                return $result[0];
             } else {
                 return array('personal_account_id' => $this->_personal_account, 'meters_id' => $meter_id, 'date' => $date, 'value' => 0);
-            }            
+            }
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
             return array('personal_account_id' => $this->_personal_account, 'meters_id' => $meter_id, 'date' => $date, 'value' => 0);
         }
     }
-
-    
-
 
     public function __destruct() {
         parent::__destruct();

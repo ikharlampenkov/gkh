@@ -179,6 +179,19 @@ class share_user_site extends share_user {
             return 0;
         }
     } 
+    
+    public function getNextId() {
+       try {
+            $sql = 'SELECT MAX(id)+1 FROM user';
+            $result = $this->_db->query($sql);
+            if (isset($result[0])) {
+                return $result[0][0];
+            } else
+                return false;
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+        } 
+    }
 
     public function __destruct() {
         parent::__destruct();

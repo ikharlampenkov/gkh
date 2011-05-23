@@ -76,6 +76,7 @@ textarea {
                     <a href="?page=license">Лицензии</a><br /><br />
                     <a href="?page=personal">Персонал</a><br /><br />
                     <a href="?page=document">Документы</a><br /><br />
+                    <a href="?page=personal_account">Лицевые счета</a><br /><br />
                     <a href="?page=support&category=request_master">Заявка на вызов мастера</a><br /><br />
                     <a href="?page=support&category=question">Задать вопрос</a><br /><br />                   
                 </td>
