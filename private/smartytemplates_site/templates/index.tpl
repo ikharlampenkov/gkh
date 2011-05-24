@@ -39,7 +39,8 @@
                                     <div style="border:1px solid black; width:250px; height:120px; padding:10px; text-align:left;">
 {if isset($login_fail)}<div style="color:red; font-weight:bold; font-size:12px;">Вы ввели неправильный логин и пароль!</div>{/if}
                                         <form method="post" style="margin:0px; padding:0px;">
-                                            <div><span style="width:70px">Дом: </span><select name="login" style="width:160px;">
+                                            <div><span style="width:70px">Дом: </span><select name="house" style="width:160px;">
+                                                    <option value="0"></option>  
                                                   {foreach from=$house_login_list item=house}
                                                   <option value="{$house.id}">{$house.street}, {$house.number}{$house.subnumber}</option>
                                                   {/foreach}                                    

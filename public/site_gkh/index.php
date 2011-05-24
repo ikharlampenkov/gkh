@@ -41,12 +41,12 @@ if ($o_user->isLogin()) {
 } else {
     $o_smarty->assign('login', false);
     
-    if (isset($_POST['login']) && isset($_POST['psw'])) {
+    if (isset($_POST['house']) && isset($_POST['apartment']) && isset($_POST['psw'])) {
         
-        if (isset($_POST['apartment'])) {
-            $login = gkh_personal_account_site::getUserByAddress($_POST['login'], $_POST['apartment']);
+        if ($_POST['house'] != 0) {
+            $login = gkh_personal_account_site::getUserByAddress($_POST['house'], $_POST['apartment']);
         } else {
-            $login = $_POST['login'];
+            $login = $_POST['apartment'];
         }
         
         if ($o_user->logIn($login, $_POST['psw'])) {
