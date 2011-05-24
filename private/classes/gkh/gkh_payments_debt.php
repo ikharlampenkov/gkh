@@ -58,6 +58,7 @@ class gkh_payments_debt extends gkh {
                         $balance[$i]['payment'] = $res['payment'];
                         $balance[$i]['total_end_month'] = $balance[$i]['total_beginning_month'] + $res['debt'] - $res['payment'];
                     }
+                    $i++;
                 }
                 return $balance;
             } else {
