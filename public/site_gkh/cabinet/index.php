@@ -19,6 +19,11 @@ if ($page == 'meters') {
     $o_smarty->assign('meters', $o_meters->getMetersByUser($date));
 }
 
+if ($page == 'balance') {
+    $o_payments_debt = new gkh_payments_debt($account_info['id']);
+    $o_smarty->assign('balance', $o_payments_debt->getBalance());
+}
+
 if ($page == 'support') {
 
     if (isset($_GET['category'])) {
