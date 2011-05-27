@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-23 22:48:03
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-27 22:39:24
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:106584dda81b3e69fc9-32597937%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:288714ddfc5ac6a1190-08605222%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '06f23a46aed9fc3af496589adff00c09fe8f7897' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/index.tpl',
-      1 => 1306165679,
+      1 => 1306253853,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '106584dda81b3e69fc9-32597937',
+  'nocache_hash' => '288714ddfc5ac6a1190-08605222',
   'function' => 
   array (
   ),
@@ -62,7 +62,8 @@ $_smarty_tpl->decodeProperties(array (
                                     <div style="border:1px solid black; width:250px; height:120px; padding:10px; text-align:left;">
 <?php if (isset($_smarty_tpl->getVariable('login_fail',null,true,false)->value)){?><div style="color:red; font-weight:bold; font-size:12px;">Вы ввели неправильный логин и пароль!</div><?php }?>
                                         <form method="post" style="margin:0px; padding:0px;">
-                                            <div><span style="width:70px">Дом: </span><select name="login" style="width:160px;">
+                                            <div><span style="width:70px">Дом: </span><select name="house" style="width:160px;">
+                                                    <option value="0"></option>  
                                                   <?php  $_smarty_tpl->tpl_vars['house'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('house_login_list')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 if ($_smarty_tpl->_count($_from) > 0){

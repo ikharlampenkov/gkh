@@ -118,6 +118,7 @@ if ($o_user->isLogin()) {
         
         if ($root != 0) {
            $o_smarty->assign('document', $o_document->getDocument($root)); 
+           $o_smarty->assign('path_to_document', $o_document->getFullPathToFolder($root));
         } else {
            $o_smarty->assign('document', false); 
         }

@@ -342,3 +342,1684 @@ info   SELECT password FROM user WHERE login="user_tenant_3"  23.05.2011 22:49
 info   SELECT * FROM personal_account WHERE user_id=3  23.05.2011 22:49
 info   SELECT password FROM user WHERE login="user_tenant_3"  23.05.2011 22:49
 info   SELECT * FROM personal_account WHERE user_id=3  23.05.2011 22:49
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  27.05.2011 22:39
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  27.05.2011 22:39
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  27.05.2011 22:39
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 22:39
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 22:39
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 22:39
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 22:39
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 22:39
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 22:39
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 22:39
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 22:39
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  27.05.2011 22:39
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 22:39
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 22:39
+info   SELECT * FROM document WHERE id=3  27.05.2011 22:39
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  27.05.2011 22:39
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  27.05.2011 22:39
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 22:39
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 22:39
+info   SELECT * FROM document WHERE id=3  27.05.2011 22:40
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  27.05.2011 22:40
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  27.05.2011 22:40
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  27.05.2011 22:40
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 22:40
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 22:40
+info   SELECT * FROM document WHERE id=3  27.05.2011 22:41
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  27.05.2011 22:41
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  27.05.2011 22:41
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  27.05.2011 22:41
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 22:41
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 22:41
+info   SELECT * FROM document WHERE id=3  27.05.2011 23:18
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  27.05.2011 23:18
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  27.05.2011 23:18
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:18
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:18
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:18
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:19
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:19
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:19
+info   SELECT * FROM document WHERE id=3  27.05.2011 23:19
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  27.05.2011 23:19
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  27.05.2011 23:19
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:19
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:19
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:19
+info   SELECT * FROM document WHERE id=3  27.05.2011 23:20
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  27.05.2011 23:20
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  27.05.2011 23:20
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:20
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:20
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:20
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:22
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:22
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:22
+info   SELECT * FROM document WHERE id=3  27.05.2011 23:22
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  27.05.2011 23:22
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  27.05.2011 23:22
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:22
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:22
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:22
+info   SELECT * FROM document WHERE id=3  27.05.2011 23:24
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  27.05.2011 23:24
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  27.05.2011 23:24
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:24
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:24
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:24
+info   SELECT * FROM document WHERE id=3  27.05.2011 23:24
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  27.05.2011 23:24
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  27.05.2011 23:24
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:24
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:24
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:24
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:24
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:24
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:24
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:25
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:25
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:25
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="admin"  27.05.2011 23:28
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:28
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:28
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:28
+info   SELECT password FROM user WHERE login="admin"  27.05.2011 23:28
+info   SELECT password FROM user WHERE login="admin"  27.05.2011 23:30
+info   SELECT * FROM document  27.05.2011 23:30
+info   SELECT password FROM user WHERE login="admin"  27.05.2011 23:30
+info   SELECT * FROM document WHERE is_folder=1  27.05.2011 23:30
+info   SELECT password FROM user WHERE login="admin"  27.05.2011 23:31
+info   INSERT INTO document(parrent_id, title, short_text, is_folder) 
+                    VALUES(0, "Уровень 1", "", 1)  27.05.2011 23:31
+info   SELECT LAST_INSERT_ID()  27.05.2011 23:31
+info   SELECT password FROM user WHERE login="admin"  27.05.2011 23:31
+info   SELECT * FROM document  27.05.2011 23:31
+info   SELECT password FROM user WHERE login="admin"  27.05.2011 23:31
+info   SELECT * FROM document WHERE is_folder=1  27.05.2011 23:31
+info   SELECT password FROM user WHERE login="admin"  27.05.2011 23:31
+info   INSERT INTO document(parrent_id, title, short_text, is_folder) 
+                    VALUES(5, "Уровень 2", "", 1)  27.05.2011 23:31
+info   SELECT LAST_INSERT_ID()  27.05.2011 23:31
+info   SELECT password FROM user WHERE login="admin"  27.05.2011 23:31
+info   SELECT * FROM document  27.05.2011 23:31
+info   SELECT password FROM user WHERE login="admin"  27.05.2011 23:31
+info   SELECT * FROM document WHERE is_folder=1  27.05.2011 23:31
+info   SELECT password FROM user WHERE login="admin"  27.05.2011 23:31
+info   INSERT INTO document(parrent_id, title, short_text, is_folder) 
+                    VALUES(6, "Уровень 3", "", 1)  27.05.2011 23:31
+info   SELECT LAST_INSERT_ID()  27.05.2011 23:31
+info   SELECT password FROM user WHERE login="admin"  27.05.2011 23:31
+info   SELECT * FROM document  27.05.2011 23:31
+info   SELECT password FROM user WHERE login="admin"  27.05.2011 23:31
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:31
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:31
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:31
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:31
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:31
+info   SELECT * FROM document WHERE id=5  27.05.2011 23:31
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:31
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:31
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=5 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:31
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:31
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:31
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:31
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:31
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:31
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:31
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:31
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:31
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:31
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:31
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:32
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:32
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:32
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:32
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:32
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:32
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:32
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:32
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:32
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:32
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:32
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:32
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:32
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:32
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:32
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:32
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:32
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:32
+info   SELECT * FROM document WHERE id=5  27.05.2011 23:32
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:32
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:32
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=5 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:32
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:32
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:32
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:32
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:32
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:32
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:32
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:32
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:32
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:32
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:32
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:33
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:33
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:33
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:33
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:33
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:33
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:33
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:33
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:33
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:33
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:33
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:33
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:33
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:33
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:33
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:33
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:33
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:33
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:33
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:33
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:33
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:33
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:33
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:33
+info   SELECT * FROM document WHERE id=5  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:33
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:33
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=5 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:33
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:33
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:33
+info   SELECT * FROM document WHERE id=5  27.05.2011 23:35
+info   SELECT * FROM document WHERE id=5  27.05.2011 23:35
+info   SELECT * FROM document WHERE id=5  27.05.2011 23:35
+info   SELECT * FROM document WHERE id=5  27.05.2011 23:35
+info   SELECT * FROM document WHERE id=5  27.05.2011 23:35
+info   SELECT * FROM document WHERE id=5  27.05.2011 23:35
+info   SELECT * FROM document WHERE id=5  27.05.2011 23:36
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:36
+info   SELECT * FROM document WHERE id=5  27.05.2011 23:36
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:36
+info   SELECT * FROM document WHERE id=5  27.05.2011 23:36
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:36
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:36
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=5 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:36
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:36
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:36
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:36
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:36
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:36
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:36
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:36
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:36
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:36
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:36
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:36
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:36
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:36
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:36
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:36
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:36
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:36
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:36
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:36
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:36
+info   SELECT * FROM document WHERE id=5  27.05.2011 23:36
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:36
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:36
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=5 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:36
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:36
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:36
+info   SELECT * FROM document WHERE id=5  27.05.2011 23:37
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:37
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:37
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=5 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:37
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:37
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:37
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:38
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:38
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:38
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:38
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:38
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:38
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:38
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:38
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:38
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:38
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:38
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:38
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:38
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:38
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:38
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:38
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:38
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:38
+info   SELECT * FROM document WHERE id=5  27.05.2011 23:38
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:38
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:38
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=5 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:38
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:38
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:38
+info   SELECT * FROM document WHERE id=5  27.05.2011 23:38
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:38
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:38
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=5 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:38
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:38
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:38
+info   SELECT * FROM document WHERE id=5  27.05.2011 23:38
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:38
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:38
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=5 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:38
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:38
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:38
+info   SELECT * FROM document WHERE id=5  27.05.2011 23:39
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:39
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:39
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=5 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:39
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:39
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:39
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:39
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:39
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:39
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:39
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:39
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:39
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:39
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:39
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:39
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:39
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:39
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:39
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:39
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:39
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:39
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:39
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:39
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:39
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:39
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:39
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:39
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:39
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:39
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:39
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:39
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:39
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:39
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:39
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:39
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:39
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:39
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:39
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:40
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:40
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:40
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:40
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:40
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:40
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:40
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:40
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:40
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:40
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:40
+info   SELECT * FROM document WHERE id=5  27.05.2011 23:40
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:40
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:40
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=5 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:40
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:40
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:40
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:40
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:40
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:40
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:40
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:40
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:40
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:40
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:40
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:42
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:42
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:42
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:42
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:42
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:42
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:42
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:42
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:42
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:42
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:42
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:42
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:42
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:42
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:42
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:42
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:43
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:43
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:43
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:43
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:43
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:43
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:43
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:43
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:43
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:43
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:43
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:43
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:43
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:43
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:43
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:43
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:43
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:43
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:43
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:43
+info   SELECT * FROM document WHERE id=6  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:43
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:43
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:43
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:43
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:43
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:43
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:43
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:43
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:43
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:44
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:44
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:44
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:44
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:44
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:44
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:44
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:44
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:44
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:44
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:45
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:45
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:45
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:45
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:45
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:45
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:45
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:45
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:45
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:45
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:45
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:45
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:45
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:45
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:45
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:45
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:45
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:45
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:45
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:45
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:53
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:53
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:53
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:53
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:53
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:53
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:53
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:53
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:53
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:53
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:53
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:53
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:53
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:53
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:53
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:53
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:53
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:54
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:54
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:54
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:54
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:54
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:54
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:54
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:54
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:54
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:54
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:56
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:56
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:56
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:56
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:56
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:56
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:56
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:56
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:56
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:56
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:56
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:56
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:56
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:56
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:56
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:56
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:56
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:57
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:57
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:57
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:57
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:57
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:57
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:57
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:57
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:57
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:57
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:58
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:58
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:58
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:58
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:58
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:58
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:58
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:58
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:58
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:58
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:58
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:58
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:58
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:58
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:58
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:58
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:58
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:58
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:58
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:58
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:58
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:58
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:58
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:58
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:58
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:58
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:58
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:58
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:58
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:59
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:59
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:59
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:59
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:59
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:59
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:59
+info   SELECT * FROM document WHERE id=7  27.05.2011 23:59
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  27.05.2011 23:59
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  27.05.2011 23:59
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  27.05.2011 23:59
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  27.05.2011 23:59
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.05.2011 23:59
+info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:59

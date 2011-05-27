@@ -25,6 +25,7 @@
  */
 class gkh_document extends gkh {
     const IS_FOLDER = 1;
+    const IS_ROOT = 0;
 
     public function __construct() {
         parent::__construct();
@@ -45,7 +46,7 @@ class gkh_document extends gkh {
 
     public function getDocument($id) {
         try {
-            $sql = 'SELECT * FROM document WHERE id=' . (int) $id;
+            $sql = 'SELECT * FROM document WHERE id=' . (int)$id;
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
                 return $result[0];
@@ -71,13 +72,34 @@ class gkh_document extends gkh {
             simo_exception::registrMsg($e, $this->_debug);
         }
     }
-    
+
     public function getFolderList() {
         try {
             $sql = 'SELECT * FROM document WHERE is_folder=' . gkh_document::IS_FOLDER;
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
                 return $result;
+            } else
+                return false;
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+        }
+    }
+
+    public function getFullPathToFolder($folder_id, array &$path = array()) {
+        try {
+            $sql = 'SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=' . gkh_document::IS_FOLDER . ' AND id=' . $folder_id . '';
+            $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
+            if (isset($result[0])) {
+                //if ($result[0]['id'] != $folder_id) {
+                $path[] = $result[0];
+                //}   
+                if ($result[0]['parrent_id'] != self::IS_ROOT) {
+                    $this->getFullPathToFolder($result[0]['parrent_id'], $path);
+                }
+                return $path;
             } else
                 return false;
         } catch (Exception $e) {
@@ -92,7 +114,7 @@ class gkh_document extends gkh {
             $sql = 'INSERT INTO document(parrent_id, title, short_text, is_folder) 
                     VALUES(' . $data['parrent_id'] . ', "' . $data['title'] . '", "' . $data['short_text'] . '", ' . $data['is_folder'] . ')';
             $this->_db->query($sql);
-            
+
             $sql = 'SELECT LAST_INSERT_ID()';
             $temp_id = $this->_db->query($sql);
 
@@ -100,7 +122,7 @@ class gkh_document extends gkh {
 
             if ($file != 'NULL') {
                 $sql = 'UPDATE document SET file="' . $file . '" 
-                        WHERE id=' . (int) $temp_id[0][0];
+                        WHERE id=' . (int)$temp_id[0][0];
                 $this->_db->query($sql);
             }
         } catch (Exception $e) {
@@ -115,13 +137,13 @@ class gkh_document extends gkh {
             $sql = 'UPDATE document 
                     SET parrent_id=' . $data['parrent_id'] . ', title="' . $data['title'] . '",  
                         short_text="' . $data['short_text'] . '", is_folder=' . $data['is_folder'] . ' 
-                    WHERE id=' . (int) $id;
+                    WHERE id=' . (int)$id;
             $this->_db->query($sql);
 
             $file = $this->_uploadFile($id, 'file');
             if ($file != 'NULL') {
                 $sql = 'UPDATE document 
-                    SET file="' . $file . '" WHERE id=' . (int) $id;
+                    SET file="' . $file . '" WHERE id=' . (int)$id;
 
                 $this->_db->query($sql);
             }
@@ -132,7 +154,7 @@ class gkh_document extends gkh {
 
     public function deleteDocument($id) {
         try {
-            $sql = 'DELETE FROM document WHERE id=' . (int) $id;
+            $sql = 'DELETE FROM document WHERE id=' . (int)$id;
             $this->_db->query($sql);
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
@@ -166,7 +188,7 @@ class gkh_document extends gkh {
             simo_functions::_delFile($__cfg['temp.public.dir'] . $temp[$field]);
 
             $sql = 'UPDATE document 
-                        SET ' . $field . '=NULL WHERE id=' . (int) $id;
+                        SET ' . $field . '=NULL WHERE id=' . (int)$id;
             $this->_db->query($sql);
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
