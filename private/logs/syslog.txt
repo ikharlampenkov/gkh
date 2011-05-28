@@ -2760,3 +2760,82 @@ info   SELECT id, parrent_id, title
 info   SELECT id, parrent_id, title 
                     FROM document 
                     WHERE is_folder=1 AND id=0  28.05.2011 14:10
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:15
+info   SELECT * FROM house ORDER BY street, number, subnumber  28.05.2011 14:15
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 15:16
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  28.05.2011 15:16
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=0  28.05.2011 15:16
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 15:27
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  28.05.2011 15:27
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=0  28.05.2011 15:27
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 15:27
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 15:39
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 15:39
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 15:40
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, question  28.05.2011 15:40
+info   SELECT id, parrent_id, question 
+                    FROM faq 
+                    WHERE is_folder=1 AND id=0  28.05.2011 15:40
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 15:44
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, question  28.05.2011 15:44
+info   SELECT id, parrent_id, question 
+                    FROM faq 
+                    WHERE is_folder=1 AND id=0  28.05.2011 15:44
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 15:44
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, question  28.05.2011 15:44
+info   SELECT id, parrent_id, question 
+                    FROM faq 
+                    WHERE is_folder=1 AND id=0  28.05.2011 15:44
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 15:45
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, question  28.05.2011 15:45
+info   SELECT id, parrent_id, question 
+                    FROM faq 
+                    WHERE is_folder=1 AND id=0  28.05.2011 15:45
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 15:45
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, question  28.05.2011 15:45
+info   SELECT id, parrent_id, question 
+                    FROM faq 
+                    WHERE is_folder=1 AND id=0  28.05.2011 15:45
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 15:45
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, question  28.05.2011 15:45
+info   SELECT id, parrent_id, question 
+                    FROM faq 
+                    WHERE is_folder=1 AND id=0  28.05.2011 15:45
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 15:45
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, question  28.05.2011 15:45
+info   SELECT id, parrent_id, question 
+                    FROM faq 
+                    WHERE is_folder=1 AND id=0  28.05.2011 15:45
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 15:45
+info   SELECT * FROM faq WHERE is_folder=1  28.05.2011 15:45

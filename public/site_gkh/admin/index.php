@@ -373,6 +373,53 @@ if ($page == 'document') {
     }
 }
 
+if ($page == 'faq') {
+
+    $o_faq = new gkh_faq();
+
+    if ($action == 'add_folder' || $action == 'edit_folder') {
+        $what = 'папку';
+    } else {
+        $what = 'вопрос';
+    }
+    
+    if (isset($_GET['root'])) {
+        $root = $_GET['root'];
+    } else {
+        $root = gkh_faq::IS_ROOT;
+    }
+    
+    if ($action == 'add' || $action == 'add_folder') {
+        if (isset($_POST['data'])) {
+            $o_faq->addFaq($_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('folder_list', $o_faq->getFolderList());
+        $o_smarty->assign('txt', 'Добавить ' . $what);
+    } elseif ($action == 'edit' || $action == 'edit_folder' && isset($_GET['id'])) {
+
+        if (isset($_POST['data'])) {
+            $o_faq->updateFaq($_GET['id'], $_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('txt', 'Редактировать ' . $what);
+        $o_smarty->assign('faq', $o_faq->getFaq($_GET['id']));
+        $o_smarty->assign('folder_list', $o_faq->getFolderList());
+    } elseif ($action == 'del') {
+        $o_faq->deleteNews($_GET['id']);
+        simo_functions::chLocation('?page=' . $page);
+    } else {
+      
+
+        $o_smarty->assign('faq_list', $o_faq->getFaqCatalog($root));  //$o_faq->getAllFaq()
+        $o_smarty->assign('path_to_faq', $o_faq->getFullPathToFolder($root));
+    }
+}
+
 if ($page == 'personal_account') {
 
     $o_pa = new gkh_personal_account_site();
