@@ -2023,3 +2023,740 @@ info   SELECT news.id, news_category_id, date, news.title, short_text, full_text
                     WHERE news.news_category_id=news_category.id  ORDER BY date DESC
                       LIMIT 5  27.05.2011 23:59
 info   SELECT * FROM house ORDER BY street, number, subnumber  27.05.2011 23:59
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  28.05.2011 14:02
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_connect"  28.05.2011 14:02
+info   SELECT * FROM content_page WHERE id=0 OR page_title="how_much"  28.05.2011 14:02
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  28.05.2011 14:02
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  28.05.2011 14:02
+info   SELECT * FROM house ORDER BY street, number, subnumber  28.05.2011 14:02
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="admin"  28.05.2011 14:03
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  28.05.2011 14:03
+info   SELECT * FROM house ORDER BY street, number, subnumber  28.05.2011 14:03
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:03
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:03
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:03
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=0  28.05.2011 14:03
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:03
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:03
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=0  28.05.2011 14:03
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:03
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:03
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=0  28.05.2011 14:03
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:03
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=5 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:03
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  28.05.2011 14:03
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:03
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:03
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  28.05.2011 14:03
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  28.05.2011 14:03
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:03
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:03
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  28.05.2011 14:03
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  28.05.2011 14:03
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  28.05.2011 14:03
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:03
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:03
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=0  28.05.2011 14:03
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:04
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:04
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=0  28.05.2011 14:04
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:04
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=5 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:04
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  28.05.2011 14:04
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:04
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:04
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  28.05.2011 14:04
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  28.05.2011 14:04
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:04
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=5 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:04
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  28.05.2011 14:04
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:04
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:04
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=0  28.05.2011 14:04
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:04
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:04
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:04
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:05
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:05
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:05
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:05
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:05
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:05
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:05
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:05
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:05
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:05
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:05
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=0  28.05.2011 14:05
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:05
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:05
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:05
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:05
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:05
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:05
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:05
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:05
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:05
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:05
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:05
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:05
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:05
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:05
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:05
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:05
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:05
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:05
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:05
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:05
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:05
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:05
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:05
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:05
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:05
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:05
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:05
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:05
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:05
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:05
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:05
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:05
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:05
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:05
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:05
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:05
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:05
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:05
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:05
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:05
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:05
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:05
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:05
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:05
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:05
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:06
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:06
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:06
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:06
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:06
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:06
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:06
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:07
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:07
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:07
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:07
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:07
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:07
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:07
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:07
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:07
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:07
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:07
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:07
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:07
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:07
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:07
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:07
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:07
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:07
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:07
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:07
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:08
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:08
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:08
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:08
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:08
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:08
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:08
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:08
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:08
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:08
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:08
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:08
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:08
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:08
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:08
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:08
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:09
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:09
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:09
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:09
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:09
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:09
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:09
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:09
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:09
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:09
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:09
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:09
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:09
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:09
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:09
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:09
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:09
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:09
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:09
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:09
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:09
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:09
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:09
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:09
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:10
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:10
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:10
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:10
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:10
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:10
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:10
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=3  28.05.2011 14:10
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:10
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=0  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=0  28.05.2011 14:10
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:10
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=5 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  28.05.2011 14:10
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:10
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  28.05.2011 14:10
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:10
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=7 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=7  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  28.05.2011 14:10
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:10
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=6  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  28.05.2011 14:10
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:10
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=5 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=5  28.05.2011 14:10
+info   SELECT password FROM user WHERE login="admin"  28.05.2011 14:10
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=0  28.05.2011 14:10
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=0  28.05.2011 14:10

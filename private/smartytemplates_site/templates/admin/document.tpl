@@ -58,6 +58,15 @@
 
 {else}
 
+{if isset($path_to_document)}
+<div>
+    <a href="?page={$page}">..</a> / 
+{section name=path_doc loop=count($path_to_document) step=-1}
+    <a href="?page={$page}&root={$path_to_document[path_doc].id}">{$path_to_document[path_doc].title}</a>{if !$smarty.section.path_doc.last} / {/if}
+{/section}    
+</div><br />
+{/if}
+
 {if $document_list!==false}
 <table>
     <tr>
@@ -68,7 +77,7 @@
     </tr>
 {foreach from=$document_list item=document}
     <tr>
-        <td>{$document.title|truncate:100}</td>
+        <td>{if $document.is_folder==1}<a href="?page={$page}&root={$document.id}">{$document.title|truncate:100}</a>{else}{$document.title|truncate:100}{/if}</td>
 	<td>{$document.short_text|truncate:200}</td>
         <td>{if $document.is_folder==1}папка{else}документ{/if}</td>    
         <td><a href="?page={$page}&action={if $document.is_folder==1}edit_folder{else}edit{/if}&id={$document.id}">редактировать</a><br />

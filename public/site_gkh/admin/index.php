@@ -336,6 +336,12 @@ if ($page == 'document') {
         $what = 'документ';
     }
     
+    if (isset($_GET['root'])) {
+        $root = $_GET['root'];
+    } else {
+        $root = gkh_document::IS_ROOT;
+    }
+    
     if ($action == 'add' || $action == 'add_folder') {
         if (isset($_POST['data'])) {
             $o_document->addDocument($_POST['data']);
@@ -362,7 +368,8 @@ if ($page == 'document') {
     } else {
       
 
-        $o_smarty->assign('document_list', $o_document->getAllDocument());
+        $o_smarty->assign('document_list', $o_document->getDocumentCatalog($root));  //$o_document->getAllDocument()
+        $o_smarty->assign('path_to_document', $o_document->getFullPathToFolder($root));
     }
 }
 
