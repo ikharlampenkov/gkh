@@ -3690,3 +3690,40 @@ info   SELECT news.id, news_category_id, date, news.title, short_text, full_text
                     WHERE news.news_category_id=news_category.id  ORDER BY date DESC
                       LIMIT 5  29.05.2011 22:39
 info   SELECT * FROM house ORDER BY street, number, subnumber  29.05.2011 22:39
+info   SELECT user_id FROM personal_account WHERE id="admin"  29.05.2011 22:51
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="admin"  29.05.2011 22:51
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, question  29.05.2011 22:51
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  29.05.2011 22:51
+info   SELECT * FROM house ORDER BY street, number, subnumber  29.05.2011 22:51
+info   SELECT password FROM user WHERE login="admin"  29.05.2011 22:51
+info   SELECT password FROM user WHERE login="admin"  29.05.2011 22:51
+info   SELECT * FROM tech_support_ticket_status  29.05.2011 22:51
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  29.05.2011 22:51
+info   SELECT password FROM user WHERE login="admin"  29.05.2011 22:51
+info   SELECT * FROM personal_account WHERE id=1  29.05.2011 22:51
+info   SELECT * FROM tech_support_ticket_status  29.05.2011 22:51
+info   SELECT tech_support_ticket.id, personal_account_id, ticket_status_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status 
+                    FROM tech_support_ticket, tech_support_ticket_status  
+                    WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                      AND tech_support_ticket.id=1 AND category="request_master"   29.05.2011 22:51
+info   SELECT * FROM tech_support_post WHERE ticket_id=1 ORDER BY date_question  29.05.2011 22:51
+info   SELECT password FROM user WHERE login="admin"  29.05.2011 22:51
+info   UPDATE tech_support_post SET answer="Разберемся", date_answer=NOW(), answer_file="" WHERE ticket_id=1 AND id=1  29.05.2011 22:51
+info   UPDATE tech_support_ticket SET ticket_status_id=2 WHERE id=1  29.05.2011 22:51
+info   SELECT password FROM user WHERE login="admin"  29.05.2011 22:51
+info   SELECT * FROM tech_support_ticket_status  29.05.2011 22:51
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status, fio  
+                         FROM tech_support_ticket, tech_support_ticket_status, personal_account
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND tech_support_ticket.personal_account_id=personal_account.id
+                           AND category="request_master" ORDER BY rating DESC, date DESC  29.05.2011 22:51

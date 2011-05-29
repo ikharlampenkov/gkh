@@ -278,7 +278,7 @@ if ($page == 'support') {
     if ($action == 'answer') {
         if (isset($_POST['data'])) {
             $o_tech_support_post->answerQuestion($_GET['id'], $_POST['data']);
-            simo_functions::chLocation('?page=' . $page);
+            simo_functions::chLocation('?page=' . $page . '&category=' . $category);
             exit;
         }
 
@@ -286,14 +286,14 @@ if ($page == 'support') {
     } elseif ($action == 'question') {
         if (isset($_POST['data'])) {
             $o_tech_support_post->askQuestion($_POST['data']['personal_account_id'], $_POST['data']);
-            simo_functions::chLocation('?page=' . $page);
+            simo_functions::chLocation('?page=' . $page . '&category=' . $category);
             exit;
         }
         $o_smarty->assign('pa_list', $o_pa->getAllPA());
     } elseif ($action == 'view_ticket') {
         if (isset($_POST['data'])) {
             $o_tech_support_post->answerQuestion($_GET['id'], $_POST['data']['id'], $_POST['data']);
-            simo_functions::chLocation('?page=' . $page);
+            simo_functions::chLocation('?page=' . $page . '&category=' . $category);
             exit;
         }
         $o_smarty->assign('pa_info', $o_pa->getPA($_GET['pa_id']));
@@ -302,7 +302,7 @@ if ($page == 'support') {
     } elseif ($action == 'add_status') {
         if (isset($_POST['data'])) {
             $o_tech_support_post->addTicketStatus($_POST['data']);
-            simo_functions::chLocation('?page=' . $page);
+            simo_functions::chLocation('?page=' . $page . '&category=' . $category);
             exit;
         }
 
@@ -311,7 +311,7 @@ if ($page == 'support') {
 
         if (isset($_POST['data'])) {
             $o_tech_support_post->updateTicketStatus($_GET['id'], $_POST['data']);
-            simo_functions::chLocation('?page=' . $page);
+            simo_functions::chLocation('?page=' . $page . '&category=' . $category);
             exit;
         }
 
@@ -319,7 +319,7 @@ if ($page == 'support') {
         $o_smarty->assign('ticket_status', $o_tech_support_post->getTicketStatus($_GET['id']));
     } elseif ($action == 'del_status') {
         $o_tech_support_post->deleteTicketStatus($_GET['id']);
-        simo_functions::chLocation('?page=' . $page);    
+        simo_functions::chLocation('?page=' . $page . '&category=' . $category);    
     } else {
         $o_smarty->assign('ticket_status_list', $o_tech_support_post->getAllTicketStatus());
         $o_smarty->assign('ticket_list', $o_tech_support_post->getAllTicket($category));
