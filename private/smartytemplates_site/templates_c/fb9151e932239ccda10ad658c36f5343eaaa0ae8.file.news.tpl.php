@@ -1,79 +1,198 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-29 23:18:49
-         compiled from "H:/www/gkh/private/smartytemplates_site/templates/news.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:123234de271e9baca93-75748476%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-29 22:59:53
+         compiled from "H:/www/gkh/private/smartytemplates_site/templates/admin/news.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:323474de26d79676456-47086028%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '1f3741ac4b5e2be11aaf71c1fd8164919cc08aca' => 
+    'fb9151e932239ccda10ad658c36f5343eaaa0ae8' => 
     array (
-      0 => 'H:/www/gkh/private/smartytemplates_site/templates/news.tpl',
-      1 => 1306685927,
+      0 => 'H:/www/gkh/private/smartytemplates_site/templates/admin/news.tpl',
+      1 => 1305647193,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '123234de271e9baca93-75748476',
+  'nocache_hash' => '323474de26d79676456-47086028',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
 <?php if (!is_callable('smarty_modifier_date_format')) include 'H:\www\gkh\private\classes\smarty\plugins\modifier.date_format.php';
-?><?php if ($_smarty_tpl->getVariable('action')->value=='view_news'){?>
+if (!is_callable('smarty_modifier_truncate')) include 'H:\www\gkh\private\classes\smarty\plugins\modifier.truncate.php';
+?><h1>Новости</h1>
 
-<h1>Новости<?php if (isset($_smarty_tpl->getVariable('news_category',null,true,false)->value)){?>: <?php echo $_smarty_tpl->getVariable('news_category')->value['title'];?>
-<?php }?></h1>
 
-<div><?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('news')->value['date'],"%d.%m.%Y");?>
-&nbsp;<?php echo $_smarty_tpl->getVariable('news')->value['title'];?>
-</div><br />
-<div><?php echo $_smarty_tpl->getVariable('news')->value['full_text'];?>
-</div>
+<?php if ($_smarty_tpl->getVariable('action')->value=="add_category"||$_smarty_tpl->getVariable('action')->value=="edit_category"){?>
 
-<br/><br/>
+<h2><?php echo $_smarty_tpl->getVariable('txt')->value;?>
+</h2>
 
-<div>Комментарии:</div><br />
-
-<?php  $_smarty_tpl->tpl_vars["news_comment"] = new Smarty_Variable;
- $_from = $_smarty_tpl->getVariable('news_comment_list')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-if ($_smarty_tpl->_count($_from) > 0){
-    foreach ($_from as $_smarty_tpl->tpl_vars["news_comment"]->key => $_smarty_tpl->tpl_vars["news_comment"]->value){
-?>
-<div><?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('news_comment')->value['date'],"%d.%m.%Y");?>
-&nbsp;<?php echo $_smarty_tpl->getVariable('news_comment')->value['nickname'];?>
-</div>
-<div><?php echo $_smarty_tpl->getVariable('news_comment')->value['text'];?>
-</div><br /><br />
-<?php }} ?>
-
-<div>Добавить комментарий:</div>
 <form action="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
 &action=<?php echo $_smarty_tpl->getVariable('action')->value;?>
-&id=<?php echo $_smarty_tpl->getVariable('news')->value['id'];?>
-&category=<?php echo $_smarty_tpl->getVariable('news')->value['news_category_id'];?>
-" method="post">
-    <table width="100%">
+<?php if ('edit'){?>&id=<?php echo $_smarty_tpl->getVariable('news_category')->value['id'];?>
+<?php }?>" method="post">
+    <table>
         <tr>
-            <td width="200">Имя</td>
-            <td><input name="data[nickname]" value="" /></td>
-        </tr>
-        <tr>
-            <td>Комментарий</td>
-            <td><textarea name="data[text]"></textarea></td>
+            <td width="200">Название</td>
+            <td><input name="data[title]" value="<?php echo $_smarty_tpl->getVariable('news_category')->value['title'];?>
+" /></td>
         </tr>
     </table>
     <input id="save" name="save" type="submit" value="Сохранить" />
 </form>
 
-<br/><br/>
-<a href="<?php echo $_smarty_tpl->getVariable('siteurl')->value;?>
-?page=news" >Все новости</a>
+<?php }elseif($_smarty_tpl->getVariable('action')->value=="add_news"||$_smarty_tpl->getVariable('action')->value=="edit_news"){?>
+
+<h2><?php echo $_smarty_tpl->getVariable('txt')->value;?>
+</h2>
+
+<form action="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+&action=<?php echo $_smarty_tpl->getVariable('action')->value;?>
+<?php if ('edit'){?>&id=<?php echo $_smarty_tpl->getVariable('news')->value['id'];?>
+<?php }?>" method="post">
+    <table>
+        <tr>
+            <td width="200">Название</td>
+            <td><input name="data[title]" value="<?php echo $_smarty_tpl->getVariable('news')->value['title'];?>
+" /></td>
+        </tr>
+        <tr>
+            <td width="200">Категория</td>
+            <td><select name="data[news_category_id]">
+                <?php  $_smarty_tpl->tpl_vars['news_category'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('news_category_list')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['news_category']->key => $_smarty_tpl->tpl_vars['news_category']->value){
+?>
+                    <option value="<?php echo $_smarty_tpl->tpl_vars['news_category']->value['id'];?>
+" <?php if (isset($_smarty_tpl->getVariable('news',null,true,false)->value)&&$_smarty_tpl->getVariable('news')->value['news_category_id']==$_smarty_tpl->tpl_vars['news_category']->value['id']){?>selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['news_category']->value['title'];?>
+</option>
+                <?php }} ?>    
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td width="200">Дата</td>
+            <td><input name="data[date]" value="<?php if (isset($_smarty_tpl->getVariable('news',null,true,false)->value['date'])){?><?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('news')->value['date'],"%d.%m.%Y");?>
+<?php }else{ ?><?php echo smarty_modifier_date_format(time(),"%d.%m.%Y");?>
+<?php }?>" /></td>
+        </tr>
+        <tr>
+            <td width="200">Анонс</td>
+            <td><textarea name="data[short_text]"><?php echo $_smarty_tpl->getVariable('news')->value['short_text'];?>
+</textarea></td>
+        </tr>
+        <tr>
+            <td width="200">Текст новости</td>
+            <td><textarea name="data[full_text]"><?php echo $_smarty_tpl->getVariable('news')->value['full_text'];?>
+</textarea></td>
+        </tr>
+    </table>
+    <input id="save" name="save" type="submit" value="Сохранить" />
+</form>
+
+<?php }elseif($_smarty_tpl->getVariable('action')->value=="show_comment"){?>
+
+<div><?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('news')->value['date'],"%d.%m.%Y");?>
+&nbsp;<?php echo $_smarty_tpl->getVariable('news')->value['title'];?>
+</div><br />
+
+<?php if ($_smarty_tpl->getVariable('news_comment_list')->value!==false){?>
+<table>
+<?php  $_smarty_tpl->tpl_vars['news_comment'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('news_comment_list')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['news_comment']->key => $_smarty_tpl->tpl_vars['news_comment']->value){
+?>
+    <tr>
+        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['news_comment']->value['date'],"%d.%m.%Y");?>
+</td>
+        <td><?php echo $_smarty_tpl->tpl_vars['news_comment']->value['nickname'];?>
+</td>
+        <td><?php echo smarty_modifier_truncate($_smarty_tpl->tpl_vars['news_comment']->value['text'],100);?>
+</td>
+        <td><a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+&action=edit_news_comment&id=<?php echo $_smarty_tpl->tpl_vars['news_comment']->value['id'];?>
+&news_id=<?php echo $_smarty_tpl->getVariable('news')->value['id'];?>
+">редактировать</a><br />
+            <a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+&action=del_news_comment&id=<?php echo $_smarty_tpl->tpl_vars['news_comment']->value['id'];?>
+&news_id=<?php echo $_smarty_tpl->getVariable('news')->value['id'];?>
+">удалить</a> </td>
+    </tr>
+<?php }} ?>
+</table>
+<?php }?>
+
+<?php }elseif($_smarty_tpl->getVariable('action')->value=="edit_news_comment"){?>
+
+<h2><?php echo $_smarty_tpl->getVariable('txt')->value;?>
+<?php echo $_smarty_tpl->getVariable('news')->value['title'];?>
+</h2>
+
+<form action="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+&action=edit_news_comment&id=<?php echo $_smarty_tpl->getVariable('news_comment')->value['id'];?>
+&news_id=<?php echo $_smarty_tpl->getVariable('news')->value['id'];?>
+" method="post">
+    <table>
+        <tr>
+            <td width="200">Дата</td>
+            <td><input name="data[date]" value="<?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('news_comment')->value['date'],"%d.%m.%Y");?>
+" /></td>
+        </tr>
+        <tr>
+            <td width="200">Имя</td>
+            <td><input name="data[nickname]" value="<?php echo $_smarty_tpl->getVariable('news_comment')->value['nickname'];?>
+" /></td>
+        </tr>
+        <tr>
+            <td width="200">Комментарий</td>
+            <td><textarea name="data[text]"><?php echo $_smarty_tpl->getVariable('news_comment')->value['text'];?>
+</textarea></td>
+        </tr>
+        <tr>
+            <td>Модерировать</td>
+            <td><input type="checkbox" name="data[is_moderated]" <?php if ($_smarty_tpl->getVariable('news_comment')->value['is_moderated']){?>checked="checked"<?php }?> style="width: 14px;" /></td>
+        </tr>
+    </table>
+    <input id="save" name="save" type="submit" value="Сохранить" />
+</form>
 
 <?php }else{ ?>
 
-<h1>Новости<?php if (isset($_smarty_tpl->getVariable('news_category',null,true,false)->value)){?>: <?php echo $_smarty_tpl->getVariable('news_category')->value['title'];?>
-<?php }?></h1>
 
-<?php if ($_smarty_tpl->getVariable('page_info')->value['page_count']!=0){?>
+<h4>Категории новостей</h4>
+
+<?php if ($_smarty_tpl->getVariable('news_category_list')->value!==false){?>
+<table>
+<?php  $_smarty_tpl->tpl_vars['news_category'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('news_category_list')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['news_category']->key => $_smarty_tpl->tpl_vars['news_category']->value){
+?>
+    <tr>
+        <td><?php echo $_smarty_tpl->tpl_vars['news_category']->value['title'];?>
+</td>
+        <td><a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+&action=edit_category&id=<?php echo $_smarty_tpl->tpl_vars['news_category']->value['id'];?>
+">редактировать</a><br />
+            <a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+&action=del_category&id=<?php echo $_smarty_tpl->tpl_vars['news_category']->value['id'];?>
+">удалить</a> </td>
+    </tr>
+<?php }} ?>
+</table>
+<?php }?>
+
+<a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+&action=add_category">добавить категорию</a>
+
+<hr width="100%" size="1" />
+
+<h4>Новости</h4>
+
+<?php if ($_smarty_tpl->getVariable('news_list')->value!==false){?>
+
 <table>
     <tr>
         <td id="pager">Страница: 
@@ -111,7 +230,6 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['pager']['last']       = ($_s
 ?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
 &action=<?php echo $_smarty_tpl->getVariable('action')->value;?>
 &pager=<?php echo $_smarty_tpl->getVariable('smarty')->value['section']['pager']['index'];?>
-&category=<?php echo $_smarty_tpl->getVariable('news')->value['news_category_id'];?>
  ><?php echo $_smarty_tpl->getVariable('smarty')->value['section']['pager']['index']+1;?>
 </a> <?php }?>
         <?php endfor; endif; ?>   
@@ -119,26 +237,35 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['pager']['last']       = ($_s
     </tr>
 </table>
 <br/>
-<?php }?>
 
+<table>
 <?php  $_smarty_tpl->tpl_vars['news'] = new Smarty_Variable;
- $_from = $_smarty_tpl->getVariable('news_list_full')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+ $_from = $_smarty_tpl->getVariable('news_list')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['news']->key => $_smarty_tpl->tpl_vars['news']->value){
 ?>
-<div><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['news']->value['date'],"%d.%m.%Y");?>
-&nbsp;<?php echo $_smarty_tpl->tpl_vars['news']->value['title'];?>
-</div>
-<div><?php echo $_smarty_tpl->tpl_vars['news']->value['short_text'];?>
-</div>
-<?php if ($_smarty_tpl->tpl_vars['news']->value['full_text']){?><a href="<?php echo $_smarty_tpl->getVariable('siteurl')->value;?>
-?page=news&action=view_news&id=<?php echo $_smarty_tpl->tpl_vars['news']->value['id'];?>
-&category=<?php echo $_smarty_tpl->tpl_vars['news']->value['news_category_id'];?>
-">подробнее...</a><br/><?php }?>
-<br/>
+    <tr>
+        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['news']->value['date'],"%d.%m.%Y");?>
+</td>
+        <td><?php echo $_smarty_tpl->tpl_vars['news']->value['title'];?>
+</td>
+        <td><?php echo $_smarty_tpl->tpl_vars['news']->value['category_title'];?>
+</td>
+        <td><?php echo smarty_modifier_truncate(strip_tags($_smarty_tpl->tpl_vars['news']->value['short_text']),50);?>
+</td>
+        <td><a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+&action=show_comment&id=<?php echo $_smarty_tpl->tpl_vars['news']->value['id'];?>
+">просмотреть комментарии</a><br />
+            <a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+&action=edit_news&id=<?php echo $_smarty_tpl->tpl_vars['news']->value['id'];?>
+">редактировать</a><br />
+            <a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+&action=del_news&id=<?php echo $_smarty_tpl->tpl_vars['news']->value['id'];?>
+">удалить</a> </td>
+    </tr>
 <?php }} ?>
+</table>
 
-<?php if ($_smarty_tpl->getVariable('page_info')->value['page_count']!=0){?>
 <br/>
 <table>
     <tr>
@@ -177,13 +304,16 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['pager']['last']       = ($_s
 ?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
 &action=<?php echo $_smarty_tpl->getVariable('action')->value;?>
 &pager=<?php echo $_smarty_tpl->getVariable('smarty')->value['section']['pager']['index'];?>
-&category=<?php echo $_smarty_tpl->getVariable('news')->value['news_category_id'];?>
  ><?php echo $_smarty_tpl->getVariable('smarty')->value['section']['pager']['index']+1;?>
 </a> <?php }?>
         <?php endfor; endif; ?>   
         </td>
     </tr>
 </table>
+<br/>
 <?php }?>
+
+<a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+&action=add_news">добавить новость</a>
 
 <?php }?>

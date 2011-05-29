@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-29 22:09:49
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-29 23:11:50
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:159934de261bd4db0a8-58274190%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:242434de2704691a602-12444702%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '06f23a46aed9fc3af496589adff00c09fe8f7897' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/index.tpl',
-      1 => 1306681529,
+      1 => 1306685507,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '159934de261bd4db0a8-58274190',
+  'nocache_hash' => '242434de2704691a602-12444702',
   'function' => 
   array (
   ),
@@ -130,8 +130,19 @@ $_smarty_tpl->decodeProperties(array (
                                 </div>
 
                                 <script type="text/javascript">
-                                var submenus = [  {  id:"tmM",subs:[  {  "t":"Раскрытие информации","u":"http://dnevnik.ru/user.aspx?user=361977" } , { "t":"Личный кабинет","u":"http://messenger.dnevnik.ru/" } , { "t":"Жизненные ситуации","u":"http://dnevnik.ru/outlook.ashx" } , { "t":"Важная информация","u":"http://dnevnik.ru/outlook.ashx" } ] } , { id:"tmC",subs:[ { "t":"Общая информация","u":"http://people.dnevnik.ru" } , { "t":"Лицензии","u":"http://groups.dnevnik.ru" } , { "t":"Руководство","u":"http://events.dnevnik.ru" } , { "t":"Персонал","u":"http://networks.dnevnik.ru" } , { "t":"Вакансии","u":"http://networks.dnevnik.ru" } , { "t":"Контакты","u":"http://networks.dnevnik.ru" } ] } , { id:"tmS",subs:[ { "t":"Электротехнические работы","u":"?page=content_page&title=eltechrab" } , { "t":"Сантехнические работы","u":"?page=content_page&title=santechrab" } , { "t":"Содержание дома","u":"http://schools.dnevnik.ru/schedules" } , { "t":"Ремонт дома","u":"http://schools.dnevnik.ru/journals/" } ] } , { id:"tmL",subs:[ { "t":"Жилищно-коммунальные услуги","u":"http://lib.dnevnik.ru/literature/" } , { "t":"Коммунальные ресурсы","u":"http://lib.dnevnik.ru/media/" } ] } , { id:"tmCON",subs:[ { "t":"Объявления","u":"http://dnevnik.ru/contests" } , { "t":"Отключения","u":"http://tests.dnevnik.ru/?cat=olympics" } , { "t":"Подключения","u":"http://tests.dnevnik.ru/" } , { "t":"Согласования","u":"http://tests.dnevnik.ru/?cat=ege" } , { "t":"Законодательство","u":"http://tests.dnevnik.ru/?cat=ege" } ] } ,  { id:"tma",subs:[ { "t":"Обслуживаемые дома","u":"http://dnevnik.ru/contests" } , { "t":"План проводимых работ","u":"http://dnevnik.ru/contests" } , { "t":"Отчет по капитальном ремонту ","u":"http://dnevnik.ru/contests" } ] } , { id:"tmO",subs:[ { "t":"Бухгалтерская отчетность","u":"http://dnevnik.ru/contests" } , { "t":"Доходы","u":"http://dnevnik.ru/contests" } , { "t":"Расходы","u":"http://dnevnik.ru/contests" } ] } ];
+                                var submenus = [ {  id:"tmM",subs:[  {  "t":"Раскрытие информации","u":"http://dnevnik.ru/user.aspx?user=361977" } , { "t":"Личный кабинет","u":"http://messenger.dnevnik.ru/" } , { "t":"Жизненные ситуации","u":"http://dnevnik.ru/outlook.ashx" } , { "t":"Важная информация","u":"http://dnevnik.ru/outlook.ashx" } ] } ,
+                                                 { id:"tmC",subs:[ { "t":"Общая информация","u":"http://people.dnevnik.ru" } , { "t":"Лицензии","u":"http://groups.dnevnik.ru" } , { "t":"Руководство","u":"http://events.dnevnik.ru" } , { "t":"Персонал","u":"http://networks.dnevnik.ru" } , { "t":"Вакансии","u":"http://networks.dnevnik.ru" } , { "t":"Контакты","u":"http://networks.dnevnik.ru" } ] } , 
+                                                 { id:"tmS",subs:[ { "t":"Электротехнические работы","u":"?page=content_page&title=eltechrab" } , { "t":"Сантехнические работы","u":"?page=content_page&title=santechrab" } , { "t":"Содержание дома","u":"http://schools.dnevnik.ru/schedules" } , { "t":"Ремонт дома","u":"http://schools.dnevnik.ru/journals/" } ] } , 
+                                                 { id:"tmL",subs:[ { "t":"Жилищно-коммунальные услуги","u":"http://lib.dnevnik.ru/literature/" } , { "t":"Коммунальные ресурсы","u":"http://lib.dnevnik.ru/media/" } ] } , 
+                                                 { id:"tmCON",subs:[ { "t":"Объявления","u":"?page=news&category=1" } , { "t":"Отключения","u":"?page=news&category=2" } , { "t":"Подключения","u":"?page=news&category=3" } , { "t":"Согласования","u":"?page=news&category=4" } , { "t":"Законодательство","u":"?page=news&category=5" } ] } , 
+                                                 { id:"tma",subs:[ { "t":"Обслуживаемые дома","u":"http://dnevnik.ru/contests" } , { "t":"План проводимых работ","u":"http://dnevnik.ru/contests" } , { "t":"Отчет по капитальном ремонту ","u":"http://dnevnik.ru/contests" } ] } , 
+                                                 { id:"tmO",subs:[ { "t":"Бухгалтерская отчетность","u":"http://dnevnik.ru/contests" } , { "t":"Доходы","u":"http://dnevnik.ru/contests" } , { "t":"Расходы","u":"http://dnevnik.ru/contests" } ] } ];
                                 </script>
+
+
+
+
+
 
                                 </div>
 

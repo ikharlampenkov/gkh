@@ -57,13 +57,14 @@ if ($o_user->isLogin()) {
 
     if ($page == 'news') {
 
+        $o_news = new gkh_news();
+        
         if (isset($_GET['category'])) {
             $category = $_GET['category'];
+            $o_smarty->assign('news_category', $o_news->getNewsCategory($category));
         } else {
             $category = gkh_news::ANY_CATEGORY;
         }
-
-        $o_news = new gkh_news();
 
         if ($action == 'view_news' && isset($_GET['id'])) {
 
@@ -86,6 +87,7 @@ if ($o_user->isLogin()) {
 
             $o_smarty->assign('news_list_full', $o_news->getAllNews($category, $cur_page));
             $o_smarty->assign('page_info', $o_news->getPageInfo($category, $cur_page));
+            
         }
     }
 

@@ -1,6 +1,6 @@
 {if $action=='view_news'}
 
-<h1>Новости</h1>
+<h1>Новости{if isset($news_category)}: {$news_category.title}{/if}</h1>
 
 <div>{$news.date|date_format:"%d.%m.%Y"}&nbsp;{$news.title}</div><br />
 <div>{$news.full_text}</div>
@@ -34,8 +34,9 @@
 
 {else}
 
-<h1>Новости</h1>
+<h1>Новости{if isset($news_category)}: {$news_category.title}{/if}</h1>
 
+{if $page_info.page_count!=0}
 <table>
     <tr>
         <td id="pager">Страница: 
@@ -46,6 +47,7 @@
     </tr>
 </table>
 <br/>
+{/if}
 
 {foreach from=$news_list_full item=news}
 <div>{$news.date|date_format:"%d.%m.%Y"}&nbsp;{$news.title}</div>
@@ -54,6 +56,7 @@
 <br/>
 {/foreach}
 
+{if $page_info.page_count!=0}
 <br/>
 <table>
     <tr>
@@ -64,5 +67,6 @@
         </td>
     </tr>
 </table>
+{/if}
 
 {/if}
