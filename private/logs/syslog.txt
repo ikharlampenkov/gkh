@@ -4549,3 +4549,13 @@ info   SELECT news.id, news_category_id, date, news.title, short_text, full_text
                     WHERE news.news_category_id=news_category.id  ORDER BY date DESC
                       LIMIT 5  30.05.2011 00:57
 info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:57
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 01:11
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 01:11
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 01:11
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 01:11

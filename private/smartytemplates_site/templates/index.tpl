@@ -83,12 +83,12 @@
                                             <td width="750">
                                                 <ul>
                                                     <li class="{if $page==''}active{else}noactive{/if}"><a id="tmM" title="Главная" href="/">Главная</a></li>
-                                                    <li class="{if $spage=='about'}active{else}noactive{/if}"><a id="tmC" title="О нас" href="http://contact.dnevnik.ru/">О нас</a></li>
-                                                    <li class="{if $spage=='service'}active{else}noactive{/if}"><a id="tmS" title="Услуги" href="http://schools.dnevnik.ru/school.aspx">Услуги</a></li>
-                                                    <li class="{if $page=='rate'}active{else}noactive{/if}"><a id="tmL" title="Тарифы" href="http://lib.dnevnik.ru/">Тарифы</a></li>
+                                                    <li class="{if $spage=='about'}active{else}noactive{/if}"><a id="tmC" title="О нас" href="/">О нас</a></li>
+                                                    <li class="{if $spage=='service'}active{else}noactive{/if}"><a id="tmS" title="Услуги" href="/">Услуги</a></li>
+                                                    <li class="{if $page=='rate'}active{else}noactive{/if}"><a id="tmL" title="Тарифы" href="/">Тарифы</a></li>
                                                     <li class="{if $page=='news'}active{else}noactive{/if}"><a id="tmCON" title="Новости" href="?page=news">Новости</a</li>
                                                     <li class="{if $page=='house'}active{else}noactive{/if}"><a id="tma" title="Ваш дом" href="?page=house">Ваш дом</a></li>
-                                                    <li class="{if $page=='report'}active{else}noactive{/if}"><a id="tmO" title="Отчеты" href="http://ggg.dnevnik.ru/">Отчеты</a></li>
+                                                    <li class="{if $page=='report'}active{else}noactive{/if}"><a id="tmO" title="Отчеты" href="/">Отчеты</a></li>
                                                 </ul>
                                             </td>
                                             <td align="right"><img src="img/right.jpg" /></td>
@@ -99,18 +99,18 @@
                                 <div style="text-align:center">
                                     <ul class="sub">
                                         {if $page==''}
-                                        <li><a title="Раскрытие информации" href="http://dnevnik.ru/user.aspx?user=361977">Раскрытие информации</a></li>
-                                        <li><a title="Личный кабинет" href="http://messenger.dnevnik.ru/">Личный кабинет</a></li>
-                                        <li><a title="Жизненные ситуации" href="http://dnevnik.ru/outlook.ashx" target="_blank">Жизненные ситуации</a></li>
-                                        <li><a title="Важная информация" href="http://dnevnik.ru/news.aspx">Важная информация</a></li>
+                                        <li><a title="Раскрытие информации" href="/">Раскрытие информации</a></li>
+                                        <li><a title="Личный кабинет" href="/">Личный кабинет</a></li>
+                                        <li><a title="Жизненные ситуации" href="/" target="_blank">Жизненные ситуации</a></li>
+                                        <li><a title="Важная информация" href="/">Важная информация</a></li>
                                         {/if}
                                         {if $spage=='about'}
-                                        <li class="{if $page=='eltechrab'}active{else}noactive{/if}"><a title="Общая информация" href="">Общая информация</a></li>
+                                        <li class="{if $page=='eltechrab'}active{else}noactive{/if}"><a title="Общая информация" href="/">Общая информация</a></li>
                                         <li class="{if $page=='license'}active{else}noactive{/if}"><a title="Лицензии" href="?page=license&spage=about">Лицензии</a></li>
-                                        <li class="{if $page=='eltechrab'}active{else}noactive{/if}"><a title="Руководство" href="?page=personal&is_leaders=1&spage=about">Руководство</a></li>
-                                        <li class="{if $page=='eltechrab'}active{else}noactive{/if}"><a title="Персонал" href="?page=personal&is_leaders=0&spage=about">Персонал</a></li>
-                                        <li class="{if $page=='eltechrab'}active{else}noactive{/if}"><a title="Вакансии" href="">Вакансии</a></li>
-                                        <li class="{if $page=='eltechrab'}active{else}noactive{/if}"><a title="Контакты" href="">Контакты</a></li>
+                                        <li class="{if $is_leaders=='1'}active{else}noactive{/if}"><a title="Руководство" href="?page=personal&is_leaders=1&spage=about">Руководство</a></li>
+                                        <li class="{if $is_leaders=='0'}active{else}noactive{/if}"><a title="Персонал" href="?page=personal&is_leaders=0&spage=about">Персонал</a></li>
+                                        <li class="{if $page=='eltechrab'}active{else}noactive{/if}"><a title="Вакансии" href="/">Вакансии</a></li>
+                                        <li class="{if $page=='eltechrab'}active{else}noactive{/if}"><a title="Контакты" href="/">Контакты</a></li>
                                         {/if}
                                         {if $spage=='service'}
                                         <li class="{if $conpage_title=='eltechrab'}active{else}noactive{/if}"><a title="Электротехнические работы" href="?page=content_page&title=eltechrab&spage=service">Электротехнические работы</a></li>
@@ -133,13 +133,13 @@
                                 </div>
 
                                 <script type="text/javascript">
-                                var submenus = [ {  id:"tmM",subs:[  {  "t":"Раскрытие информации","u":"http://dnevnik.ru/user.aspx?user=361977" } , { "t":"Личный кабинет","u":"http://messenger.dnevnik.ru/" } , { "t":"Жизненные ситуации","u":"http://dnevnik.ru/outlook.ashx" } , { "t":"Важная информация","u":"http://dnevnik.ru/outlook.ashx" } ] } ,
-                                                 { id:"tmC",subs:[ { "t":"Общая информация","u":"http://people.dnevnik.ru" } , { "t":"Лицензии","u":"?page=license&spage=about" } , { "t":"Руководство","u":"?page=personal&is_leaders=1&spage=about" } , { "t":"Персонал","u":"?page=personal&is_leaders=0&spage=about" } , { "t":"Вакансии","u":"http://networks.dnevnik.ru" } , { "t":"Контакты","u":"http://networks.dnevnik.ru" } ] } , 
-                                                 { id:"tmS",subs:[ { "t":"Электротехнические работы","u":"?page=content_page&title=eltechrab&spage=service" } , { "t":"Сантехнические работы","u":"?page=content_page&title=santechrab&spage=service" } , { "t":"Содержание дома","u":"http://schools.dnevnik.ru/schedules" } , { "t":"Ремонт дома","u":"http://schools.dnevnik.ru/journals/" } ] } , 
-                                                 { id:"tmL",subs:[ { "t":"Жилищно-коммунальные услуги","u":"http://lib.dnevnik.ru/literature/" } , { "t":"Коммунальные ресурсы","u":"http://lib.dnevnik.ru/media/" } ] } , 
+                                var submenus = [ {  id:"tmM",subs:[  {  "t":"Раскрытие информации","u":"/" } , { "t":"Личный кабинет","u":"http://messenger.dnevnik.ru/" } , { "t":"Жизненные ситуации","u":"/" } , { "t":"Важная информация","u":"/" } ] } ,
+                                                 { id:"tmC",subs:[ { "t":"Общая информация","u":"/" } , { "t":"Лицензии","u":"?page=license&spage=about" } , { "t":"Руководство","u":"?page=personal&is_leaders=1&spage=about" } , { "t":"Персонал","u":"?page=personal&is_leaders=0&spage=about" } , { "t":"Вакансии","u":"/" } , { "t":"Контакты","u":"/" } ] } , 
+                                                 { id:"tmS",subs:[ { "t":"Электротехнические работы","u":"?page=content_page&title=eltechrab&spage=service" } , { "t":"Сантехнические работы","u":"?page=content_page&title=santechrab&spage=service" } , { "t":"Содержание дома","u":"/" } , { "t":"Ремонт дома","u":"/" } ] } , 
+                                                 { id:"tmL",subs:[ { "t":"Жилищно-коммунальные услуги","u":"/" } , { "t":"Коммунальные ресурсы","u":"/" } ] } , 
                                                  { id:"tmCON",subs:[ { "t":"Объявления","u":"?page=news&category=1" } , { "t":"Отключения","u":"?page=news&category=2" } , { "t":"Подключения","u":"?page=news&category=3" } , { "t":"Согласования","u":"?page=news&category=4" } , { "t":"Законодательство","u":"?page=news&category=5" } ] } , 
-                                                 { id:"tma",subs:[ { "t":"Обслуживаемые дома","u":"http://dnevnik.ru/contests" } , { "t":"План проводимых работ","u":"http://dnevnik.ru/contests" } , { "t":"Отчет по капитальном ремонту ","u":"http://dnevnik.ru/contests" } ] } , 
-                                                 { id:"tmO",subs:[ { "t":"Бухгалтерская отчетность","u":"http://dnevnik.ru/contests" } , { "t":"Доходы","u":"http://dnevnik.ru/contests" } , { "t":"Расходы","u":"http://dnevnik.ru/contests" } ] } ];
+                                                 { id:"tma",subs:[ { "t":"Обслуживаемые дома","u":"/" } , { "t":"План проводимых работ","u":"/" } , { "t":"Отчет по капитальном ремонту ","u":"/" } ] } , 
+                                                 { id:"tmO",subs:[ { "t":"Бухгалтерская отчетность","u":"/" } , { "t":"Доходы","u":"/" } , { "t":"Расходы","u":"/" } ] } ];
                                 </script>
                                 
                                 </div>
