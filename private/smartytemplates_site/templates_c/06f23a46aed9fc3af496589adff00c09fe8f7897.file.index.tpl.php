@@ -1,9 +1,31 @@
-<!DOCTYPE html PUBliC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-29 22:09:49
+         compiled from "H:/www/gkh/private/smartytemplates_site/templates/index.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:159934de261bd4db0a8-58274190%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '06f23a46aed9fc3af496589adff00c09fe8f7897' => 
+    array (
+      0 => 'H:/www/gkh/private/smartytemplates_site/templates/index.tpl',
+      1 => 1306681529,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '159934de261bd4db0a8-58274190',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+)); /*/%%SmartyHeaderCode%%*/?>
+<?php if (!is_callable('smarty_modifier_date_format')) include 'H:\www\gkh\private\classes\smarty\plugins\modifier.date_format.php';
+?><!DOCTYPE html PUBliC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8"></meta>
-        <meta name="DEscriptION" content="{$description}"></meta>
-        <meta name="keywords" content="{$keywords}"></meta>
+        <meta name="DEscriptION" content="<?php echo $_smarty_tpl->getVariable('description')->value;?>
+"></meta>
+        <meta name="keywords" content="<?php echo $_smarty_tpl->getVariable('keywords')->value;?>
+"></meta>
         <meta name="author-corporate" content=""></meta>
         <meta name="publisher-email" content=""></meta>
 
@@ -13,11 +35,13 @@
         <script type="text/javascript" language="javascript" src="/js/main.js" ></script>
         <script type="text/javascript" language="javascript" src="/js/common.js"></script>
 
-        <title>{$title}</title>
+        <title><?php echo $_smarty_tpl->getVariable('title')->value;?>
+</title>
 
     </head>
     <body>
- {include file="error_msg.tpl"} 
+ <?php $_template = new Smarty_Internal_Template("error_msg.tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
+ echo $_template->getRenderedTemplate();?><?php unset($_template);?> 
 
         <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
             <tr>
@@ -49,7 +73,7 @@
                             </td>
                             <td width="159" background="img/vhod.jpg" valign="top" style="padding-left: 15px;" align="right">
                                 <br/><br/><br/>
-                                {if isset($login_fail)} <div style="color:red; font-weight:bold; font-size:12px;">Вы ввели неправильный логин и пароль!</div>{/if}
+                                <?php if (isset($_smarty_tpl->getVariable('login_fail',null,true,false)->value)){?> <div style="color:red; font-weight:bold; font-size:12px;">Вы ввели неправильный логин и пароль!</div><?php }?>
 
                                 <form method="post" style="margin:0px; padding:0px;">
                                     <span style="width:70px">Лицевой счет: </span>
@@ -129,9 +153,10 @@
                             <td>&nbsp;</td>
                             <td width="885" valign="top">
 
-                            {if isset($page) && !empty($page)} 
-                                {include file="$page.tpl"} 
-                            {else} 
+                            <?php if (isset($_smarty_tpl->getVariable('page',null,true,false)->value)&&!empty($_smarty_tpl->getVariable('page',null,true,false)->value)){?> 
+                                <?php $_template = new Smarty_Internal_Template(($_smarty_tpl->getVariable('page')->value).".tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);
+ echo $_template->getRenderedTemplate();?><?php unset($_template);?> 
+                            <?php }else{ ?> 
 
                                 <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
                                     <tr>
@@ -152,18 +177,28 @@
                                             <div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">Важная информация</div>
                                             <div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
 
-                                            {foreach from=$news_list item=news} 
-                                            <div>{$news.date|date_format:"%d.%m.%Y"} &nbsp; {$news.title}</div>
-                                            <div>{$news.short_text} </div>
-                                            {if $news.full_text}<a href="{$siteurl}?page=news&action=view_news&id={$news.id}&category={$news.news_category_id}">подробнее...</a><br/>{/if} 
+                                            <?php  $_smarty_tpl->tpl_vars['news'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('news_list')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['news']->key => $_smarty_tpl->tpl_vars['news']->value){
+?> 
+                                            <div><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['news']->value['date'],"%d.%m.%Y");?>
+ &nbsp; <?php echo $_smarty_tpl->tpl_vars['news']->value['title'];?>
+</div>
+                                            <div><?php echo $_smarty_tpl->tpl_vars['news']->value['short_text'];?>
+ </div>
+                                            <?php if ($_smarty_tpl->tpl_vars['news']->value['full_text']){?><a href="<?php echo $_smarty_tpl->getVariable('siteurl')->value;?>
+?page=news&action=view_news&id=<?php echo $_smarty_tpl->tpl_vars['news']->value['id'];?>
+&category=<?php echo $_smarty_tpl->tpl_vars['news']->value['news_category_id'];?>
+">подробнее...</a><br/><?php }?> 
                                             <br/>
-                                           {/foreach}
+                                           <?php }} ?>
 
                                         </td>
                                     </tr>
                                 </table>
 
-                            {/if}
+                            <?php }?>
 
                             </td>
                             <td>&nbsp;</td>

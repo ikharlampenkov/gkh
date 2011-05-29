@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-28 15:45:29
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-29 22:27:50
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/admin/faq.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:287054de0b6293b3c74-70848210%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:90374de265f6498da2-82900859%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '9576e9415c00828429bf57cd8398ba909cb420bd' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/admin/faq.tpl',
-      1 => 1306572326,
+      1 => 1306682868,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '287054de0b6293b3c74-70848210',
+  'nocache_hash' => '90374de265f6498da2-82900859',
   'function' => 
   array (
   ),
@@ -32,12 +32,12 @@ $_smarty_tpl->decodeProperties(array (
     <table>
         <tr>
             <td width="200">Вопрос</td>
-            <td><input name="data[title]" value="<?php echo $_smarty_tpl->getVariable('faq')->value['title'];?>
+            <td><input name="data[question]" value="<?php echo $_smarty_tpl->getVariable('faq')->value['question'];?>
 " /></td>
         </tr>
         <tr>
             <td >Ответ</td>
-            <td><textarea name="data[short_text]"><?php echo $_smarty_tpl->getVariable('faq')->value['short_text'];?>
+            <td><textarea name="data[answer]"><?php echo $_smarty_tpl->getVariable('faq')->value['answer'];?>
 </textarea></td>
         </tr>
         <tr>
@@ -50,7 +50,7 @@ if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['folder']->key => $_smarty_tpl->tpl_vars['folder']->value){
 ?>
                     <option value="<?php echo $_smarty_tpl->tpl_vars['folder']->value['id'];?>
-" <?php if (isset($_smarty_tpl->getVariable('faq',null,true,false)->value['parent_id'])&&$_smarty_tpl->getVariable('faq')->value['parent_id']==$_smarty_tpl->tpl_vars['folder']->value['id']){?>selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['folder']->value['title'];?>
+" <?php if (isset($_smarty_tpl->getVariable('faq',null,true,false)->value['parent_id'])&&$_smarty_tpl->getVariable('faq')->value['parent_id']==$_smarty_tpl->tpl_vars['folder']->value['id']){?>selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['folder']->value['question'];?>
 </option>
                     <?php }} ?>
                 </select></td>
@@ -69,7 +69,7 @@ if ($_smarty_tpl->_count($_from) > 0){
     <table>
         <tr>
             <td width="200">Название</td>
-            <td><input name="data[title]" value="<?php echo $_smarty_tpl->getVariable('faq')->value['title'];?>
+            <td><input name="data[question]" value="<?php echo $_smarty_tpl->getVariable('faq')->value['question'];?>
 " /></td>
         </tr>
         <tr>
@@ -82,13 +82,13 @@ if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['folder']->key => $_smarty_tpl->tpl_vars['folder']->value){
 ?>
                     <option value="<?php echo $_smarty_tpl->tpl_vars['folder']->value['id'];?>
-" <?php if (isset($_smarty_tpl->getVariable('faq',null,true,false)->value['parent_id'])&&$_smarty_tpl->getVariable('faq')->value['parent_id']==$_smarty_tpl->tpl_vars['folder']->value['id']){?>selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['folder']->value['title'];?>
+" <?php if (isset($_smarty_tpl->getVariable('faq',null,true,false)->value['parent_id'])&&$_smarty_tpl->getVariable('faq')->value['parent_id']==$_smarty_tpl->tpl_vars['folder']->value['id']){?>selected="selected"<?php }?>><?php echo $_smarty_tpl->tpl_vars['folder']->value['question'];?>
 </option>
                     <?php }} ?>
                 </select></td>
         </tr>
     </table>
-    <input type="hidden" name="data[short_text]" value="" />
+    <input type="hidden" name="data[answer]" value="" />
     <input type="hidden" name="data[is_folder]" value="1" />
     <input id="save" name="save" type="submit" value="Сохранить" />
 </form>
@@ -125,7 +125,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['path_doc']['last']       = (
 ?>
     <a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
 &root=<?php echo $_smarty_tpl->getVariable('path_to_faq')->value[$_smarty_tpl->getVariable('smarty')->value['section']['path_doc']['index']]['id'];?>
-"><?php echo $_smarty_tpl->getVariable('path_to_faq')->value[$_smarty_tpl->getVariable('smarty')->value['section']['path_doc']['index']]['title'];?>
+"><?php echo $_smarty_tpl->getVariable('path_to_faq')->value[$_smarty_tpl->getVariable('smarty')->value['section']['path_doc']['index']]['question'];?>
 </a><?php if (!$_smarty_tpl->getVariable('smarty')->value['section']['path_doc']['last']){?> / <?php }?>
 <?php endfor; endif; ?>    
 </div><br />
@@ -147,10 +147,10 @@ if ($_smarty_tpl->_count($_from) > 0){
     <tr>
         <td><?php if ($_smarty_tpl->tpl_vars['faq']->value['is_folder']==1){?><a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
 &root=<?php echo $_smarty_tpl->tpl_vars['faq']->value['id'];?>
-"><?php echo smarty_modifier_truncate($_smarty_tpl->tpl_vars['faq']->value['title'],100);?>
-</a><?php }else{ ?><?php echo smarty_modifier_truncate($_smarty_tpl->tpl_vars['faq']->value['title'],100);?>
+"><?php echo smarty_modifier_truncate($_smarty_tpl->tpl_vars['faq']->value['question'],100);?>
+</a><?php }else{ ?><?php echo smarty_modifier_truncate($_smarty_tpl->tpl_vars['faq']->value['question'],100);?>
 <?php }?></td>
-	<td><?php echo smarty_modifier_truncate($_smarty_tpl->tpl_vars['faq']->value['short_text'],200);?>
+	<td><?php echo smarty_modifier_truncate($_smarty_tpl->tpl_vars['faq']->value['answer'],200);?>
 </td>
         <td><?php if ($_smarty_tpl->tpl_vars['faq']->value['is_folder']==1){?>папка<?php }else{ ?>документ<?php }?></td>    
         <td><a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>

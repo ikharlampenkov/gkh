@@ -26,3 +26,11 @@ function showHouse(id) {
         $("#house_" + id).css("display", "none");
     }
 }
+
+function showAnswer(id) {
+    if ($("#question_" + id).css("display") == "none") {
+        $("#question_" + id).css("display", "block");
+    } else {
+        $("#question_" + id).css("display", "none");
+    }
+}

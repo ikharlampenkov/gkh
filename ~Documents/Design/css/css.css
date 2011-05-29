@@ -1,0 +1,34 @@
+* { margin: 0; padding: 0;}
+ul { list-style: none; }
+body { background-color:#fff; font:62.5% arial,helvetica,sans-serif; }
+
+.bgmenu { background-image:url('../img/bgmenu.jpg'); }
+.topmenu { background-color: #f4f4e9; border-bottom: 1px solid #cedfd8 ; border-right: 1px solid #cedfd8 ; border-left: 1px solid #cedfd8; }
+.topmenu a { color: #416e79 ; font-size:140%; }
+.topmenu a:hover { background-color:#89b4be; color:#fff; }
+
+.panel { margin-bottom:10px; }
+.panel { height:33px; width:885px; }
+.panel li {  }
+.panel li.r { }
+.panel a { color:#000000; text-decoration: none; display:block; float:left; font-size:140%; line-height: 33px ;width: 89px; text-align:center;background-image: url('../img/m.jpg');}
+.panel li.active a { background-image: url('img/msel.jpg') !important; height:100%; color: #fff !important; width: 89px}
+.panel a:hover, .panel li.hover a { background-image: url('../img/mon.jpg') ; color: #416e79;width: 89px}
+
+ul.sub { clear:both; height:20px; padding:5px 0 0 0px; font-size:110%; left: 100px}
+ul.sub li { float:left; margin-right:4px; }
+ul.sub li a { display:block; float:left; font-size:1.3em; margin:0; padding:2px 6px; color: #416e79}
+ul.sub li a:hover,  ul.sub li.active a { background-color:#89b4be; color:#fff  }
+ul.sub li.active a { color:#fff; }
+ul.sub li.active a.disabled { background-color:#eee; color:#ddd; }
+ul.sub li.active a.disabled:hover { background-color:#eee; color:#fff; }
+ul.sub li a.disabled { color:#ddd; }
+ul.sub li a.disabled:hover { background-color:Transparent; }
+div.subMenus {clear: both; height: 25px; overflow: hidden; position: relative; }
+div.subMenus ul.sub {position: absolute; top: -25px; }
+				
+	
+	
+
+	
+

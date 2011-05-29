@@ -19,7 +19,7 @@
             <td><select name="data[parrent_id]">
                     <option value="0" {if isset($faq.parent_id) && $faq.parent_id==0}selected="selected"{/if}>корень</option>
                     {foreach from=$folder_list item=folder}
-                    <option value="{$folder.id}" {if isset($faq.parent_id) && $faq.parent_id==$folder.id}selected="selected"{/if}>{$folder.title}</option>
+                    <option value="{$folder.id}" {if isset($faq.parent_id) && $faq.parent_id==$folder.id}selected="selected"{/if}>{$folder.question}</option>
                     {/foreach}
                 </select></td>
         </tr>
@@ -41,7 +41,7 @@
             <td><select name="data[parrent_id]">
                     <option value="0" {if isset($faq.parent_id) && $faq.parent_id==0}selected="selected"{/if}>корень</option>
                     {foreach from=$folder_list item=folder}
-                    <option value="{$folder.id}" {if isset($faq.parent_id) && $faq.parent_id==$folder.id}selected="selected"{/if}>{$folder.title}</option>
+                    <option value="{$folder.id}" {if isset($faq.parent_id) && $faq.parent_id==$folder.id}selected="selected"{/if}>{$folder.question}</option>
                     {/foreach}
                 </select></td>
         </tr>
@@ -57,7 +57,7 @@
 <div>
     <a href="?page={$page}">..</a> / 
 {section name=path_doc loop=count($path_to_faq) step=-1}
-    <a href="?page={$page}&root={$path_to_faq[path_doc].id}">{$path_to_faq[path_doc].title}</a>{if !$smarty.section.path_doc.last} / {/if}
+    <a href="?page={$page}&root={$path_to_faq[path_doc].id}">{$path_to_faq[path_doc].question}</a>{if !$smarty.section.path_doc.last} / {/if}
 {/section}    
 </div><br />
 {/if}
