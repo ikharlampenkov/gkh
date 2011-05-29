@@ -65,6 +65,7 @@ if ($o_user->isLogin()) {
         } else {
             $category = gkh_news::ANY_CATEGORY;
         }
+        $o_smarty->assign('category', $category);
 
         if ($action == 'view_news' && isset($_GET['id'])) {
 
@@ -95,6 +96,7 @@ if ($o_user->isLogin()) {
 
         $o_content_page = new gkh_content_page_site();
         $o_smarty->assign('conpage', $o_content_page->getContentPage($_GET['title']));
+        $o_smarty->assign('conpage_title', $_GET['title']);
     }
 
     if ($page == 'house') {

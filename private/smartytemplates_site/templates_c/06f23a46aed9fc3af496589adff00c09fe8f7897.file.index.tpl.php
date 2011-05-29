@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-29 23:11:50
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-30 00:14:21
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:242434de2704691a602-12444702%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:297654de27eed65b133-93036661%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '06f23a46aed9fc3af496589adff00c09fe8f7897' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/index.tpl',
-      1 => 1306685507,
+      1 => 1306689258,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '242434de2704691a602-12444702',
+  'nocache_hash' => '297654de27eed65b133-93036661',
   'function' => 
   array (
   ),
@@ -106,13 +106,13 @@ $_smarty_tpl->decodeProperties(array (
                                             <td><img src="/img/left.jpg" /></td>
                                             <td width="750">
                                                 <ul>
-                                                    <li class="active"><a id="tmM" title="Главная" href="/">Главная</a></li>
-                                                    <li class="noactive"><a id="tmC" title="О нас" href="http://contact.dnevnik.ru/">О нас</a></li>
-                                                    <li class="noactive"><a id="tmS" title="Услуги" href="http://schools.dnevnik.ru/school.aspx">Услуги</a></li>
-                                                    <li class="noactive"><a id="tmL" title="Тарифы" href="http://lib.dnevnik.ru/">Тарифы</a></li>
-                                                    <li class="noactive"><a id="tmCON" title="Новости" href="?page=news">Новости</a</li>
-                                                    <li class="noactive"><a id="tma" title="Ваш дом" href="?page=house">Ваш дом</a></li>
-                                                    <li class="noactive"><a id="tmO" title="Отчеты" href="http://ggg.dnevnik.ru/">Отчеты</a></li>
+                                                    <li class="<?php if ($_smarty_tpl->getVariable('page')->value==''){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmM" title="Главная" href="/">Главная</a></li>
+                                                    <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='about'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmC" title="О нас" href="http://contact.dnevnik.ru/">О нас</a></li>
+                                                    <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='service'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmS" title="Услуги" href="http://schools.dnevnik.ru/school.aspx">Услуги</a></li>
+                                                    <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='rate'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmL" title="Тарифы" href="http://lib.dnevnik.ru/">Тарифы</a></li>
+                                                    <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='news'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmCON" title="Новости" href="?page=news">Новости</a</li>
+                                                    <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='house'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tma" title="Ваш дом" href="?page=house">Ваш дом</a></li>
+                                                    <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='report'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmO" title="Отчеты" href="http://ggg.dnevnik.ru/">Отчеты</a></li>
                                                 </ul>
                                             </td>
                                             <td align="right"><img src="img/right.jpg" /></td>
@@ -122,10 +122,31 @@ $_smarty_tpl->decodeProperties(array (
 
                                 <div style="text-align:center">
                                     <ul class="sub">
-                                        <li><a title="Раскрытие информации" href="http://dnevnik.ru/user.aspx?user=361977">Раскрытие информации</a</li>
-                                        <li><a title="Личный кабинет" href="http://messenger.dnevnik.ru/">Личный кабинет</a</li>
-                                        <li><a title="Жизненные ситуации" href="http://dnevnik.ru/outlook.ashx" target="_blank">Жизненные ситуации</a</li>
-                                        <li><a title="Важная информация" href="http://dnevnik.ru/news.aspx">Важная информация</a</li>
+                                        <?php if ($_smarty_tpl->getVariable('page')->value==''){?>
+                                        <li><a title="Раскрытие информации" href="http://dnevnik.ru/user.aspx?user=361977">Раскрытие информации</a></li>
+                                        <li><a title="Личный кабинет" href="http://messenger.dnevnik.ru/">Личный кабинет</a></li>
+                                        <li><a title="Жизненные ситуации" href="http://dnevnik.ru/outlook.ashx" target="_blank">Жизненные ситуации</a></li>
+                                        <li><a title="Важная информация" href="http://dnevnik.ru/news.aspx">Важная информация</a></li>
+                                        <?php }?>
+                                        <?php if ($_smarty_tpl->getVariable('page')->value=='about'){?>
+                                        <?php }?>
+                                        <?php if ($_smarty_tpl->getVariable('page')->value=='content_page'){?>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value=='eltechrab'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Электротехнические работы" href="?page=content_page&title=eltechrab">Электротехнические работы</a></li>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value=='santechrab'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Сантехнические работы" href="?page=content_page&title=santechrab">Сантехнические работы</a></li>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value==''){?>active<?php }else{ ?>noactive<?php }?>"><a title="Содержание дома" href="?page=content_page&title=">Содержание дома</a></li>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value==''){?>active<?php }else{ ?>noactive<?php }?>"><a title="Ремонт дома" href="?page=content_page&title=">Ремонт дома</a></li>
+                                        <?php }?>
+                                        <?php if ($_smarty_tpl->getVariable('page')->value=='rate'){?>
+                                        <?php }?>
+                                        <?php if ($_smarty_tpl->getVariable('page')->value=='news'){?>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('category')->value=='1'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Объявления" href="?page=news&category=1">Объявления</a></li>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('category')->value=='2'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Отключения" href="?page=news&category=2" >Отключения</a></li>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('category')->value=='3'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Подключения" href="?page=news&category=3" >Подключения</a></li>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('category')->value=='4'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Согласования" href="?page=news&category=4" >Согласования</a></li>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('category')->value=='5'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Законодательство" href="?page=news&category=5" >Законодательство</a></li>
+                                        <?php }?>
+                                        <?php if ($_smarty_tpl->getVariable('page')->value=='report'){?>
+                                        <?php }?>
                                     </ul>
                                 </div>
 
@@ -138,12 +159,7 @@ $_smarty_tpl->decodeProperties(array (
                                                  { id:"tma",subs:[ { "t":"Обслуживаемые дома","u":"http://dnevnik.ru/contests" } , { "t":"План проводимых работ","u":"http://dnevnik.ru/contests" } , { "t":"Отчет по капитальном ремонту ","u":"http://dnevnik.ru/contests" } ] } , 
                                                  { id:"tmO",subs:[ { "t":"Бухгалтерская отчетность","u":"http://dnevnik.ru/contests" } , { "t":"Доходы","u":"http://dnevnik.ru/contests" } , { "t":"Расходы","u":"http://dnevnik.ru/contests" } ] } ];
                                 </script>
-
-
-
-
-
-
+                                
                                 </div>
 
                             </td>

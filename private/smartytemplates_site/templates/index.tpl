@@ -82,13 +82,13 @@
                                             <td><img src="/img/left.jpg" /></td>
                                             <td width="750">
                                                 <ul>
-                                                    <li class="active"><a id="tmM" title="Главная" href="/">Главная</a></li>
-                                                    <li class="noactive"><a id="tmC" title="О нас" href="http://contact.dnevnik.ru/">О нас</a></li>
-                                                    <li class="noactive"><a id="tmS" title="Услуги" href="http://schools.dnevnik.ru/school.aspx">Услуги</a></li>
-                                                    <li class="noactive"><a id="tmL" title="Тарифы" href="http://lib.dnevnik.ru/">Тарифы</a></li>
-                                                    <li class="noactive"><a id="tmCON" title="Новости" href="?page=news">Новости</a</li>
-                                                    <li class="noactive"><a id="tma" title="Ваш дом" href="?page=house">Ваш дом</a></li>
-                                                    <li class="noactive"><a id="tmO" title="Отчеты" href="http://ggg.dnevnik.ru/">Отчеты</a></li>
+                                                    <li class="{if $page==''}active{else}noactive{/if}"><a id="tmM" title="Главная" href="/">Главная</a></li>
+                                                    <li class="{if $page=='about'}active{else}noactive{/if}"><a id="tmC" title="О нас" href="http://contact.dnevnik.ru/">О нас</a></li>
+                                                    <li class="{if $page=='service'}active{else}noactive{/if}"><a id="tmS" title="Услуги" href="http://schools.dnevnik.ru/school.aspx">Услуги</a></li>
+                                                    <li class="{if $page=='rate'}active{else}noactive{/if}"><a id="tmL" title="Тарифы" href="http://lib.dnevnik.ru/">Тарифы</a></li>
+                                                    <li class="{if $page=='news'}active{else}noactive{/if}"><a id="tmCON" title="Новости" href="?page=news">Новости</a</li>
+                                                    <li class="{if $page=='house'}active{else}noactive{/if}"><a id="tma" title="Ваш дом" href="?page=house">Ваш дом</a></li>
+                                                    <li class="{if $page=='report'}active{else}noactive{/if}"><a id="tmO" title="Отчеты" href="http://ggg.dnevnik.ru/">Отчеты</a></li>
                                                 </ul>
                                             </td>
                                             <td align="right"><img src="img/right.jpg" /></td>
@@ -98,10 +98,31 @@
 
                                 <div style="text-align:center">
                                     <ul class="sub">
-                                        <li><a title="Раскрытие информации" href="http://dnevnik.ru/user.aspx?user=361977">Раскрытие информации</a</li>
-                                        <li><a title="Личный кабинет" href="http://messenger.dnevnik.ru/">Личный кабинет</a</li>
-                                        <li><a title="Жизненные ситуации" href="http://dnevnik.ru/outlook.ashx" target="_blank">Жизненные ситуации</a</li>
-                                        <li><a title="Важная информация" href="http://dnevnik.ru/news.aspx">Важная информация</a</li>
+                                        {if $page==''}
+                                        <li><a title="Раскрытие информации" href="http://dnevnik.ru/user.aspx?user=361977">Раскрытие информации</a></li>
+                                        <li><a title="Личный кабинет" href="http://messenger.dnevnik.ru/">Личный кабинет</a></li>
+                                        <li><a title="Жизненные ситуации" href="http://dnevnik.ru/outlook.ashx" target="_blank">Жизненные ситуации</a></li>
+                                        <li><a title="Важная информация" href="http://dnevnik.ru/news.aspx">Важная информация</a></li>
+                                        {/if}
+                                        {if $page=='about'}
+                                        {/if}
+                                        {if $page=='service' }
+                                        <li class="{if $conpage_title=='eltechrab'}active{else}noactive{/if}"><a title="Электротехнические работы" href="?page=content_page&title=eltechrab">Электротехнические работы</a></li>
+                                        <li class="{if $conpage_title=='santechrab'}active{else}noactive{/if}"><a title="Сантехнические работы" href="?page=content_page&title=santechrab">Сантехнические работы</a></li>
+                                        <li class="{if $conpage_title==''}active{else}noactive{/if}"><a title="Содержание дома" href="?page=content_page&title=">Содержание дома</a></li>
+                                        <li class="{if $conpage_title==''}active{else}noactive{/if}"><a title="Ремонт дома" href="?page=content_page&title=">Ремонт дома</a></li>
+                                        {/if}
+                                        {if $page=='rate'}
+                                        {/if}
+                                        {if $page=='news'}
+                                        <li class="{if $category=='1'}active{else}noactive{/if}"><a title="Объявления" href="?page=news&category=1">Объявления</a></li>
+                                        <li class="{if $category=='2'}active{else}noactive{/if}"><a title="Отключения" href="?page=news&category=2" >Отключения</a></li>
+                                        <li class="{if $category=='3'}active{else}noactive{/if}"><a title="Подключения" href="?page=news&category=3" >Подключения</a></li>
+                                        <li class="{if $category=='4'}active{else}noactive{/if}"><a title="Согласования" href="?page=news&category=4" >Согласования</a></li>
+                                        <li class="{if $category=='5'}active{else}noactive{/if}"><a title="Законодательство" href="?page=news&category=5" >Законодательство</a></li>
+                                        {/if}
+                                        {if $page=='report'}
+                                        {/if}
                                     </ul>
                                 </div>
 
@@ -114,12 +135,7 @@
                                                  { id:"tma",subs:[ { "t":"Обслуживаемые дома","u":"http://dnevnik.ru/contests" } , { "t":"План проводимых работ","u":"http://dnevnik.ru/contests" } , { "t":"Отчет по капитальном ремонту ","u":"http://dnevnik.ru/contests" } ] } , 
                                                  { id:"tmO",subs:[ { "t":"Бухгалтерская отчетность","u":"http://dnevnik.ru/contests" } , { "t":"Доходы","u":"http://dnevnik.ru/contests" } , { "t":"Расходы","u":"http://dnevnik.ru/contests" } ] } ];
                                 </script>
-
-
-
-
-
-
+                                
                                 </div>
 
                             </td>
