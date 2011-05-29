@@ -83,8 +83,8 @@
                                             <td width="750">
                                                 <ul>
                                                     <li class="{if $page==''}active{else}noactive{/if}"><a id="tmM" title="Главная" href="/">Главная</a></li>
-                                                    <li class="{if $page=='about'}active{else}noactive{/if}"><a id="tmC" title="О нас" href="http://contact.dnevnik.ru/">О нас</a></li>
-                                                    <li class="{if $page=='service'}active{else}noactive{/if}"><a id="tmS" title="Услуги" href="http://schools.dnevnik.ru/school.aspx">Услуги</a></li>
+                                                    <li class="{if $spage=='about'}active{else}noactive{/if}"><a id="tmC" title="О нас" href="http://contact.dnevnik.ru/">О нас</a></li>
+                                                    <li class="{if $spage=='service'}active{else}noactive{/if}"><a id="tmS" title="Услуги" href="http://schools.dnevnik.ru/school.aspx">Услуги</a></li>
                                                     <li class="{if $page=='rate'}active{else}noactive{/if}"><a id="tmL" title="Тарифы" href="http://lib.dnevnik.ru/">Тарифы</a></li>
                                                     <li class="{if $page=='news'}active{else}noactive{/if}"><a id="tmCON" title="Новости" href="?page=news">Новости</a</li>
                                                     <li class="{if $page=='house'}active{else}noactive{/if}"><a id="tma" title="Ваш дом" href="?page=house">Ваш дом</a></li>
@@ -104,11 +104,17 @@
                                         <li><a title="Жизненные ситуации" href="http://dnevnik.ru/outlook.ashx" target="_blank">Жизненные ситуации</a></li>
                                         <li><a title="Важная информация" href="http://dnevnik.ru/news.aspx">Важная информация</a></li>
                                         {/if}
-                                        {if $page=='about'}
+                                        {if $spage=='about'}
+                                        <li class="{if $page=='eltechrab'}active{else}noactive{/if}"><a title="Общая информация" href="">Общая информация</a></li>
+                                        <li class="{if $page=='license'}active{else}noactive{/if}"><a title="Лицензии" href="?page=license&spage=about">Лицензии</a></li>
+                                        <li class="{if $page=='eltechrab'}active{else}noactive{/if}"><a title="Руководство" href="?page=personal&is_leaders=1&spage=about">Руководство</a></li>
+                                        <li class="{if $page=='eltechrab'}active{else}noactive{/if}"><a title="Персонал" href="?page=personal&is_leaders=0&spage=about">Персонал</a></li>
+                                        <li class="{if $page=='eltechrab'}active{else}noactive{/if}"><a title="Вакансии" href="">Вакансии</a></li>
+                                        <li class="{if $page=='eltechrab'}active{else}noactive{/if}"><a title="Контакты" href="">Контакты</a></li>
                                         {/if}
-                                        {if $page=='service' }
-                                        <li class="{if $conpage_title=='eltechrab'}active{else}noactive{/if}"><a title="Электротехнические работы" href="?page=content_page&title=eltechrab">Электротехнические работы</a></li>
-                                        <li class="{if $conpage_title=='santechrab'}active{else}noactive{/if}"><a title="Сантехнические работы" href="?page=content_page&title=santechrab">Сантехнические работы</a></li>
+                                        {if $spage=='service'}
+                                        <li class="{if $conpage_title=='eltechrab'}active{else}noactive{/if}"><a title="Электротехнические работы" href="?page=content_page&title=eltechrab&spage=service">Электротехнические работы</a></li>
+                                        <li class="{if $conpage_title=='santechrab'}active{else}noactive{/if}"><a title="Сантехнические работы" href="?page=content_page&title=santechrab&spage=service">Сантехнические работы</a></li>
                                         <li class="{if $conpage_title==''}active{else}noactive{/if}"><a title="Содержание дома" href="?page=content_page&title=">Содержание дома</a></li>
                                         <li class="{if $conpage_title==''}active{else}noactive{/if}"><a title="Ремонт дома" href="?page=content_page&title=">Ремонт дома</a></li>
                                         {/if}
@@ -128,8 +134,8 @@
 
                                 <script type="text/javascript">
                                 var submenus = [ {  id:"tmM",subs:[  {  "t":"Раскрытие информации","u":"http://dnevnik.ru/user.aspx?user=361977" } , { "t":"Личный кабинет","u":"http://messenger.dnevnik.ru/" } , { "t":"Жизненные ситуации","u":"http://dnevnik.ru/outlook.ashx" } , { "t":"Важная информация","u":"http://dnevnik.ru/outlook.ashx" } ] } ,
-                                                 { id:"tmC",subs:[ { "t":"Общая информация","u":"http://people.dnevnik.ru" } , { "t":"Лицензии","u":"http://groups.dnevnik.ru" } , { "t":"Руководство","u":"http://events.dnevnik.ru" } , { "t":"Персонал","u":"http://networks.dnevnik.ru" } , { "t":"Вакансии","u":"http://networks.dnevnik.ru" } , { "t":"Контакты","u":"http://networks.dnevnik.ru" } ] } , 
-                                                 { id:"tmS",subs:[ { "t":"Электротехнические работы","u":"?page=content_page&title=eltechrab" } , { "t":"Сантехнические работы","u":"?page=content_page&title=santechrab" } , { "t":"Содержание дома","u":"http://schools.dnevnik.ru/schedules" } , { "t":"Ремонт дома","u":"http://schools.dnevnik.ru/journals/" } ] } , 
+                                                 { id:"tmC",subs:[ { "t":"Общая информация","u":"http://people.dnevnik.ru" } , { "t":"Лицензии","u":"?page=license&spage=about" } , { "t":"Руководство","u":"?page=personal&is_leaders=1&spage=about" } , { "t":"Персонал","u":"?page=personal&is_leaders=0&spage=about" } , { "t":"Вакансии","u":"http://networks.dnevnik.ru" } , { "t":"Контакты","u":"http://networks.dnevnik.ru" } ] } , 
+                                                 { id:"tmS",subs:[ { "t":"Электротехнические работы","u":"?page=content_page&title=eltechrab&spage=service" } , { "t":"Сантехнические работы","u":"?page=content_page&title=santechrab&spage=service" } , { "t":"Содержание дома","u":"http://schools.dnevnik.ru/schedules" } , { "t":"Ремонт дома","u":"http://schools.dnevnik.ru/journals/" } ] } , 
                                                  { id:"tmL",subs:[ { "t":"Жилищно-коммунальные услуги","u":"http://lib.dnevnik.ru/literature/" } , { "t":"Коммунальные ресурсы","u":"http://lib.dnevnik.ru/media/" } ] } , 
                                                  { id:"tmCON",subs:[ { "t":"Объявления","u":"?page=news&category=1" } , { "t":"Отключения","u":"?page=news&category=2" } , { "t":"Подключения","u":"?page=news&category=3" } , { "t":"Согласования","u":"?page=news&category=4" } , { "t":"Законодательство","u":"?page=news&category=5" } ] } , 
                                                  { id:"tma",subs:[ { "t":"Обслуживаемые дома","u":"http://dnevnik.ru/contests" } , { "t":"План проводимых работ","u":"http://dnevnik.ru/contests" } , { "t":"Отчет по капитальном ремонту ","u":"http://dnevnik.ru/contests" } ] } , 

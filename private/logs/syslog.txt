@@ -4309,3 +4309,243 @@ info   SELECT news.id, news_category_id, date, news.title, short_text, full_text
                     WHERE news.news_category_id=news_category.id  ORDER BY date DESC
                       LIMIT 5  30.05.2011 00:16
 info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:16
+info   SELECT * FROM content_page WHERE id=0 OR page_title="eltechrab"  30.05.2011 00:21
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:21
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:21
+info   SELECT * FROM content_page WHERE id=0 OR page_title="eltechrab"  30.05.2011 00:21
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:21
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:21
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:21
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:21
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:22
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:22
+info   SELECT * FROM personal WHERE is_leaders=  30.05.2011 00:22
+error   Can`t complit query: SELECT * FROM personal WHERE is_leaders= No error: 1064:: Error msg: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 ;  30.05.2011 00:22
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:22
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:22
+info   SELECT * FROM personal WHERE is_leaders=1  30.05.2011 00:25
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:25
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:25
+info   SELECT * FROM personal WHERE is_leaders=1  30.05.2011 00:26
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:26
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:26
+info   SELECT * FROM personal WHERE is_leaders=0  30.05.2011 00:26
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:26
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:26
+info   SELECT * FROM personal WHERE is_leaders=0  30.05.2011 00:28
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:28
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:28
+info   SELECT * FROM personal WHERE is_leaders=0  30.05.2011 00:30
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:30
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:30
+info   SELECT * FROM personal WHERE is_leaders=1  30.05.2011 00:30
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:30
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:30
+info   SELECT * FROM personal WHERE is_leaders=0  30.05.2011 00:30
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:30
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:30
+info   SELECT * FROM personal WHERE is_leaders=0  30.05.2011 00:31
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:31
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:31
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:32
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:32
+info   SELECT * FROM license  30.05.2011 00:33
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:33
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:33
+info   SELECT * FROM license  30.05.2011 00:35
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:35
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:35
+info   SELECT * FROM license  30.05.2011 00:35
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:35
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:35
+info   SELECT * FROM license  30.05.2011 00:35
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:35
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:35
+info   SELECT * FROM license  30.05.2011 00:37
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:37
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:37
+info   SELECT * FROM content_page WHERE id=0 OR page_title="eltechrab"  30.05.2011 00:38
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:38
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:38
+info   SELECT * FROM license  30.05.2011 00:38
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:38
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:38
+info   SELECT * FROM license  30.05.2011 00:45
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:45
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:45
+info   SELECT * FROM license  30.05.2011 00:45
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:45
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:45
+info   SELECT * FROM license  30.05.2011 00:45
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:45
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:45
+info   SELECT * FROM license  30.05.2011 00:45
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:45
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:45
+info   SELECT * FROM license  30.05.2011 00:45
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:45
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:45
+info   SELECT * FROM license  30.05.2011 00:45
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:45
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:45
+info   SELECT * FROM license  30.05.2011 00:55
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:55
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:55
+info   SELECT * FROM license  30.05.2011 00:55
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:55
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:55
+info   SELECT * FROM license  30.05.2011 00:55
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:55
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:55
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  30.05.2011 00:55
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   30.05.2011 00:55
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:55
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:55
+info   SELECT * FROM news_category WHERE id=1  30.05.2011 00:55
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  AND news_category_id=1 ORDER BY date DESC  LIMIT 0, 20  30.05.2011 00:55
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  AND news_category_id=1  30.05.2011 00:55
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:55
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:55
+info   SELECT * FROM content_page WHERE id=0 OR page_title="eltechrab"  30.05.2011 00:55
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:55
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:55
+info   SELECT * FROM content_page WHERE id=0 OR page_title="eltechrab"  30.05.2011 00:56
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:56
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:56
+info   SELECT * FROM news_category WHERE id=4  30.05.2011 00:57
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  AND news_category_id=4 ORDER BY date DESC  LIMIT 0, 20  30.05.2011 00:57
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  AND news_category_id=4  30.05.2011 00:57
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:57
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:57
+info   SELECT * FROM license  30.05.2011 00:57
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:57
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:57
+info   SELECT * FROM personal WHERE is_leaders=1  30.05.2011 00:57
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:57
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:57
+info   SELECT * FROM personal WHERE is_leaders=0  30.05.2011 00:57
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 00:57
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 00:57

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-30 00:14:21
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-30 00:56:59
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:297654de27eed65b133-93036661%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:303874de288eb3925e4-94330777%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '06f23a46aed9fc3af496589adff00c09fe8f7897' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/index.tpl',
-      1 => 1306689258,
+      1 => 1306691816,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '297654de27eed65b133-93036661',
+  'nocache_hash' => '303874de288eb3925e4-94330777',
   'function' => 
   array (
   ),
@@ -107,8 +107,8 @@ $_smarty_tpl->decodeProperties(array (
                                             <td width="750">
                                                 <ul>
                                                     <li class="<?php if ($_smarty_tpl->getVariable('page')->value==''){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmM" title="Главная" href="/">Главная</a></li>
-                                                    <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='about'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmC" title="О нас" href="http://contact.dnevnik.ru/">О нас</a></li>
-                                                    <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='service'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmS" title="Услуги" href="http://schools.dnevnik.ru/school.aspx">Услуги</a></li>
+                                                    <li class="<?php if ($_smarty_tpl->getVariable('spage')->value=='about'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmC" title="О нас" href="http://contact.dnevnik.ru/">О нас</a></li>
+                                                    <li class="<?php if ($_smarty_tpl->getVariable('spage')->value=='service'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmS" title="Услуги" href="http://schools.dnevnik.ru/school.aspx">Услуги</a></li>
                                                     <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='rate'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmL" title="Тарифы" href="http://lib.dnevnik.ru/">Тарифы</a></li>
                                                     <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='news'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmCON" title="Новости" href="?page=news">Новости</a</li>
                                                     <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='house'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tma" title="Ваш дом" href="?page=house">Ваш дом</a></li>
@@ -128,11 +128,17 @@ $_smarty_tpl->decodeProperties(array (
                                         <li><a title="Жизненные ситуации" href="http://dnevnik.ru/outlook.ashx" target="_blank">Жизненные ситуации</a></li>
                                         <li><a title="Важная информация" href="http://dnevnik.ru/news.aspx">Важная информация</a></li>
                                         <?php }?>
-                                        <?php if ($_smarty_tpl->getVariable('page')->value=='about'){?>
+                                        <?php if ($_smarty_tpl->getVariable('spage')->value=='about'){?>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='eltechrab'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Общая информация" href="">Общая информация</a></li>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='license'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Лицензии" href="?page=license&spage=about">Лицензии</a></li>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='eltechrab'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Руководство" href="?page=personal&is_leaders=1&spage=about">Руководство</a></li>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='eltechrab'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Персонал" href="?page=personal&is_leaders=0&spage=about">Персонал</a></li>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='eltechrab'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Вакансии" href="">Вакансии</a></li>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='eltechrab'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Контакты" href="">Контакты</a></li>
                                         <?php }?>
-                                        <?php if ($_smarty_tpl->getVariable('page')->value=='content_page'){?>
-                                        <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value=='eltechrab'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Электротехнические работы" href="?page=content_page&title=eltechrab">Электротехнические работы</a></li>
-                                        <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value=='santechrab'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Сантехнические работы" href="?page=content_page&title=santechrab">Сантехнические работы</a></li>
+                                        <?php if ($_smarty_tpl->getVariable('spage')->value=='service'){?>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value=='eltechrab'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Электротехнические работы" href="?page=content_page&title=eltechrab&spage=service">Электротехнические работы</a></li>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value=='santechrab'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Сантехнические работы" href="?page=content_page&title=santechrab&spage=service">Сантехнические работы</a></li>
                                         <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value==''){?>active<?php }else{ ?>noactive<?php }?>"><a title="Содержание дома" href="?page=content_page&title=">Содержание дома</a></li>
                                         <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value==''){?>active<?php }else{ ?>noactive<?php }?>"><a title="Ремонт дома" href="?page=content_page&title=">Ремонт дома</a></li>
                                         <?php }?>
@@ -152,8 +158,8 @@ $_smarty_tpl->decodeProperties(array (
 
                                 <script type="text/javascript">
                                 var submenus = [ {  id:"tmM",subs:[  {  "t":"Раскрытие информации","u":"http://dnevnik.ru/user.aspx?user=361977" } , { "t":"Личный кабинет","u":"http://messenger.dnevnik.ru/" } , { "t":"Жизненные ситуации","u":"http://dnevnik.ru/outlook.ashx" } , { "t":"Важная информация","u":"http://dnevnik.ru/outlook.ashx" } ] } ,
-                                                 { id:"tmC",subs:[ { "t":"Общая информация","u":"http://people.dnevnik.ru" } , { "t":"Лицензии","u":"http://groups.dnevnik.ru" } , { "t":"Руководство","u":"http://events.dnevnik.ru" } , { "t":"Персонал","u":"http://networks.dnevnik.ru" } , { "t":"Вакансии","u":"http://networks.dnevnik.ru" } , { "t":"Контакты","u":"http://networks.dnevnik.ru" } ] } , 
-                                                 { id:"tmS",subs:[ { "t":"Электротехнические работы","u":"?page=content_page&title=eltechrab" } , { "t":"Сантехнические работы","u":"?page=content_page&title=santechrab" } , { "t":"Содержание дома","u":"http://schools.dnevnik.ru/schedules" } , { "t":"Ремонт дома","u":"http://schools.dnevnik.ru/journals/" } ] } , 
+                                                 { id:"tmC",subs:[ { "t":"Общая информация","u":"http://people.dnevnik.ru" } , { "t":"Лицензии","u":"?page=license&spage=about" } , { "t":"Руководство","u":"?page=personal&is_leaders=1&spage=about" } , { "t":"Персонал","u":"?page=personal&is_leaders=0&spage=about" } , { "t":"Вакансии","u":"http://networks.dnevnik.ru" } , { "t":"Контакты","u":"http://networks.dnevnik.ru" } ] } , 
+                                                 { id:"tmS",subs:[ { "t":"Электротехнические работы","u":"?page=content_page&title=eltechrab&spage=service" } , { "t":"Сантехнические работы","u":"?page=content_page&title=santechrab&spage=service" } , { "t":"Содержание дома","u":"http://schools.dnevnik.ru/schedules" } , { "t":"Ремонт дома","u":"http://schools.dnevnik.ru/journals/" } ] } , 
                                                  { id:"tmL",subs:[ { "t":"Жилищно-коммунальные услуги","u":"http://lib.dnevnik.ru/literature/" } , { "t":"Коммунальные ресурсы","u":"http://lib.dnevnik.ru/media/" } ] } , 
                                                  { id:"tmCON",subs:[ { "t":"Объявления","u":"?page=news&category=1" } , { "t":"Отключения","u":"?page=news&category=2" } , { "t":"Подключения","u":"?page=news&category=3" } , { "t":"Согласования","u":"?page=news&category=4" } , { "t":"Законодательство","u":"?page=news&category=5" } ] } , 
                                                  { id:"tma",subs:[ { "t":"Обслуживаемые дома","u":"http://dnevnik.ru/contests" } , { "t":"План проводимых работ","u":"http://dnevnik.ru/contests" } , { "t":"Отчет по капитальном ремонту ","u":"http://dnevnik.ru/contests" } ] } , 

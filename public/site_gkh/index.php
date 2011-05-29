@@ -11,6 +11,12 @@ if (isset($_GET['page'])) {
     $page = '';
 }
 
+if (isset($_GET['spage'])) {
+    $spage = $_GET['spage'];
+} else {
+    $spage = '';
+}
+
 if (isset($_GET['action'])) {
     $action = $_GET['action'];
 } else {
@@ -18,6 +24,7 @@ if (isset($_GET['action'])) {
 }
 
 $o_smarty->assign('page', $page);
+$o_smarty->assign('spage', $spage);
 $o_smarty->assign('action', $action);
 
 
@@ -58,7 +65,7 @@ if ($o_user->isLogin()) {
     if ($page == 'news') {
 
         $o_news = new gkh_news();
-        
+
         if (isset($_GET['category'])) {
             $category = $_GET['category'];
             $o_smarty->assign('news_category', $o_news->getNewsCategory($category));
@@ -88,7 +95,6 @@ if ($o_user->isLogin()) {
 
             $o_smarty->assign('news_list_full', $o_news->getAllNews($category, $cur_page));
             $o_smarty->assign('page_info', $o_news->getPageInfo($category, $cur_page));
-            
         }
     }
 
@@ -128,7 +134,7 @@ if ($o_user->isLogin()) {
 
         $o_smarty->assign('document_list', $o_document->getDocumentCatalog($root));
     }
-    
+
     if ($page == 'faq') {
 
         if (isset($_GET['root'])) {
@@ -147,6 +153,27 @@ if ($o_user->isLogin()) {
         }
 
         $o_smarty->assign('faq_list', $o_faq->getFaqCatalog($root));
+    }
+
+    if ($page == 'personal' && isset($_GET['is_leaders'])) {
+        $is_leaders = $_GET['is_leaders'];
+
+        if ($is_leaders == gkh_personal::NOT_LEADER_PERSONAL) {
+            $o_smarty->assign('personal_title', 'Персонал');
+        } elseif ($is_leaders == gkh_personal::LEADER_PERSONAL) {
+            $o_smarty->assign('personal_title', 'Руководство');
+        }
+        $o_smarty->assign('is_leaders', $is_leaders);
+
+        $o_personal = new gkh_personal();
+
+        $o_smarty->assign('personal_list', $o_personal->getAllPersonal($is_leaders));
+    }
+
+    if ($page == 'license') {
+
+        $o_license = new gkh_license();
+        $o_smarty->assign('license_list', $o_license->getAllLicense());
     }
 
     $o_news = new gkh_news();
