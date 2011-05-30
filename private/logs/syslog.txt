@@ -5950,3 +5950,88 @@ info   SELECT *
                     FROM payments_debt 
                     WHERE personal_account_id=1 
                     ORDER BY date  31.05.2011 00:40
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 00:43
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 00:43
+info   SELECT * 
+                    FROM payments_debt 
+                    WHERE personal_account_id=1 
+                    ORDER BY date  31.05.2011 00:43
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 00:43
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 00:43
+info   SELECT * 
+                    FROM payments_debt 
+                    WHERE personal_account_id=1 
+                    ORDER BY date  31.05.2011 00:43
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 00:44
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 00:44
+info   SELECT * 
+                    FROM payments_debt 
+                    WHERE personal_account_id=1 
+                    ORDER BY date  31.05.2011 00:44
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 00:44
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 00:44
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 00:44
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 00:44
+info   SELECT * 
+                    FROM payments_debt 
+                    WHERE personal_account_id=1 
+                    ORDER BY date  31.05.2011 00:44
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 00:45
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 00:45
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 00:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 00:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 00:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 00:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 00:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 00:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 00:45
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 00:45
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 00:45
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 00:45
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 00:45
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  31.05.2011 00:45
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 00:45
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 00:45
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="question" ORDER BY rating DESC, date DESC  31.05.2011 00:45
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 00:45
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 00:45
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="question" ORDER BY rating DESC, date DESC  31.05.2011 00:45
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 00:45
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 00:45
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 00:45
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 00:45
+info   SELECT user_id FROM personal_account WHERE id="admin"  31.05.2011 00:45
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="admin"  31.05.2011 00:45
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 00:45
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 00:45
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 00:45
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 00:45
