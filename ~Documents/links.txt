@@ -1,0 +1,31 @@
+Контакты				contact
+
+Раскрытие информации	disclosure_of_information
+
+Личный кабинет	cabinet
+
+Важная информация	important_information
+
+О нас	about
+
+Общая информация	general_information
+
+Услуги	service
+
+Содержание дома		keep_the_house
+
+Ремонт дома			home_repair
+
+Тарифы		rates
+
+Жилищно-коммунальные услуги		gkh
+
+Коммунальные ресурсы		communal_resources
+
+Отчеты					reports	
+
+Бухгалтерская отчетность		financial_statements
+
+Доходы				income
+
+Расходы				costs
