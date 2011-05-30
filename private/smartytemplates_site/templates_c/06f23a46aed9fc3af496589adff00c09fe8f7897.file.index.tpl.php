@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-30 23:21:44
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-31 00:06:54
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:172954de3c418c6c0e8-16542432%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:174314de3ceaede5328-54629542%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '06f23a46aed9fc3af496589adff00c09fe8f7897' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/index.tpl',
-      1 => 1306772402,
+      1 => 1306775209,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '172954de3c418c6c0e8-16542432',
+  'nocache_hash' => '174314de3ceaede5328-54629542',
   'function' => 
   array (
   ),
@@ -56,7 +56,7 @@ $_smarty_tpl->decodeProperties(array (
                                         <td height="30" class="topmenu">
                                             &nbsp;<img src="/img/karta.gif" align="absmiddle" /><img src="/img/mail.gif" align="absmiddle" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                             <a href="?page=faq">Вопрос-ответ</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <a href="">Полезная информация</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <a href="?page=content_page&title=helpful_information">Полезная информация</a>&nbsp;&nbsp;&nbsp;&nbsp;
                                             <a href="?page=document">Документы</a>
                                         </td>
                                     </tr>

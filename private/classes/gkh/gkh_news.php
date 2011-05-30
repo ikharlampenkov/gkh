@@ -243,7 +243,7 @@ class gkh_news extends gkh {
         }
     }
 
-    public function getPageInfo($category_id, $cur_page, $is_important) {
+    public function getPageInfo($category_id, $cur_page, $is_important = -1) {
         $retArray = array();
         $retArray['cur_page'] = $cur_page;
         $retArray['rec_on_page'] = gkh_news::NEWS_ON_PAGE;

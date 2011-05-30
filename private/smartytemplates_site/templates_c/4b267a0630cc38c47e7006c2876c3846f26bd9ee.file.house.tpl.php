@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-30 23:37:38
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-30 23:45:16
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/house.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:213154de3c7d2a76297-26721634%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:276884de3c99cdaa737-74418124%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4b267a0630cc38c47e7006c2876c3846f26bd9ee' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/house.tpl',
-      1 => 1306773456,
+      1 => 1306773512,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '213154de3c7d2a76297-26721634',
+  'nocache_hash' => '276884de3c99cdaa737-74418124',
   'function' => 
   array (
   ),
@@ -83,6 +83,7 @@ if ($_smarty_tpl->_count($_from) > 0){
             <td><?php echo $_smarty_tpl->tpl_vars['house']->value['area'];?>
 </td>
             
+            <?php if ($_smarty_tpl->getVariable('category')->value=='all'||$_smarty_tpl->getVariable('category')->value=='plan'){?>
             <td>
             <?php if (!empty($_smarty_tpl->tpl_vars['house']->value['file_repair_plan'])){?>
             <a href="<?php echo $_smarty_tpl->getVariable('siteurl')->value;?>
@@ -90,6 +91,9 @@ temp_files/<?php echo $_smarty_tpl->tpl_vars['house']->value['file_repair_plan']
 " target="_blank">Скачать</a>
             <?php }?>
             </td>
+            <?php }?>
+            
+            <?php if ($_smarty_tpl->getVariable('category')->value=='all'){?>
             <td>
             <?php if (!empty($_smarty_tpl->tpl_vars['house']->value['file_costs_income'])){?>
             <a href="<?php echo $_smarty_tpl->getVariable('siteurl')->value;?>
@@ -97,6 +101,9 @@ temp_files/<?php echo $_smarty_tpl->tpl_vars['house']->value['file_costs_income'
 " target="_blank">Скачать</a>
             <?php }?>
             </td>
+            <?php }?>
+            
+            <?php if ($_smarty_tpl->getVariable('category')->value=='all'||$_smarty_tpl->getVariable('category')->value!='plan'){?>
             <td>
             <?php if (!empty($_smarty_tpl->tpl_vars['house']->value['file_performed_repair'])){?>
             <a href="<?php echo $_smarty_tpl->getVariable('siteurl')->value;?>
@@ -104,6 +111,7 @@ temp_files/<?php echo $_smarty_tpl->tpl_vars['house']->value['file_performed_rep
 ">Скачать</a>
             <?php }?>
             </td>
+            <?php }?>
         </tr>
 <?php }} ?>
     </table>

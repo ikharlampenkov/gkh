@@ -28,7 +28,7 @@ class simo_functions
       unlink($fname);
       return true;
     } else {
-        throw Exception('Не возможно удалить файл');
+        throw new Exception('Не возможно удалить файл');
     }
   }
 

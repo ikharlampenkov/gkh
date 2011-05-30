@@ -32,7 +32,7 @@
                                         <td height="30" class="topmenu">
                                             &nbsp;<img src="/img/karta.gif" align="absmiddle" /><img src="/img/mail.gif" align="absmiddle" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                             <a href="?page=faq">Вопрос-ответ</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <a href="">Полезная информация</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <a href="?page=content_page&title=helpful_information">Полезная информация</a>&nbsp;&nbsp;&nbsp;&nbsp;
                                             <a href="?page=document">Документы</a>
                                         </td>
                                     </tr>

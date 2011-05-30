@@ -19,7 +19,7 @@ if ($page == 'content_page') {
 
         if (isset($_POST['data'])) {
             $o_content_page->updateContentPage($_GET['id'], $_POST['data']);
-            simo_functions::chLocation('?page=' . $page);
+            simo_functions::chLocation('?page=' . $page . '&action=edit&id=' . $_GET['id']);
             exit;
         }
 

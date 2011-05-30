@@ -102,10 +102,11 @@ class gkh_content_page_site extends gkh_content_page {
         global $__cfg;
         $resstr = '';
 
+        print_r($_FILES);
         if (isset($_FILES)) {
             $i = 0;
             foreach ($_FILES as $file) {
-                if (!empty($file['name'])) {
+                if (!empty($file['name']) && $file['error']===0) {
                     $tempInfo = pathinfo($file['name']);
                     $temp_file_name = $id . '_' . date('d-m-Y-H-i-s') . '_' . $i . '.' . $tempInfo['extension'];
 
@@ -117,6 +118,9 @@ class gkh_content_page_site extends gkh_content_page {
                 }
             }
             $resstr = substr($resstr, 0, strlen($resstr) - 1);
+            if (strlen($resstr)==0) {
+                $resstr = 'NULL';
+            }
             return $resstr;
         } else {
             return 'NULL';

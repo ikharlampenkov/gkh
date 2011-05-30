@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-30 22:03:09
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-30 23:56:04
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/news.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:200934de3b1ad214646-02198369%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:161584de3cc24e34412-51167207%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1f3741ac4b5e2be11aaf71c1fd8164919cc08aca' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/news.tpl',
-      1 => 1306767786,
+      1 => 1306774561,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '200934de3b1ad214646-02198369',
+  'nocache_hash' => '161584de3cc24e34412-51167207',
   'function' => 
   array (
   ),
@@ -73,7 +73,9 @@ if ($_smarty_tpl->_count($_from) > 0){
 <h1><?php if ($_smarty_tpl->getVariable('is_important')->value==1){?>Важная информация<?php }else{ ?>Новости<?php if (isset($_smarty_tpl->getVariable('news_category',null,true,false)->value)){?>: <?php echo $_smarty_tpl->getVariable('news_category')->value['title'];?>
 <?php }?><?php }?></h1>
 
-<?php if ($_smarty_tpl->getVariable('page_info')->value['page_count']!=0){?>
+<br/>
+
+<?php if ($_smarty_tpl->getVariable('page_info')->value['page_count']!=0&&$_smarty_tpl->getVariable('page_info')->value['page_count']>1){?>
 <table>
     <tr>
         <td id="pager">Страница: 
@@ -127,7 +129,8 @@ if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['news']->key => $_smarty_tpl->tpl_vars['news']->value){
 ?>
 <div><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['news']->value['date'],"%d.%m.%Y");?>
-&nbsp;<?php echo $_smarty_tpl->tpl_vars['news']->value['title'];?>
+&nbsp;<?php if (!isset($_smarty_tpl->getVariable('news_category',null,true,false)->value)){?><b><?php echo $_smarty_tpl->tpl_vars['news']->value['category_title'];?>
+</b>&nbsp;<?php }?><?php echo $_smarty_tpl->tpl_vars['news']->value['title'];?>
 </div>
 <div><?php echo $_smarty_tpl->tpl_vars['news']->value['short_text'];?>
 </div>
@@ -138,7 +141,7 @@ if ($_smarty_tpl->_count($_from) > 0){
 <br/>
 <?php }} ?>
 
-<?php if ($_smarty_tpl->getVariable('page_info')->value['page_count']!=0){?>
+<?php if ($_smarty_tpl->getVariable('page_info')->value['page_count']!=0&&$_smarty_tpl->getVariable('page_info')->value['page_count']>1){?>
 <br/>
 <table>
     <tr>

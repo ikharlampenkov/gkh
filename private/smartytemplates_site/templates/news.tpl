@@ -36,7 +36,9 @@
 
 <h1>{if $is_important==1}Важная информация{else}Новости{if isset($news_category)}: {$news_category.title}{/if}{/if}</h1>
 
-{if $page_info.page_count!=0}
+<br/>
+
+{if $page_info.page_count!=0 && $page_info.page_count>1}
 <table>
     <tr>
         <td id="pager">Страница: 
@@ -50,13 +52,13 @@
 {/if}
 
 {foreach from=$news_list_full item=news}
-<div>{$news.date|date_format:"%d.%m.%Y"}&nbsp;{$news.title}</div>
+<div>{$news.date|date_format:"%d.%m.%Y"}&nbsp;{if !isset($news_category)}<b>{$news.category_title}</b>&nbsp;{/if}{$news.title}</div>
 <div>{$news.short_text}</div>
 {if $news.full_text}<a href="{$siteurl}?page=news&action=view_news&id={$news.id}&category={$news.news_category_id}">подробнее...</a><br/>{/if}
 <br/>
 {/foreach}
 
-{if $page_info.page_count!=0}
+{if $page_info.page_count!=0 && $page_info.page_count>1}
 <br/>
 <table>
     <tr>
