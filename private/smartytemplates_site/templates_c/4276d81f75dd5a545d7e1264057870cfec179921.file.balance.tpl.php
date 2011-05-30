@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-29 22:11:46
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-31 00:40:37
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/cabinet/balance.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:306584de26232ca2b79-09093583%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:217354de3d695431b81-54953951%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4276d81f75dd5a545d7e1264057870cfec179921' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/cabinet/balance.tpl',
-      1 => 1306253853,
+      1 => 1306777234,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '306584de26232ca2b79-09093583',
+  'nocache_hash' => '217354de3d695431b81-54953951',
   'function' => 
   array (
   ),
@@ -48,6 +48,11 @@ if ($_smarty_tpl->_count($_from) > 0){
 </td>
     </tr>
     <?php }} ?>
+    <tr>
+        <td colspan="4">Итого:</td>
+        <td><?php echo $_smarty_tpl->getVariable('month')->value['total_end_month'];?>
+</td>
+    </tr>
 </table>
 
 <?php }?>

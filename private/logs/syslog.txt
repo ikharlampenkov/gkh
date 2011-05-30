@@ -5924,3 +5924,29 @@ info   SELECT *
 info   SELECT id, parrent_id, question 
                     FROM faq 
                     WHERE is_folder=1 AND id=0  31.05.2011 00:33
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 00:37
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 00:37
+info   SELECT user_id FROM personal_account WHERE id="1"  31.05.2011 00:38
+info   SELECT * FROM user WHERE id=2 OR login="2"  31.05.2011 00:38
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="ten"  31.05.2011 00:38
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 00:38
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 00:38
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 00:38
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 00:39
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 00:39
+info   SELECT * 
+                    FROM payments_debt 
+                    WHERE personal_account_id=1 
+                    ORDER BY date  31.05.2011 00:39
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 00:40
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 00:40
+info   SELECT * 
+                    FROM payments_debt 
+                    WHERE personal_account_id=1 
+                    ORDER BY date  31.05.2011 00:40

@@ -19,6 +19,10 @@
         <td>{$month.total_end_month}</td>
     </tr>
     {/foreach}
+    <tr>
+        <td colspan="4">Итого:</td>
+        <td>{$month.total_end_month}</td>
+    </tr>
 </table>
 
 {/if}
