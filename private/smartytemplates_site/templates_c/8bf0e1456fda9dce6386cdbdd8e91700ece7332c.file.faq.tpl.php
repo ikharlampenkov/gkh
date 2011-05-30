@@ -1,23 +1,23 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-30 22:43:48
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-30 23:15:26
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/faq.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:187804de3bb34d512f8-10243606%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:187964de3c29e9ae177-85096399%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8bf0e1456fda9dce6386cdbdd8e91700ece7332c' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/faq.tpl',
-      1 => 1306770225,
+      1 => 1306772123,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '187804de3bb34d512f8-10243606',
+  'nocache_hash' => '187964de3c29e9ae177-85096399',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
-<h1><?php if (isset($_smarty_tpl->getVariable('is_situation',null,true,false)->value)){?>Жизненные ситуации<?php }else{ ?>Вопрос-ответ<?php }?></h1>
+<h1><?php if (isset($_smarty_tpl->getVariable('is_situation',null,true,false)->value)&&$_smarty_tpl->getVariable('is_situation')->value==1){?>Жизненные ситуации<?php }else{ ?>Вопрос-ответ<?php }?></h1>
 
 <?php if (isset($_smarty_tpl->getVariable('path_to_faq',null,true,false)->value)){?>
 <div>

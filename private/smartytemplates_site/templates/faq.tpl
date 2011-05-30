@@ -1,4 +1,4 @@
-<h1>{if isset($is_situation)}Жизненные ситуации{else}Вопрос-ответ{/if}</h1>
+<h1>{if isset($is_situation) && $is_situation==1}Жизненные ситуации{else}Вопрос-ответ{/if}</h1>
 
 {if isset($path_to_faq)}
 <div>

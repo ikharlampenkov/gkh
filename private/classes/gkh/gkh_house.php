@@ -69,11 +69,15 @@ class gkh_house extends gkh {
                     }
                     
                     $retArray[$i]['street'] = $res['street'];
+                    $retArray[$i]['houses'][$j]['id'] = $res['id'];
                     $retArray[$i]['houses'][$j]['number'] = $res['number'];
                     $retArray[$i]['houses'][$j]['subnumber'] = $res['subnumber'];
-                    $retArray[$i]['houses'][$j]['subnumber'] = $res['subnumber'];
-                    $retArray[$i]['houses'][$j]['id'] = $res['id'];
+                    $retArray[$i]['houses'][$j]['area'] = $res['area'];
                     
+                    $retArray[$i]['houses'][$j]['file_repair_plan'] = $res['file_repair_plan'];
+                    $retArray[$i]['houses'][$j]['file_costs_income'] = $res['file_costs_income'];
+                    $retArray[$i]['houses'][$j]['file_performed_repair'] = $res['file_performed_repair'];
+           
                     $j++;
                 }              
                 

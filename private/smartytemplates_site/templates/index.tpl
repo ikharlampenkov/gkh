@@ -101,8 +101,8 @@
                                         {if $spage=='main'}
                                         <li class="{if $conpage_title=='disclosure_of_information'}active{else}noactive{/if}"><a title="Раскрытие информации" href="?page=content_page&title=disclosure_of_information">Раскрытие информации</a></li>
                                         <li class="{if $conpage_title=='cabinet'}active{else}noactive{/if}"><a title="Личный кабинет" href="?page=content_page&title=cabinet">Личный кабинет</a></li>
-                                        <li class="{if $page=='faq' && isset($is_situation)}active{else}noactive{/if}"><a title="Жизненные ситуации" href="?page=faq&is_situation=1" target="_blank">Жизненные ситуации</a></li>
-                                        <li class="{if $page=='news' && isset($is_important)}active{else}noactive{/if}"><a title="Важная информация" href="?page=news&is_important=1">Важная информация</a></li>
+                                        <li class="{if $page=='faq' && isset($is_situation) && $is_situation==1}active{else}noactive{/if}"><a title="Жизненные ситуации" href="?page=faq&is_situation=1">Жизненные ситуации</a></li>
+                                        <li class="{if $page=='news' && isset($is_important) && $is_important==1}active{else}noactive{/if}"><a title="Важная информация" href="?page=news&is_important=1">Важная информация</a></li>
                                         {/if}
                                         {if $spage=='about'}
                                         <li class="{if $conpage_title=='general_information'}active{else}noactive{/if}"><a title="Общая информация" href="?page=content_page&title=general_information&spage=about">Общая информация</a></li>
@@ -130,9 +130,9 @@
                                         <li class="{if $category=='5'}active{else}noactive{/if}"><a title="Законодательство" href="?page=news&category=5&spage=news" >Законодательство</a></li>
                                         {/if}
                                         {if $spage=='house'}
-                                        <li class="{if $conpage_title=='home_repair'}active{else}noactive{/if}"><a title="Обслуживаемые дома" href="?page=house&spage=house">Обслуживаемые дома</a></li>
-                                        <li class="{if $conpage_title=='home_repair'}active{else}noactive{/if}"><a title="План проводимых работ" href="?page=house&spage=house">План проводимых работ</a></li>
-                                        <li class="{if $conpage_title=='home_repair'}active{else}noactive{/if}"><a title="Отчет по капитальном ремонту" href="?page=house&spage=house">Отчет по капитальном ремонту</a></li>
+                                        <li class="{if $category=='all'}active{else}noactive{/if}"><a title="Обслуживаемые дома" href="?page=house&category=all&spage=house">Обслуживаемые дома</a></li>
+                                        <li class="{if $category=='plan'}active{else}noactive{/if}"><a title="План проводимых работ" href="?page=house&category=plan&spage=house">План проводимых работ</a></li>
+                                        <li class="{if $category=='reports'}active{else}noactive{/if}"><a title="Отчет по капитальном ремонту" href="?page=house&category=reports&spage=house">Отчет по капитальном ремонту</a></li>
                                         {/if}
                                         {if $spage=='reports'}
                                         <li class="{if $conpage_title=='financial_statements'}active{else}noactive{/if}"><a title="Бухгалтерская отчетность" href="?page=content_page&title=financial_statements&spage=reports">Бухгалтерская отчетность</a></li>
@@ -148,7 +148,7 @@
                                                  { id:"tmS",subs:[ { "t":"Электротехнические работы","u":"?page=content_page&title=eltechrab&spage=service" } , { "t":"Сантехнические работы","u":"?page=content_page&title=santechrab&spage=service" } , { "t":"Содержание дома","u":"http://schools.dnevnik.ru/schedules" } , { "t":"Ремонт дома","u":"http://schools.dnevnik.ru/journals/" } ] } , 
                                                  { id:"tmL",subs:[ { "t":"Жилищно-коммунальные услуги","u":"?page=content_page&title=gkh&spage=rates" } , { "t":"Коммунальные ресурсы","u":"?page=content_page&title=communal_resources&spage=rates" } ] } , 
                                                  { id:"tmCON",subs:[ { "t":"Объявления","u":"?page=news&category=1&spage=news" } , { "t":"Отключения","u":"?page=news&category=2&spage=news" } , { "t":"Подключения","u":"?page=news&category=3&spage=news" } , { "t":"Согласования","u":"?page=news&category=4&spage=news" } , { "t":"Законодательство","u":"?page=news&category=5&spage=news" } ] } , 
-                                                 { id:"tma",subs:[ { "t":"Обслуживаемые дома","u":"?page=house&spage=house" } , { "t":"План проводимых работ","u":"?page=house&spage=house" } , { "t":"Отчет по капитальном ремонту","u":"?page=house&spage=house" } ] } , 
+                                                 { id:"tma",subs:[ { "t":"Обслуживаемые дома","u":"?page=house&category=all&spage=house" } , { "t":"План проводимых работ","u":"?page=house&category=plan&spage=house" } , { "t":"Отчет по капитальном ремонту","u":"?page=house&category=reports&spage=house" } ] } , 
                                                  { id:"tmO",subs:[ { "t":"Бухгалтерская отчетность","u":"?page=content_page&title=financial_statements&spage=reports" } , { "t":"Доходы","u":"?page=content_page&title=income&spage=reports" } , { "t":"Расходы","u":"?page=content_page&title=costs&spage=reports" } ] } ];
                                 </script>
                                 
