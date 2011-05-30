@@ -14,7 +14,7 @@ if (isset($_GET['page'])) {
 if (isset($_GET['spage'])) {
     $spage = $_GET['spage'];
 } else {
-    $spage = '';
+    $spage = $page;
 }
 
 if (isset($_GET['action'])) {

@@ -82,13 +82,13 @@
                                             <td><img src="/img/left.jpg" /></td>
                                             <td width="750">
                                                 <ul>
-                                                    <li class="{if $page==''}active{else}noactive{/if}"><a id="tmM" title="Главная" href="/">Главная</a></li>
-                                                    <li class="{if $spage=='about'}active{else}noactive{/if}"><a id="tmC" title="О нас" href="http://contact.dnevnik.ru/">О нас</a></li>
-                                                    <li class="{if $spage=='service'}active{else}noactive{/if}"><a id="tmS" title="Услуги" href="http://schools.dnevnik.ru/school.aspx">Услуги</a></li>
-                                                    <li class="{if $page=='rate'}active{else}noactive{/if}"><a id="tmL" title="Тарифы" href="http://lib.dnevnik.ru/">Тарифы</a></li>
+                                                    <li class="{if $spage==''}active{else}noactive{/if}"><a id="tmM" title="Главная" href="/">Главная</a></li>
+                                                    <li class="{if $spage=='about'}active{else}noactive{/if}"><a id="tmC" title="О нас" href="?page=content_page&title=about&spage=about">О нас</a></li>
+                                                    <li class="{if $spage=='service'}active{else}noactive{/if}"><a id="tmS" title="Услуги" href="?page=content_page&title=service&spage=service">Услуги</a></li>
+                                                    <li class="{if $spage=='rate'}active{else}noactive{/if}"><a id="tmL" title="Тарифы" href="?page=content_page&title=rates&spage=rates">Тарифы</a></li>
                                                     <li class="{if $page=='news'}active{else}noactive{/if}"><a id="tmCON" title="Новости" href="?page=news">Новости</a</li>
                                                     <li class="{if $page=='house'}active{else}noactive{/if}"><a id="tma" title="Ваш дом" href="?page=house">Ваш дом</a></li>
-                                                    <li class="{if $page=='report'}active{else}noactive{/if}"><a id="tmO" title="Отчеты" href="http://ggg.dnevnik.ru/">Отчеты</a></li>
+                                                    <li class="{if $spage=='reports'}active{else}noactive{/if}"><a id="tmO" title="Отчеты" href="?page=content_page&title=reports&spage=reports">Отчеты</a></li>
                                                 </ul>
                                             </td>
                                             <td align="right"><img src="img/right.jpg" /></td>
@@ -98,27 +98,29 @@
 
                                 <div style="text-align:center">
                                     <ul class="sub">
-                                        {if $page==''}
-                                        <li><a title="Раскрытие информации" href="http://dnevnik.ru/user.aspx?user=361977">Раскрытие информации</a></li>
-                                        <li><a title="Личный кабинет" href="http://messenger.dnevnik.ru/">Личный кабинет</a></li>
-                                        <li><a title="Жизненные ситуации" href="http://dnevnik.ru/outlook.ashx" target="_blank">Жизненные ситуации</a></li>
-                                        <li><a title="Важная информация" href="http://dnevnik.ru/news.aspx">Важная информация</a></li>
+                                        {if $spage==''}
+                                        <li class="{if $conpage_title=='disclosure_of_information'}active{else}noactive{/if}"><a title="Раскрытие информации" href="?page=content_page&title=disclosure_of_information">Раскрытие информации</a></li>
+                                        <li class="{if $conpage_title=='cabinet'}active{else}noactive{/if}"><a title="Личный кабинет" href="?page=content_page&title=cabinet">Личный кабинет</a></li>
+                                        <li class="{if $conpage_title==''}active{else}noactive{/if}"><a title="Жизненные ситуации" href="" target="_blank">Жизненные ситуации</a></li>
+                                        <li class="{if $conpage_title=='important_information'}active{else}noactive{/if}"><a title="Важная информация" href="?page=content_page&title=important_information">Важная информация</a></li>
                                         {/if}
                                         {if $spage=='about'}
-                                        <li class="{if $page=='eltechrab'}active{else}noactive{/if}"><a title="Общая информация" href="">Общая информация</a></li>
+                                        <li class="{if $conpage_title=='general_information'}active{else}noactive{/if}"><a title="Общая информация" href="?page=content_page&title=general_information&spage=about">Общая информация</a></li>
                                         <li class="{if $page=='license'}active{else}noactive{/if}"><a title="Лицензии" href="?page=license&spage=about">Лицензии</a></li>
-                                        <li class="{if $page=='eltechrab'}active{else}noactive{/if}"><a title="Руководство" href="?page=personal&is_leaders=1&spage=about">Руководство</a></li>
-                                        <li class="{if $page=='eltechrab'}active{else}noactive{/if}"><a title="Персонал" href="?page=personal&is_leaders=0&spage=about">Персонал</a></li>
-                                        <li class="{if $page=='eltechrab'}active{else}noactive{/if}"><a title="Вакансии" href="">Вакансии</a></li>
-                                        <li class="{if $page=='eltechrab'}active{else}noactive{/if}"><a title="Контакты" href="">Контакты</a></li>
+                                        <li class="{if $page=='personal' && $is_leaders==1}active{else}noactive{/if}"><a title="Руководство" href="?page=personal&is_leaders=1&spage=about">Руководство</a></li>
+                                        <li class="{if $page=='personal' && $is_leaders==0}active{else}noactive{/if}"><a title="Персонал" href="?page=personal&is_leaders=0&spage=about">Персонал</a></li>
+                                        <li class="{if $page==''}active{else}noactive{/if}"><a title="Вакансии" href="">Вакансии</a></li>
+                                        <li class="{if $conpage_title=='contact'}active{else}noactive{/if}"><a title="Контакты" href="?page=content_page&title=contact&spage=about">Контакты</a></li>
                                         {/if}
                                         {if $spage=='service'}
                                         <li class="{if $conpage_title=='eltechrab'}active{else}noactive{/if}"><a title="Электротехнические работы" href="?page=content_page&title=eltechrab&spage=service">Электротехнические работы</a></li>
                                         <li class="{if $conpage_title=='santechrab'}active{else}noactive{/if}"><a title="Сантехнические работы" href="?page=content_page&title=santechrab&spage=service">Сантехнические работы</a></li>
-                                        <li class="{if $conpage_title==''}active{else}noactive{/if}"><a title="Содержание дома" href="?page=content_page&title=">Содержание дома</a></li>
-                                        <li class="{if $conpage_title==''}active{else}noactive{/if}"><a title="Ремонт дома" href="?page=content_page&title=">Ремонт дома</a></li>
+                                        <li class="{if $conpage_title=='keep_the_house'}active{else}noactive{/if}"><a title="Содержание дома" href="?page=content_page&title=keep_the_house&spage=service">Содержание дома</a></li>
+                                        <li class="{if $conpage_title=='home_repair'}active{else}noactive{/if}"><a title="Ремонт дома" href="?page=content_page&title=home_repair&spage=service">Ремонт дома</a></li>
                                         {/if}
-                                        {if $page=='rate'}
+                                        {if $spage=='rates'}
+                                        <li class="{if $conpage_title=='gkh'}active{else}noactive{/if}"><a title="Жилищно-коммунальные услуги" href="?page=content_page&title=gkh&spage=rates">Жилищно-коммунальные услуги</a></li>
+                                        <li class="{if $conpage_title=='communal_resources'}active{else}noactive{/if}"><a title="Коммунальные ресурсы" href="?page=content_page&title=communal_resources&spage=rates">Коммунальные ресурсы</a></li>                                        
                                         {/if}
                                         {if $page=='news'}
                                         <li class="{if $category=='1'}active{else}noactive{/if}"><a title="Объявления" href="?page=news&category=1">Объявления</a></li>
@@ -127,19 +129,27 @@
                                         <li class="{if $category=='4'}active{else}noactive{/if}"><a title="Согласования" href="?page=news&category=4" >Согласования</a></li>
                                         <li class="{if $category=='5'}active{else}noactive{/if}"><a title="Законодательство" href="?page=news&category=5" >Законодательство</a></li>
                                         {/if}
-                                        {if $page=='report'}
+                                        {if $page=='house'}
+                                        <li class="{if $conpage_title=='home_repair'}active{else}noactive{/if}"><a title="Обслуживаемые дома" href="?page=house">Обслуживаемые дома</a></li>
+                                        <li class="{if $conpage_title=='home_repair'}active{else}noactive{/if}"><a title="План проводимых работ" href="?page=house">План проводимых работ</a></li>
+                                        <li class="{if $conpage_title=='home_repair'}active{else}noactive{/if}"><a title="Отчет по капитальном ремонту" href="?page=house">Отчет по капитальном ремонту</a></li>
+                                        {/if}
+                                        {if $spage=='reports'}
+                                        <li class="{if $conpage_title=='financial_statements'}active{else}noactive{/if}"><a title="Бухгалтерская отчетность" href="?page=content_page&title=financial_statements&spage=reports">Бухгалтерская отчетность</a></li>
+                                        <li class="{if $conpage_title=='income'}active{else}noactive{/if}"><a title="Доходы" href="?page=content_page&title=income&spage=reports">Доходы</a></li>
+                                        <li class="{if $conpage_title=='costs'}active{else}noactive{/if}"><a title="Расходы" href="?page=content_page&title=costs&spage=reports">Расходы</a></li>
                                         {/if}
                                     </ul>
                                 </div>
 
                                 <script type="text/javascript">
-                                var submenus = [ {  id:"tmM",subs:[  {  "t":"Раскрытие информации","u":"http://dnevnik.ru/user.aspx?user=361977" } , { "t":"Личный кабинет","u":"http://messenger.dnevnik.ru/" } , { "t":"Жизненные ситуации","u":"http://dnevnik.ru/outlook.ashx" } , { "t":"Важная информация","u":"http://dnevnik.ru/outlook.ashx" } ] } ,
-                                                 { id:"tmC",subs:[ { "t":"Общая информация","u":"http://people.dnevnik.ru" } , { "t":"Лицензии","u":"?page=license&spage=about" } , { "t":"Руководство","u":"?page=personal&is_leaders=1&spage=about" } , { "t":"Персонал","u":"?page=personal&is_leaders=0&spage=about" } , { "t":"Вакансии","u":"http://networks.dnevnik.ru" } , { "t":"Контакты","u":"http://networks.dnevnik.ru" } ] } , 
+                                var submenus = [ {  id:"tmM",subs:[  {  "t":"Раскрытие информации","u":"?page=content_page&title=disclosure_of_information" } , { "t":"Личный кабинет","u":"?page=content_page&title=cabinet" } , { "t":"Жизненные ситуации","u":"/" } , { "t":"Важная информация","u":"?page=content_page&title=important_information" } ] } ,
+                                                 { id:"tmC",subs:[ { "t":"Общая информация","u":"http://people.dnevnik.ru" } , { "t":"Лицензии","u":"?page=license&spage=about" } , { "t":"Руководство","u":"?page=personal&is_leaders=1&spage=about" } , { "t":"Персонал","u":"?page=personal&is_leaders=0&spage=about" } , { "t":"Вакансии","u":"/" } , { "t":"Контакты","u":"?page=content_page&title=contact&spage=about" } ] } , 
                                                  { id:"tmS",subs:[ { "t":"Электротехнические работы","u":"?page=content_page&title=eltechrab&spage=service" } , { "t":"Сантехнические работы","u":"?page=content_page&title=santechrab&spage=service" } , { "t":"Содержание дома","u":"http://schools.dnevnik.ru/schedules" } , { "t":"Ремонт дома","u":"http://schools.dnevnik.ru/journals/" } ] } , 
-                                                 { id:"tmL",subs:[ { "t":"Жилищно-коммунальные услуги","u":"http://lib.dnevnik.ru/literature/" } , { "t":"Коммунальные ресурсы","u":"http://lib.dnevnik.ru/media/" } ] } , 
+                                                 { id:"tmL",subs:[ { "t":"Жилищно-коммунальные услуги","u":"?page=content_page&title=gkh&spage=rates" } , { "t":"Коммунальные ресурсы","u":"?page=content_page&title=communal_resources&spage=rates" } ] } , 
                                                  { id:"tmCON",subs:[ { "t":"Объявления","u":"?page=news&category=1" } , { "t":"Отключения","u":"?page=news&category=2" } , { "t":"Подключения","u":"?page=news&category=3" } , { "t":"Согласования","u":"?page=news&category=4" } , { "t":"Законодательство","u":"?page=news&category=5" } ] } , 
-                                                 { id:"tma",subs:[ { "t":"Обслуживаемые дома","u":"http://dnevnik.ru/contests" } , { "t":"План проводимых работ","u":"http://dnevnik.ru/contests" } , { "t":"Отчет по капитальном ремонту ","u":"http://dnevnik.ru/contests" } ] } , 
-                                                 { id:"tmO",subs:[ { "t":"Бухгалтерская отчетность","u":"http://dnevnik.ru/contests" } , { "t":"Доходы","u":"http://dnevnik.ru/contests" } , { "t":"Расходы","u":"http://dnevnik.ru/contests" } ] } ];
+                                                 { id:"tma",subs:[ { "t":"Обслуживаемые дома","u":"?page=house" } , { "t":"План проводимых работ","u":"?page=house" } , { "t":"Отчет по капитальном ремонту","u":"?page=house" } ] } , 
+                                                 { id:"tmO",subs:[ { "t":"Бухгалтерская отчетность","u":"?page=content_page&title=financial_statements&spage=reports" } , { "t":"Доходы","u":"?page=content_page&title=income&spage=reports" } , { "t":"Расходы","u":"?page=content_page&title=costs&spage=reports" } ] } ];
                                 </script>
                                 
                                 </div>
