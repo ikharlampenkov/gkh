@@ -101,7 +101,7 @@
                                         {if $spage=='main'}
                                         <li class="{if $conpage_title=='disclosure_of_information'}active{else}noactive{/if}"><a title="Раскрытие информации" href="?page=content_page&title=disclosure_of_information">Раскрытие информации</a></li>
                                         <li class="{if $conpage_title=='cabinet'}active{else}noactive{/if}"><a title="Личный кабинет" href="?page=content_page&title=cabinet">Личный кабинет</a></li>
-                                        <li class="{if $page=='faq'}active{else}noactive{/if}"><a title="Жизненные ситуации" href="?page=faq&root=4" target="_blank">Жизненные ситуации</a></li>
+                                        <li class="{if $page=='faq' && isset($is_situation)}active{else}noactive{/if}"><a title="Жизненные ситуации" href="?page=faq&is_situation=1" target="_blank">Жизненные ситуации</a></li>
                                         <li class="{if $page=='news' && isset($is_important)}active{else}noactive{/if}"><a title="Важная информация" href="?page=news&is_important=1">Важная информация</a></li>
                                         {/if}
                                         {if $spage=='about'}
@@ -143,7 +143,7 @@
                                 </div>
 
                                 <script type="text/javascript">
-                                var submenus = [ {  id:"tmM",subs:[  {  "t":"Раскрытие информации","u":"?page=content_page&title=disclosure_of_information" } , { "t":"Личный кабинет","u":"?page=content_page&title=cabinet" } , { "t":"Жизненные ситуации","u":"?page=faq&root=4" } , { "t":"Важная информация","u":"?page=content_page&title=important_information" } ] } ,
+                                var submenus = [ {  id:"tmM",subs:[  {  "t":"Раскрытие информации","u":"?page=content_page&title=disclosure_of_information" } , { "t":"Личный кабинет","u":"?page=content_page&title=cabinet" } , { "t":"Жизненные ситуации","u":"?page=faq&is_situation=1" } , { "t":"Важная информация","u":"?page=content_page&title=important_information" } ] } ,
                                                  { id:"tmC",subs:[ { "t":"Общая информация","u":"?page=content_page&title=general_information&spage=about" } , { "t":"Лицензии","u":"?page=license&spage=about" } , { "t":"Руководство","u":"?page=personal&is_leaders=1&spage=about" } , { "t":"Персонал","u":"?page=personal&is_leaders=0&spage=about" } , { "t":"Вакансии","u":"/" } , { "t":"Контакты","u":"?page=content_page&title=contact&spage=about" } ] } , 
                                                  { id:"tmS",subs:[ { "t":"Электротехнические работы","u":"?page=content_page&title=eltechrab&spage=service" } , { "t":"Сантехнические работы","u":"?page=content_page&title=santechrab&spage=service" } , { "t":"Содержание дома","u":"http://schools.dnevnik.ru/schedules" } , { "t":"Ремонт дома","u":"http://schools.dnevnik.ru/journals/" } ] } , 
                                                  { id:"tmL",subs:[ { "t":"Жилищно-коммунальные услуги","u":"?page=content_page&title=gkh&spage=rates" } , { "t":"Коммунальные ресурсы","u":"?page=content_page&title=communal_resources&spage=rates" } ] } , 

@@ -5061,3 +5061,158 @@ info   SELECT news.id, news_category_id, date, news.title, short_text, full_text
                     WHERE news.news_category_id=news_category.id  ORDER BY date DESC
                       LIMIT 5  30.05.2011 22:11
 info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 22:11
+info   SELECT user_id FROM personal_account WHERE id="admin"  30.05.2011 22:27
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="admin"  30.05.2011 22:27
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 22:27
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 22:27
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 22:27
+info   SELECT password FROM user WHERE login="admin"  30.05.2011 22:27
+info   SELECT password FROM user WHERE login="admin"  30.05.2011 22:27
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, question  30.05.2011 22:27
+info   SELECT id, parrent_id, question 
+                    FROM faq 
+                    WHERE is_folder=1 AND id=0  30.05.2011 22:27
+info   SELECT password FROM user WHERE login="admin"  30.05.2011 22:28
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=1 
+                    ORDER BY is_folder DESC, question  30.05.2011 22:28
+info   SELECT id, parrent_id, question 
+                    FROM faq 
+                    WHERE is_folder=1 AND id=1  30.05.2011 22:28
+info   SELECT password FROM user WHERE login="admin"  30.05.2011 22:28
+info   SELECT * FROM faq WHERE is_folder=1  30.05.2011 22:28
+info   SELECT password FROM user WHERE login="admin"  30.05.2011 22:29
+info   INSERT INTO faq(parrent_id, question, answer, is_folder) 
+                    VALUES(3, "Как установить счетчики для воды", "Сначала обратитесь в РЭУ для вызова мастера\r\n\r\n", 0)  30.05.2011 22:29
+info   SELECT password FROM user WHERE login="admin"  30.05.2011 22:29
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, question  30.05.2011 22:29
+info   SELECT id, parrent_id, question 
+                    FROM faq 
+                    WHERE is_folder=1 AND id=0  30.05.2011 22:29
+info   SELECT password FROM user WHERE login="admin"  30.05.2011 22:29
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=3 
+                    ORDER BY is_folder DESC, question  30.05.2011 22:29
+info   SELECT id, parrent_id, question 
+                    FROM faq 
+                    WHERE is_folder=1 AND id=3  30.05.2011 22:29
+info   SELECT password FROM user WHERE login="admin"  30.05.2011 22:29
+info   SELECT * FROM faq WHERE id=4  30.05.2011 22:29
+info   SELECT * FROM faq WHERE is_folder=1  30.05.2011 22:29
+info   SELECT password FROM user WHERE login="admin"  30.05.2011 22:38
+info   SELECT * FROM faq WHERE id=4  30.05.2011 22:38
+info   SELECT * FROM faq WHERE is_folder=1  30.05.2011 22:38
+info   SELECT password FROM user WHERE login="admin"  30.05.2011 22:38
+info   UPDATE faq 
+                    SET parrent_id=0, question="Как установить счетчики для воды",  
+                        answer="Сначала обратитесь в РЭУ для вызова мастера\r\n\r\n", is_folder=0, 
+                        is_situation=1 
+                    WHERE id=4  30.05.2011 22:38
+info   SELECT password FROM user WHERE login="admin"  30.05.2011 22:38
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, question  30.05.2011 22:38
+info   SELECT id, parrent_id, question 
+                    FROM faq 
+                    WHERE is_folder=1 AND id=0  30.05.2011 22:38
+info   SELECT password FROM user WHERE login="admin"  30.05.2011 22:38
+info   SELECT * FROM faq WHERE id=4  30.05.2011 22:38
+info   SELECT * FROM faq WHERE is_folder=1  30.05.2011 22:38
+info   SELECT password FROM user WHERE login="admin"  30.05.2011 22:38
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 22:38
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 22:38
+info   SELECT * FROM faq WHERE id=4  30.05.2011 22:38
+info   SELECT id, parrent_id, question 
+                    FROM faq 
+                    WHERE is_folder=1 AND id=4  30.05.2011 22:38
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=4 
+                    ORDER BY is_folder DESC, question  30.05.2011 22:38
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 22:38
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 22:38
+info   SELECT * FROM faq WHERE id=4  30.05.2011 22:41
+info   SELECT id, parrent_id, question 
+                    FROM faq 
+                    WHERE is_folder=1 AND id=4  30.05.2011 22:41
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=4 
+                    ORDER BY is_folder DESC, question  30.05.2011 22:41
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 22:41
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 22:41
+info   SELECT * FROM faq WHERE is_situation=1  30.05.2011 22:41
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 22:41
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 22:41
+info   SELECT * FROM faq WHERE is_situation=1  30.05.2011 22:43
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 22:43
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 22:43
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, question  30.05.2011 22:44
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 22:44
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 22:44
+info   SELECT * FROM faq WHERE id=1  30.05.2011 22:44
+info   SELECT id, parrent_id, question 
+                    FROM faq 
+                    WHERE is_folder=1 AND id=1  30.05.2011 22:44
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=1 
+                    ORDER BY is_folder DESC, question  30.05.2011 22:44
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 22:44
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 22:44
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, question  30.05.2011 22:44
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 22:44
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 22:44
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 22:44
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 22:44
+info   SELECT * FROM faq WHERE is_situation=1  30.05.2011 22:44
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  30.05.2011 22:44
+info   SELECT * FROM house ORDER BY street, number, subnumber  30.05.2011 22:44

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-29 22:27:50
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-30 22:27:51
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/admin/faq.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:90374de265f6498da2-82900859%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:170644de3b777374df3-39164887%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '9576e9415c00828429bf57cd8398ba909cb420bd' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/admin/faq.tpl',
-      1 => 1306682868,
+      1 => 1306769169,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '90374de265f6498da2-82900859',
+  'nocache_hash' => '170644de3b777374df3-39164887',
   'function' => 
   array (
   ),
@@ -36,7 +36,7 @@ $_smarty_tpl->decodeProperties(array (
 " /></td>
         </tr>
         <tr>
-            <td >Ответ</td>
+            <td>Ответ</td>
             <td><textarea name="data[answer]"><?php echo $_smarty_tpl->getVariable('faq')->value['answer'];?>
 </textarea></td>
         </tr>
@@ -54,6 +54,10 @@ if ($_smarty_tpl->_count($_from) > 0){
 </option>
                     <?php }} ?>
                 </select></td>
+        </tr>
+        <tr>
+            <td>Жизненные ситуации</td>
+            <td><input type="checkbox" name="data[is_situation]" <?php if (isset($_smarty_tpl->getVariable('faq',null,true,false)->value['is_situation'])&&$_smarty_tpl->getVariable('faq')->value['is_situation']){?>checked="checked"<?php }?> style="width: 14px;" /></td>
         </tr>
     </table>
     <input type="hidden" name="data[is_folder]" value="0" />

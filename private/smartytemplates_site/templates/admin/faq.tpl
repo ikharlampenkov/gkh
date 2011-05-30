@@ -11,7 +11,7 @@
             <td><input name="data[question]" value="{$faq.question}" /></td>
         </tr>
         <tr>
-            <td >Ответ</td>
+            <td>Ответ</td>
             <td><textarea name="data[answer]">{$faq.answer}</textarea></td>
         </tr>
         <tr>
@@ -22,6 +22,10 @@
                     <option value="{$folder.id}" {if isset($faq.parent_id) && $faq.parent_id==$folder.id}selected="selected"{/if}>{$folder.question}</option>
                     {/foreach}
                 </select></td>
+        </tr>
+        <tr>
+            <td>Жизненные ситуации</td>
+            <td><input type="checkbox" name="data[is_situation]" {if isset($faq.is_situation) && $faq.is_situation}checked="checked"{/if} style="width: 14px;" /></td>
         </tr>
     </table>
     <input type="hidden" name="data[is_folder]" value="0" />

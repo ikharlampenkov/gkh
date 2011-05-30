@@ -7,6 +7,7 @@
   `question` TEXT NOT NULL ,
   `answer` TEXT NULL ,
   `is_folder` TINYINT(1)  NOT NULL DEFAULT 0 ,
+   is_situation
   PRIMARY KEY (`id`) )
 ENGINE = InnoDB
  */
@@ -27,6 +28,18 @@ class gkh_faq extends gkh {
     public function getAllFaq() {
         try {
             $sql = 'SELECT * FROM faq';
+            $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
+            if (isset($result[0])) {
+                return $result;
+            } else
+                return false;
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+        }
+    }
+    public function getSituationFaq() {
+        try {
+            $sql = 'SELECT * FROM faq WHERE is_situation=1';
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
                 return $result;
@@ -105,9 +118,16 @@ class gkh_faq extends gkh {
     public function addFaq($data) {
         try {
             $data = $this->_db->prepareArray($data);
+            
+            if (isset($data['is_situation'])) {
+                $data['is_situation'] = 1;
+            } else {
+                $data['is_situation'] = 0;
+            }
 
-            $sql = 'INSERT INTO faq(parrent_id, question, answer, is_folder) 
-                    VALUES(' . $data['parrent_id'] . ', "' . $data['question'] . '", "' . $data['answer'] . '", ' . $data['is_folder'] . ')';
+            $sql = 'INSERT INTO faq(parrent_id, question, answer, is_folder, is_situation) 
+                    VALUES(' . $data['parrent_id'] . ', "' . $data['question'] . '", 
+                          "' . $data['answer'] . '", ' . $data['is_folder'] . ', ' . $data['is_situation'] . ')';
             $this->_db->query($sql);
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
@@ -117,10 +137,17 @@ class gkh_faq extends gkh {
     public function updateFaq($id, $data) {
         try {
             $data = $this->_db->prepareArray($data);
+            
+            if (isset($data['is_situation'])) {
+                $data['is_situation'] = 1;
+            } else {
+                $data['is_situation'] = 0;
+            }
 
             $sql = 'UPDATE faq 
                     SET parrent_id=' . $data['parrent_id'] . ', question="' . $data['question'] . '",  
-                        answer="' . $data['answer'] . '", is_folder=' . $data['is_folder'] . ' 
+                        answer="' . $data['answer'] . '", is_folder=' . $data['is_folder'] . ', 
+                        is_situation=' . $data['is_situation'] . ' 
                     WHERE id=' . (int)$id;
             $this->_db->query($sql);
         } catch (Exception $e) {

@@ -153,14 +153,21 @@ if ($o_user->isLogin()) {
 
         $o_faq = new gkh_faq();
 
-        if ($root != 0) {
-            $o_smarty->assign('faq', $o_faq->getFaq($root));
-            $o_smarty->assign('path_to_faq', $o_faq->getFullPathToFolder($root));
+        if (isset($_GET['is_situation'])) {
+           $o_smarty->assign('faq_list', $o_faq->getSituationFaq()); 
+           $o_smarty->assign('is_situation', 1);
         } else {
-            $o_smarty->assign('faq', false);
-        }
 
-        $o_smarty->assign('faq_list', $o_faq->getFaqCatalog($root));
+            if ($root != 0) {
+                $o_smarty->assign('faq', $o_faq->getFaq($root));
+                $o_smarty->assign('path_to_faq', $o_faq->getFullPathToFolder($root));
+            } else {
+                $o_smarty->assign('faq', false);
+            }
+
+            $o_smarty->assign('faq_list', $o_faq->getFaqCatalog($root));
+            $o_smarty->assign('is_situation', 0);
+        }
     }
 
     if ($page == 'personal' && isset($_GET['is_leaders'])) {

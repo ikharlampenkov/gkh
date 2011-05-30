@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-30 22:11:47
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-30 22:41:34
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:94264de3b3b37a4e12-95338411%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:305794de3baaec78983-85599871%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '06f23a46aed9fc3af496589adff00c09fe8f7897' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/index.tpl',
-      1 => 1306768300,
+      1 => 1306770092,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '94264de3b3b37a4e12-95338411',
+  'nocache_hash' => '305794de3baaec78983-85599871',
   'function' => 
   array (
   ),
@@ -125,7 +125,7 @@ $_smarty_tpl->decodeProperties(array (
                                         <?php if ($_smarty_tpl->getVariable('spage')->value=='main'){?>
                                         <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value=='disclosure_of_information'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Раскрытие информации" href="?page=content_page&title=disclosure_of_information">Раскрытие информации</a></li>
                                         <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value=='cabinet'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Личный кабинет" href="?page=content_page&title=cabinet">Личный кабинет</a></li>
-                                        <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='faq'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Жизненные ситуации" href="?page=faq&root=4" target="_blank">Жизненные ситуации</a></li>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='faq'&&isset($_smarty_tpl->getVariable('is_situation',null,true,false)->value)){?>active<?php }else{ ?>noactive<?php }?>"><a title="Жизненные ситуации" href="?page=faq&is_situation=1" target="_blank">Жизненные ситуации</a></li>
                                         <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='news'&&isset($_smarty_tpl->getVariable('is_important',null,true,false)->value)){?>active<?php }else{ ?>noactive<?php }?>"><a title="Важная информация" href="?page=news&is_important=1">Важная информация</a></li>
                                         <?php }?>
                                         <?php if ($_smarty_tpl->getVariable('spage')->value=='about'){?>
@@ -167,7 +167,7 @@ $_smarty_tpl->decodeProperties(array (
                                 </div>
 
                                 <script type="text/javascript">
-                                var submenus = [ {  id:"tmM",subs:[  {  "t":"Раскрытие информации","u":"?page=content_page&title=disclosure_of_information" } , { "t":"Личный кабинет","u":"?page=content_page&title=cabinet" } , { "t":"Жизненные ситуации","u":"?page=faq&root=4" } , { "t":"Важная информация","u":"?page=content_page&title=important_information" } ] } ,
+                                var submenus = [ {  id:"tmM",subs:[  {  "t":"Раскрытие информации","u":"?page=content_page&title=disclosure_of_information" } , { "t":"Личный кабинет","u":"?page=content_page&title=cabinet" } , { "t":"Жизненные ситуации","u":"?page=faq&is_situation=1" } , { "t":"Важная информация","u":"?page=content_page&title=important_information" } ] } ,
                                                  { id:"tmC",subs:[ { "t":"Общая информация","u":"?page=content_page&title=general_information&spage=about" } , { "t":"Лицензии","u":"?page=license&spage=about" } , { "t":"Руководство","u":"?page=personal&is_leaders=1&spage=about" } , { "t":"Персонал","u":"?page=personal&is_leaders=0&spage=about" } , { "t":"Вакансии","u":"/" } , { "t":"Контакты","u":"?page=content_page&title=contact&spage=about" } ] } , 
                                                  { id:"tmS",subs:[ { "t":"Электротехнические работы","u":"?page=content_page&title=eltechrab&spage=service" } , { "t":"Сантехнические работы","u":"?page=content_page&title=santechrab&spage=service" } , { "t":"Содержание дома","u":"http://schools.dnevnik.ru/schedules" } , { "t":"Ремонт дома","u":"http://schools.dnevnik.ru/journals/" } ] } , 
                                                  { id:"tmL",subs:[ { "t":"Жилищно-коммунальные услуги","u":"?page=content_page&title=gkh&spage=rates" } , { "t":"Коммунальные ресурсы","u":"?page=content_page&title=communal_resources&spage=rates" } ] } , 
