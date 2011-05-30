@@ -8,6 +8,7 @@
   `title` varchar(255) NOT NULL,
   `short_text` text,
   `full_text` text,
+  `is_impotant` TINYINT(1)  NOT NULL DEFAULT 0 ,
   PRIMARY KEY (`id`),
   KEY `fk_news_news_category1` (`news_category_id`)
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
@@ -65,7 +66,7 @@ class gkh_news extends gkh {
 
     public function getNewsCategory($id) {
         try {
-            $sql = 'SELECT * FROM news_category WHERE id=' . (int) $id;
+            $sql = 'SELECT * FROM news_category WHERE id=' . (int)$id;
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
                 return $result[0];
@@ -90,7 +91,7 @@ class gkh_news extends gkh {
     public function updateNewsCategory($id, $data) {
         try {
             $data = $this->_db->prepareArray($data);
-            $sql = 'UPDATE news_category SET title="' . $data['title'] . '" WHERE id=' . (int) $id;
+            $sql = 'UPDATE news_category SET title="' . $data['title'] . '" WHERE id=' . (int)$id;
             $this->_db->query($sql);
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
@@ -99,7 +100,7 @@ class gkh_news extends gkh {
 
     public function deleteNewsCategory($id) {
         try {
-            $sql = 'DELETE FROM news_category WHERE id=' . (int) $id;
+            $sql = 'DELETE FROM news_category WHERE id=' . (int)$id;
             $this->_db->query($sql);
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
@@ -108,7 +109,7 @@ class gkh_news extends gkh {
 
     public function getAllNews($category_id, $cur_page = -1) {
         try {
-            $sql = 'SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+            $sql = 'SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
                     FROM news, news_category
                     WHERE news.news_category_id=news_category.id ';
 
@@ -134,7 +135,7 @@ class gkh_news extends gkh {
 
     public function getTopNews($category_id) {
         try {
-            $sql = 'SELECT news.id, news_category_id, date, news.title, short_text, full_text, news_category.title AS category_title
+            $sql = 'SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
                     FROM news, news_category
                     WHERE news.news_category_id=news_category.id ';
             if ($category_id != gkh_news::ANY_CATEGORY) {
@@ -153,10 +154,31 @@ class gkh_news extends gkh {
             simo_exception::registrMsg($e, $this->_debug);
         }
     }
+    
+    public function getImportantNews($cur_page) {
+        try {
+            $sql = 'SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id AND is_impotant=1';
+            $sql .= ' ORDER BY date DESC ';
+            
+            if ($cur_page != -1) {
+                $sql .= ' LIMIT ' . $cur_page * gkh_news::NEWS_ON_PAGE . ', ' . gkh_news::NEWS_ON_PAGE;
+            }
+
+            $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
+            if (isset($result[0])) {
+                return $result;
+            } else
+                return false;
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+        }
+    }
 
     public function getNews($id) {
         try {
-            $sql = 'SELECT * FROM news WHERE id=' . (int) $id;
+            $sql = 'SELECT * FROM news WHERE id=' . (int)$id;
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
                 return $result[0];
@@ -173,10 +195,16 @@ class gkh_news extends gkh {
 
             $data['date'] = date('Y-m-d', strtotime($data['date']));
 
-            $sql = 'INSERT INTO news(news_category_id, date, title, short_text, full_text)
+            if (isset($data['is_impotant'])) {
+                $data['is_impotant'] = 1;
+            } else {
+                $data['is_impotant'] = 0;
+            }
+
+            $sql = 'INSERT INTO news(news_category_id, date, title, short_text, full_text, is_impotant)
                               VALUES(' . $data['news_category_id'] . ', "' . $data['date'] . '",
                                     "' . $data['title'] . '", "' . $data['short_text'] . '",
-                                    "' . $data['full_text'] . '")';
+                                    "' . $data['full_text'] . '", ' . $data['is_impotant'] . ')';
             $this->_db->query($sql);
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
@@ -188,12 +216,18 @@ class gkh_news extends gkh {
             $data = $this->_db->prepareArray($data);
 
             $data['date'] = date('Y-m-d', strtotime($data['date']));
+            
+            if (isset($data['is_impotant'])) {
+                $data['is_impotant'] = 1;
+            } else {
+                $data['is_impotant'] = 0;
+            }
 
             $sql = 'UPDATE news
                     SET news_category_id=' . $data['news_category_id'] . ', date="' . $data['date'] . '",
                         title="' . $data['title'] . '", short_text="' . $data['short_text'] . '",
-                        full_text="' . $data['full_text'] . '"
-                    WHERE id=' . (int) $id;
+                        full_text="' . $data['full_text'] . '", is_impotant=' . $data['is_impotant'] . ' 
+                    WHERE id=' . (int)$id;
             $this->_db->query($sql);
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
@@ -202,14 +236,14 @@ class gkh_news extends gkh {
 
     public function deleteNews($id) {
         try {
-            $sql = 'DELETE FROM news WHERE id=' . (int) $id;
+            $sql = 'DELETE FROM news WHERE id=' . (int)$id;
             $this->_db->query($sql);
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
         }
     }
 
-    public function getPageInfo($category_id, $cur_page) {
+    public function getPageInfo($category_id, $cur_page, $is_important) {
         $retArray = array();
         $retArray['cur_page'] = $cur_page;
         $retArray['rec_on_page'] = gkh_news::NEWS_ON_PAGE;
@@ -220,6 +254,10 @@ class gkh_news extends gkh {
 
             if ($category_id != gkh_news::ANY_CATEGORY) {
                 $sql .= ' AND news_category_id=' . $category_id;
+            }
+            
+            if ($is_important != -1) {
+                $sql .= ' AND is_impotant=' . $is_important;
             }
 
             $result = $this->_db->query($sql);
@@ -252,7 +290,7 @@ class gkh_news extends gkh {
             simo_exception::registrMsg($e, $this->_debug);
         }
     }
-    
+
     public function getComment($news_id, $id) {
         try {
             $sql = 'SELECT *
@@ -290,11 +328,11 @@ class gkh_news extends gkh {
     public function updateComment($news_id, $id, $data) {
         try {
             $data = $this->_db->prepareArray($data);
-            
+
             if (isset($data['is_moderated'])) {
                 $data['is_moderated'] = 1;
             } else {
-               $data['is_moderated'] = 0; 
+                $data['is_moderated'] = 0;
             }
 
             $data['date'] = date('Y-m-d', strtotime($data['date']));
@@ -308,8 +346,8 @@ class gkh_news extends gkh {
             simo_exception::registrMsg($e, $this->_debug);
         }
     }
-    
-     public function deleteComment($news_id, $id) {
+
+    public function deleteComment($news_id, $id) {
         try {
             $sql = 'DELETE FROM news_comment WHERE news_id=' . (int)$news_id . ' AND id=' . (int)$id;
             $this->_db->query($sql);

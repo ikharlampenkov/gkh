@@ -19,6 +19,10 @@
             <td>Текст</td>
             <td><textarea name="data[content]">{$conpage.content}</textarea></td>
         </tr>
+         <tr>
+            <td>Описание</td>
+            <td><textarea name="data[description]">{$conpage.description}</textarea></td>
+        </tr>
     </table>
     <input id="save" name="save" type="submit" value="Сохранить" />
 </form>

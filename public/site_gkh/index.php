@@ -14,7 +14,7 @@ if (isset($_GET['page'])) {
 if (isset($_GET['spage'])) {
     $spage = $_GET['spage'];
 } else {
-    $spage = $page;
+    $spage = 'main';
 }
 
 if (isset($_GET['action'])) {
@@ -93,8 +93,16 @@ if ($o_user->isLogin()) {
             }
             $o_smarty->assign('cur_page', $cur_page);
 
-            $o_smarty->assign('news_list_full', $o_news->getAllNews($category, $cur_page));
-            $o_smarty->assign('page_info', $o_news->getPageInfo($category, $cur_page));
+            if (isset($_GET['is_important'])) {
+                $o_smarty->assign('news_list_full', $o_news->getImportantNews($cur_page));
+                $o_smarty->assign('page_info', $o_news->getPageInfo($category, $cur_page, 1));
+                $o_smarty->assign('is_important', 1);
+            } else {
+
+                $o_smarty->assign('news_list_full', $o_news->getAllNews($category, $cur_page));
+                $o_smarty->assign('page_info', $o_news->getPageInfo($category, $cur_page, -1));
+                $o_smarty->assign('is_important', 0);
+            }
         }
     }
 

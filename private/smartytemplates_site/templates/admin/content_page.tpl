@@ -20,6 +20,10 @@
             <td><textarea name="data[content]">{$conpage.content}</textarea></td>
         </tr>
         <tr>
+            <td>Описание</td>
+            <td><textarea name="data[description]">{$conpage.description}</textarea></td>
+        </tr>
+        <tr>
             <td>Прикрепить файл</td>
             <td>
                 {if isset($conpage.file_list) && $conpage.file_list !== false}

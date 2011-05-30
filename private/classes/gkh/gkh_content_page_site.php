@@ -7,6 +7,7 @@
   `title` varchar(255) NOT NULL,
   `content` text,
   `file` varchar(255),
+   description
   PRIMARY KEY (`id`),
   UNIQUE KEY `page_title_UNIQUE` (`page_title`)
   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

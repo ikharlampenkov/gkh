@@ -1,6 +1,6 @@
 {if $action=='view_news'}
 
-<h1>Новости{if isset($news_category)}: {$news_category.title}{/if}</h1>
+<h1>{if $is_important==1}Важная информация{else}Новости{if isset($news_category)}: {$news_category.title}{/if}{/if}</h1>
 
 <div>{$news.date|date_format:"%d.%m.%Y"}&nbsp;{$news.title}</div><br />
 <div>{$news.full_text}</div>
@@ -34,7 +34,7 @@
 
 {else}
 
-<h1>Новости{if isset($news_category)}: {$news_category.title}{/if}</h1>
+<h1>{if $is_important==1}Важная информация{else}Новости{if isset($news_category)}: {$news_category.title}{/if}{/if}</h1>
 
 {if $page_info.page_count!=0}
 <table>

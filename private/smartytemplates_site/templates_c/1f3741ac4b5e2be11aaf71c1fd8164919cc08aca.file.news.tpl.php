@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-29 23:18:49
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-30 22:03:09
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/news.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:123234de271e9baca93-75748476%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:200934de3b1ad214646-02198369%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1f3741ac4b5e2be11aaf71c1fd8164919cc08aca' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/news.tpl',
-      1 => 1306685927,
+      1 => 1306767786,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '123234de271e9baca93-75748476',
+  'nocache_hash' => '200934de3b1ad214646-02198369',
   'function' => 
   array (
   ),
@@ -20,8 +20,8 @@ $_smarty_tpl->decodeProperties(array (
 <?php if (!is_callable('smarty_modifier_date_format')) include 'H:\www\gkh\private\classes\smarty\plugins\modifier.date_format.php';
 ?><?php if ($_smarty_tpl->getVariable('action')->value=='view_news'){?>
 
-<h1>Новости<?php if (isset($_smarty_tpl->getVariable('news_category',null,true,false)->value)){?>: <?php echo $_smarty_tpl->getVariable('news_category')->value['title'];?>
-<?php }?></h1>
+<h1><?php if ($_smarty_tpl->getVariable('is_important')->value==1){?>Важная информация<?php }else{ ?>Новости<?php if (isset($_smarty_tpl->getVariable('news_category',null,true,false)->value)){?>: <?php echo $_smarty_tpl->getVariable('news_category')->value['title'];?>
+<?php }?><?php }?></h1>
 
 <div><?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('news')->value['date'],"%d.%m.%Y");?>
 &nbsp;<?php echo $_smarty_tpl->getVariable('news')->value['title'];?>
@@ -70,8 +70,8 @@ if ($_smarty_tpl->_count($_from) > 0){
 
 <?php }else{ ?>
 
-<h1>Новости<?php if (isset($_smarty_tpl->getVariable('news_category',null,true,false)->value)){?>: <?php echo $_smarty_tpl->getVariable('news_category')->value['title'];?>
-<?php }?></h1>
+<h1><?php if ($_smarty_tpl->getVariable('is_important')->value==1){?>Важная информация<?php }else{ ?>Новости<?php if (isset($_smarty_tpl->getVariable('news_category',null,true,false)->value)){?>: <?php echo $_smarty_tpl->getVariable('news_category')->value['title'];?>
+<?php }?><?php }?></h1>
 
 <?php if ($_smarty_tpl->getVariable('page_info')->value['page_count']!=0){?>
 <table>

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-29 22:59:53
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-30 21:39:49
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/admin/news.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:323474de26d79676456-47086028%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:181084de3ac352620b0-94659247%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'fb9151e932239ccda10ad658c36f5343eaaa0ae8' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/admin/news.tpl',
-      1 => 1305647193,
+      1 => 1306766386,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '323474de26d79676456-47086028',
+  'nocache_hash' => '181084de3ac352620b0-94659247',
   'function' => 
   array (
   ),
@@ -86,6 +86,10 @@ if ($_smarty_tpl->_count($_from) > 0){
             <td width="200">Текст новости</td>
             <td><textarea name="data[full_text]"><?php echo $_smarty_tpl->getVariable('news')->value['full_text'];?>
 </textarea></td>
+        </tr>
+        <tr>
+            <td>Важная информация</td>
+            <td><input type="checkbox" name="data[is_impotant]" <?php if (isset($_smarty_tpl->getVariable('news',null,true,false)->value['is_impotant'])&&$_smarty_tpl->getVariable('news')->value['is_impotant']){?>checked="checked"<?php }?> style="width: 14px;" /></td>
         </tr>
     </table>
     <input id="save" name="save" type="submit" value="Сохранить" />
@@ -252,6 +256,8 @@ if ($_smarty_tpl->_count($_from) > 0){
         <td><?php echo $_smarty_tpl->tpl_vars['news']->value['category_title'];?>
 </td>
         <td><?php echo smarty_modifier_truncate(strip_tags($_smarty_tpl->tpl_vars['news']->value['short_text']),50);?>
+</td>
+        <td><?php echo $_smarty_tpl->tpl_vars['news']->value['is_impotant'];?>
 </td>
         <td><a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
 &action=show_comment&id=<?php echo $_smarty_tpl->tpl_vars['news']->value['id'];?>

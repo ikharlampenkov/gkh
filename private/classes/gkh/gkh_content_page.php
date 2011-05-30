@@ -5,6 +5,7 @@
   `page_title` varchar(40) NOT NULL DEFAULT 'английское название для системы',
   `title` varchar(255) NOT NULL,
   `content` text,
+   description
   PRIMARY KEY (`id`),
   UNIQUE KEY `page_title_UNIQUE` (`page_title`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -45,7 +46,8 @@ class gkh_content_page extends gkh {
     public function addContentPage($data) {
         try {
             $data = $this->_db->prepareArray($data);
-            $sql = 'INSERT INTO content_page(page_title, title, content) VALUES("' . $data['page_title'] . '", "' . $data['title'] . '", "' . $data['content'] . '")';
+            $sql = 'INSERT INTO content_page(page_title, title, content, description) 
+                    VALUES("' . $data['page_title'] . '", "' . $data['title'] . '", "' . $data['content'] . '", "' . $data['description'] . '")';
             $this->_db->query($sql);
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
@@ -55,7 +57,10 @@ class gkh_content_page extends gkh {
     public function updateContentPage($id, $data) {
         try {
             $data = $this->_db->prepareArray($data);
-            $sql = 'UPDATE content_page SET page_title="' . $data['page_title'] . '", title="' . $data['title'] . '", content="' . $data['content'] . '" WHERE id=' . (int)$id;
+            $sql = 'UPDATE content_page 
+                    SET page_title="' . $data['page_title'] . '", title="' . $data['title'] . '", 
+                        content="' . $data['content'] . '", description="' . $data['description'] . '" 
+                    WHERE id=' . (int)$id;
             $this->_db->query($sql);
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);

@@ -46,6 +46,10 @@
             <td width="200">Текст новости</td>
             <td><textarea name="data[full_text]">{$news.full_text}</textarea></td>
         </tr>
+        <tr>
+            <td>Важная информация</td>
+            <td><input type="checkbox" name="data[is_impotant]" {if isset($news.is_impotant) && $news.is_impotant}checked="checked"{/if} style="width: 14px;" /></td>
+        </tr>
     </table>
     <input id="save" name="save" type="submit" value="Сохранить" />
 </form>
@@ -137,6 +141,7 @@
         <td>{$news.title}</td>
         <td>{$news.category_title}</td>
         <td>{$news.short_text|strip_tags:false|truncate:50}</td>
+        <td>{$news.is_impotant}</td>
         <td><a href="?page={$page}&action=show_comment&id={$news.id}">просмотреть комментарии</a><br />
             <a href="?page={$page}&action=edit_news&id={$news.id}">редактировать</a><br />
             <a href="?page={$page}&action=del_news&id={$news.id}">удалить</a> </td>

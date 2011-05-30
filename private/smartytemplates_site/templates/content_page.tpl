@@ -1,5 +1,9 @@
 <h1>{$conpage.title}</h1>
 
+{if !empty($conpage.description)}
+<div>{$conpage.description}</div><br/><br/>
+{/if}
+
 <div>{$conpage.content|nl2br}</div>
 
 {if isset($conpage.file_list) && $conpage.file_list !== false}
