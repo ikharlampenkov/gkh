@@ -208,6 +208,9 @@ if ($o_user->isLogin()) {
 
     $o_news = new gkh_news();
     $o_smarty->assign('news_list', $o_news->getTopNews(gkh_news::ANY_CATEGORY));
+    
+    $o_faq = new gkh_faq();
+    $o_smarty->assign('faq_list', $o_faq->getSituationFaq());
 
     //$o_house = new gkh_house();
     //$o_smarty->assign('house_login_list', $o_house->getAllHouse());

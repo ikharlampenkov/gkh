@@ -36,6 +36,7 @@ class gkh_content_page extends gkh {
             $sql = 'SELECT * FROM content_page WHERE id=' . (int)$id . ' OR page_title="' . $id . '"';
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
+                $result[0]['content'] = stripslashes($result[0]['content']);
                 return $result[0];
             } else return false;
         } catch (Exception $e) {

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-31 22:10:47
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-01 01:21:34
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:245534de504f7ae0d55-44851575%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:64274de531ae80c827-20951869%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '06f23a46aed9fc3af496589adff00c09fe8f7897' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/index.tpl',
-      1 => 1306854645,
+      1 => 1306865733,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '245534de504f7ae0d55-44851575',
+  'nocache_hash' => '64274de531ae80c827-20951869',
   'function' => 
   array (
   ),
@@ -175,7 +175,7 @@ $_smarty_tpl->decodeProperties(array (
                                                  { id:"tma",subs:[ { "t":"Обслуживаемые дома","u":"?page=house&category=all&spage=house" } , { "t":"План проводимых работ","u":"?page=house&category=plan&spage=house" } , { "t":"Отчет по капитальном ремонту","u":"?page=house&category=reports&spage=house" } ] } , 
                                                  { id:"tmO",subs:[ { "t":"Бухгалтерская отчетность","u":"?page=content_page&title=financial_statements&spage=reports" } , { "t":"Доходы","u":"?page=content_page&title=income&spage=reports" } , { "t":"Расходы","u":"?page=content_page&title=costs&spage=reports" } ] } ];
                                 </script>
-                                
+
                                 </div>
 
                             </td>
@@ -213,6 +213,31 @@ $_smarty_tpl->decodeProperties(array (
                                         <td width="32%" valign="top">
                                             <div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">Прозрачность работы</div>
                                             <div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
+
+                                            <ul>
+                                                <li><a title="Общая информация" href="?page=content_page&title=general_information&spage=about">Общая информация</a></li>
+
+                                                <li><a title="Финансово-хозяйственная деятельность" href="?page=content_page&title=reports&spage=reports">Финансово-хозяйственная деятельность</a></li>
+                                                <li><a title="Бухгалтерская отчетность" href="?page=content_page&title=financial_statements&spage=reports">- бухгалтерская отчетность</a></li>
+                                                <li><a title="Доходы" href="?page=content_page&title=income&spage=reports">- доходы от услуг по управлению МКД</a></li>
+                                                <li><a title="Расходы" href="?page=content_page&title=costs&spage=reports">- расходы в связи с оказанием услуг по управлению МКД</a></li>
+
+                                                <li><a title="Информация об услугах, работах по содержанию и ремонту" href="?page=content_page&title=service&spage=service">Информация об услугах, работах по содержанию и ремонту</a></li>
+                                                <li><a title="базовые" href="?page=content_page&title=basic&spage=about">- базовые</a></li>
+                                                <li><a title="платные" href="?page=content_page&title=platnie&spage=about">- платные</a></li>
+
+
+                                                <li><a title="Порядок и условия оказания услуг по содержание и ремонт" href="?page=content_page&title=order_service&spage=about">Порядок и условия оказания услуг по содержание и ремонт</a></li>
+                                                <li><a title="- Договор" href="?page=content_page&title=dogovor&spage=about">- Договор</a></li>
+                                                <li><a title="- План работ по содержанию и ремонту" href="?page=content_page&title=plan_rabot&spage=about">- План работ по содержанию и ремонту</a></li>
+                                                <li><a title="- Меры по снижению расходов на работу" href="?page=content_page&title=meri_rashod&spage=about">- Меры по снижению расходов на работу</a></li>
+                                                <li><a title="- Нарушения" href="?page=content_page&title=narusheni&spage=about">- Нарушения</a></li>
+                                                <li><a title="- Соответствие качеству" href="?page=content_page&title=kachthestvo&spage=about">- Соответствие качеству</a></li>
+
+                                                <li><a title="Содержание, периодичность, результат, стоимость работ по содержанию и ремонту" href="?page=content_page&title=soderg&spage=about">Содержание, периодичность, результат, стоимость работ по содержанию и ремонту</a></li>
+                                                <li><a title="Тарифы на коммунальные ресурсы" href="?page=content_page&title=communal_resources&spage=rates">Тарифы на коммунальные ресурсы</a></li>                                        
+                                                <li><a title="Случаи привлечения к ответственности" href="?page=content_page&title=otvetstv&spage=about">Случаи привлечения к ответственности</a></li>
+                                            </ul>                                                                                  
                                         </td>
                                         <td width="200">&nbsp;</td>
 
@@ -259,6 +284,20 @@ if ($_smarty_tpl->_count($_from) > 0){
                             <td width="604" valign="top">
                                 <br/>
                                 <div style="color: #fff; font-size: 21px;">Жизненные ситуации</div>
+
+                                <br/>
+                                <?php  $_smarty_tpl->tpl_vars['faq'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->getVariable('faq_list')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+if ($_smarty_tpl->_count($_from) > 0){
+    foreach ($_from as $_smarty_tpl->tpl_vars['faq']->key => $_smarty_tpl->tpl_vars['faq']->value){
+?>
+
+                                <div><a href="?page=faq&is_situation=1#<?php echo $_smarty_tpl->tpl_vars['faq']->value['id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['faq']->value['question'];?>
+</a></div>
+                                <br/>
+                                <?php }} ?>
+
                             </td>
                             <td width="281" valign="bottom"><img src="/img/banner.gif" /></td>
                             <td>&nbsp;</td>

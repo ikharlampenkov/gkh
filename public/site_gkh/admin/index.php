@@ -9,9 +9,15 @@ if ($page == 'content_page') {
     global $__cfg;
 
     include_once $__cfg['site.dir'] . '/ckeditor/ckeditor.php';
+    require_once $__cfg['site.dir'] . '/ckfinder/ckfinder.php' ;
+    
     $CKEditor = new CKEditor();
     $CKEditor->basePath = '/ckeditor/';
     $CKEditor->returnOutput = true;
+    
+    $ckfinder = new CKFinder();
+    $ckfinder->BasePath = '/ckfinder/';
+    $ckfinder->SetupCKEditorObject($CKEditor);
     
     $o_content_page = new gkh_content_page_site();
 

@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-30 21:16:05
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-01 01:21:36
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/content_page.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1064de3a6a591ef44-46475763%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:234054de531b0123460-20628172%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '40fe4a5c87176727249eb3bce826878a7fde604b' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/content_page.tpl',
-      1 => 1306764954,
+      1 => 1306863629,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1064de3a6a591ef44-46475763',
+  'nocache_hash' => '234054de531b0123460-20628172',
   'function' => 
   array (
   ),
@@ -25,7 +25,7 @@ $_smarty_tpl->decodeProperties(array (
 </div><br/><br/>
 <?php }?>
 
-<div><?php echo nl2br($_smarty_tpl->getVariable('conpage')->value['content']);?>
+<div><?php echo $_smarty_tpl->getVariable('conpage')->value['content'];?>
 </div>
 
 <?php if (isset($_smarty_tpl->getVariable('conpage',null,true,false)->value['file_list'])&&$_smarty_tpl->getVariable('conpage')->value['file_list']!==false){?>

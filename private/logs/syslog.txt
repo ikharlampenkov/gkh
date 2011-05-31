@@ -7623,3 +7623,196 @@ info   SELECT * FROM meters_value
                     WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:52
 info   SELECT * FROM meters_value 
                     WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:52
+info   SELECT password FROM user WHERE login="ten"  01.06.2011 00:02
+info   SELECT * FROM personal_account WHERE user_id=2  01.06.2011 00:02
+info   SELECT * FROM house WHERE id=2  01.06.2011 00:02
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  01.06.2011 00:02
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  01.06.2011 00:02
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  01.06.2011 00:02
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  01.06.2011 00:02
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  01.06.2011 00:02
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  01.06.2011 00:02
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  01.06.2011 00:02
+info   SELECT password FROM user WHERE login="ten"  01.06.2011 00:02
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 00:02
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 00:02
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 00:02
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 00:02
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 00:02
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 00:02
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 00:02
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 00:03
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 00:03
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 00:03
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 00:03
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 00:03
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 00:03
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 00:03
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 00:03
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 00:03
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 00:03
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 00:03
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 00:03
+info   SELECT * FROM content_page WHERE id=0 OR page_title="financial_statements"  01.06.2011 00:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 00:10
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 00:10
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  01.06.2011 00:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 00:10
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 00:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 00:10
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 00:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 00:11
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 00:11
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 00:11
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 00:11
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 00:19
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 00:19
+info   SELECT * FROM house ORDER BY street, number, subnumber  01.06.2011 00:21
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 00:21
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 00:21
+info   SELECT user_id FROM personal_account WHERE id="admin"  01.06.2011 00:32
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="admin"  01.06.2011 00:32
+info   SELECT * FROM house ORDER BY street, number, subnumber  01.06.2011 00:32
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 00:32
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 00:32
+info   SELECT password FROM user WHERE login="admin"  01.06.2011 00:32
+info   SELECT password FROM user WHERE login="admin"  01.06.2011 00:32
+info   SELECT * FROM content_page WHERE id=0 OR page_title="disclosure_of_information"  01.06.2011 00:32
+info   SELECT password FROM user WHERE login="admin"  01.06.2011 00:32
+info   SELECT * FROM content_page WHERE id=0 OR page_title="disclosure_of_information"  01.06.2011 00:32
+info   SELECT password FROM user WHERE login="admin"  01.06.2011 00:33
+info   SELECT * FROM content_page WHERE id=0 OR page_title="disclosure_of_information"  01.06.2011 00:33
+info   SELECT password FROM user WHERE login="admin"  01.06.2011 00:35
+info   SELECT * FROM content_page WHERE id=0 OR page_title="disclosure_of_information"  01.06.2011 00:35
+info   SELECT password FROM user WHERE login="admin"  01.06.2011 00:51
+info   SELECT * FROM content_page WHERE id=0 OR page_title="disclosure_of_information"  01.06.2011 00:51
+info   SELECT password FROM user WHERE login="admin"  01.06.2011 00:51
+info   SELECT * FROM content_page WHERE id=0 OR page_title="disclosure_of_information"  01.06.2011 00:51
+info   SELECT password FROM user WHERE login="admin"  01.06.2011 00:51
+info   SELECT * FROM content_page WHERE id=0 OR page_title="disclosure_of_information"  01.06.2011 00:51
+info   SELECT password FROM user WHERE login="admin"  01.06.2011 00:52
+info   SELECT * FROM content_page WHERE id=0 OR page_title="disclosure_of_information"  01.06.2011 00:52
+info   SELECT password FROM user WHERE login="admin"  01.06.2011 00:55
+info   SELECT * FROM content_page WHERE id=0 OR page_title="disclosure_of_information"  01.06.2011 00:55
+info   SELECT password FROM user WHERE login="admin"  01.06.2011 00:55
+info   SELECT * FROM content_page WHERE id=0 OR page_title="disclosure_of_information"  01.06.2011 00:55
+info   SELECT password FROM user WHERE login="admin"  01.06.2011 00:55
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 00:55
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 00:55
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 01:02
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 01:02
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 01:05
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 01:05
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 01:11
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 01:11
+info   SELECT user_id FROM personal_account WHERE id="admin"  01.06.2011 01:13
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="admin"  01.06.2011 01:13
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 01:13
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 01:13
+info   SELECT password FROM user WHERE login="admin"  01.06.2011 01:13
+info   SELECT password FROM user WHERE login="admin"  01.06.2011 01:13
+info   SELECT * FROM content_page  01.06.2011 01:13
+info   SELECT password FROM user WHERE login="admin"  01.06.2011 01:13
+info   SELECT password FROM user WHERE login="admin"  01.06.2011 01:13
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 01:13
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 01:13
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 01:21
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 01:21
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  01.06.2011 01:21
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 01:21
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 01:21
+info   SELECT * FROM content_page WHERE id=0 OR page_title="distributor"  01.06.2011 01:21
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 01:21
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 01:21
+info   SELECT * FROM content_page WHERE id=0 OR page_title="eltechrab"  01.06.2011 01:21
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  01.06.2011 01:21
+info   SELECT * FROM faq WHERE is_situation=1  01.06.2011 01:21

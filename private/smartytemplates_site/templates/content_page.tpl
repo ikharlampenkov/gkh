@@ -4,7 +4,7 @@
 <div>{$conpage.description}</div><br/><br/>
 {/if}
 
-<div>{$conpage.content|nl2br}</div>
+<div>{$conpage.content}</div>
 
 {if isset($conpage.file_list) && $conpage.file_list !== false}
 {foreach from=$conpage.file_list item=file name=_file}

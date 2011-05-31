@@ -156,7 +156,7 @@
                                                  { id:"tma",subs:[ { "t":"Обслуживаемые дома","u":"?page=house&category=all&spage=house" } , { "t":"План проводимых работ","u":"?page=house&category=plan&spage=house" } , { "t":"Отчет по капитальном ремонту","u":"?page=house&category=reports&spage=house" } ] } , 
                                                  { id:"tmO",subs:[ { "t":"Бухгалтерская отчетность","u":"?page=content_page&title=financial_statements&spage=reports" } , { "t":"Доходы","u":"?page=content_page&title=income&spage=reports" } , { "t":"Расходы","u":"?page=content_page&title=costs&spage=reports" } ] } ];
                                 </script>
-                                
+
                                 </div>
 
                             </td>
@@ -193,6 +193,31 @@
                                         <td width="32%" valign="top">
                                             <div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">Прозрачность работы</div>
                                             <div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
+
+                                            <ul>
+                                                <li><a title="Общая информация" href="?page=content_page&title=general_information&spage=about">Общая информация</a></li>
+
+                                                <li><a title="Финансово-хозяйственная деятельность" href="?page=content_page&title=reports&spage=reports">Финансово-хозяйственная деятельность</a></li>
+                                                <li><a title="Бухгалтерская отчетность" href="?page=content_page&title=financial_statements&spage=reports">- бухгалтерская отчетность</a></li>
+                                                <li><a title="Доходы" href="?page=content_page&title=income&spage=reports">- доходы от услуг по управлению МКД</a></li>
+                                                <li><a title="Расходы" href="?page=content_page&title=costs&spage=reports">- расходы в связи с оказанием услуг по управлению МКД</a></li>
+
+                                                <li><a title="Информация об услугах, работах по содержанию и ремонту" href="?page=content_page&title=service&spage=service">Информация об услугах, работах по содержанию и ремонту</a></li>
+                                                <li><a title="базовые" href="?page=content_page&title=basic&spage=about">- базовые</a></li>
+                                                <li><a title="платные" href="?page=content_page&title=platnie&spage=about">- платные</a></li>
+
+
+                                                <li><a title="Порядок и условия оказания услуг по содержание и ремонт" href="?page=content_page&title=order_service&spage=about">Порядок и условия оказания услуг по содержание и ремонт</a></li>
+                                                <li><a title="- Договор" href="?page=content_page&title=dogovor&spage=about">- Договор</a></li>
+                                                <li><a title="- План работ по содержанию и ремонту" href="?page=content_page&title=plan_rabot&spage=about">- План работ по содержанию и ремонту</a></li>
+                                                <li><a title="- Меры по снижению расходов на работу" href="?page=content_page&title=meri_rashod&spage=about">- Меры по снижению расходов на работу</a></li>
+                                                <li><a title="- Нарушения" href="?page=content_page&title=narusheni&spage=about">- Нарушения</a></li>
+                                                <li><a title="- Соответствие качеству" href="?page=content_page&title=kachthestvo&spage=about">- Соответствие качеству</a></li>
+
+                                                <li><a title="Содержание, периодичность, результат, стоимость работ по содержанию и ремонту" href="?page=content_page&title=soderg&spage=about">Содержание, периодичность, результат, стоимость работ по содержанию и ремонту</a></li>
+                                                <li><a title="Тарифы на коммунальные ресурсы" href="?page=content_page&title=communal_resources&spage=rates">Тарифы на коммунальные ресурсы</a></li>                                        
+                                                <li><a title="Случаи привлечения к ответственности" href="?page=content_page&title=otvetstv&spage=about">Случаи привлечения к ответственности</a></li>
+                                            </ul>                                                                                  
                                         </td>
                                         <td width="200">&nbsp;</td>
 
@@ -229,6 +254,14 @@
                             <td width="604" valign="top">
                                 <br/>
                                 <div style="color: #fff; font-size: 21px;">Жизненные ситуации</div>
+
+                                <br/>
+                                {foreach from=$faq_list item=faq}
+
+                                <div><a href="?page=faq&is_situation=1#{$faq.id}">{$faq.question}</a></div>
+                                <br/>
+                                {/foreach}
+
                             </td>
                             <td width="281" valign="bottom"><img src="/img/banner.gif" /></td>
                             <td>&nbsp;</td>
