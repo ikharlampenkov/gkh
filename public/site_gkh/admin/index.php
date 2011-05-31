@@ -249,6 +249,37 @@ if ($page == 'personal') {
     }
 }
 
+if ($page == 'vacancy') {
+
+    $o_vacancy = new gkh_vacancy();
+
+    if ($action == 'add') {
+        if (isset($_POST['data'])) {
+            $o_vacancy->addVacancy($_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('txt', 'Добавить вакансию');
+    } elseif ($action == 'edit' && isset($_GET['id'])) {
+
+        if (isset($_POST['data'])) {
+            $o_vacancy->updateVacancy($_GET['id'], $_POST['data']);
+            simo_functions::chLocation('?page=' . $page);
+            exit;
+        }
+
+        $o_smarty->assign('txt', 'Редактировать вакансию');
+        $o_smarty->assign('vacancy', $o_vacancy->getVacancy($_GET['id']));
+    } elseif ($action == 'del') {
+        $o_vacancy->deleteVacancy($_GET['id']);
+        simo_functions::chLocation('?page=' . $page);
+        exit;
+    } else {
+        $o_smarty->assign('vacancy_list', $o_vacancy->getAllVacancy());
+    }
+}
+
 if ($page == 'support') {
     
     if (isset($_GET['category'])) {

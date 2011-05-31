@@ -114,13 +114,13 @@ if ($o_user->isLogin()) {
     }
 
     if ($page == 'house') {
-        
+
         if (isset($_GET['category'])) {
             $o_smarty->assign('category', $_GET['category']);
         } else {
             $o_smarty->assign('category', 'all');
         }
-        
+
         $o_house = new gkh_house();
 
         if ($action == 'view') {
@@ -161,8 +161,8 @@ if ($o_user->isLogin()) {
         $o_faq = new gkh_faq();
 
         if (isset($_GET['is_situation'])) {
-           $o_smarty->assign('faq_list', $o_faq->getSituationFaq()); 
-           $o_smarty->assign('is_situation', 1);
+            $o_smarty->assign('faq_list', $o_faq->getSituationFaq());
+            $o_smarty->assign('is_situation', 1);
         } else {
 
             if ($root != 0) {
@@ -197,6 +197,14 @@ if ($o_user->isLogin()) {
         $o_license = new gkh_license();
         $o_smarty->assign('license_list', $o_license->getAllLicense());
     }
+
+    if ($page == 'vacancy') {
+
+        $o_vacancy = new gkh_vacancy();
+
+        $o_smarty->assign('vacancy_list', $o_vacancy->getPublicVacancy());
+    }
+
 
     $o_news = new gkh_news();
     $o_smarty->assign('news_list', $o_news->getTopNews(gkh_news::ANY_CATEGORY));
