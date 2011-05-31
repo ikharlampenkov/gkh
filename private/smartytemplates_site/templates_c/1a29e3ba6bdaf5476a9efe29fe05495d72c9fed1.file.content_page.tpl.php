@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-31 00:02:29
+<?php /* Smarty version Smarty-3.0.7, created on 2011-05-31 19:08:05
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/admin/content_page.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:125104de3cda5a0b153-47205314%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:267694de4da258a9640-76525706%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1a29e3ba6bdaf5476a9efe29fe05495d72c9fed1' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/admin/content_page.tpl',
-      1 => 1306764850,
+      1 => 1306843683,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '125104de3cda5a0b153-47205314',
+  'nocache_hash' => '267694de4da258a9640-76525706',
   'function' => 
   array (
   ),
@@ -42,8 +42,8 @@ $_smarty_tpl->decodeProperties(array (
         </tr>
         <tr>
             <td>Текст</td>
-            <td><textarea name="data[content]"><?php echo $_smarty_tpl->getVariable('conpage')->value['content'];?>
-</textarea></td>
+            <td><?php echo $_smarty_tpl->getVariable('ckeditor')->value;?>
+  </td>
         </tr>
         <tr>
             <td>Описание</td>

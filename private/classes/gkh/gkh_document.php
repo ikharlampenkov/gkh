@@ -166,7 +166,7 @@ class gkh_document extends gkh {
         $resstr = '';
 
         if (isset($_FILES['data'])) {
-            print_r($_FILES);
+            //print_r($_FILES);
             if (!empty($_FILES['data']['name'][$field])) {
                 $tempInfo = pathinfo($_FILES['data']['name'][$field]);
                 $temp_file_name = $id . '_' . date('d-m-Y-H-i-s') . '_' . $i . '.' . $tempInfo['extension'];

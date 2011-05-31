@@ -6035,3 +6035,441 @@ info   SELECT news.id, news_category_id, date, news.title, short_text, full_text
                     FROM news, news_category
                     WHERE news.news_category_id=news_category.id  ORDER BY date DESC
                       LIMIT 5  31.05.2011 00:45
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 00:46
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 18:37
+info   SELECT * FROM house ORDER BY street, number, subnumber  31.05.2011 18:40
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 18:40
+info   SELECT * FROM house ORDER BY street, number, subnumber  31.05.2011 18:40
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 18:40
+info   SELECT * FROM house ORDER BY street, number, subnumber  31.05.2011 18:40
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 18:40
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 19:02
+info   SELECT user_id FROM personal_account WHERE id="admin"  31.05.2011 19:03
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="admin"  31.05.2011 19:03
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 19:03
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:03
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:03
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:03
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  31.05.2011 19:03
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:03
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  31.05.2011 19:03
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:06
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  31.05.2011 19:06
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:06
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  31.05.2011 19:06
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:08
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  31.05.2011 19:08
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:08
+info   UPDATE content_page 
+                    SET page_title="about", title="О нас", 
+                        content="", description="" 
+                    WHERE id=7  31.05.2011 19:08
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:08
+info   SELECT * FROM content_page WHERE id=7 OR page_title="7"  31.05.2011 19:08
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:09
+info   SELECT * FROM content_page WHERE id=7 OR page_title="7"  31.05.2011 19:09
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:12
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  31.05.2011 19:12
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=0  31.05.2011 19:12
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:12
+info   SELECT * FROM document WHERE is_folder=1  31.05.2011 19:12
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:12
+info   INSERT INTO document(parrent_id, title, short_text, is_folder) 
+                    VALUES(0, "Договор управления МКД", "", 0)  31.05.2011 19:12
+info   SELECT LAST_INSERT_ID()  31.05.2011 19:12
+info   UPDATE document SET file="8_31-05-2011-19-12-56_.doc" 
+                        WHERE id=8  31.05.2011 19:12
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:12
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  31.05.2011 19:12
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=0  31.05.2011 19:12
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:12
+info   SELECT * FROM document WHERE id=8  31.05.2011 19:12
+info   SELECT * FROM document WHERE is_folder=1  31.05.2011 19:12
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:13
+info   UPDATE document 
+                    SET parrent_id=0, title="Договор управления МКД",  
+                        short_text="", is_folder=0 
+                    WHERE id=8  31.05.2011 19:13
+info   UPDATE document 
+                    SET file="8_31-05-2011-19-13-54_.doc" WHERE id=8  31.05.2011 19:13
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:13
+info   SELECT * 
+                    FROM document 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, title  31.05.2011 19:13
+info   SELECT id, parrent_id, title 
+                    FROM document 
+                    WHERE is_folder=1 AND id=0  31.05.2011 19:13
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:13
+info   SELECT * FROM document WHERE id=8  31.05.2011 19:13
+info   SELECT * FROM document WHERE is_folder=1  31.05.2011 19:13
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:22
+info   SELECT * FROM content_page WHERE id=0 OR page_title="general_information"  31.05.2011 19:22
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:23
+info   UPDATE content_page 
+                    SET page_title="general_information", title="Общая информация", 
+                        content="", description="" 
+                    WHERE id=8  31.05.2011 19:23
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:24
+info   SELECT * FROM content_page WHERE id=8 OR page_title="8"  31.05.2011 19:24
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:24
+info   UPDATE content_page 
+                    SET page_title="general_information", title="Общая информация", 
+                        content="<p>\r\n	<strong>Общая информация</strong></p>\r\n", description="" 
+                    WHERE id=8  31.05.2011 19:24
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:25
+info   SELECT * FROM content_page WHERE id=8 OR page_title="8"  31.05.2011 19:25
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:26
+info   UPDATE content_page 
+                    SET page_title="general_information", title="Общая информация", 
+                        content="<p>\r\n	<strong>Общая информация</strong></p>\r\n", description="" 
+                    WHERE id=8  31.05.2011 19:26
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:26
+info   SELECT * FROM content_page WHERE id=8 OR page_title="8"  31.05.2011 19:26
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 19:26
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 19:26
+info   SELECT user_id FROM personal_account WHERE id="admin"  31.05.2011 20:48
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="admin"  31.05.2011 20:48
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 20:48
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 20:48
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 20:48
+info   SELECT * FROM content_page  31.05.2011 20:48
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 20:48
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 20:49
+info   INSERT INTO content_page(page_title, title, content, description) 
+                    VALUES("passport_office", "Паспортный стол", "", "\r\n")  31.05.2011 20:49
+info   SELECT LAST_INSERT_ID()  31.05.2011 20:49
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 20:49
+info   SELECT * FROM content_page  31.05.2011 20:49
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 20:49
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 20:51
+info   INSERT INTO content_page(page_title, title, content, description) 
+                    VALUES("where_to_pay", "Где оплатить?", "", "")  31.05.2011 20:51
+info   SELECT LAST_INSERT_ID()  31.05.2011 20:51
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 20:51
+info   SELECT * FROM content_page  31.05.2011 20:51
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 20:51
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 20:52
+info   INSERT INTO content_page(page_title, title, content, description) 
+                    VALUES("leaders", "Руководство", "", "")  31.05.2011 20:52
+info   SELECT LAST_INSERT_ID()  31.05.2011 20:52
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 20:52
+info   SELECT * FROM content_page  31.05.2011 20:52
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 20:58
+info   SELECT * FROM personal  31.05.2011 20:58
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 20:58
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 20:58
+info   SELECT * FROM personal WHERE is_leaders=1  31.05.2011 20:58
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 20:58
+info   SELECT * FROM personal WHERE is_leaders=1  31.05.2011 21:02
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:02
+info   SELECT * FROM content_page WHERE id=0 OR page_title="passport_office"  31.05.2011 21:02
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:02
+info   SELECT * FROM content_page WHERE id=0 OR page_title="leaders"  31.05.2011 21:02
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:02
+info   SELECT * FROM content_page WHERE id=0 OR page_title="leaders"  31.05.2011 21:03
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:03
+info   SELECT * FROM content_page WHERE id=0 OR page_title="leaders"  31.05.2011 21:04
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:04
+info   SELECT * FROM content_page WHERE id=0 OR page_title="service"  31.05.2011 21:04
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:04
+info   SELECT * FROM content_page WHERE id=0 OR page_title="where_to_pay"  31.05.2011 21:05
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:05
+info   SELECT * FROM content_page WHERE id=0 OR page_title="where_to_pay"  31.05.2011 21:05
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:05
+info   SELECT * FROM content_page WHERE id=0 OR page_title="rates"  31.05.2011 21:05
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:05
+info   SELECT * FROM content_page WHERE id=0 OR page_title="where_to_pay"  31.05.2011 21:05
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:05
+info   SELECT * FROM content_page WHERE id=0 OR page_title="helpful_information"  31.05.2011 21:05
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:05
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  31.05.2011 21:05
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:05
+info   SELECT * FROM content_page WHERE id=0 OR page_title="passport_office"  31.05.2011 21:05
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:05
+info   SELECT * FROM content_page WHERE id=0 OR page_title="passport_office"  31.05.2011 21:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="leaders"  31.05.2011 21:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="passport_office"  31.05.2011 21:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="passport_office"  31.05.2011 21:12
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:12
+info   SELECT * FROM content_page WHERE id=0 OR page_title="where_to_pay"  31.05.2011 21:12
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:12
+info   SELECT * FROM content_page WHERE id=0 OR page_title="where_to_pay"  31.05.2011 21:14
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:14
+info   SELECT * FROM content_page WHERE id=0 OR page_title="where_to_pay"  31.05.2011 21:14
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:14
+info   SELECT user_id FROM personal_account WHERE id="admin"  31.05.2011 21:17
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="admin"  31.05.2011 21:17
+info   SELECT * FROM content_page WHERE id=0 OR page_title="where_to_pay"  31.05.2011 21:17
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:17
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 21:17
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 21:20
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 21:20
+info   SELECT * FROM content_page WHERE id=0 OR page_title="passport_office"  31.05.2011 21:20
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 21:20
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:20
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:31
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:33
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:38
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:46
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:57
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:58
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 21:58
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 22:02
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 22:04
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 22:04
+info   SELECT user_id FROM personal_account WHERE id="1"  31.05.2011 22:05
+info   SELECT * FROM user WHERE id=2 OR login="2"  31.05.2011 22:05
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="ten"  31.05.2011 22:05
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 22:05
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 22:05
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 22:05
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 22:05
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 22:05
+info   SELECT * 
+                    FROM payments_debt 
+                    WHERE personal_account_id=1 
+                    ORDER BY date  31.05.2011 22:05
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 22:07
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 22:07
+info   SELECT user_id FROM personal_account WHERE id="admin"  31.05.2011 22:07
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="admin"  31.05.2011 22:07
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 22:07
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 22:07
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 22:07
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  31.05.2011 22:07
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 22:07
+info   SELECT * FROM content_page  31.05.2011 22:07
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 22:08
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 22:08
+info   INSERT INTO content_page(page_title, title, content, description) 
+                    VALUES("distributor", "Поставщики", "", "\r\n")  31.05.2011 22:08
+info   SELECT LAST_INSERT_ID()  31.05.2011 22:08
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 22:08
+info   SELECT * FROM content_page  31.05.2011 22:08
+info   SELECT password FROM user WHERE login="admin"  31.05.2011 22:08
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 22:08
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  31.05.2011 22:08
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 22:08
+info   SELECT * FROM content_page WHERE id=0 OR page_title="about"  31.05.2011 22:09
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 22:09
+info   SELECT * FROM content_page WHERE id=0 OR page_title="distributor"  31.05.2011 22:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 22:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="service"  31.05.2011 22:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 22:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="service"  31.05.2011 22:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 22:10
+info   SELECT * FROM content_page WHERE id=0 OR page_title="distributor"  31.05.2011 22:10
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 22:10
+info   SELECT user_id FROM personal_account WHERE id="1"  31.05.2011 22:16
+info   SELECT * FROM user WHERE id=2 OR login="2"  31.05.2011 22:16
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="ten"  31.05.2011 22:16
+info   SELECT * FROM content_page WHERE id=0 OR page_title="distributor"  31.05.2011 22:16
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 22:16
+info   SELECT user_id FROM personal_account WHERE id="1"  31.05.2011 22:16
+info   SELECT * FROM user WHERE id=2 OR login="2"  31.05.2011 22:16
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="ten"  31.05.2011 22:16
+info   SELECT * FROM content_page WHERE id=0 OR page_title="distributor"  31.05.2011 22:16
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  31.05.2011 22:16
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 22:16
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 22:16
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 22:16
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 22:16
+info   SELECT * 
+                    FROM payments_debt 
+                    WHERE personal_account_id=1 
+                    ORDER BY date  31.05.2011 22:16
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 22:17
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 22:17
+info   SELECT * 
+                    FROM payments_debt 
+                    WHERE personal_account_id=1 
+                    ORDER BY date  31.05.2011 22:17
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 22:17
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 22:17

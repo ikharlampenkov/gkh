@@ -17,7 +17,7 @@
         </tr>
         <tr>
             <td>Текст</td>
-            <td><textarea name="data[content]">{$conpage.content}</textarea></td>
+            <td>{$ckeditor}  {*<textarea name="data[content]">{$conpage.content}</textarea>*}</td>
         </tr>
         <tr>
             <td>Описание</td>

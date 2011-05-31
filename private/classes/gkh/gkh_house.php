@@ -97,7 +97,7 @@ class gkh_house extends gkh {
                 $data['area'] = 0;
 
             $sql = 'INSERT INTO house(street, number, subnumber, area) 
-                    VALUES("' . $data['street'] . '", ' . $data['number'] . ', "' . $data['subnumber'] . '", ' . $data['area'] . ')';
+                    VALUES("' . $data['street'] . '", ' . $data['number'] . ', "' . $data['subnumber'] . '", ' . str_replace(',', '.', $data['area']) . ')';
             $this->_db->query($sql);
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
@@ -113,7 +113,7 @@ class gkh_house extends gkh {
 
             $sql = 'UPDATE house 
                     SET street="' . $data['street'] . '", number=' . $data['number'] . ', 
-                        subnumber="' . $data['subnumber'] . '", area=' . $data['area'] . ' 
+                        subnumber="' . $data['subnumber'] . '", area=' . str_replace(',', '.', $data['area']) . ' 
                     WHERE id=' . (int)$id;
             $this->_db->query($sql);
 

@@ -102,7 +102,7 @@ class gkh_content_page_site extends gkh_content_page {
         global $__cfg;
         $resstr = '';
 
-        print_r($_FILES);
+        //print_r($_FILES);
         if (isset($_FILES)) {
             $i = 0;
             foreach ($_FILES as $file) {

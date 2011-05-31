@@ -20,7 +20,7 @@
     </tr>
     {/foreach}
     <tr>
-        <td colspan="4">Итого:</td>
+        <td colspan="4">Итого {if $month.total_end_month>0}(долг){else}(переплата){/if}:</td>
         <td>{$month.total_end_month}</td>
     </tr>
 </table>

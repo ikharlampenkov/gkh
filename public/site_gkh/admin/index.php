@@ -2,8 +2,17 @@
 
 $management_company = 1;
 
-if ($page == 'content_page') {
 
+
+// Create a textarea element and attach CKEditor to it.
+if ($page == 'content_page') {
+    global $__cfg;
+
+    include_once $__cfg['site.dir'] . '/ckeditor/ckeditor.php';
+    $CKEditor = new CKEditor();
+    $CKEditor->basePath = '/ckeditor/';
+    $CKEditor->returnOutput = true;
+    
     $o_content_page = new gkh_content_page_site();
 
     if ($action == 'add') {
@@ -14,6 +23,7 @@ if ($page == 'content_page') {
         }
 
         $o_smarty->assign('conpage', '');
+        $o_smarty->assign('ckeditor', $CKEditor->editor('data[content]', ''));
         $o_smarty->assign('txt', 'Добавить контентную страницу');
     } elseif ($action == 'edit' && isset($_GET['id'])) {
 
@@ -22,9 +32,12 @@ if ($page == 'content_page') {
             simo_functions::chLocation('?page=' . $page . '&action=edit&id=' . $_GET['id']);
             exit;
         }
+        
+        $conpage = $o_content_page->getContentPage($_GET['id']);
 
         $o_smarty->assign('txt', 'Редактировать контентную страницу');
-        $o_smarty->assign('conpage', $o_content_page->getContentPage($_GET['id']));
+        $o_smarty->assign('conpage', $conpage);
+        $o_smarty->assign('ckeditor', $CKEditor->editor('data[content]', $conpage['content']));
     } elseif ($action == 'del') {
         $o_content_page->deleteContentPage($_GET['id']);
         simo_functions::chLocation('?page=' . $page);
