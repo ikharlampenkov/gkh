@@ -5,9 +5,43 @@ $management_company = 1;
 $o_pa = new gkh_personal_account_site($management_company);
 $account_info = $o_pa->getPAByUser(share_user_site::getUserId());
 
+if ($page == 'receipt') {
+    //print_r($account_info);
+    
+    $date = date('Y-m-d');
+    $date = '2011-05-30';
+    $o_smarty->assign('date', $date);    
+    $o_smarty->assign('account_info', $account_info); 
+    
+    $o_house = new gkh_house();
+    $o_smarty->assign('house', $o_house->getHouse($account_info['house_id']));
+    
+    $o_meters = new gkh_meters($account_info['id']);
+    $meters_value = $o_meters->getMetersByUserForReceipt($date);
+    $o_smarty->assign('meters', $meters_value);
+    
+    $gku = array('title' => 'Плата за ЖКУ', 'sum' => 1300);
+    $o_smarty->assign('gku', $gku);
+    
+    $itogo = 0;
+    
+    foreach ($meters_value as $meter) {
+        $itogo += $meter['sum'];
+    }
+    
+    $itogo += $gku['sum'];
+    
+    $o_smarty->assign('itogo', $itogo);
+    
+    if ($action == 'print') {
+       $o_smarty->display('cabinet/print.tpl'); 
+       exit;
+    }
+}
+
 if ($page == 'meters') {
 
-    $date = date('Y-m-d');
+    $date = date('Y-m-d');   
     $o_meters = new gkh_meters($account_info['id']);
 
     if (isset($_POST['data'])) {

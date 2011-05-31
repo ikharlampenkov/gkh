@@ -131,7 +131,7 @@ class gkh_meters extends gkh {
 
     public function getMetersByUser($date) {
         try {
-            $sql = 'SELECT id, title, rate  
+            $sql = 'SELECT id, title, rate, unit  
                     FROM meters, meters_to_account 
                     WHERE meters.id=meters_to_account.meters_id AND personal_account_id=' . $this->_personal_account;
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
@@ -143,6 +143,33 @@ class gkh_meters extends gkh {
                     $meter['cur_value'] = $this->_getMeterValueByDate($meter['id'], $date);
 
                     $meter['prev_value'] = $this->_getMeterValueByDate($meter['id'], $prev_date);
+                }
+                return $result;
+            } else {
+                return false;
+            }
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+            return false;
+        }
+    }
+    
+    public function getMetersByUserForReceipt($date) {
+        try {
+            $sql = 'SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=' . $this->_personal_account;
+            $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
+            if (!empty($result[0])) {
+                $temp_date = date_parse($date);
+                $prev_date = date('Y-m-d', mktime(0, 0, 0, $temp_date['month'] - 1, $temp_date['day'], $temp_date['year']));
+
+                foreach ($result as &$meter) {
+                    $meter['cur_value'] = $this->_getMeterValueByDate($meter['id'], $date);
+                    $meter['prev_value'] = $this->_getMeterValueByDate($meter['id'], $prev_date);
+                    
+                    $meter['diff'] = $meter['cur_value']['value'] - $meter['prev_value']['value'];
+                    $meter['sum'] = $meter['diff'] * $meter['rate'];
                 }
                 return $result;
             } else {

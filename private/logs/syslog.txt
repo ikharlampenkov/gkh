@@ -6473,3 +6473,1153 @@ info   SELECT *
                     ORDER BY date  31.05.2011 22:17
 info   SELECT password FROM user WHERE login="ten"  31.05.2011 22:17
 info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 22:17
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 22:32
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 22:32
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 22:34
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 22:34
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 22:38
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 22:38
+info   SELECT * FROM house WHERE id=2  31.05.2011 22:38
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 22:38
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 22:38
+info   SELECT * FROM house WHERE id=2  31.05.2011 22:38
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 22:38
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 22:38
+info   SELECT * FROM house WHERE id=2  31.05.2011 22:38
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 22:39
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 22:39
+info   SELECT * FROM house WHERE id=2  31.05.2011 22:39
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 22:45
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 22:45
+info   SELECT * FROM house WHERE id=2  31.05.2011 22:45
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 22:45
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 22:45
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 22:45
+info   SELECT * FROM house WHERE id=2  31.05.2011 22:45
+info   SELECT id, title, rate  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 22:45
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 22:45
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 22:49
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 22:49
+info   SELECT * FROM house WHERE id=2  31.05.2011 22:49
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 22:49
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 22:49
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 22:49
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 22:49
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 22:49
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 22:49
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 22:49
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 22:50
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 22:50
+info   SELECT * FROM house WHERE id=2  31.05.2011 22:50
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 22:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 22:50
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 23:01
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 23:01
+info   SELECT * FROM house WHERE id=2  31.05.2011 23:01
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 23:01
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 23:01
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 23:01
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 23:01
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 23:01
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 23:01
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 23:01
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:03
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:03
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:03
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:03
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:03
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:03
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:03
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:03
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:03
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:03
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:03
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:03
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:03
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:03
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:03
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:03
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:03
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:03
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:03
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:03
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:04
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:04
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:04
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:04
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:04
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:04
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:04
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:04
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:04
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:05
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:05
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:05
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:05
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:05
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:05
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:05
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:05
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:05
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:05
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:05
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:05
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:05
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:05
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:05
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:05
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:05
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:05
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:05
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:05
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:05
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:05
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:06
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:06
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:06
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:06
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:06
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:06
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:06
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:06
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:06
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:06
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:06
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:06
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:06
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:06
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:06
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:06
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:06
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:06
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:06
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:06
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:06
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:06
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:07
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:07
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:07
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:07
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:07
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:07
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:07
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:07
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:07
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:07
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:07
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:07
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:07
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:07
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:07
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:07
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:07
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:07
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:07
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:07
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:07
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:07
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:07
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:07
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:07
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:07
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:07
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:07
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:07
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:07
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:07
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:07
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:07
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:07
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:07
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:07
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:07
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:07
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:07
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:07
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:07
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:07
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:07
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:07
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:07
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:07
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:08
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:08
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:08
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:08
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:08
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:08
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:08
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:08
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:08
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:08
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:08
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:08
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:08
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:08
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:08
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:08
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:08
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:08
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:08
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:08
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:08
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT password FROM user WHERE login="ten"  30.05.2011 23:08
+info   SELECT * FROM personal_account WHERE user_id=2  30.05.2011 23:08
+info   SELECT * FROM house WHERE id=2  30.05.2011 23:08
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  30.05.2011 23:08
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 23:10
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 23:10
+info   SELECT * FROM house WHERE id=2  31.05.2011 23:10
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 23:10
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 23:10
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 23:10
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 23:10
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 23:10
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-31", "%Y-%m")  31.05.2011 23:10
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-01", "%Y-%m")  31.05.2011 23:10
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 23:11
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 23:11
+info   SELECT * FROM house WHERE id=2  31.05.2011 23:11
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 23:11
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:11
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:11
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:11
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:11
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:11
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:11
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 23:11
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 23:11
+info   SELECT * FROM house WHERE id=2  31.05.2011 23:11
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 23:11
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:11
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:11
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:11
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:11
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:11
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:11
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 23:12
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 23:12
+info   SELECT * FROM house WHERE id=2  31.05.2011 23:12
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 23:12
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:12
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:12
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:12
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:12
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:12
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:12
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 23:14
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 23:14
+info   SELECT * FROM house WHERE id=2  31.05.2011 23:14
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 23:14
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:14
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:14
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:14
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:14
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:14
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:14
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 23:25
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 23:25
+info   SELECT * FROM house WHERE id=2  31.05.2011 23:25
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 23:25
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:25
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:25
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:25
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:25
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:25
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:25
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 23:27
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 23:27
+info   SELECT * FROM house WHERE id=2  31.05.2011 23:27
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 23:27
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:27
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:27
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:27
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:27
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:27
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:27
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 23:29
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 23:29
+info   SELECT * FROM house WHERE id=2  31.05.2011 23:29
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 23:29
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:29
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:29
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:29
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:29
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:29
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:29
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 23:31
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 23:31
+info   SELECT * FROM house WHERE id=2  31.05.2011 23:31
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 23:31
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:31
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:31
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:31
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:31
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:31
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:31
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 23:31
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 23:31
+info   SELECT * FROM house WHERE id=2  31.05.2011 23:31
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 23:31
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:31
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:31
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:31
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:31
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:31
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:31
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 23:35
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 23:35
+info   SELECT * FROM house WHERE id=2  31.05.2011 23:35
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 23:35
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:35
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:35
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:35
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:35
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:35
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:35
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 23:42
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 23:42
+info   SELECT * FROM house WHERE id=2  31.05.2011 23:42
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 23:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:42
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:42
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 23:47
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 23:47
+info   SELECT * FROM house WHERE id=2  31.05.2011 23:47
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 23:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:47
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 23:47
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 23:47
+info   SELECT * FROM house WHERE id=2  31.05.2011 23:47
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 23:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:47
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 23:47
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 23:47
+info   SELECT * FROM house WHERE id=2  31.05.2011 23:47
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 23:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:47
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:47
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 23:50
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 23:50
+info   SELECT * FROM house WHERE id=2  31.05.2011 23:50
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 23:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:50
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:50
+info   SELECT password FROM user WHERE login="ten"  31.05.2011 23:52
+info   SELECT * FROM personal_account WHERE user_id=2  31.05.2011 23:52
+info   SELECT * FROM house WHERE id=2  31.05.2011 23:52
+info   SELECT id, title, rate, unit  
+                    FROM meters, meters_to_account 
+                    WHERE meters.id=meters_to_account.meters_id AND personal_account_id=1  31.05.2011 23:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=1 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=2 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-05-30", "%Y-%m")  31.05.2011 23:52
+info   SELECT * FROM meters_value 
+                    WHERE personal_account_id=1 AND meters_id=3 AND DATE_FORMAT(date, "%Y-%m")=DATE_FORMAT("2011-04-30", "%Y-%m")  31.05.2011 23:52
