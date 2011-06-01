@@ -2,23 +2,21 @@
 
 {if $vacancy_list!==false}
 
-<table>
+<table cellpadding="10">
     <tr>
-       <td>Должность</td>
-       <td>Требования</td>
-       <td>Заработная плата</td>
-       <td>Текст</td>
-       <td>Куда присылать резюме</td>
-       <td>К кому обращаться</td>
+       <td class="pom"><b>Должность<b></td>
+       <td class="pom"><b>Требования<b></td>
+       <td class="pom"><b>Заработная плата<b></td>
+       <td class="pom"><b>Куда присылать резюме<b></td>
+       <td class="pom"><b>К кому обращаться<b></td>
     </tr>
 {foreach from=$vacancy_list item=vacancy}
     <tr>
-	<td>{$vacancy.position}</td>
-        <td>{$vacancy.requirements}</td>
-        <td>{$vacancy.salary}</td>
-        <td>{$vacancy.some_text}</td>
-        <td>{$vacancy.contact}</td>
-        <td>{$vacancy.who}</td>
+	<td class="pem">{$vacancy.position}</td>
+        <td class="pem">{$vacancy.requirements}</td>
+        <td class="pem">{$vacancy.salary}</td>
+        <td class="pem">{$vacancy.contact}</td>
+        <td class="pem">{$vacancy.who}</td>
     </tr>
 {/foreach}
 </table>

@@ -55,6 +55,18 @@ if ($page == 'content_page') {
     }
 }
 
+if ($page == 'messaging') {
+    $o_pa = new gkh_personal_account_site();
+    
+    if (isset($_POST['data'])) {
+        $o_pa->sendMessage($_POST['data']);
+        simo_functions::chLocation('?page=' . $page);
+        exit;
+    }
+    
+    $o_smarty->assign('pa_list', $o_pa->getAllPAForMessage());
+}
+
 if ($page == 'news') {
 
     $o_news = new gkh_news();

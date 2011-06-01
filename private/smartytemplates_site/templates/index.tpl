@@ -43,9 +43,9 @@
                                 <br/>
                                 <span style="font-size: 14px">Справочная служба</span><br/>
                                 <span style="font-size: 20px; color: #51828e;">36-54-61</span><br/><br/>
-                                <span style="font-size: 14px">Аварийная служб</span><br/>
-                                <span style="font-size: 20px; color: #51828e;">36-66-8</span><br/>
-                                <span style="font-size: 12px; color: #51828e;">круглосуточн</span>
+                                <span style="font-size: 14px">Аварийная служба</span><br/>
+                                <span style="font-size: 20px; color: #51828e;">36-66-83</span><br/>
+                                <span style="font-size: 12px; color: #51828e;">круглосуточно</span>
                             </td>
                             <td width="159" background="img/vhod.jpg" valign="top" style="padding-left: 15px;" align="right">
                                 <br/><br/><br/>
@@ -136,8 +136,8 @@
                                         {/if}
                                         {if $spage=='house'}
                                         <li class="{if $category=='all'}active{else}noactive{/if}"><a title="Обслуживаемые дома" href="?page=house&category=all&spage=house">Обслуживаемые дома</a></li>
-                                        <li class="{if $category=='plan'}active{else}noactive{/if}"><a title="План проводимых работ" href="?page=house&category=plan&spage=house">План проводимых работ</a></li>
-                                        <li class="{if $category=='reports'}active{else}noactive{/if}"><a title="Отчет по капитальном ремонту" href="?page=house&category=reports&spage=house">Отчет по капитальном ремонту</a></li>
+                                        <li class="{if $category=='plan'}active{else}noactive{/if}"><a title="План проводимых работ" href="?page=content_page&title=plan_prov_rabot&spage=house">План проводимых работ</a></li>
+                                        {*<li class="{if $category=='reports'}active{else}noactive{/if}"><a title="Отчет по капитальном ремонту" href="?page=house&category=reports&spage=house">Отчет по капитальном ремонту</a></li>*}
                                         {/if}
                                         {if $spage=='reports'}
                                         <li class="{if $conpage_title=='financial_statements'}active{else}noactive{/if}"><a title="Бухгалтерская отчетность" href="?page=content_page&title=financial_statements&spage=reports">Бухгалтерская отчетность</a></li>
@@ -153,7 +153,7 @@
                                                  { id:"tmS",subs:[ { "t":"Электротехнические работы","u":"?page=content_page&title=eltechrab&spage=service" } , { "t":"Сантехнические работы","u":"?page=content_page&title=santechrab&spage=service" } , { "t":"Содержание дома","u":"?page=content_page&title=keep_the_house&spage=service" } , { "t":"Где оплатить?","u":"?page=content_page&title=where_to_pay&spage=service" } ] } , 
                                                  { id:"tmL",subs:[ { "t":"Жилищно-коммунальные услуги","u":"?page=content_page&title=gkh&spage=rates" } , { "t":"Коммунальные ресурсы","u":"?page=content_page&title=communal_resources&spage=rates" } , { "t":"Где оплатить?","u":"?page=content_page&title=where_to_pay&spage=rates" } ] } , 
                                                  { id:"tmCON",subs:[ { "t":"Объявления","u":"?page=news&category=1&spage=news" } , { "t":"Отключения","u":"?page=news&category=2&spage=news" } , { "t":"Подключения","u":"?page=news&category=3&spage=news" } , { "t":"Согласования","u":"?page=news&category=4&spage=news" } , { "t":"Законодательство","u":"?page=news&category=5&spage=news" } ] } , 
-                                                 { id:"tma",subs:[ { "t":"Обслуживаемые дома","u":"?page=house&category=all&spage=house" } , { "t":"План проводимых работ","u":"?page=house&category=plan&spage=house" } , { "t":"Отчет по капитальном ремонту","u":"?page=house&category=reports&spage=house" } ] } , 
+                                                 { id:"tma",subs:[ { "t":"Обслуживаемые дома","u":"?page=house&category=all&spage=house" } , { "t":"План проводимых работ","u":"?page=content_page&title=plan_prov_rabot&spage=house" } ] } , 
                                                  { id:"tmO",subs:[ { "t":"Бухгалтерская отчетность","u":"?page=content_page&title=financial_statements&spage=reports" } , { "t":"Доходы","u":"?page=content_page&title=income&spage=reports" } , { "t":"Расходы","u":"?page=content_page&title=costs&spage=reports" } ] } ];
                                 </script>
 
@@ -175,7 +175,7 @@
                     <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
                         <tr>
                             <td>&nbsp;</td>
-                            <td width="885" valign="top">
+                            <td width="885" valign="top" style="font-size:13px;">
 
                             {if isset($page) && !empty($page)} 
                                 {include file="$page.tpl"} 
@@ -187,35 +187,37 @@
                                         <td width="32%" valign="top">
                                             <div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">Личный кабинет жильца</div>
                                             <div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
+                                            <img src="kab.gif">
                                         </td>
                                         <td width="200">&nbsp;</td>
 
                                         <td width="32%" valign="top">
-                                            <div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">Прозрачность работы</div>
+                                            <div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">Раскрытие информации</div>
                                             <div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
 
                                             <ul>
                                                 <li><a title="Общая информация" href="?page=content_page&title=general_information&spage=about">Общая информация</a></li>
 
-                                                <li><a title="Финансово-хозяйственная деятельность" href="?page=content_page&title=reports&spage=reports">Финансово-хозяйственная деятельность</a></li>
+                                                <li>Финансово-хозяйственная деятельность</li>
                                                 <li><a title="Бухгалтерская отчетность" href="?page=content_page&title=financial_statements&spage=reports">- бухгалтерская отчетность</a></li>
                                                 <li><a title="Доходы" href="?page=content_page&title=income&spage=reports">- доходы от услуг по управлению МКД</a></li>
                                                 <li><a title="Расходы" href="?page=content_page&title=costs&spage=reports">- расходы в связи с оказанием услуг по управлению МКД</a></li>
 
-                                                <li><a title="Информация об услугах, работах по содержанию и ремонту" href="?page=content_page&title=service&spage=service">Информация об услугах, работах по содержанию и ремонту</a></li>
-                                                <li><a title="базовые" href="?page=content_page&title=basic&spage=about">- базовые</a></li>
-                                                <li><a title="платные" href="?page=content_page&title=platnie&spage=about">- платные</a></li>
+                                                <li>Информация об услугах, работах по содержанию и ремонту</li>
+                                                <li><a title="По содержанию дома" href="?page=content_page&title=basic&spage=about">- базовые</a></li>
+                                                <li><a title="Электротехнические" href="?page=content_page&title=platnie&spage=about">- платные</a></li>
 
 
-                                                <li><a title="Порядок и условия оказания услуг по содержание и ремонт" href="?page=content_page&title=order_service&spage=about">Порядок и условия оказания услуг по содержание и ремонт</a></li>
+                                                <li>Порядок и условия оказания услуг по содержание и ремонт</li>
                                                 <li><a title="- Договор" href="?page=content_page&title=dogovor&spage=about">- Договор</a></li>
                                                 <li><a title="- План работ по содержанию и ремонту" href="?page=content_page&title=plan_rabot&spage=about">- План работ по содержанию и ремонту</a></li>
                                                 <li><a title="- Меры по снижению расходов на работу" href="?page=content_page&title=meri_rashod&spage=about">- Меры по снижению расходов на работу</a></li>
                                                 <li><a title="- Нарушения" href="?page=content_page&title=narusheni&spage=about">- Нарушения</a></li>
                                                 <li><a title="- Соответствие качеству" href="?page=content_page&title=kachthestvo&spage=about">- Соответствие качеству</a></li>
 
-                                                <li><a title="Содержание, периодичность, результат, стоимость работ по содержанию и ремонту" href="?page=content_page&title=soderg&spage=about">Содержание, периодичность, результат, стоимость работ по содержанию и ремонту</a></li>
+                                                <li>Содержание, периодичность, результат, стоимость работ по содержанию и ремонту</li>
                                                 <li><a title="Тарифы на коммунальные ресурсы" href="?page=content_page&title=communal_resources&spage=rates">Тарифы на коммунальные ресурсы</a></li>                                        
+                                                
                                                 <li><a title="Случаи привлечения к ответственности" href="?page=content_page&title=otvetstv&spage=about">Случаи привлечения к ответственности</a></li>
                                             </ul>                                                                                  
                                         </td>
@@ -256,9 +258,9 @@
                                 <div style="color: #fff; font-size: 21px;">Жизненные ситуации</div>
 
                                 <br/>
-                                {foreach from=$faq_list item=faq}
+                                {foreach from=$faq_title_list item=faq_t}
 
-                                <div><a href="?page=faq&is_situation=1#{$faq.id}">{$faq.question}</a></div>
+                                <div><a href="?page=faq&is_situation=1#{$faq_t.id}" style="color: #fff; font-size: 16px;">{$faq_t.question}</a></div>
                                 <br/>
                                 {/foreach}
 

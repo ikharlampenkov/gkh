@@ -18,9 +18,9 @@
 {foreach from=$faq_list item=faq}
 
 {if $faq.is_folder}
-<div><a href="?page={$page}&root={$faq.id}">{$faq.question}</a></div>
+<div><img src="/img/folder.png" /> <a href="?page={$page}&root={$faq.id}">{$faq.question}</a></div>
 {else}
-<div><a href="javascript:showAnswer({$faq.id});">{$faq.question}</a></div>
+<div><img src="/img/page_word.png" /> <a href="javascript:showAnswer({$faq.id});">{$faq.question}</a></div>
 <div id="question_{$faq.id}" style="display:none;">{$faq.answer}</div>
 {/if}
 <br/>

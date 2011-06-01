@@ -7,25 +7,23 @@
 
 <form action="?page={$page}&action={$action}{if edit}&id={$conpage.id}{/if}" method="post" enctype="multipart/form-data">
     <table>
-        <tr>
-            <td width="200">Название страницы (англ)</td>
-            <td><input name="data[page_title]" value="{$conpage.page_title}" /></td>
-        </tr>
+        <tr><td width="200">Название страницы (англ)</td>
+        <tr><td><input name="data[page_title]" value="{$conpage.page_title}" /></td></tr>
         <tr>
             <td>Название страницы</td>
-            <td><input name="data[title]" value="{$conpage.title}" /></td>
+            <tr><td><input name="data[title]" value="{$conpage.title}" /></td>
         </tr>
         <tr>
             <td>Текст</td>
-            <td>{$ckeditor}  {*<textarea name="data[content]">{$conpage.content}</textarea>*}</td>
+            <tr><td>{$ckeditor}  {*<textarea name="data[content]">{$conpage.content}</textarea>*}</td>
         </tr>
         <tr>
             <td>Описание</td>
-            <td><textarea name="data[description]">{$conpage.description}</textarea></td>
+            <tr><td><textarea name="data[description]">{$conpage.description}</textarea></td>
         </tr>
         <tr>
             <td>Прикрепить файл</td>
-            <td>
+            <tr><td>
                 {if isset($conpage.file_list) && $conpage.file_list !== false}
                 {foreach from=$conpage.file_list item=file name=_file}
                 <a href="{$siteurl}temp_files/{$file}" target="_blank">Файл {$smarty.foreach._file.iteration}</a>&nbsp;<a href="?page={$page}&action=del_pic&id={$conpage.id}&fname={$file}">удалить</a><br /> 

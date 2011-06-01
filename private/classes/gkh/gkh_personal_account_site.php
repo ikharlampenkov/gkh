@@ -67,6 +67,27 @@ class gkh_personal_account_site extends gkh {
         }
     }
     
+    public function getAllPAForMessage() {
+        try {
+            $sql = 'SELECT * FROM personal_account';
+            $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
+            if (!empty($result[0])) {
+                
+                $o_house = new gkh_house();
+                
+                foreach ($result as &$pa) {
+                    $pa['house'] = $o_house->getHouse($pa['house_id']);
+                }
+                return $result;               
+            } else {
+                return false;    
+            }            
+        } catch (Exception $e) {
+            simo_exception::registrMsg($e, $this->_debug);
+            return false;
+        }
+    }
+    
     public function getPA($id) {
         try {
             $sql = 'SELECT * FROM personal_account WHERE id=' . (int)$id;
@@ -120,6 +141,20 @@ class gkh_personal_account_site extends gkh {
         }
     }
     
+    public function sendMessage($data) {
+        $message = $data['message'];
+        foreach ($data['debts'] as $key => $value) {
+            try {
+                $result = $this->getPA($key);
+
+                $test = $this->_send_sms($result['phone'], mb_convert_encoding($message, 'Windows-1251', 'UTF-8'), $__cfg['sms.login'], $__cfg['sms.password']); //рассылка сообщения
+                simo_log::logMsg($test);
+            } catch (Exception $e) {
+                simo_exception::registrMsg($e, $this->_debug);
+            }
+        }
+    }
+    
     static function getUserByAddress($house_id, $apartment) {
         try {
             $db = simo_db::getInstance();
@@ -161,6 +196,20 @@ class gkh_personal_account_site extends gkh {
             simo_exception::registrMsg($e, $this->_debug);
             return false;
         }
+    }
+    
+    private function _send_sms($to, $msg, $login, $password) {
+        $u = 'http://www.websms.ru/http_in4.asp';
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, 'Http_username=' . urlencode($login) . '&Http_password=' . urlencode($password) . '&Phone_list=' . $to . '&Message=' . urlencode($msg));
+        curl_setopt($ch, CURLOPT_URL, $u);
+        $u = trim(curl_exec($ch));
+        curl_close($ch);
+        return (preg_match('#Http_id\s*=\s*0#i', $u));
     }
 
 

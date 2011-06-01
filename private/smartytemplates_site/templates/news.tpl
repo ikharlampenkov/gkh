@@ -1,6 +1,9 @@
 {if $action=='view_news'}
 
-<h1>{if $is_important==1}Важная информация{else}Новости{if isset($news_category)}: {$news_category.title}{/if}{/if}</h1>
+<div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">
+{if $is_important==1}Важная информация{else}Новости{if isset($news_category)}: {$news_category.title}{/if}{/if}
+</div>
+<div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
 
 <div>{$news.date|date_format:"%d.%m.%Y"}&nbsp;{$news.title}</div><br />
 <div>{$news.full_text}</div>
@@ -34,7 +37,10 @@
 
 {else}
 
-<h1>{if $is_important==1}Важная информация{else}Новости{if isset($news_category)}: {$news_category.title}{/if}{/if}</h1>
+<div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">
+{if $is_important==1}Важная информация{else}Новости{if isset($news_category)}: {$news_category.title}{/if}{/if}
+</div>
+<div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
 
 <br/>
 

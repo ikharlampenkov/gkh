@@ -35,7 +35,7 @@
 
 {elseif $action=="add_folder" || $action=="edit_folder"}
 
-<form action="?page={$page}&action={$action}&id={if $action=="edit"}{$document.id}{/if}" method="post" enctype="multipart/form-data">
+<form action="?page={$page}&action={$action}&id={if $action=="edit_folder"}{$document.id}{/if}" method="post" enctype="multipart/form-data">
     <table>
         <tr>
             <td width="200">Название</td>

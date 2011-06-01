@@ -1,14 +1,5 @@
-<h1>Документы</h1>
-
-{if isset($path_to_document)}
-<div>
-    <a href="?page={$page}">..</a> / 
-{section name=path_doc loop=count($path_to_document) step=-1 max=count($path_to_document)-1}
-    <a href="?page={$page}&root={$path_to_document[path_doc].id}">{$path_to_document[path_doc].title}</a>{if !$smarty.section.path_doc.last} / {/if}
-{/section}    
-</div><br />
-{/if}
-
+<div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">Документы</div>
+<div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
 
 {if $document != false}
 <h4>{$document.title}</h4>
@@ -18,8 +9,8 @@
 {foreach from=$document_list item=document}
 
 {if $document.is_folder}
-<div><a href="?page={$page}&root={$document.id}">{$document.title}</a></div>
+<div><img src="/img/folder.png" /> <a href="?page={$page}&root={$document.id}">{$document.title}</a></div>
 {else}
-<div><a href="{$siteurl}temp_files/{$document.file}" title="{$document.short_text}" target="_blank">{$document.title}</a></div>
+<div><img src="/img/page_word.png" /> <a href="{$siteurl}temp_files/{$document.file}" title="{$document.short_text}" target="_blank">{$document.title}</a></div>
 {/if}
 {/foreach}
