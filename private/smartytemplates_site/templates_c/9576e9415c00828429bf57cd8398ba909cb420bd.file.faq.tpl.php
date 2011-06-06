@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-30 22:27:51
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-06 21:42:04
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/admin/faq.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:170644de3b777374df3-39164887%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:297074dece73c6adda0-71120896%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '9576e9415c00828429bf57cd8398ba909cb420bd' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/admin/faq.tpl',
-      1 => 1306769169,
+      1 => 1306906860,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '170644de3b777374df3-39164887',
+  'nocache_hash' => '297074dece73c6adda0-71120896',
   'function' => 
   array (
   ),
@@ -68,7 +68,7 @@ if ($_smarty_tpl->_count($_from) > 0){
 
 <form action="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
 &action=<?php echo $_smarty_tpl->getVariable('action')->value;?>
-&id=<?php if ($_smarty_tpl->getVariable('action')->value=="edit"){?><?php echo $_smarty_tpl->getVariable('faq')->value['id'];?>
+&id=<?php if ($_smarty_tpl->getVariable('action')->value=="edit_folder"){?><?php echo $_smarty_tpl->getVariable('faq')->value['id'];?>
 <?php }?>" method="post" enctype="multipart/form-data">
     <table>
         <tr>

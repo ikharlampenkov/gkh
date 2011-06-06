@@ -1,4 +1,5 @@
-<h1>{$module_title}</h1>
+<div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">{$module_title}</div>
+                                            <div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
 
 
 {if $action=="question"}
@@ -8,7 +9,7 @@
 <form action="?page={$page}&action={$action}&category={$category}" method="post" enctype="multipart/form-data">
     <table>
         <tr>
-            <td width="200">Вопрос</td>
+            <td width="200" class="pom" align="center">Вопрос</td>
             <td><textarea name="data[question]"></textarea></td>
         </tr>
         <tr>
@@ -67,7 +68,7 @@
 <form action="?page={$page}&action={$action}&id={$ticket.id}&category={$category}" method="post" enctype="multipart/form-data">
     <table>
         <tr>
-            <td width="200">Вопрос</td>
+            <td width="200" class="pom" align="center">Вопрос</td>
             <td><textarea name="data[question]"></textarea></td>
         </tr>
         <tr>
@@ -87,21 +88,21 @@
 {else}
 
 {if $ticket_list!==false}
-<table>
+<table cellpadding="10">
    <tr>
-       <td>Номер</td>
-       <td>Дата</td>
-       <td>Заголовок</td>
-       <td>Состояние</td>
-       <td>&nbsp;</td>
+       <td  class="pom" align="center"><b>Номер</td>
+       <td class="pom" align="center"><b>Дата</td>
+       <td class="pom" align="center"><b>Заголовок</td>
+       <td class="pom" align="center"><b>Состояние</td>
+       <td class="pom" align="center"><b>&nbsp;</td>
     </tr> 
 {foreach from=$ticket_list item=ticket}
     <tr>
-        <td>{$ticket.id}</td>
-        <td>{$ticket.date|date_format:"%d.%m.%Y %H:%M"}</td>
-        <td>{$ticket.title|strip_tags:false|truncate:30:""}</td>
-        <td>{$ticket.status}</td>
-        <td><a href="?page={$page}&action=view_ticket&id={$ticket.id}&category={$category}">просмотреть</a><br /> </td>
+        <td  class="pem" align="center">{$ticket.id}</td>
+        <td  class="pem" align="center">{$ticket.date|date_format:"%d.%m.%Y %H:%M"}</td>
+        <td  class="pem" align="center">{$ticket.title|strip_tags:false|truncate:30:""}</td>
+        <td  class="pem" align="center">{$ticket.status}</td>
+        <td  class="pem" align="center"><a href="?page={$page}&action=view_ticket&id={$ticket.id}&category={$category}">просмотреть</a><br /> </td>
     </tr>
 {/foreach}
 </table>

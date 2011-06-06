@@ -106,13 +106,12 @@
                                         {/if}
                                         {if $spage=='about'}
                                         <li class="{if $conpage_title=='general_information'}active{else}noactive{/if}"><a title="Общая информация" href="?page=content_page&title=general_information&spage=about">Общая информация</a></li>
-                                        <li class="{if $page=='license'}active{else}noactive{/if}"><a title="Лицензии" href="?page=license&spage=about">Лицензии</a></li>
+                                        <li class="{if $page=='license'}active{else}noactive{/if}"><a title="Свидетельство" href="?page=license&spage=about">Достижения</a></li>
                                         {*<li class="{if $page=='personal' && $is_leaders==1}active{else}noactive{/if}"><a title="Руководство" href="?page=personal&is_leaders=1&spage=about">Руководство</a></li>*}
                                         {*<li class="{if $page=='personal' && $is_leaders==0}active{else}noactive{/if}"><a title="Персонал" href="?page=personal&is_leaders=0&spage=about">Персонал</a></li>*}
                                         <li class="{if $conpage_title=='leaders'}active{else}noactive{/if}"><a title="Руководство" href="?page=content_page&title=leaders&spage=about">Руководство</a></li>
                                         <li class="{if $conpage_title=='passport_office'}active{else}noactive{/if}"><a title="Паспортный стол" href="?page=content_page&title=passport_office&spage=about">Паспортный стол</a></li>
                                         <li class="{if $page=='vacancy'}active{else}noactive{/if}"><a title="Вакансии" href="?page=vacancy&spage=about">Вакансии</a></li>
-                                        <li class="{if $conpage_title=='distributor'}active{else}noactive{/if}"><a title="Поставщики" href="?page=content_page&title=distributor&spage=about">Поставщики</a></li>
                                         <li class="{if $conpage_title=='contact'}active{else}noactive{/if}"><a title="Контакты" href="?page=content_page&title=contact&spage=about">Контакты</a></li>
                                         {/if}
                                         {if $spage=='service'}
@@ -125,6 +124,7 @@
                                         {if $spage=='rates'}
                                         <li class="{if $conpage_title=='gkh'}active{else}noactive{/if}"><a title="Жилищно-коммунальные услуги" href="?page=content_page&title=gkh&spage=rates">Жилищно-коммунальные услуги</a></li>
                                         <li class="{if $conpage_title=='communal_resources'}active{else}noactive{/if}"><a title="Коммунальные ресурсы" href="?page=content_page&title=communal_resources&spage=rates">Коммунальные ресурсы</a></li>                                        
+                                        <li class="{if $conpage_title=='distributor'}active{else}noactive{/if}"><a title="Поставщики" href="?page=content_page&title=distributor&spage=about">Поставщики</a></li>
                                         <li class="{if $conpage_title=='where_to_pay'}active{else}noactive{/if}"><a title="Где оплатить?" href="?page=content_page&title=where_to_pay&spage=rates">Где оплатить?</a></li>
                                         {/if}
                                         {if $spage=='news'}
@@ -141,14 +141,13 @@
                                         {/if}
                                         {if $spage=='reports'}
                                         <li class="{if $conpage_title=='financial_statements'}active{else}noactive{/if}"><a title="Бухгалтерская отчетность" href="?page=content_page&title=financial_statements&spage=reports">Бухгалтерская отчетность</a></li>
-                                        <li class="{if $conpage_title=='income'}active{else}noactive{/if}"><a title="Доходы" href="?page=content_page&title=income&spage=reports">Доходы</a></li>
-                                        <li class="{if $conpage_title=='costs'}active{else}noactive{/if}"><a title="Расходы" href="?page=content_page&title=costs&spage=reports">Расходы</a></li>
+                                        <li class="{if $conpage_title=='income'}active{else}noactive{/if}"><a title="Отчет о прибылях и убытка" href="?page=content_page&title=income&spage=reports">Отчет о прибылях и убытка</a></li>
                                         {/if}
                                     </ul>
                                 </div>
 
                                 <script type="text/javascript">
-                                var submenus = [ {  id:"tmM",subs:[  {  "t":"Раскрытие информации","u":"?page=content_page&title=disclosure_of_information" } , { "t":"Личный кабинет","u":"?page=content_page&title=cabinet" } , { "t":"Жизненные ситуации","u":"?page=faq&is_situation=1" } , { "t":"Важная информация","u":"?page=content_page&title=important_information" } ] } ,
+                                var submenus = [ { id:"tmM",subs:[ { "t":"Раскрытие информации","u":"?page=content_page&title=disclosure_of_information" } , { "t":"Личный кабинет","u":"?page=content_page&title=cabinet" } , { "t":"Жизненные ситуации","u":"?page=faq&is_situation=1" } , { "t":"Важная информация","u":"?page=content_page&title=important_information" } ] } ,
                                                  { id:"tmC",subs:[ { "t":"Общая информация","u":"?page=content_page&title=general_information&spage=about" } , { "t":"Лицензии","u":"?page=license&spage=about" } , { "t":"Руководство","u":"?page=content_page&title=leaders&spage=about" } , { "t":"Паспортный стол","u":"?page=content_page&title=passport_office&spage=about" } , { "t":"Вакансии","u":"?page=vacancy&spage=about" } , { "t":"Поставщики","u":"?page=content_page&title=distributor&spage=about" } , { "t":"Контакты","u":"?page=content_page&title=contact&spage=about" } ] } , 
                                                  { id:"tmS",subs:[ { "t":"Электротехнические работы","u":"?page=content_page&title=eltechrab&spage=service" } , { "t":"Сантехнические работы","u":"?page=content_page&title=santechrab&spage=service" } , { "t":"Содержание дома","u":"?page=content_page&title=keep_the_house&spage=service" } , { "t":"Где оплатить?","u":"?page=content_page&title=where_to_pay&spage=service" } ] } , 
                                                  { id:"tmL",subs:[ { "t":"Жилищно-коммунальные услуги","u":"?page=content_page&title=gkh&spage=rates" } , { "t":"Коммунальные ресурсы","u":"?page=content_page&title=communal_resources&spage=rates" } , { "t":"Где оплатить?","u":"?page=content_page&title=where_to_pay&spage=rates" } ] } , 
@@ -195,31 +194,30 @@
                                             <div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">Раскрытие информации</div>
                                             <div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
 
-                                            <ul>
-                                                <li><a title="Общая информация" href="?page=content_page&title=general_information&spage=about">Общая информация</a></li>
+                                            <table cellpadding="5" border="0">
+                                                <tr><td class="pom"><a title="Общая информация" href="?page=content_page&title=general_information&spage=about">Общая информация</a></td>
 
-                                                <li>Финансово-хозяйственная деятельность</li>
-                                                <li><a title="Бухгалтерская отчетность" href="?page=content_page&title=financial_statements&spage=reports">- бухгалтерская отчетность</a></li>
-                                                <li><a title="Доходы" href="?page=content_page&title=income&spage=reports">- доходы от услуг по управлению МКД</a></li>
-                                                <li><a title="Расходы" href="?page=content_page&title=costs&spage=reports">- расходы в связи с оказанием услуг по управлению МКД</a></li>
-
-                                                <li>Информация об услугах, работах по содержанию и ремонту</li>
-                                                <li><a title="По содержанию дома" href="?page=content_page&title=basic&spage=about">- базовые</a></li>
-                                                <li><a title="Электротехнические" href="?page=content_page&title=platnie&spage=about">- платные</a></li>
-
-
-                                                <li>Порядок и условия оказания услуг по содержание и ремонт</li>
-                                                <li><a title="- Договор" href="?page=content_page&title=dogovor&spage=about">- Договор</a></li>
-                                                <li><a title="- План работ по содержанию и ремонту" href="?page=content_page&title=plan_rabot&spage=about">- План работ по содержанию и ремонту</a></li>
-                                                <li><a title="- Меры по снижению расходов на работу" href="?page=content_page&title=meri_rashod&spage=about">- Меры по снижению расходов на работу</a></li>
-                                                <li><a title="- Нарушения" href="?page=content_page&title=narusheni&spage=about">- Нарушения</a></li>
-                                                <li><a title="- Соответствие качеству" href="?page=content_page&title=kachthestvo&spage=about">- Соответствие качеству</a></li>
-
-                                                <li>Содержание, периодичность, результат, стоимость работ по содержанию и ремонту</li>
-                                                <li><a title="Тарифы на коммунальные ресурсы" href="?page=content_page&title=communal_resources&spage=rates">Тарифы на коммунальные ресурсы</a></li>                                        
+                                                <tr><td class="pem">Финансово-хозяйственная деятельность</td></tr>
+                                                <tr><td class="pom"><a title="Бухгалтерская отчетность" href="?page=content_page&title=financial_statements&spage=reports">Бухгалтерская отчетность</a></td></tr>
+                                                <tr><td class="pom"><a title="Доходы" href="?page=content_page&title=income&spage=reports">Отчет о прибылях и убытках</a></td></tr>
                                                 
-                                                <li><a title="Случаи привлечения к ответственности" href="?page=content_page&title=otvetstv&spage=about">Случаи привлечения к ответственности</a></li>
-                                            </ul>                                                                                  
+                                                <tr><td class="pem">Информация об услугах, работах по содержанию и ремонту</li>
+                                                <tr><td class="pom"><a title="По содержанию дома" href="?page=content_page&title=basic&spage=about">Базовые услуги</a></td></tr>
+                                                <tr><td class="pom"><a title="Электротехнические" href="?page=content_page&title=platnie&spage=about">Платные</a></td></tr>
+
+                                                <tr><td class="pem">Порядок и условия оказания услуг по содержание и ремонт</li>
+                                                <tr><td class="pom"><a title="Договор" href="?page=content_page&title=dogovor&spage=about">Договор управления МКД</a></td></tr>
+                                                <tr><td class="pom"><a title="План работ по содержанию и ремонту" href="?page=content_page&title=plan_rabot&spage=about">План работ по содержанию и ремонту</a></td></tr>
+                                                <tr><td class="pom"><a title="Меры по снижению расходов на работу" href="?page=content_page&title=meri_rashod&spage=about">Меры по снижению расходов на работу</a></td></tr>
+                                                <tr><td class="pom"><a title="Нарушения" href="?page=content_page&title=narusheni&spage=about">Нарушения</td></tr>
+                                                <tr><td class="pom"><a title="Соответствие качеству" href="?page=content_page&title=kachthestvo&spage=about">Соответствие качеству</td></tr>
+
+                                                <tr><td class="pem">Содержание, периодичность, результат, стоимость работ по содержанию и ремонту</td></tr>
+                                                <tr><td class="pom"><a title="Тарифы на коммунальные ресурсы" href="?page=content_page&title=communal_resources&spage=rates">Тарифы на коммунальные ресурсы</a></td></tr>                                        
+                                                
+                                                <tr><td class="pem"><a title="Случаи привлечения к ответственности" href="?page=content_page&title=otvetstv&spage=about">Случаи привлечения к ответственности</a></td></tr>
+                                            
+                                            </table>                                                                                
                                         </td>
                                         <td width="200">&nbsp;</td>
 

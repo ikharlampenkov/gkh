@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-06-01 00:32:00
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-06 21:41:53
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/admin/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:70684de52610d49b90-10357027%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:14464dece731c43df1-59442327%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd3c83e385ff07675bafa7a4e1644fab99735005a' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/admin/index.tpl',
-      1 => 1306854835,
+      1 => 1306912860,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '70684de52610d49b90-10357027',
+  'nocache_hash' => '14464dece731c43df1-59442327',
   'function' => 
   array (
   ),
@@ -68,6 +68,9 @@ $_smarty_tpl->decodeProperties(array (
  echo $_template->getRenderedTemplate();?><?php unset($_template);?>
 
         <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td style="border:#99999 1px solid;" align="center"><a href="?page=messaging">Рассылка сообщений</a> </td>
+            </tr>
             <tr>
                 <td height="200" background="/img/bgshapka.jpg">
 
@@ -174,8 +177,8 @@ $_smarty_tpl->decodeProperties(array (
                                         <?php }?>
                                         <?php if ($_smarty_tpl->getVariable('spage')->value=='house'){?>
                                         <li class="<?php if ($_smarty_tpl->getVariable('category')->value=='all'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Обслуживаемые дома" href="?page=house&category=all&spage=house">Обслуживаемые дома</a></li>
-                                        <li class="<?php if ($_smarty_tpl->getVariable('category')->value=='plan'){?>active<?php }else{ ?>noactive<?php }?>"><a title="План проводимых работ" href="?page=house&category=plan&spage=house">План проводимых работ</a></li>
-                                        <li class="<?php if ($_smarty_tpl->getVariable('category')->value=='reports'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Отчет по капитальном ремонту" href="?page=house&category=reports&spage=house">Отчет по капитальном ремонту</a></li>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value=='plan_prov_rabot'){?>active<?php }else{ ?>noactive<?php }?>"><a title="План проводимых работ" href="?page=content_page&action=edit&id=plan_prov_rabot&spage=house">План проводимых работ</a></li>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value=='kap_remont'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Журнал проводимых работ" href="?page=content_page&action=edit&id=kap_remont&spage=house">Журнал проводимых работ</a></li>
                                         <?php }?>
                                         <?php if ($_smarty_tpl->getVariable('spage')->value=='reports'){?>
                                         <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value=='financial_statements'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Бухгалтерская отчетность" href="?page=content_page&action=edit&id=financial_statements&spage=reports">Бухгалтерская отчетность</a></li>
@@ -191,7 +194,7 @@ $_smarty_tpl->decodeProperties(array (
                                                  { id:"tmS",subs:[ { "t":"Электротехнические работы","u":"?page=content_page&action=edit&id=eltechrab&spage=service" } , { "t":"Сантехнические работы","u":"?page=content_page&action=edit&id=santechrab&spage=service" } , { "t":"Содержание дома","u":"?page=content_page&action=edit&id=keep_the_house&spage=service" } , { "t":"Где оплатить?","u":"?page=content_page&action=edit&id=where_to_pay&spage=service" } ] } , 
                                                  { id:"tmL",subs:[ { "t":"Жилищно-коммунальные услуги","u":"?page=content_page&action=edit&id=gkh&spage=rates" } , { "t":"Коммунальные ресурсы","u":"?page=content_page&action=edit&id=communal_resources&spage=rates" } , { "t":"Где оплатить?","u":"?page=content_page&action=edit&id=where_to_pay&spage=rates" } ] } , 
                                                  { id:"tmCON",subs:[ { "t":"Объявления","u":"?page=news&category=1&spage=news" } , { "t":"Отключения","u":"?page=news&category=2&spage=news" } , { "t":"Подключения","u":"?page=news&category=3&spage=news" } , { "t":"Согласования","u":"?page=news&category=4&spage=news" } , { "t":"Законодательство","u":"?page=news&category=5&spage=news" } ] } , 
-                                                 { id:"tma",subs:[ { "t":"Обслуживаемые дома","u":"?page=house&category=all&spage=house" } , { "t":"План проводимых работ","u":"?page=house&category=plan&spage=house" } , { "t":"Отчет по капитальном ремонту","u":"?page=house&category=reports&spage=house" } ] } , 
+                                                 { id:"tma",subs:[ { "t":"Обслуживаемые дома","u":"?page=house&category=all&spage=house" } , { "t":"План проводимых работ","u":"?page=content_page&action=edit&id=plan_prov_rabot&spage=house" } , { "t":"Журнал проводимых работ","u":"?page=content_page&action=edit&id=kap_remont&spage=house" } ] } , 
                                                  { id:"tmO",subs:[ { "t":"Бухгалтерская отчетность","u":"?page=content_page&action=edit&id=financial_statements&spage=reports" } , { "t":"Доходы","u":"?page=content_page&action=edit&id=income&spage=reports" } , { "t":"Расходы","u":"?page=content_page&action=edit&id=costs&spage=reports" } ] } ];
                                 </script>
                                 

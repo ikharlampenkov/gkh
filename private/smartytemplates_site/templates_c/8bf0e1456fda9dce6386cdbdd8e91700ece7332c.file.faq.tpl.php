@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-30 23:15:26
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-06 21:40:39
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/faq.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:187964de3c29e9ae177-85096399%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:113774dece6e7769fd0-90291725%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8bf0e1456fda9dce6386cdbdd8e91700ece7332c' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/faq.tpl',
-      1 => 1306772123,
+      1 => 1306907340,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '187964de3c29e9ae177-85096399',
+  'nocache_hash' => '113774dece6e7769fd0-90291725',
   'function' => 
   array (
   ),
@@ -71,12 +71,12 @@ if ($_smarty_tpl->_count($_from) > 0){
 ?>
 
 <?php if ($_smarty_tpl->tpl_vars['faq']->value['is_folder']){?>
-<div><a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+<div><img src="/img/folder.png" /> <a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
 &root=<?php echo $_smarty_tpl->tpl_vars['faq']->value['id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['faq']->value['question'];?>
 </a></div>
 <?php }else{ ?>
-<div><a href="javascript:showAnswer(<?php echo $_smarty_tpl->tpl_vars['faq']->value['id'];?>
+<div><img src="/img/page_word.png" /> <a href="javascript:showAnswer(<?php echo $_smarty_tpl->tpl_vars['faq']->value['id'];?>
 );"><?php echo $_smarty_tpl->tpl_vars['faq']->value['question'];?>
 </a></div>
 <div id="question_<?php echo $_smarty_tpl->tpl_vars['faq']->value['id'];?>

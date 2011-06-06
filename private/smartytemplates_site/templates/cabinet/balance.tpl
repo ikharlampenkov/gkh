@@ -1,28 +1,27 @@
-<h1>Баланс платежей</h1>
 
+<div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">Баланс платежей</div>
+                                            <div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
 {if $balance !== false}
 
-<table>
+<table cellpadding="10">
     <tr>
-        <td>Месяц</td>
-        <td>Баланс на начало месяца</td>
-        <td>Начислено</td>
-        <td>Оплачено</td>
-        <td>Баланс на конец месяца</td>
+        <td class="pom" align="center"><b>Месяц</td>
+        <td class="pom" align="center"><b>Баланс на начало месяца</td>
+        <td class="pom" align="center"><b>Начислено</td>
+        <td class="pom" align="center"><b>Оплачено</td>
+        <td class="pom" align="center"><b>Баланс на конец месяца</td>
     </tr>
     {foreach from=$balance item=month}
     <tr>
-        <td>{$month.date|date_format:"%m.%Y"}</td>
-        <td>{$month.total_beginning_month}</td>
-        <td>{$month.debt}</td>
-        <td>{$month.payment}</td>
-        <td>{$month.total_end_month}</td>
+        <td class="pem" align="center">{$month.date|date_format:"%m.%Y"}</td>
+        <td class="pem" align="center">{$month.total_beginning_month}</td>
+        <td class="pem" align="center">{$month.debt}</td>
+        <td class="pem" align="center">{$month.payment}</td>
+        <td class="pem" align="center">{$month.total_end_month}</td>
     </tr>
     {/foreach}
-    <tr>
-        <td colspan="4">Итого {if $month.total_end_month>0}(долг){else}(переплата){/if}:</td>
-        <td>{$month.total_end_month}</td>
-    </tr>
 </table>
+<br>
+<div align="center" style="font-weight:bold; font-size: 16px">Итого {if $month.total_end_month>0}(долг){else}(переплата){/if}: {$month.total_end_month}</div>
 
 {/if}

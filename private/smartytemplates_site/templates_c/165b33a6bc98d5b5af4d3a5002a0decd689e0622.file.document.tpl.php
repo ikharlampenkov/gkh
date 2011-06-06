@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-28 14:10:33
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-06 21:42:12
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/admin/document.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:319344de09fe9568ba6-57904921%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:52484dece744415d57-00304512%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '165b33a6bc98d5b5af4d3a5002a0decd689e0622' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/admin/document.tpl',
-      1 => 1306566627,
+      1 => 1306906860,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '319344de09fe9568ba6-57904921',
+  'nocache_hash' => '52484dece744415d57-00304512',
   'function' => 
   array (
   ),
@@ -71,7 +71,7 @@ temp_files/<?php echo $_smarty_tpl->getVariable('document')->value['file'];?>
 
 <form action="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
 &action=<?php echo $_smarty_tpl->getVariable('action')->value;?>
-&id=<?php if ($_smarty_tpl->getVariable('action')->value=="edit"){?><?php echo $_smarty_tpl->getVariable('document')->value['id'];?>
+&id=<?php if ($_smarty_tpl->getVariable('action')->value=="edit_folder"){?><?php echo $_smarty_tpl->getVariable('document')->value['id'];?>
 <?php }?>" method="post" enctype="multipart/form-data">
     <table>
         <tr>

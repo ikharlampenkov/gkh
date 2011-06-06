@@ -1,11 +1,12 @@
-* { margin: 0; padding: 0;}
-ul { list-style: none; }
-body { background-color:#fff; font:62.5% arial,helvetica,sans-serif; }
+ul { list-style: none; margin: 0; padding: 0;}
+body { background-color:#fff; font:62.5% arial,helvetica,sans-serif; margin: 0; padding: 0;}
 
 .bgmenu { background-image:url('/img/bgmenu.jpg'); }
 .topmenu { background-color: #f4f4e9; border-bottom: 1px solid #cedfd8 ; border-right: 1px solid #cedfd8 ; border-left: 1px solid #cedfd8; }
 .topmenu a { color: #416e79 ; font-size:140%; }
 .topmenu a:hover { background-color:#89b4be; color:#fff; }
+
+a {color: #416e79}
 
 .panel { margin-bottom:10px; }
 .panel { height:33px; width:885px; }
@@ -26,6 +27,9 @@ ul.sub li a.disabled { color:#ddd; }
 ul.sub li a.disabled:hover { background-color:Transparent; }
 div.subMenus {clear: both; height: 25px; overflow: hidden; position: relative; }
 div.subMenus ul.sub {position: absolute; top: -25px; }
+
+.pom {background-color: #e4f8ff}
+.pem {background-color: #f4f6e1}
 				
 	
 	
