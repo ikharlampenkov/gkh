@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-31 00:45:02
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-26 21:58:08
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/cabinet/support.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:281794de3d79e1678e5-03774313%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:374e07490022e069-69461864%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ed25b59bdd8e40bf93b36baa6843b5fade081f7f' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/cabinet/support.tpl',
-      1 => 1305564996,
+      1 => 1306909260,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '281794de3d79e1678e5-03774313',
+  'nocache_hash' => '374e07490022e069-69461864',
   'function' => 
   array (
   ),
@@ -19,8 +19,9 @@ $_smarty_tpl->decodeProperties(array (
 )); /*/%%SmartyHeaderCode%%*/?>
 <?php if (!is_callable('smarty_modifier_date_format')) include 'H:\www\gkh\private\classes\smarty\plugins\modifier.date_format.php';
 if (!is_callable('smarty_modifier_truncate')) include 'H:\www\gkh\private\classes\smarty\plugins\modifier.truncate.php';
-?><h1><?php echo $_smarty_tpl->getVariable('module_title')->value;?>
-</h1>
+?><div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;"><?php echo $_smarty_tpl->getVariable('module_title')->value;?>
+</div>
+                                            <div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
 
 
 <?php if ($_smarty_tpl->getVariable('action')->value=="question"){?>
@@ -34,7 +35,7 @@ if (!is_callable('smarty_modifier_truncate')) include 'H:\www\gkh\private\classe
 " method="post" enctype="multipart/form-data">
     <table>
         <tr>
-            <td width="200">Вопрос</td>
+            <td width="200" class="pom" align="center">Вопрос</td>
             <td><textarea name="data[question]"></textarea></td>
         </tr>
         <tr>
@@ -127,7 +128,7 @@ temp_support/<?php echo $_smarty_tpl->tpl_vars['file']->value;?>
 " method="post" enctype="multipart/form-data">
     <table>
         <tr>
-            <td width="200">Вопрос</td>
+            <td width="200" class="pom" align="center">Вопрос</td>
             <td><textarea name="data[question]"></textarea></td>
         </tr>
         <tr>
@@ -147,13 +148,13 @@ temp_support/<?php echo $_smarty_tpl->tpl_vars['file']->value;?>
 <?php }else{ ?>
 
 <?php if ($_smarty_tpl->getVariable('ticket_list')->value!==false){?>
-<table>
+<table cellpadding="10">
    <tr>
-       <td>Номер</td>
-       <td>Дата</td>
-       <td>Заголовок</td>
-       <td>Состояние</td>
-       <td>&nbsp;</td>
+       <td  class="pom" align="center"><b>Номер</td>
+       <td class="pom" align="center"><b>Дата</td>
+       <td class="pom" align="center"><b>Заголовок</td>
+       <td class="pom" align="center"><b>Состояние</td>
+       <td class="pom" align="center"><b>&nbsp;</td>
     </tr> 
 <?php  $_smarty_tpl->tpl_vars['ticket'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('ticket_list')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -161,15 +162,15 @@ if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['ticket']->key => $_smarty_tpl->tpl_vars['ticket']->value){
 ?>
     <tr>
-        <td><?php echo $_smarty_tpl->tpl_vars['ticket']->value['id'];?>
+        <td  class="pem" align="center"><?php echo $_smarty_tpl->tpl_vars['ticket']->value['id'];?>
 </td>
-        <td><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['ticket']->value['date'],"%d.%m.%Y %H:%M");?>
+        <td  class="pem" align="center"><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['ticket']->value['date'],"%d.%m.%Y %H:%M");?>
 </td>
-        <td><?php echo smarty_modifier_truncate(strip_tags($_smarty_tpl->tpl_vars['ticket']->value['title']),30,'');?>
+        <td  class="pem" align="center"><?php echo smarty_modifier_truncate(strip_tags($_smarty_tpl->tpl_vars['ticket']->value['title']),30,'');?>
 </td>
-        <td><?php echo $_smarty_tpl->tpl_vars['ticket']->value['status'];?>
+        <td  class="pem" align="center"><?php echo $_smarty_tpl->tpl_vars['ticket']->value['status'];?>
 </td>
-        <td><a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+        <td  class="pem" align="center"><a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
 &action=view_ticket&id=<?php echo $_smarty_tpl->tpl_vars['ticket']->value['id'];?>
 &category=<?php echo $_smarty_tpl->getVariable('category')->value;?>
 ">просмотреть</a><br /> </td>

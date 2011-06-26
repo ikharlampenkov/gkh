@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-28 14:15:49
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-26 22:16:32
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/admin/house.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:241054de0a125e08e32-91722641%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_smarty_tpl->decodeProperties(array (
     'd4c404d98445026607d325cb9d5699a41fd18c12' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/admin/house.tpl',
-      1 => 1305821093,
+      1 => 1305821280,
       2 => 'file',
     ),
   ),

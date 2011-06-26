@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-06-26 21:53:20
-         compiled from "H:/www/gkh/private/smartytemplates_site/templates/house.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:165834e0747e036d8c7-21262287%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-27 00:04:51
+         compiled from "H:/www/gkh/private/smartytemplates_site/templates/cabinet/house.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:108714e0766b37199d8-61605321%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '4b267a0630cc38c47e7006c2876c3846f26bd9ee' => 
+    'db85a9669cd515d3fce7717964cad848895ae374' => 
     array (
-      0 => 'H:/www/gkh/private/smartytemplates_site/templates/house.tpl',
-      1 => 1306907100,
+      0 => 'H:/www/gkh/private/smartytemplates_site/templates/cabinet/house.tpl',
+      1 => 1309107537,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '165834e0747e036d8c7-21262287',
+  'nocache_hash' => '108714e0766b37199d8-61605321',
   'function' => 
   array (
   ),

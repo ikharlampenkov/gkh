@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-31 19:08:05
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-26 22:16:05
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/admin/content_page.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:267694de4da258a9640-76525706%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:126844e074d355be883-98030548%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1a29e3ba6bdaf5476a9efe29fe05495d72c9fed1' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/admin/content_page.tpl',
-      1 => 1306843683,
+      1 => 1306895640,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '267694de4da258a9640-76525706',
+  'nocache_hash' => '126844e074d355be883-98030548',
   'function' => 
   array (
   ),
@@ -30,29 +30,27 @@ $_smarty_tpl->decodeProperties(array (
 <?php if ('edit'){?>&id=<?php echo $_smarty_tpl->getVariable('conpage')->value['id'];?>
 <?php }?>" method="post" enctype="multipart/form-data">
     <table>
-        <tr>
-            <td width="200">Название страницы (англ)</td>
-            <td><input name="data[page_title]" value="<?php echo $_smarty_tpl->getVariable('conpage')->value['page_title'];?>
-" /></td>
-        </tr>
+        <tr><td width="200">Название страницы (англ)</td>
+        <tr><td><input name="data[page_title]" value="<?php echo $_smarty_tpl->getVariable('conpage')->value['page_title'];?>
+" /></td></tr>
         <tr>
             <td>Название страницы</td>
-            <td><input name="data[title]" value="<?php echo $_smarty_tpl->getVariable('conpage')->value['title'];?>
+            <tr><td><input name="data[title]" value="<?php echo $_smarty_tpl->getVariable('conpage')->value['title'];?>
 " /></td>
         </tr>
         <tr>
             <td>Текст</td>
-            <td><?php echo $_smarty_tpl->getVariable('ckeditor')->value;?>
+            <tr><td><?php echo $_smarty_tpl->getVariable('ckeditor')->value;?>
   </td>
         </tr>
         <tr>
             <td>Описание</td>
-            <td><textarea name="data[description]"><?php echo $_smarty_tpl->getVariable('conpage')->value['description'];?>
+            <tr><td><textarea name="data[description]"><?php echo $_smarty_tpl->getVariable('conpage')->value['description'];?>
 </textarea></td>
         </tr>
         <tr>
             <td>Прикрепить файл</td>
-            <td>
+            <tr><td>
                 <?php if (isset($_smarty_tpl->getVariable('conpage',null,true,false)->value['file_list'])&&$_smarty_tpl->getVariable('conpage')->value['file_list']!==false){?>
                 <?php  $_smarty_tpl->tpl_vars['file'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('conpage')->value['file_list']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}

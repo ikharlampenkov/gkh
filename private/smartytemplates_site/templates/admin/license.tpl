@@ -1,4 +1,4 @@
-<h1>Лицензии</h1>
+<h1>Достижения</h1>
 
 {if $action=="add" || $action=="edit"}
 
@@ -7,7 +7,7 @@
 <form action="?page={$page}&action={$action}{if $action=="edit"}&id={$license.id}{/if}" method="post" enctype="multipart/form-data">
     <table>
         <tr>
-            <td>Лицензия</td>
+            <td>Достижение</td>
             <td>{if !empty($license.img)}<img src="{$siteurl}temp_files/{$license.img}" /><br />
                 &nbsp;<a href="?page={$page}&action=del_file&id={$license.id}&field=img">удалить</a><br />{/if}
                 <input type="file"  name="data[img]" /></td>
@@ -25,7 +25,7 @@
 {if $license_list!==false}
 <table>
     <tr>
-       <td>Лицензия</td>
+       <td>Достижение</td>
        <td>Описание</td>
        <td>&nbsp;</td>
     </tr>
@@ -41,6 +41,6 @@
 {/if}
 
 <br />
-<a href="?page={$page}&action=add">Добавить лицензию</a>
+<a href="?page={$page}&action=add">Добавить достижение</a>
 
 {/if}

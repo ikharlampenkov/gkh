@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-31 22:16:31
+<?php /* Smarty version Smarty-3.0.7, created on 2011-06-27 00:03:32
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/cabinet/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:130414de5064f1cee98-99656543%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:258894e076664976942-00598370%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ee775e62a317cd52355306397de7f90039ef34c1' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/cabinet/index.tpl',
-      1 => 1306854769,
+      1 => 1309107810,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '130414de5064f1cee98-99656543',
+  'nocache_hash' => '258894e076664976942-00598370',
   'function' => 
   array (
   ),
@@ -80,7 +80,7 @@ $_smarty_tpl->decodeProperties(array (
                                         <td height="30" class="topmenu">
                                             &nbsp;<img src="/img/karta.gif" align="absmiddle" /><img src="/img/mail.gif" align="absmiddle" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                             <a href="?page=faq">Вопрос-ответ</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <a href="?page=content_page&action=edit&id=helpful_information">Полезная информация</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <a href="?page=content_page&title=helpful_information">Полезная информация</a>&nbsp;&nbsp;&nbsp;&nbsp;
                                             <a href="?page=document">Документы</a>
                                         </td>
                                     </tr>
@@ -124,12 +124,12 @@ $_smarty_tpl->decodeProperties(array (
                                             <td width="750">
                                                 <ul>
                                                     <li class="<?php if ($_smarty_tpl->getVariable('spage')->value=='main'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmM" title="Главная" href="/">Главная</a></li>
-                                                    <li class="<?php if ($_smarty_tpl->getVariable('spage')->value=='about'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmC" title="О нас" href="?page=content_page&action=edit&id=about&spage=about">О нас</a></li>
-                                                    <li class="<?php if ($_smarty_tpl->getVariable('spage')->value=='service'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmS" title="Услуги" href="?page=content_page&action=edit&id=service&spage=service">Услуги</a></li>
-                                                    <li class="<?php if ($_smarty_tpl->getVariable('spage')->value=='rates'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmL" title="Тарифы" href="?page=content_page&action=edit&id=rates&spage=rates">Тарифы</a></li>
+                                                    <li class="<?php if ($_smarty_tpl->getVariable('spage')->value=='about'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmC" title="О нас" href="?page=content_page&title=about&spage=about">О нас</a></li>
+                                                    <li class="<?php if ($_smarty_tpl->getVariable('spage')->value=='service'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmS" title="Услуги" href="?page=content_page&title=service&spage=service">Услуги</a></li>
+                                                    <li class="<?php if ($_smarty_tpl->getVariable('spage')->value=='rates'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmL" title="Тарифы" href="?page=content_page&title=rates&spage=rates">Тарифы</a></li>
                                                     <li class="<?php if ($_smarty_tpl->getVariable('spage')->value=='news'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmCON" title="Новости" href="?page=news&spage=news">Новости</a</li>
                                                     <li class="<?php if ($_smarty_tpl->getVariable('spage')->value=='house'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tma" title="Ваш дом" href="?page=house&spage=house">Ваш дом</a></li>
-                                                    <li class="<?php if ($_smarty_tpl->getVariable('spage')->value=='reports'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmO" title="Отчеты" href="?page=content_page&action=edit&id=reports&spage=reports">Отчеты</a></li>
+                                                    <li class="<?php if ($_smarty_tpl->getVariable('spage')->value=='reports'){?>active<?php }else{ ?>noactive<?php }?>"><a id="tmO" title="Отчеты" href="?page=content_page&title=reports&spage=reports">Отчеты</a></li>
                                                 </ul>
                                             </td>
                                             <td align="right"><img src="img/right.jpg" /></td>
@@ -147,11 +147,10 @@ $_smarty_tpl->decodeProperties(array (
                                         <?php }?>
                                         <?php if ($_smarty_tpl->getVariable('spage')->value=='about'){?>
                                         <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value=='general_information'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Общая информация" href="?page=content_page&title=general_information&spage=about">Общая информация</a></li>
-                                        <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='license'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Лицензии" href="?page=license&spage=about">Лицензии</a></li>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='license'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Лицензии" href="?page=license&spage=about">Достижения</a></li>
                                         <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value=='leaders'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Руководство" href="?page=content_page&title=leaders&spage=about">Руководство</a></li>
                                         <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value=='passport_office'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Паспортный стол" href="?page=content_page&title=passport_office&spage=about">Паспортный стол</a></li>
                                         <li class="<?php if ($_smarty_tpl->getVariable('page')->value=='vacancy'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Вакансии" href="?page=vacancy&spage=about">Вакансии</a></li>
-                                        <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value=='distributor'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Поставщики" href="?page=content_page&title=distributor&spage=about">Поставщики</a></li>
                                         <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value=='contact'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Контакты" href="?page=content_page&title=contact&spage=about">Контакты</a></li>
                                         <?php }?>
                                         <?php if ($_smarty_tpl->getVariable('spage')->value=='service'){?>
@@ -175,24 +174,22 @@ $_smarty_tpl->decodeProperties(array (
                                         <?php if ($_smarty_tpl->getVariable('spage')->value=='house'){?>
                                         <li class="<?php if ($_smarty_tpl->getVariable('category')->value=='all'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Обслуживаемые дома" href="?page=house&category=all&spage=house">Обслуживаемые дома</a></li>
                                         <li class="<?php if ($_smarty_tpl->getVariable('category')->value=='plan'){?>active<?php }else{ ?>noactive<?php }?>"><a title="План проводимых работ" href="?page=house&category=plan&spage=house">План проводимых работ</a></li>
-                                        <li class="<?php if ($_smarty_tpl->getVariable('category')->value=='reports'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Отчет по капитальном ремонту" href="?page=house&category=reports&spage=house">Отчет по капитальном ремонту</a></li>
                                         <?php }?>
                                         <?php if ($_smarty_tpl->getVariable('spage')->value=='reports'){?>
                                         <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value=='financial_statements'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Бухгалтерская отчетность" href="?page=content_page&title=financial_statements&spage=reports">Бухгалтерская отчетность</a></li>
-                                        <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value=='income'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Доходы" href="?page=content_page&title=income&spage=reports">Доходы</a></li>
-                                        <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value=='costs'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Расходы" href="?page=content_page&title=costs&spage=reports">Расходы</a></li>
+                                        <li class="<?php if ($_smarty_tpl->getVariable('conpage_title')->value=='income'){?>active<?php }else{ ?>noactive<?php }?>"><a title="Отчет о прибылях и убытка" href="?page=content_page&title=income&spage=reports">Отчет о прибылях и убытка</a></li>
                                         <?php }?>
                                     </ul>
                                 </div>
 
                                 <script type="text/javascript">
                                 var submenus = [ {  id:"tmM",subs:[  {  "t":"Раскрытие информации","u":"?page=content_page&title=disclosure_of_information" } , { "t":"Личный кабинет","u":"?page=content_page&title=cabinet" } , { "t":"Жизненные ситуации","u":"?page=faq&is_situation=1" } , { "t":"Важная информация","u":"?page=content_page&title=important_information" } ] } ,
-                                                 { id:"tmC",subs:[ { "t":"Общая информация","u":"?page=content_page&title=general_information&spage=about" } , { "t":"Лицензии","u":"?page=license&spage=about" } , { "t":"Руководство","u":"?page=content_page&title=leaders&spage=about" } , { "t":"Паспортный стол","u":"?page=content_page&title=passport_office&spage=about" } , { "t":"Вакансии","u":"?page=vacancy&spage=about" } , { "t":"Поставщики","u":"?page=content_page&title=distributor&spage=about" } , { "t":"Контакты","u":"?page=content_page&title=contact&spage=about" } ] } , 
+                                                 { id:"tmC",subs:[ { "t":"Общая информация","u":"?page=content_page&title=general_information&spage=about" } , { "t":"Достижения","u":"?page=license&spage=about" } , { "t":"Руководство","u":"?page=content_page&title=leaders&spage=about" } , { "t":"Паспортный стол","u":"?page=content_page&title=passport_office&spage=about" } , { "t":"Вакансии","u":"?page=vacancy&spage=about" } , { "t":"Контакты","u":"?page=content_page&title=contact&spage=about" } ] } , 
                                                  { id:"tmS",subs:[ { "t":"Электротехнические работы","u":"?page=content_page&title=eltechrab&spage=service" } , { "t":"Сантехнические работы","u":"?page=content_page&title=santechrab&spage=service" } , { "t":"Содержание дома","u":"?page=content_page&title=keep_the_house&spage=service" } , { "t":"Где оплатить?","u":"?page=content_page&title=where_to_pay&spage=service" } ] } , 
                                                  { id:"tmL",subs:[ { "t":"Жилищно-коммунальные услуги","u":"?page=content_page&title=gkh&spage=rates" } , { "t":"Коммунальные ресурсы","u":"?page=content_page&title=communal_resources&spage=rates" } , { "t":"Где оплатить?","u":"?page=content_page&title=where_to_pay&spage=rates" } ] } , 
                                                  { id:"tmCON",subs:[ { "t":"Объявления","u":"?page=news&category=1&spage=news" } , { "t":"Отключения","u":"?page=news&category=2&spage=news" } , { "t":"Подключения","u":"?page=news&category=3&spage=news" } , { "t":"Согласования","u":"?page=news&category=4&spage=news" } , { "t":"Законодательство","u":"?page=news&category=5&spage=news" } ] } , 
-                                                 { id:"tma",subs:[ { "t":"Обслуживаемые дома","u":"?page=house&category=all&spage=house" } , { "t":"План проводимых работ","u":"?page=house&category=plan&spage=house" } , { "t":"Отчет по капитальном ремонту","u":"?page=house&category=reports&spage=house" } ] } , 
-                                                 { id:"tmO",subs:[ { "t":"Бухгалтерская отчетность","u":"?page=content_page&title=financial_statements&spage=reports" } , { "t":"Доходы","u":"?page=content_page&title=income&spage=reports" } , { "t":"Расходы","u":"?page=content_page&title=costs&spage=reports" } ] } ];
+                                                 { id:"tma",subs:[ { "t":"Обслуживаемые дома","u":"?page=house&category=all&spage=house" } , { "t":"План проводимых работ","u":"?page=house&category=plan&spage=house" } ] } , 
+                                                 { id:"tmO",subs:[ { "t":"Бухгалтерская отчетность","u":"?page=content_page&title=financial_statements&spage=reports" } , { "t":"Отчет о прибылях и убытка","u":"?page=content_page&title=income&spage=reports" } ] } ];
                                 </script>
                                 
                                 </div>
@@ -217,16 +214,17 @@ $_smarty_tpl->decodeProperties(array (
 
                                 <table border="0" width="100">
                                     <tr>
-                                        <td width="230">
+                                        <td width="230" style="font-size: 16px;">
 
-                                            <a href="?page=receipt">Электронная квитанция</a><br /><br />
+                                            <a href="?page=receipt">Счет-фактура</a><br /><br />
                                             <a href="?page=balance">Баланс платежей</a><br /><br />
                                             <a href="?page=meters">Показания счетчиков</a><br /><br />
-                                            <a href="?page=payment">Оплата услуг</a><br /><br />
                                             <a href="?page=support&category=request_master">Заявка на вызов мастера</a><br /><br />
                                             <a href="?page=support&category=question">Задать вопрос</a><br /><br />
+                                            <a href="?page=payment">Оплата услуг</a><br /><br />
+                                            <a href="?page=content_page&title=kap_remont">Журнал проводимых работ</a></li>
                                         </td>
-                                        <td>
+                                        <td style="font-size: 14px;">
 
                     <?php if (isset($_smarty_tpl->getVariable('page',null,true,false)->value)&&!empty($_smarty_tpl->getVariable('page',null,true,false)->value)){?>
                         <?php $_template = new Smarty_Internal_Template("cabinet/".($_smarty_tpl->getVariable('page')->value).".tpl", $_smarty_tpl->smarty, $_smarty_tpl, $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null);

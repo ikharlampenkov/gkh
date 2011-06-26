@@ -9,16 +9,16 @@ if ($page == 'content_page') {
     global $__cfg;
 
     include_once $__cfg['site.dir'] . '/ckeditor/ckeditor.php';
-    require_once $__cfg['site.dir'] . '/ckfinder/ckfinder.php' ;
-    
+    require_once $__cfg['site.dir'] . '/ckfinder/ckfinder.php';
+
     $CKEditor = new CKEditor();
     $CKEditor->basePath = '/ckeditor/';
     $CKEditor->returnOutput = true;
-    
+
     $ckfinder = new CKFinder();
     $ckfinder->BasePath = '/ckfinder/';
     $ckfinder->SetupCKEditorObject($CKEditor);
-    
+
     $o_content_page = new gkh_content_page_site();
 
     if ($action == 'add') {
@@ -38,7 +38,7 @@ if ($page == 'content_page') {
             simo_functions::chLocation('?page=' . $page . '&action=edit&id=' . $_GET['id']);
             exit;
         }
-        
+
         $conpage = $o_content_page->getContentPage($_GET['id']);
 
         $o_smarty->assign('txt', 'Редактировать контентную страницу');
@@ -49,7 +49,7 @@ if ($page == 'content_page') {
         simo_functions::chLocation('?page=' . $page);
     } elseif ($action == 'del_pic') {
         $o_content_page->deleteFile($_GET['id'], $_GET['fname']);
-        simo_functions::chLocation('?page=' . $page . '&action=edit&id=' . $_GET['id']);        
+        simo_functions::chLocation('?page=' . $page . '&action=edit&id=' . $_GET['id']);
     } else {
         $o_smarty->assign('conpage_list', $o_content_page->getAllContentPage());
     }
@@ -57,13 +57,13 @@ if ($page == 'content_page') {
 
 if ($page == 'messaging') {
     $o_pa = new gkh_personal_account_site();
-    
+
     if (isset($_POST['data'])) {
         $o_pa->sendMessage($_POST['data']);
         simo_functions::chLocation('?page=' . $page);
         exit;
     }
-    
+
     $o_smarty->assign('pa_list', $o_pa->getAllPAForMessage());
 }
 
@@ -130,7 +130,7 @@ if ($page == 'news') {
         $o_news->deleteComment($_GET['news_id'], $_GET['id']);
         simo_functions::chLocation('?page=' . $page . '&action=show_comment&id=' . $_GET['news_id']);
     } elseif ($action == 'show_comment') {
-        $o_smarty->assign('news', $o_news->getNews($_GET['id']));  
+        $o_smarty->assign('news', $o_news->getNews($_GET['id']));
         $o_smarty->assign('news_comment_list', $o_news->getAllCommentByNews($_GET['id'], gkh_news::ANY_COMMENT));
     } else {
 
@@ -140,7 +140,7 @@ if ($page == 'news') {
             $cur_page = 0;
         }
         $o_smarty->assign('cur_page', $cur_page);
-        
+
 
         $o_smarty->assign('news_category_list', $o_news->getAllNewsCategory());
         $o_smarty->assign('news_list', $o_news->getAllNews(gkh_news::ANY_CATEGORY, $cur_page));
@@ -312,13 +312,13 @@ if ($page == 'vacancy') {
 }
 
 if ($page == 'support') {
-    
+
     if (isset($_GET['category'])) {
         $category = $_GET['category'];
     } else {
         $category = gkh_tech_support_post_site::CATEGORY_REQUEST_MASTER;
     }
-    
+
     if ($category == gkh_tech_support_post_site::CATEGORY_REQUEST_MASTER) {
         $o_smarty->assign('module_title', 'Заявки на вызов мастера');
         $o_smarty->assign('action_title', 'Подать заявку');
@@ -336,7 +336,7 @@ if ($page == 'support') {
     $o_tech_support_post = new gkh_tech_support_post_site(0);
     $o_pa = new gkh_personal_account_site();
 
-    
+
     if ($action == 'answer') {
         if (isset($_POST['data'])) {
             $o_tech_support_post->answerQuestion($_GET['id'], $_POST['data']);
@@ -381,7 +381,7 @@ if ($page == 'support') {
         $o_smarty->assign('ticket_status', $o_tech_support_post->getTicketStatus($_GET['id']));
     } elseif ($action == 'del_status') {
         $o_tech_support_post->deleteTicketStatus($_GET['id']);
-        simo_functions::chLocation('?page=' . $page . '&category=' . $category);    
+        simo_functions::chLocation('?page=' . $page . '&category=' . $category);
     } else {
         $o_smarty->assign('ticket_status_list', $o_tech_support_post->getAllTicketStatus());
         $o_smarty->assign('ticket_list', $o_tech_support_post->getAllTicket($category));
@@ -397,13 +397,13 @@ if ($page == 'document') {
     } else {
         $what = 'документ';
     }
-    
+
     if (isset($_GET['root'])) {
         $root = $_GET['root'];
     } else {
         $root = gkh_document::IS_ROOT;
     }
-    
+
     if ($action == 'add' || $action == 'add_folder') {
         if (isset($_POST['data'])) {
             $o_document->addDocument($_POST['data']);
@@ -424,11 +424,11 @@ if ($page == 'document') {
         $o_smarty->assign('txt', 'Редактировать ' . $what);
         $o_smarty->assign('document', $o_document->getDocument($_GET['id']));
         $o_smarty->assign('folder_list', $o_document->getFolderList());
-    } elseif ($action == 'del') {
-        $o_document->deleteNews($_GET['id']);
+    } elseif ($action == 'del' || $action == 'del_folder') {
+        $o_document->deleteDocument($_GET['id']);
         simo_functions::chLocation('?page=' . $page);
     } else {
-      
+
 
         $o_smarty->assign('document_list', $o_document->getDocumentCatalog($root));  //$o_document->getAllDocument()
         $o_smarty->assign('path_to_document', $o_document->getFullPathToFolder($root));
@@ -444,13 +444,13 @@ if ($page == 'faq') {
     } else {
         $what = 'вопрос';
     }
-    
+
     if (isset($_GET['root'])) {
         $root = $_GET['root'];
     } else {
         $root = gkh_faq::IS_ROOT;
     }
-    
+
     if ($action == 'add' || $action == 'add_folder') {
         if (isset($_POST['data'])) {
             $o_faq->addFaq($_POST['data']);
@@ -471,11 +471,11 @@ if ($page == 'faq') {
         $o_smarty->assign('txt', 'Редактировать ' . $what);
         $o_smarty->assign('faq', $o_faq->getFaq($_GET['id']));
         $o_smarty->assign('folder_list', $o_faq->getFolderList());
-    } elseif ($action == 'del') {
+    } elseif ($action == 'del' || $action == 'del_folder') {
         $o_faq->deleteNews($_GET['id']);
         simo_functions::chLocation('?page=' . $page);
     } else {
-      
+
 
         $o_smarty->assign('faq_list', $o_faq->getFaqCatalog($root));  //$o_faq->getAllFaq()
         $o_smarty->assign('path_to_faq', $o_faq->getFullPathToFolder($root));
@@ -512,20 +512,26 @@ if ($page == 'personal_account') {
         simo_functions::chLocation('?page=' . $page);
     } elseif ($action == 'meters') {
         $o_meters = new gkh_meters($_GET['id']);
-        
+
         if (isset($_POST['data'])) {
             $o_meters->setMetersForUser($_POST['data']);
             simo_functions::chLocation('?page=' . $page);
             exit;
         }
-        
+
         $o_smarty->assign('pa', $o_pa->getPA($_GET['id']));
-        $o_smarty->assign('meters_list', $o_meters->getAllMeters()); 
+        $o_smarty->assign('meters_list', $o_meters->getAllMeters());
         $o_smarty->assign('pa_meters', $o_meters->getMetersListByUser());
     } else {
         $o_smarty->assign('pa_list', $o_pa->getAllPA());
     }
 }
+
+$o_news = new gkh_news();
+$o_smarty->assign('news_list', $o_news->getTopNews(gkh_news::ANY_CATEGORY));
+
+$o_faq = new gkh_faq();
+$o_smarty->assign('faq_title_list', $o_faq->getSituationFaq());
 
 $o_smarty->display('admin/index.tpl');
 ?>

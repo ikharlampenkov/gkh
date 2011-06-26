@@ -7,9 +7,9 @@
   `question` TEXT NOT NULL ,
   `answer` TEXT NULL ,
   `is_folder` TINYINT(1)  NOT NULL DEFAULT 0 ,
-   is_situation
+  is_situation
   PRIMARY KEY (`id`) )
-ENGINE = InnoDB
+  ENGINE = InnoDB
  */
 
 /**
@@ -30,6 +30,10 @@ class gkh_faq extends gkh {
             $sql = 'SELECT * FROM faq';
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
+                foreach ($result as &$res) {
+                    $res['question'] = str_replace('\"', '"', $res['question']);
+                    $res['answer'] = str_replace('\"', '"', $res['answer']);
+                }
                 return $result;
             } else
                 return false;
@@ -37,11 +41,16 @@ class gkh_faq extends gkh {
             simo_exception::registrMsg($e, $this->_debug);
         }
     }
+
     public function getSituationFaq() {
         try {
             $sql = 'SELECT * FROM faq WHERE is_situation=1';
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
+                foreach ($result as &$res) {
+                    $res['question'] = str_replace('\"', '"', $res['question']);
+                    $res['answer'] = str_replace('\"', '"', $res['answer']);
+                }
                 return $result;
             } else
                 return false;
@@ -55,6 +64,8 @@ class gkh_faq extends gkh {
             $sql = 'SELECT * FROM faq WHERE id=' . (int)$id;
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
+                $result[0]['question'] = str_replace('\"', '"', $result[0]['question']);
+                $result[0]['answer'] = str_replace('\"', '"', $result[0]['answer']);
                 return $result[0];
             } else
                 return false;
@@ -91,8 +102,8 @@ class gkh_faq extends gkh {
             simo_exception::registrMsg($e, $this->_debug);
         }
     }
-    
-   // parrent_id, question, answer, is_folder
+
+    // parrent_id, question, answer, is_folder
 
     public function getFullPathToFolder($folder_id, array &$path = array()) {
         try {
@@ -118,7 +129,7 @@ class gkh_faq extends gkh {
     public function addFaq($data) {
         try {
             $data = $this->_db->prepareArray($data);
-            
+
             if (isset($data['is_situation'])) {
                 $data['is_situation'] = 1;
             } else {
@@ -137,7 +148,7 @@ class gkh_faq extends gkh {
     public function updateFaq($id, $data) {
         try {
             $data = $this->_db->prepareArray($data);
-            
+
             if (isset($data['is_situation'])) {
                 $data['is_situation'] = 1;
             } else {

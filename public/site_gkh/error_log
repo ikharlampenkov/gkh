@@ -1,0 +1,115 @@
+[24-May-2011 13:52:21] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dnevnik/public_html/gkh/site_gkh/index.php:45) in /home/dnevnik/private/classes/stdclass/simo_smarty.php on line 40
+[24-May-2011 13:52:21] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dnevnik/public_html/gkh/site_gkh/index.php:45) in /home/dnevnik/private/classes/stdclass/simo_smarty.php on line 41
+[24-May-2011 13:53:03] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dnevnik/public_html/gkh/site_gkh/index.php:45) in /home/dnevnik/private/classes/stdclass/simo_smarty.php on line 40
+[24-May-2011 13:53:03] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dnevnik/public_html/gkh/site_gkh/index.php:45) in /home/dnevnik/private/classes/stdclass/simo_smarty.php on line 41
+[24-May-2011 13:53:28] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dnevnik/public_html/gkh/site_gkh/index.php:45) in /home/dnevnik/public_html/gkh/site_gkh/index.php on line 54
+[24-May-2011 13:53:28] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dnevnik/public_html/gkh/site_gkh/index.php:45) in /home/dnevnik/private/classes/stdclass/simo_smarty.php on line 40
+[24-May-2011 13:53:28] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dnevnik/public_html/gkh/site_gkh/index.php:45) in /home/dnevnik/private/classes/stdclass/simo_smarty.php on line 41
+[29-May-2011 22:37:28] PHP Fatal error:  Uncaught exception 'SmartyException' with message 'Unable to load template file 'faq.tpl'' in /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php:163
+Stack trace:
+#0 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(550): Smarty_Internal_Template->isExisting(true)
+#1 /home/dnevnik/private/smartytemplates_site/templates_c/d8ff63475e9b3f59b053b05398e9ae381b219251.file.index.tpl.php(158): Smarty_Internal_Template->getRenderedTemplate()
+#2 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(432): include('/home/dnevnik/p...')
+#3 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(567): Smarty_Internal_Template->renderTemplate()
+#4 /home/dnevnik/private/classes/smarty/Smarty.class.php(338): Smarty_Internal_Template->getRenderedTemplate()
+#5 /home/dnevnik/private/classes/smarty/Smarty.class.php(382): Smarty->fetch('index.tpl', NULL, NULL, NULL, true)
+#6 /home/dnevnik/private/classes/stdclass/simo_smarty.php(52): Sm in /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php on line 163
+[29-May-2011 22:38:36] PHP Fatal error:  Uncaught exception 'SmartyException' with message 'Unable to load template file 'faq.tpl'' in /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php:163
+Stack trace:
+#0 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(550): Smarty_Internal_Template->isExisting(true)
+#1 /home/dnevnik/private/smartytemplates_site/templates_c/d8ff63475e9b3f59b053b05398e9ae381b219251.file.index.tpl.php(158): Smarty_Internal_Template->getRenderedTemplate()
+#2 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(432): include('/home/dnevnik/p...')
+#3 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(567): Smarty_Internal_Template->renderTemplate()
+#4 /home/dnevnik/private/classes/smarty/Smarty.class.php(338): Smarty_Internal_Template->getRenderedTemplate()
+#5 /home/dnevnik/private/classes/smarty/Smarty.class.php(382): Smarty->fetch('index.tpl', NULL, NULL, NULL, true)
+#6 /home/dnevnik/private/classes/stdclass/simo_smarty.php(52): Sm in /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php on line 163
+[30-May-2011 14:49:47] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 14:49:53] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 14:50:02] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 14:50:04] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 14:50:07] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 14:50:09] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 14:50:11] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 14:50:12] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 14:50:13] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 14:50:15] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 14:50:29] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 14:50:31] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 14:50:32] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 14:50:33] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 14:50:34] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 14:50:36] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 14:51:33] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 14:51:34] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 14:51:36] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 14:52:04] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 14:52:16] PHP Fatal error:  Class 'simo_log' not found in /home/dnevnik/private/classes/simo_site.php on line 50
+[30-May-2011 23:44:52] PHP Fatal error:  Uncaught exception 'SmartyException' with message 'Unable to load template file 'personal_account.tpl'' in /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php:163
+Stack trace:
+#0 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(550): Smarty_Internal_Template->isExisting(true)
+#1 /home/dnevnik/private/smartytemplates_site/templates_c/d8ff63475e9b3f59b053b05398e9ae381b219251.file.index.tpl.php(201): Smarty_Internal_Template->getRenderedTemplate()
+#2 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(432): include('/home/dnevnik/p...')
+#3 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(567): Smarty_Internal_Template->renderTemplate()
+#4 /home/dnevnik/private/classes/smarty/Smarty.class.php(338): Smarty_Internal_Template->getRenderedTemplate()
+#5 /home/dnevnik/private/classes/smarty/Smarty.class.php(382): Smarty->fetch('index.tpl', NULL, NULL, NULL, true)
+#6 /home/dnevnik/private/classes/stdclass/simo_smart in /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php on line 163
+[30-May-2011 23:57:40] PHP Fatal error:  Uncaught exception 'SmartyException' with message 'Unable to load template file 'personal_account.tpl'' in /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php:163
+Stack trace:
+#0 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(550): Smarty_Internal_Template->isExisting(true)
+#1 /home/dnevnik/private/smartytemplates_site/templates_c/d8ff63475e9b3f59b053b05398e9ae381b219251.file.index.tpl.php(201): Smarty_Internal_Template->getRenderedTemplate()
+#2 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(432): include('/home/dnevnik/p...')
+#3 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(567): Smarty_Internal_Template->renderTemplate()
+#4 /home/dnevnik/private/classes/smarty/Smarty.class.php(338): Smarty_Internal_Template->getRenderedTemplate()
+#5 /home/dnevnik/private/classes/smarty/Smarty.class.php(382): Smarty->fetch('index.tpl', NULL, NULL, NULL, true)
+#6 /home/dnevnik/private/classes/stdclass/simo_smart in /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php on line 163
+[31-May-2011 18:07:52] PHP Warning:  copy(/home/dnevnik/public_html/site_gkh/temp_files/8_31-05-2011-18-07-52_.doc) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/dnevnik/private/classes/gkh/gkh_document.php on line 174
+[31-May-2011 18:07:52] PHP Warning:  chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory in /home/dnevnik/private/classes/gkh/gkh_document.php on line 175
+[31-May-2011 18:07:52] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dnevnik/private/classes/gkh/gkh_document.php:169) in /home/dnevnik/private/classes/stdclass/simo_functions.php on line 67
+[31-May-2011 19:11:42] PHP Warning:  copy(/home/dnevnik/public_html/site_gkh/temp_files/8_31-05-2011-19-11-42_.doc) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/dnevnik/private/classes/gkh/gkh_document.php on line 174
+[31-May-2011 19:11:42] PHP Warning:  chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory in /home/dnevnik/private/classes/gkh/gkh_document.php on line 175
+[31-May-2011 19:11:42] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dnevnik/private/classes/gkh/gkh_document.php:169) in /home/dnevnik/private/classes/stdclass/simo_functions.php on line 67
+[31-May-2011 19:15:23] PHP Warning:  copy(/home/dnevnik/public_html/site_gkh/temp_files/8_31-05-2011-19-15-23_.doc) [<a href='function.copy'>function.copy</a>]: failed to open stream: No such file or directory in /home/dnevnik/private/classes/gkh/gkh_document.php on line 174
+[31-May-2011 19:15:23] PHP Warning:  chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory in /home/dnevnik/private/classes/gkh/gkh_document.php on line 175
+[31-May-2011 19:15:23] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dnevnik/private/classes/gkh/gkh_document.php:169) in /home/dnevnik/private/classes/stdclass/simo_functions.php on line 67
+[31-May-2011 19:21:25] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dnevnik/private/classes/gkh/gkh_document.php:169) in /home/dnevnik/private/classes/stdclass/simo_functions.php on line 67
+[31-May-2011 19:30:54] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dnevnik/private/classes/gkh/gkh_content_page_site.php:105) in /home/dnevnik/private/classes/stdclass/simo_functions.php on line 67
+[31-May-2011 23:35:24] PHP Warning:  Invalid argument supplied for foreach() in /home/dnevnik/public_html/gkh/site_gkh/cabinet/index.php on line 28
+[31-May-2011 23:35:24] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dnevnik/public_html/gkh/site_gkh/cabinet/index.php:28) in /home/dnevnik/private/classes/stdclass/simo_smarty.php on line 40
+[31-May-2011 23:35:24] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dnevnik/public_html/gkh/site_gkh/cabinet/index.php:28) in /home/dnevnik/private/classes/stdclass/simo_smarty.php on line 41
+[01-Jun-2011 10:08:19] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dnevnik/private/classes/gkh/gkh_house.php:162) in /home/dnevnik/private/classes/stdclass/simo_functions.php on line 67
+[01-Jun-2011 10:08:37] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dnevnik/private/classes/gkh/gkh_house.php:162) in /home/dnevnik/private/classes/stdclass/simo_functions.php on line 67
+[01-Jun-2011 10:11:08] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dnevnik/private/classes/gkh/gkh_house.php:162) in /home/dnevnik/private/classes/stdclass/simo_functions.php on line 67
+[01-Jun-2011 10:42:49] PHP Warning:  Invalid argument supplied for foreach() in /home/dnevnik/private/classes/gkh/gkh_personal_account_site.php on line 146
+[01-Jun-2011 10:42:49] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dnevnik/private/classes/gkh/gkh_personal_account_site.php:146) in /home/dnevnik/private/classes/stdclass/simo_functions.php on line 67
+[01-Jun-2011 10:45:05] PHP Fatal error:  Call to undefined method gkh_personal_account_site::getPersonalAccount() in /home/dnevnik/private/classes/gkh/gkh_personal_account_site.php on line 148
+[01-Jun-2011 11:44:49] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dnevnik/private/classes/gkh/gkh_license.php:113) in /home/dnevnik/private/classes/stdclass/simo_functions.php on line 67
+[01-Jun-2011 11:46:22] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/dnevnik/private/classes/gkh/gkh_license.php:113) in /home/dnevnik/private/classes/stdclass/simo_functions.php on line 67
+[01-Jun-2011 14:24:32] PHP Fatal error:  Uncaught exception 'SmartyException' with message 'Unable to load template file 'cabinet/document.tpl'' in /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php:163
+Stack trace:
+#0 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(550): Smarty_Internal_Template->isExisting(true)
+#1 /home/dnevnik/private/smartytemplates_site/templates_c/eedd30e0050dea613007f19898eac20b5e839049.file.index.tpl.php(233): Smarty_Internal_Template->getRenderedTemplate()
+#2 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(432): include('/home/dnevnik/p...')
+#3 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(567): Smarty_Internal_Template->renderTemplate()
+#4 /home/dnevnik/private/classes/smarty/Smarty.class.php(338): Smarty_Internal_Template->getRenderedTemplate()
+#5 /home/dnevnik/private/classes/smarty/Smarty.class.php(382): Smarty->fetch('cabinet/index.t...', NULL, NULL, NULL, true)
+#6 /home/dnevnik/private/classes/stdclass/s in /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php on line 163
+[01-Jun-2011 20:06:16] PHP Fatal error:  Uncaught exception 'SmartyException' with message 'Unable to load template file 'balance.tpl'' in /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php:163
+Stack trace:
+#0 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(550): Smarty_Internal_Template->isExisting(true)
+#1 /home/dnevnik/private/smartytemplates_site/templates_c/d8ff63475e9b3f59b053b05398e9ae381b219251.file.index.tpl.php(200): Smarty_Internal_Template->getRenderedTemplate()
+#2 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(432): include('/home/dnevnik/p...')
+#3 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(567): Smarty_Internal_Template->renderTemplate()
+#4 /home/dnevnik/private/classes/smarty/Smarty.class.php(338): Smarty_Internal_Template->getRenderedTemplate()
+#5 /home/dnevnik/private/classes/smarty/Smarty.class.php(382): Smarty->fetch('index.tpl', NULL, NULL, NULL, true)
+#6 /home/dnevnik/private/classes/stdclass/simo_smarty.php(52) in /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php on line 163
+[02-Jun-2011 10:23:41] PHP Fatal error:  Uncaught exception 'SmartyException' with message 'Unable to load template file 'messaging.tpl'' in /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php:163
+Stack trace:
+#0 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(550): Smarty_Internal_Template->isExisting(true)
+#1 /home/dnevnik/private/smartytemplates_site/templates_c/d8ff63475e9b3f59b053b05398e9ae381b219251.file.index.tpl.php(199): Smarty_Internal_Template->getRenderedTemplate()
+#2 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(432): include('/home/dnevnik/p...')
+#3 /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php(567): Smarty_Internal_Template->renderTemplate()
+#4 /home/dnevnik/private/classes/smarty/Smarty.class.php(338): Smarty_Internal_Template->getRenderedTemplate()
+#5 /home/dnevnik/private/classes/smarty/Smarty.class.php(382): Smarty->fetch('index.tpl', NULL, NULL, NULL, true)
+#6 /home/dnevnik/private/classes/stdclass/simo_smarty.php(5 in /home/dnevnik/private/classes/smarty/sysplugins/smarty_internal_template.php on line 163
+[21-Jun-2011 01:01:15] PHP Fatal error:  Call to undefined method gkh_document::deleteNews() in /home/dnevnik/public_html/gkh/site_gkh/admin/index.php on line 428
+[21-Jun-2011 01:05:37] PHP Fatal error:  Call to undefined method gkh_document::deleteNews() in /home/dnevnik/public_html/gkh/site_gkh/admin/index.php on line 428
