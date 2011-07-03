@@ -45,7 +45,7 @@
 
         <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
             <tr>
-                <td style="border:#999999 1px solid;" align="center"><a href="?page=messaging">Рассылка сообщений</a> </td>
+                <td style="border:#999999 1px solid;" align="center"><a href="?page=messaging">Рассылка сообщений</a> / <a href="?page=content_page&action=edit&id=debt_call">Обзвон должников</a> / <a href="?page=content_page&action=edit&id=sms_message">Смс рассылка</a> / <a href="?page=content_page&action=edit&id=tele_rating">Телеголосование</a> </td>
             </tr>
             <tr>
                 <td style="border:#999999 1px solid;" align="center"><a href="?page=content_page">Контентная страница</a> / <a href="?page=news">Новости</a> / <a href="?page=meters">Счетчики</a> / <a href="?page=house">Дома</a> / <a href="?page=license">Достижения</a> / <a href="?page=personal">Персонал</a> / <a href="?page=vacancy">Вакансии</a> / <a href="?page=document">Документы</a> / <a href="?page=faq">Вопросы и ответы</a> / <a href="?page=personal_account">Лицевые счета</a> / <a href="?page=support&category=request_master">Заявка на вызов мастера</a> / <a href="?page=support&category=question">Задать вопрос</a>  </td>

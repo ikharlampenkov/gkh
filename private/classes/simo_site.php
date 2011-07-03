@@ -43,6 +43,11 @@ function autoload($className) {
   if(file_exists($fn = $__cfg['site.main.dir'] . 'private/classes/gkh_site/' . $className . '.php')) {
     include_once($fn);
   }
+  
+  if(file_exists($fn = $__cfg['site.main.dir'] . 'private/classes/FileManager/' . $className . '.php')) {
+    include_once($fn);
+  }
+  
 }
 
 spl_autoload_register('autoload', false);

@@ -10,7 +10,7 @@
             <td>Достижение</td>
             <td>{if !empty($license.img)}<img src="{$siteurl}temp_files/{$license.img}" /><br />
                 &nbsp;<a href="?page={$page}&action=del_file&id={$license.id}&field=img">удалить</a><br />{/if}
-                <input type="file"  name="data[img]" /></td>
+                <input type="file"  name="img" /></td>
         </tr>
         <tr>
             <td width="200">Описание</td>

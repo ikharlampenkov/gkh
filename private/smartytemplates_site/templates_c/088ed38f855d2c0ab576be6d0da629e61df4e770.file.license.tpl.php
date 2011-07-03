@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-06-26 23:55:32
+<?php /* Smarty version Smarty-3.0.7, created on 2011-07-03 23:38:44
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/admin/license.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:74094e076484c7dec1-40881882%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:240454e109b147a9241-20807094%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '088ed38f855d2c0ab576be6d0da629e61df4e770' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/admin/license.tpl',
-      1 => 1309107286,
+      1 => 1309711102,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '74094e076484c7dec1-40881882',
+  'nocache_hash' => '240454e109b147a9241-20807094',
   'function' => 
   array (
   ),
@@ -38,7 +38,7 @@ temp_files/<?php echo $_smarty_tpl->getVariable('license')->value['img'];?>
                 &nbsp;<a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
 &action=del_file&id=<?php echo $_smarty_tpl->getVariable('license')->value['id'];?>
 &field=img">удалить</a><br /><?php }?>
-                <input type="file"  name="data[img]" /></td>
+                <input type="file"  name="img" /></td>
         </tr>
         <tr>
             <td width="200">Описание</td>

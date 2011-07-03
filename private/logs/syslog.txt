@@ -14385,3 +14385,217 @@ info   SELECT news.id, news_category_id, date, news.title, short_text, full_text
                     WHERE news.news_category_id=news_category.id  ORDER BY date DESC
                       LIMIT 5  27.06.2011 00:14
 info   SELECT * FROM faq WHERE is_situation=1  27.06.2011 00:14
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.06.2011 23:39
+info   SELECT * FROM faq WHERE is_situation=1  27.06.2011 23:39
+info   SELECT user_id FROM personal_account WHERE id="1"  27.06.2011 23:39
+info   SELECT * FROM user WHERE id=2 OR login="2"  27.06.2011 23:39
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="ten"  27.06.2011 23:39
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.06.2011 23:39
+info   SELECT * FROM faq WHERE is_situation=1  27.06.2011 23:39
+info   SELECT password FROM user WHERE login="ten"  27.06.2011 23:39
+info   SELECT * FROM personal_account WHERE user_id=2  27.06.2011 23:39
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.06.2011 23:39
+info   SELECT * FROM faq WHERE is_situation=1  27.06.2011 23:39
+info   SELECT password FROM user WHERE login="ten"  27.06.2011 23:40
+info   SELECT * FROM personal_account WHERE user_id=2  27.06.2011 23:40
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  27.06.2011 23:40
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.06.2011 23:40
+info   SELECT * FROM faq WHERE is_situation=1  27.06.2011 23:40
+info   SELECT password FROM user WHERE login="ten"  27.06.2011 23:40
+info   SELECT * FROM personal_account WHERE user_id=2  27.06.2011 23:40
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.06.2011 23:40
+info   SELECT * FROM faq WHERE is_situation=1  27.06.2011 23:40
+info   SELECT password FROM user WHERE login="ten"  27.06.2011 23:40
+info   SELECT * FROM personal_account WHERE user_id=2  27.06.2011 23:40
+info   INSERT INTO tech_support_ticket(personal_account_id, title, date, category, ticket_status_id) 
+                        VALUES(1, "оавоавоваоавов", "2011-06-27 23:40:09", "request_master", 1)  27.06.2011 23:40
+info   SELECT LAST_INSERT_ID()  27.06.2011 23:40
+info   INSERT INTO tech_support_post(ticket_id, question, date_question, file) 
+                        VALUES(3, "оавоавоваоавов", "2011-06-27 23:40:09", "")  27.06.2011 23:40
+info   SELECT password FROM user WHERE login="ten"  27.06.2011 23:40
+info   SELECT * FROM personal_account WHERE user_id=2  27.06.2011 23:40
+info   SELECT tech_support_ticket.id, personal_account_id, tech_support_ticket.title, date, category, tech_support_ticket_status.title as status  
+                         FROM tech_support_ticket, tech_support_ticket_status 
+                         WHERE tech_support_ticket.ticket_status_id=tech_support_ticket_status.id 
+                           AND personal_account_id=1 
+                           AND category="request_master" ORDER BY rating DESC, date DESC  27.06.2011 23:40
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  27.06.2011 23:40
+info   SELECT * FROM faq WHERE is_situation=1  27.06.2011 23:40
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  03.07.2011 23:25
+info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:25
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  03.07.2011 23:25
+info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:25
+info   SELECT * FROM license  03.07.2011 23:25
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  03.07.2011 23:25
+info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:25
+info   SELECT user_id FROM personal_account WHERE id="admin"  03.07.2011 23:25
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="admin"  03.07.2011 23:25
+info   SELECT * FROM license  03.07.2011 23:25
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  03.07.2011 23:25
+info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:25
+info   SELECT password FROM user WHERE login="admin"  03.07.2011 23:25
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  03.07.2011 23:25
+info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:25
+info   SELECT password FROM user WHERE login="admin"  03.07.2011 23:26
+info   SELECT * FROM license  03.07.2011 23:26
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  03.07.2011 23:26
+info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:26
+info   SELECT password FROM user WHERE login="admin"  03.07.2011 23:26
+info   DELETE FROM license WHERE id=1  03.07.2011 23:26
+info   SELECT password FROM user WHERE login="admin"  03.07.2011 23:26
+info   SELECT * FROM license  03.07.2011 23:26
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  03.07.2011 23:26
+info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:26
+info   SELECT password FROM user WHERE login="admin"  03.07.2011 23:26
+info   SELECT * FROM license WHERE id=2  03.07.2011 23:26
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  03.07.2011 23:26
+info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:26
+info   SELECT password FROM user WHERE login="admin"  03.07.2011 23:26
+info   UPDATE license 
+                    SET description="ИНН"  
+                    WHERE id=2  03.07.2011 23:26
+info   SELECT password FROM user WHERE login="admin"  03.07.2011 23:26
+info   SELECT * FROM license  03.07.2011 23:26
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  03.07.2011 23:26
+info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:26
+info   SELECT password FROM user WHERE login="admin"  03.07.2011 23:27
+info   SELECT * FROM license WHERE id=2  03.07.2011 23:27
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  03.07.2011 23:27
+info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:27
+info   SELECT password FROM user WHERE login="admin"  03.07.2011 23:38
+info   UPDATE license 
+                    SET description="ИНН"  
+                    WHERE id=2  03.07.2011 23:38
+info   SELECT password FROM user WHERE login="admin"  03.07.2011 23:38
+info   SELECT * FROM license  03.07.2011 23:38
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  03.07.2011 23:38
+info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:38
+info   SELECT password FROM user WHERE login="admin"  03.07.2011 23:39
+info   SELECT * FROM license WHERE id=2  03.07.2011 23:39
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  03.07.2011 23:39
+info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:39
+info   SELECT password FROM user WHERE login="admin"  03.07.2011 23:42
+info   UPDATE license 
+                    SET description="ИНН"  
+                    WHERE id=2  03.07.2011 23:42
+info   UPDATE license 
+                        SET img="" WHERE id=2  03.07.2011 23:42
+info   SELECT password FROM user WHERE login="admin"  03.07.2011 23:43
+info   UPDATE license 
+                    SET description="ИНН"  
+                    WHERE id=2  03.07.2011 23:43
+info   UPDATE license 
+                        SET img="img_03-07-2011-23-43-12.jpg" WHERE id=2  03.07.2011 23:43
+info   SELECT password FROM user WHERE login="admin"  03.07.2011 23:43
+info   SELECT * FROM license  03.07.2011 23:43
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  03.07.2011 23:43
+info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:43
+info   SELECT password FROM user WHERE login="admin"  03.07.2011 23:43
+info   SELECT * FROM license WHERE id=2  03.07.2011 23:43
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  03.07.2011 23:43
+info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:43
+info   SELECT password FROM user WHERE login="admin"  03.07.2011 23:43
+info   UPDATE license 
+                    SET description="ИНН"  
+                    WHERE id=2  03.07.2011 23:43
+info   SELECT password FROM user WHERE login="admin"  03.07.2011 23:43
+info   SELECT * FROM license  03.07.2011 23:43
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  03.07.2011 23:43
+info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:43
+info   SELECT password FROM user WHERE login="admin"  03.07.2011 23:44
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  03.07.2011 23:44
+info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:44
+info   SELECT * FROM license  03.07.2011 23:44
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  03.07.2011 23:44
+info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:44
+info   SELECT * FROM license  03.07.2011 23:45
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  03.07.2011 23:45
+info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:45
+info   SELECT * FROM license  03.07.2011 23:45
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  03.07.2011 23:45
+info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:45
+info   SELECT * FROM license  03.07.2011 23:45
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  03.07.2011 23:45
+info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:45

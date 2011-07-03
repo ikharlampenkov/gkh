@@ -16,8 +16,15 @@ ENGINE = InnoDB
  */
 class gkh_license extends gkh {
     
+    private $_img;
+    
     public function __construct() {
         parent::__construct();
+        
+        global $__cfg;
+        $this->_img = new Image($__cfg['temp.public.dir']);
+        
+        
     }
 
     public function getAllLicense() {
@@ -26,7 +33,8 @@ class gkh_license extends gkh {
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
                 foreach ($result as &$res) {
-                    $res['img_prew'] = $res['img'];
+                    $this->_img->setName($res['img']);
+                    $res['img_prew'] = $this->_img->getPreview();
                 }
                 return $result;
             } else
@@ -41,7 +49,8 @@ class gkh_license extends gkh {
             $sql = 'SELECT * FROM license WHERE id=' . (int)$id;
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
-                $result[0]['img_prew'] = $result[0]['img'];
+                $this->_img->setName($result[0]['img']);
+                $result[0]['img_prew'] = $this->_img->getPreview();
                 return $result[0];
             } else
                 return false;
@@ -60,13 +69,25 @@ class gkh_license extends gkh {
             
             $temp_id = $this->_db->query('SELECT LAST_INSERT_ID()');
             
-            $file = $this->_uploadFile($temp_id[0][0], 'img');
+            $fileName = $this->_img->download('img');
+            if ($fileName !== false) {
+                $this->_img->createPreview();
+                $sql = 'UPDATE license 
+                    SET img="' . $fileName . '" WHERE id=' . (int)$temp_id[0][0];
+
+                $this->_db->query($sql);
+            }
+            
+            //$file = $this->_uploadFile($temp_id[0][0], 'img');
+            /*
             if ($file != 'NULL') {
                 $sql = 'UPDATE license 
                     SET img="' . $file . '" WHERE id=' . (int)$temp_id[0][0];
 
                 $this->_db->query($sql);
-            }            
+            } 
+             * 
+             */           
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
         }
@@ -76,14 +97,20 @@ class gkh_license extends gkh {
         try {
             $data = $this->_db->prepareArray($data);
 
-            if (empty($data['area']))
-                $data['area'] = 0;
-
             $sql = 'UPDATE license 
                     SET description="' . $data['description'] . '"  
                     WHERE id=' . (int)$id;
             $this->_db->query($sql);
+            
+            $fileName = $this->_img->download('img');
+            if ($fileName !== false) {
+                $this->_img->createPreview();
+                $sql = 'UPDATE license 
+                        SET img="' . $fileName . '" WHERE id=' . (int)$id;
 
+                $this->_db->query($sql);
+            }
+/*
             $file = $this->_uploadFile($id, 'img');
             if ($file != 'NULL') {
                 $sql = 'UPDATE license 
@@ -91,6 +118,8 @@ class gkh_license extends gkh {
 
                 $this->_db->query($sql);
             }
+ * 
+ */
         } catch (Exception $e) {
             simo_exception::registrMsg($e, $this->_debug);
         }
@@ -128,7 +157,11 @@ class gkh_license extends gkh {
         global $__cfg;
         try {
             $temp = $this->getLicense($id);
-            simo_functions::_delFile($__cfg['temp.public.dir'] . $temp[$field]);
+            
+            $this->_img->setName($temp[$field]);
+            $this->_img->delete();
+            
+            //simo_functions::_delFile($__cfg['temp.public.dir'] . $temp[$field]);
 
             $sql = 'UPDATE license 
                         SET ' . $field . '=NULL WHERE id=' . (int)$id;
