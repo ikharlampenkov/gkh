@@ -14599,3 +14599,541 @@ info   SELECT news.id, news_category_id, date, news.title, short_text, full_text
                     WHERE news.news_category_id=news_category.id  ORDER BY date DESC
                       LIMIT 5  03.07.2011 23:45
 info   SELECT * FROM faq WHERE is_situation=1  03.07.2011 23:45
+info   SELECT * FROM license  05.07.2011 21:54
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 21:54
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 21:54
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 21:54
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 21:54
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:01
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:01
+info   SELECT * FROM news_category WHERE id=1  05.07.2011 23:01
+info   SELECT * FROM news WHERE id=1  05.07.2011 23:01
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=1 AND is_moderated=1 ORDER BY is_moderated, date  05.07.2011 23:01
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:01
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:01
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  05.07.2011 23:06
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   05.07.2011 23:06
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:06
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:06
+info   SELECT * FROM news_category WHERE id=1  05.07.2011 23:07
+info   SELECT * FROM news WHERE id=1  05.07.2011 23:07
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=1 AND is_moderated=1 ORDER BY is_moderated, date  05.07.2011 23:07
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:07
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:07
+info   SELECT * FROM news_category WHERE id=1  05.07.2011 23:07
+info   SELECT * FROM news WHERE id=1  05.07.2011 23:07
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=1 AND is_moderated=1 ORDER BY is_moderated, date  05.07.2011 23:07
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:07
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:07
+info   SELECT user_id FROM personal_account WHERE id="admin"  05.07.2011 23:12
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="admin"  05.07.2011 23:12
+info   SELECT * FROM news_category WHERE id=1  05.07.2011 23:12
+info   SELECT * FROM news WHERE id=1  05.07.2011 23:12
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=1 AND is_moderated=1 ORDER BY is_moderated, date  05.07.2011 23:12
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:12
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:12
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:12
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:12
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:12
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:12
+info   SELECT * FROM license  05.07.2011 23:12
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:12
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:12
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:12
+info   SELECT * FROM license WHERE id=2  05.07.2011 23:12
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:12
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:12
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:12
+info   SELECT * FROM license  05.07.2011 23:12
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:12
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:12
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:12
+info   DELETE FROM license WHERE id=2  05.07.2011 23:12
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:12
+info   SELECT * FROM license  05.07.2011 23:12
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:12
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:12
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:12
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:12
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:12
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:13
+info   INSERT INTO license(img, description) 
+                    VALUES("", "ИНН")  05.07.2011 23:13
+info   SELECT LAST_INSERT_ID()  05.07.2011 23:13
+info   UPDATE license 
+                    SET img="img_05-07-2011-23-13-03.jpg" WHERE id=3  05.07.2011 23:13
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:13
+info   SELECT * FROM license  05.07.2011 23:13
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:13
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:13
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:15
+info   SELECT * FROM news_category  05.07.2011 23:15
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  05.07.2011 23:15
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   05.07.2011 23:15
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:15
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:15
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:15
+info   SELECT * FROM news WHERE id=1  05.07.2011 23:15
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=1 ORDER BY is_moderated, date  05.07.2011 23:15
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:15
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:15
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:17
+info   SELECT * FROM news_category  05.07.2011 23:17
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  05.07.2011 23:17
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   05.07.2011 23:17
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:17
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:17
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:19
+info   SELECT * FROM news_category  05.07.2011 23:19
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  05.07.2011 23:19
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   05.07.2011 23:19
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:19
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:19
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:21
+info   SELECT * FROM news_category  05.07.2011 23:21
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  05.07.2011 23:21
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   05.07.2011 23:21
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:21
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:21
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:21
+info   SELECT * FROM news_category  05.07.2011 23:21
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  05.07.2011 23:21
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   05.07.2011 23:21
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:21
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:21
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:23
+info   SELECT * FROM news WHERE id=2  05.07.2011 23:23
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 ORDER BY is_moderated, date  05.07.2011 23:23
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:23
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:23
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:23
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:23
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:23
+info   SELECT * FROM news_category WHERE id=1  05.07.2011 23:23
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  AND news_category_id=1 ORDER BY date DESC  LIMIT 0, 20  05.07.2011 23:23
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  AND news_category_id=1  05.07.2011 23:23
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:23
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:23
+info   SELECT * FROM news_category WHERE id=1  05.07.2011 23:23
+info   SELECT * FROM news WHERE id=1  05.07.2011 23:23
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=1 AND is_moderated=1 ORDER BY is_moderated, date  05.07.2011 23:23
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:23
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:23
+info   SELECT * FROM news_category WHERE id=1  05.07.2011 23:26
+info   SELECT * FROM news WHERE id=1  05.07.2011 23:26
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=1 AND is_moderated=1 ORDER BY is_moderated, date  05.07.2011 23:26
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:26
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:26
+info   SELECT * FROM news_category WHERE id=1  05.07.2011 23:27
+info   INSERT INTO news_comment(news_id, date, nickname, text, is_moderated)
+                              VALUES(1, "2011-07-05",
+                                    "ivan", "аврарррарарарарварав", 0)  05.07.2011 23:27
+info   SELECT * FROM news_category WHERE id=1  05.07.2011 23:27
+info   SELECT * FROM news WHERE id=1  05.07.2011 23:27
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=1 AND is_moderated=1 ORDER BY is_moderated, date  05.07.2011 23:27
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:27
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:27
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  05.07.2011 23:27
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   05.07.2011 23:27
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:27
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:27
+info   SELECT * FROM news_category WHERE id=1  05.07.2011 23:27
+info   SELECT * FROM news WHERE id=1  05.07.2011 23:27
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=1 AND is_moderated=1 ORDER BY is_moderated, date  05.07.2011 23:27
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:27
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:27
+info   SELECT * FROM news_category WHERE id=1  05.07.2011 23:27
+info   INSERT INTO news_comment(news_id, date, nickname, text, is_moderated)
+                              VALUES(1, "2011-07-05",
+                                    "geust", "паопасмтсм рвпрв\r\nарв арв\r\n враврв", 0)  05.07.2011 23:27
+info   SELECT * FROM news_category WHERE id=1  05.07.2011 23:27
+info   SELECT * FROM news WHERE id=1  05.07.2011 23:27
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=1 AND is_moderated=1 ORDER BY is_moderated, date  05.07.2011 23:27
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:27
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:27
+info   SELECT user_id FROM personal_account WHERE id="admin"  05.07.2011 23:27
+info   SELECT id, login, password, title FROM user, user_role WHERE user.role=user_role.title AND login="admin"  05.07.2011 23:27
+info   SELECT * FROM news_category WHERE id=1  05.07.2011 23:27
+info   SELECT * FROM news WHERE id=1  05.07.2011 23:27
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=1 AND is_moderated=1 ORDER BY is_moderated, date  05.07.2011 23:27
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:27
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:27
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:27
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:27
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:27
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:28
+info   SELECT * FROM news_category  05.07.2011 23:28
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  05.07.2011 23:28
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   05.07.2011 23:28
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:28
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:28
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:28
+info   SELECT * FROM news WHERE id=2  05.07.2011 23:28
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 ORDER BY is_moderated, date  05.07.2011 23:28
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:28
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:28
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:28
+info   SELECT * FROM news_category  05.07.2011 23:28
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  05.07.2011 23:28
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   05.07.2011 23:28
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:28
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:28
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:28
+info   SELECT * FROM news WHERE id=1  05.07.2011 23:28
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=1 ORDER BY is_moderated, date  05.07.2011 23:28
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:28
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:28
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:28
+info   SELECT * FROM news WHERE id=1  05.07.2011 23:28
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=1 AND id=1  05.07.2011 23:28
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:28
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:28
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:28
+info   UPDATE news_comment 
+                    SET date="2011-07-05", nickname="ivan", 
+                        text="аврарррарарарарварав", is_moderated=1 
+                    WHERE news_id=1 AND id=1  05.07.2011 23:28
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:28
+info   SELECT * FROM news WHERE id=1  05.07.2011 23:28
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=1 ORDER BY is_moderated, date  05.07.2011 23:28
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:28
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:28
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:30
+info   SELECT * FROM news WHERE id=1  05.07.2011 23:30
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=1 ORDER BY is_moderated, date  05.07.2011 23:30
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:30
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:30
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:30
+info   SELECT * FROM news WHERE id=1  05.07.2011 23:30
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=1 ORDER BY is_moderated, date  05.07.2011 23:30
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:30
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:30
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:30
+info   SELECT * FROM news WHERE id=1  05.07.2011 23:30
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=1 AND id=1  05.07.2011 23:30
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:30
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:30
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:30
+info   SELECT * FROM news WHERE id=1  05.07.2011 23:30
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=1 ORDER BY is_moderated, date  05.07.2011 23:30
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:30
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:30
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:30
+info   SELECT * FROM news_category  05.07.2011 23:30
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  05.07.2011 23:30
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   05.07.2011 23:30
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:30
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:30
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:30
+info   SELECT * FROM news WHERE id=1  05.07.2011 23:30
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=1 ORDER BY is_moderated, date  05.07.2011 23:30
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:30
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:30
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:30
+info   SELECT * FROM news_category  05.07.2011 23:30
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  05.07.2011 23:30
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   05.07.2011 23:30
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:30
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:30
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:30
+info   SELECT * FROM news WHERE id=2  05.07.2011 23:30
+info   SELECT *
+                    FROM news_comment
+                    WHERE news_id=2 ORDER BY is_moderated, date  05.07.2011 23:30
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:30
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:30
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:30
+info   SELECT * FROM news_category  05.07.2011 23:30
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC  LIMIT 0, 20  05.07.2011 23:30
+info   SELECT COUNT(news.id) FROM news, news_category
+                    WHERE news.news_category_id=news_category.id   05.07.2011 23:30
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:30
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:30
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:31
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, question  05.07.2011 23:31
+info   SELECT id, parrent_id, question 
+                    FROM faq 
+                    WHERE is_folder=1 AND id=0  05.07.2011 23:31
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:31
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:31
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:32
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, question  05.07.2011 23:32
+info   SELECT id, parrent_id, question 
+                    FROM faq 
+                    WHERE is_folder=1 AND id=6  05.07.2011 23:32
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:32
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:32
+info   SELECT password FROM user WHERE login="admin"  05.07.2011 23:32
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:32
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:32
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=0 
+                    ORDER BY is_folder DESC, question  05.07.2011 23:32
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:32
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:32
+info   SELECT * FROM faq WHERE id=6  05.07.2011 23:33
+info   SELECT id, parrent_id, question 
+                    FROM faq 
+                    WHERE is_folder=1 AND id=6  05.07.2011 23:33
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, question  05.07.2011 23:33
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:33
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:33
+info   SELECT * FROM faq WHERE id=6  05.07.2011 23:40
+info   SELECT id, parrent_id, question 
+                    FROM faq 
+                    WHERE is_folder=1 AND id=6  05.07.2011 23:40
+info   SELECT * 
+                    FROM faq 
+                    WHERE parrent_id=6 
+                    ORDER BY is_folder DESC, question  05.07.2011 23:40
+info   SELECT news.id, news_category_id, date, news.title, short_text, full_text, is_impotant, news_category.title AS category_title
+                    FROM news, news_category
+                    WHERE news.news_category_id=news_category.id  ORDER BY date DESC
+                      LIMIT 5  05.07.2011 23:40
+info   SELECT * FROM faq WHERE is_situation=1  05.07.2011 23:40

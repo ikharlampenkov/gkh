@@ -1,5 +1,6 @@
-<h1>{$module_title}</h1>
 
+<div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">{$module_title}</div>
+<div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
 
 {if $action=="answer"}
 
@@ -7,15 +8,15 @@
 
 <form action="?page={$page}&action={$action}&id={$tech_support_post.id}&category={$category}" method="post">
     <table>
-        <tr>
+        <tr class="pem">
             <td width="200">Дата вороса</td>
             <td>{$tech_support_post.date_question|date_format:"%d.%m.%Y %H:%M"}</td>
         </tr>
-        <tr>
+        <tr class="pem">
             <td width="200">Вопрос</td>
             <td>{$tech_support_post.question}</td>
         </tr>
-        <tr>
+        <tr class="pem">
             <td width="200">Ответ</td>
             <td><textarea name="data[answer]">{$tech_support_post.answer}</textarea></td>
         </tr>
@@ -64,7 +65,7 @@
 {if $ticket.post_list}
 <table>
 {foreach from=$ticket.post_list item=post name=_post}
-    <tr>
+    <tr class="pem">
         <td style="background-color: #e0e0e0;">{$post.date_question|date_format:"%d.%m.%Y %H:%M"}<br />
                 {$post.question}
                 {if $post.file_list != false}
@@ -77,7 +78,7 @@
         </td>
     </tr>
 		{if $smarty.foreach._post.last}
-    <tr>
+    <tr class="pem">
         <td>
             <form action="?page={$page}&action={$action}&id={$ticket.id}&pa_id={$ticket.personal_account_id}&category={$category}" method="post">
 		Ответ<br />
@@ -140,45 +141,28 @@
 
 {else}
 
-<h4>Статусы заявок</h4>
 
-{if $ticket_status_list!==false}
-<table>
-{foreach from=$ticket_status_list item=ticket_status}
-    <tr>
-        <td>{$ticket_status.title}</td>
-        <td>{$ticket_status.rating}</td>
-        <td><a href="?page={$page}&action=edit_status&id={$ticket_status.id}&category={$category}">редактировать</a><br />
-            <a href="?page={$page}&action=del_status&id={$ticket_status.id}&category={$category}">удалить</a> </td>
-    </tr>
-{/foreach}
-</table>
-{/if}
-
-<a href="?page={$page}&action=add_status&category={$category}">добавить статус заявки</a>
-
-<hr width="100%" size="1" />
 
 <h4>{$module_title}</h4>
 
 {if $ticket_list!==false}
-<table>
+<table width="100%" cellpadding="5" cellspacing="2" style="font-size:14px">
     <tr>
-       <td>Номер</td>
-       <td>Дата</td>
-       <td>От кого</td>
-       <td>Заголовок</td>
-       <td>Состояние</td>
-       <td>&nbsp;</td>
+       <td class="pum">Номер</td>
+       <td class="pum">Дата</td>
+       <td class="pum">От кого</td>
+       <td class="pum">Заголовок</td>
+       <td class="pum">Состояние</td>
+       <td class="pum">&nbsp;</td>
     </tr>
 {foreach from=$ticket_list item=ticket}
     <tr>
-        <td>{$ticket.id}</td>
-        <td>{$ticket.date|date_format:"%d.%m.%Y %H:%M"}</td>
-	<td>{$ticket.fio}</td>
-        <td>{$ticket.title|strip_tags:false|truncate:30:""}</td>
-        <td>{$ticket.status}</td>
-        <td><a href="?page={$page}&action=view_ticket&id={$ticket.id}&pa_id={$ticket.personal_account_id}&category={$category}">ответить</a><br /> </td>
+        <td class="pem">{$ticket.id}</td>
+        <td class="pem">{$ticket.date|date_format:"%d.%m.%Y %H:%M"}</td>
+	<td class="pem">{$ticket.fio}</td>
+        <td class="pem">{$ticket.title|strip_tags:false|truncate:30:""}</td>
+        <td class="pem">{$ticket.status}</td>
+        <td class="pom"><a href="?page={$page}&action=view_ticket&id={$ticket.id}&pa_id={$ticket.personal_account_id}&category={$category}">открыть</a><br /> </td>
     </tr>
 {/foreach}
 </table>
@@ -186,5 +170,23 @@
 
 <br />
 <a href="?page={$page}&action=question&category={$category}">{$action_title}</a>
+<hr width="100%" size="1" />
+
+<h4>Статусы заявок</h4>
+
+{if $ticket_status_list!==false}
+<table width="100%" cellpadding="5" cellspacing="2" style="font-size:14px">
+{foreach from=$ticket_status_list item=ticket_status}
+    <tr class="pem">
+        <td>{$ticket_status.title}</td>
+        <td>{$ticket_status.rating}</td>
+        <td class="pom"><a href="?page={$page}&action=edit_status&id={$ticket_status.id}&category={$category}">редактировать</a><br />
+            <a href="?page={$page}&action=del_status&id={$ticket_status.id}&category={$category}">удалить</a> </td>
+    </tr>
+{/foreach}
+</table>
+{/if}
+
+<a href="?page={$page}&action=add_status&category={$category}">добавить статус заявки</a>
 
 {/if}

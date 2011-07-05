@@ -82,8 +82,10 @@ if ($o_user->isLogin()) {
                 exit;
             }
 
-            $o_smarty->assign('news', $o_news->getNews($_GET['id']));
+            $news = $o_news->getNews($_GET['id']);
+            $o_smarty->assign('news', $news);
             $o_smarty->assign('news_comment_list', $o_news->getAllCommentByNews($_GET['id'], gkh_news::IS_MODERATED));
+            $o_smarty->assign('is_important', $news['is_impotant']);
         } else {
 
             if (isset($_GET['pager'])) {

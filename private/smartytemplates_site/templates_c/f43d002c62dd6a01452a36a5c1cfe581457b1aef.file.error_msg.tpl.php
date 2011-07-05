@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-06-06 21:38:30
+<?php /* Smarty version Smarty-3.0.7, created on 2011-07-05 23:01:09
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/error_msg.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:268694de09ed93ca691-72237888%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:174214e133545a6ba77-47241306%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'f43d002c62dd6a01452a36a5c1cfe581457b1aef' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/error_msg.tpl',
-      1 => 1304440380,
+      1 => 1309108080,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '268694de09ed93ca691-72237888',
+  'nocache_hash' => '174214e133545a6ba77-47241306',
   'function' => 
   array (
   ),

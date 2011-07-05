@@ -23,7 +23,7 @@ class Image extends File {
     public function download($field) {
         if (isset($_FILES[$field])) {
             $this->_ext = $this->extractExt($_FILES[$field]['name']);
-            
+
             if (!in_array($this->_ext, $this->_extList)) {
                 throw new Exception('Bad extension');
             }
@@ -87,7 +87,12 @@ class Image extends File {
      * @access public
      */
     public function delete() {
-        unlink($this->_path . $this->getPreview());
+        if (file_exists($this->_path . $this->_name)) {
+            $result = unlink($this->_path . $this->getPreview());
+            if ($result === false) {
+                throw new Exception('Can not delete preview file ' . $this->getPreview());
+            }
+        }
         parent::delete();
     }
 

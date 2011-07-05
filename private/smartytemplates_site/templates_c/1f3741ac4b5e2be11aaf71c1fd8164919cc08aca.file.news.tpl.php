@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-05-30 23:56:04
+<?php /* Smarty version Smarty-3.0.7, created on 2011-07-05 23:12:22
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/news.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:161584de3cc24e34412-51167207%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:242334e1337e61c7fb1-32031544%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1f3741ac4b5e2be11aaf71c1fd8164919cc08aca' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/news.tpl',
-      1 => 1306774561,
+      1 => 1309882043,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '161584de3cc24e34412-51167207',
+  'nocache_hash' => '242334e1337e61c7fb1-32031544',
   'function' => 
   array (
   ),
@@ -20,8 +20,11 @@ $_smarty_tpl->decodeProperties(array (
 <?php if (!is_callable('smarty_modifier_date_format')) include 'H:\www\gkh\private\classes\smarty\plugins\modifier.date_format.php';
 ?><?php if ($_smarty_tpl->getVariable('action')->value=='view_news'){?>
 
-<h1><?php if ($_smarty_tpl->getVariable('is_important')->value==1){?>Важная информация<?php }else{ ?>Новости<?php if (isset($_smarty_tpl->getVariable('news_category',null,true,false)->value)){?>: <?php echo $_smarty_tpl->getVariable('news_category')->value['title'];?>
-<?php }?><?php }?></h1>
+<div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">
+<?php if ($_smarty_tpl->getVariable('is_important')->value==1){?>Важная информация<?php }else{ ?>Новости<?php if (isset($_smarty_tpl->getVariable('news_category',null,true,false)->value)){?>: <?php echo $_smarty_tpl->getVariable('news_category')->value['title'];?>
+<?php }?><?php }?>
+</div>
+<div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
 
 <div><?php echo smarty_modifier_date_format($_smarty_tpl->getVariable('news')->value['date'],"%d.%m.%Y");?>
 &nbsp;<?php echo $_smarty_tpl->getVariable('news')->value['title'];?>
@@ -70,8 +73,11 @@ if ($_smarty_tpl->_count($_from) > 0){
 
 <?php }else{ ?>
 
-<h1><?php if ($_smarty_tpl->getVariable('is_important')->value==1){?>Важная информация<?php }else{ ?>Новости<?php if (isset($_smarty_tpl->getVariable('news_category',null,true,false)->value)){?>: <?php echo $_smarty_tpl->getVariable('news_category')->value['title'];?>
-<?php }?><?php }?></h1>
+<div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">
+<?php if ($_smarty_tpl->getVariable('is_important')->value==1){?>Важная информация<?php }else{ ?>Новости<?php if (isset($_smarty_tpl->getVariable('news_category',null,true,false)->value)){?>: <?php echo $_smarty_tpl->getVariable('news_category')->value['title'];?>
+<?php }?><?php }?>
+</div>
+<div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
 
 <br/>
 

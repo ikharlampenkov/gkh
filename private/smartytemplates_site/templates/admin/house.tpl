@@ -1,5 +1,5 @@
-<h1>Дома</h1>
-
+<div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">Ваш дом</div>
+                                            <div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
 {if $action=="add"}
 
 <h2>{$txt}</h2>
@@ -65,26 +65,34 @@
 {else}
 
 {if $house_list!==false}
-<table>
+<table cellpadding="5" border="0" style="font-size:14px;">
+<td class="pom" align="center">
+<a href="?page={$page}&action=add">ДОБАВИТЬ ДОМ</a> / <a href="#" style="color:#aaaaaa">ИМПОРТИРОВАТЬ ДАННЫЕ ИЗ CVS-ФАЙЛА</a>
+</td>
+</table>
+<table cellpadding="5" border="0" style="font-size:14px;">
     <tr>
-       <td>Улица</td>
-       <td>Номер</td>
-       <td>Общая площадь</td>
+       <td class="pum">Улица</td>
+       <td class="pum">Номер</td>
+       <td class="pum">Общая площадь</td>
        <td>&nbsp;</td>
     </tr>
 {foreach from=$house_list item=house}
     <tr>
-        <td>{$house.street}</td>
-	<td>{$house.number}{if !empty($house.subnumber)}{$house.subnumber}{/if}</td>
-        <td>{$house.area}</td>    
-        <td><a href="?page={$page}&action=edit&id={$house.id}">редактировать</a><br />
-            <a href="?page={$page}&action=del&id={$house.id}">удалить</a></td>
+        <td class="pem">{$house.street}</td>
+	<td class="pem">{$house.number}{if !empty($house.subnumber)}{$house.subnumber}{/if}</td>
+        <td class="pem">{$house.area}</td>    
+        <td class="pom"><a href="?page={$page}&action=edit&id={$house.id}">редактировать</a></td>
+        <td class="pom"><a href="?page={$page}&action=del&id={$house.id}">удалить</a></td>
     </tr>
 {/foreach}
 </table>
 {/if}
-
-<br />
-<a href="?page={$page}&action=add">Добавить дом</a>
+<table cellpadding="5" border="0" style="font-size:14px;">
+<td class="pom" align="center">
+<a href="?page={$page}&action=add">ДОБАВИТЬ ДОМ</a> / <a href="#" style="color:#aaaaaa">ИМПОРТИРОВАТЬ ДАННЫЕ ИЗ CVS-ФАЙЛА</a>
+</td>
+</table>
+<br>
 
 {/if}

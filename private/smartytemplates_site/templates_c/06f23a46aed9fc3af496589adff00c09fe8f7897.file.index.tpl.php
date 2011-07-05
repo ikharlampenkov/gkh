@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-06-27 00:14:24
+<?php /* Smarty version Smarty-3.0.7, created on 2011-07-05 23:01:09
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:247344e0768f02f7a75-40043839%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:256864e13354559d393-19116345%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '06f23a46aed9fc3af496589adff00c09fe8f7897' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/index.tpl',
-      1 => 1309108443,
+      1 => 1309794240,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '247344e0768f02f7a75-40043839',
+  'nocache_hash' => '256864e13354559d393-19116345',
   'function' => 
   array (
   ),
@@ -201,11 +201,29 @@ $_smarty_tpl->decodeProperties(array (
 
                                 <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
                                     <tr>
-
+										
                                         <td width="32%" valign="top">
                                             <div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">Личный кабинет жильца</div>
                                             <div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
-                                            <img src="/kab.gif" />
+                                            <table cellpadding="5" border="0" width="100%">
+                                            <tr><td><img src="/img/1.gif"></td><td class="pem">Посмотреть распечатку платежей</td></tr>
+                                            <tr><td><img src="/img/2.gif"></td><td class="pom">Посмотреть баланс платежей</td></tr>
+                                            <tr><td><img src="/img/4.gif"></td><td class="pem">Передать показания счетчиков</td></tr>
+                                            <tr><td><img src="/img/5.gif"></td><td class="pom">Подать заявку на вызов мастера</td></tr>
+                                            <tr><td><img src="/img/6.gif"></td><td class="pem">Задать вопрос управлению</td></tr>
+                                            <tr><td><img src="/img/3.gif"></td><td class="pom">Оплатить услуги</td></tr>
+                                            <tr><td><img src="/img/6.gif"></td><td class="pem">Посмотреть текущие работы по дому</td></tr>
+                                            </table>
+                                            <br>
+                                            <div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">Как получить доступ?</div>
+                                            <div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
+                                            <div style="font-weight: bold; text-align:center">Три простых шага:</div>
+                                            <table cellpadding="5" border="0" width="100%">
+                                            <tr><td>1</td><td class="pem">Прийти в РЭУ с паспортом<br><span style="color:#aaaaaa">(можно при оплате)</td></tr>
+                                            <tr><td>2<td class="pom">Подписать согласие на доступ к личному кабинету (3 мин.). Получить пароль.</td></tr>
+                                            <tr><td>3<td class="pem">Войти в личный кабинет.</td></tr>
+                                            </table><br>
+                                            <div style="text-align:center">Все справки по работе с личным кабинетом по телефону: 764-999</div>
                                         </td>
                                         <td width="200">&nbsp;</td>
 
@@ -214,25 +232,25 @@ $_smarty_tpl->decodeProperties(array (
                                             <div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
 
                                             <table cellpadding="5" border="0">
-                                                <tr><td class="pom"><a title="Общая информация" href="?page=content_page&title=general_information&spage=about">Общая информация</a></td>
+                                                <tr><td class="pem"><a title="Общая информация" href="?page=content_page&title=general_information&spage=about">Общая информация</a></td>
 
-                                                <tr><td class="pem">Финансово-хозяйственная деятельность</td></tr>
-                                                <tr><td class="pom"><a title="Бухгалтерская отчетность" href="?page=content_page&title=financial_statements&spage=reports">Бухгалтерская отчетность</a></td></tr>
-                                                <tr><td class="pom"><a title="Доходы" href="?page=content_page&title=income&spage=reports">Отчет о прибылях и убытках</a></td></tr>
+                                                <tr><td style="color:#aaaaaa">Финансово-хозяйственная деятельность</td></tr>
+                                                <tr><td class="pem"><a title="Бухгалтерская отчетность" href="?page=content_page&title=financial_statements&spage=reports">Бухгалтерская отчетность</a></td></tr>
+                                                <tr><td class="pem"><a title="Доходы" href="?page=content_page&title=income&spage=reports">Отчет о прибылях и убытках</a></td></tr>
                                                 
-                                                <tr><td class="pem">Информация об услугах, работах по содержанию и ремонту</li>
-                                                <tr><td class="pom"><a title="По содержанию дома" href="?page=content_page&title=basic&spage=about">Базовые услуги</a></td></tr>
-                                                <tr><td class="pom"><a title="Электротехнические" href="?page=content_page&title=platnie&spage=about">Платные</a></td></tr>
+                                                <tr><td style="color:#aaaaaa">Информация об услугах, работах по содержанию и ремонту</li>
+                                                <tr><td class="pem"><a title="По содержанию дома" href="?page=content_page&title=basic&spage=about">Базовые услуги</a></td></tr>
+                                                <tr><td class="pem"><a title="Электротехнические" href="?page=content_page&title=platnie&spage=about">Платные</a></td></tr>
 
-                                                <tr><td class="pem">Порядок и условия оказания услуг по содержание и ремонт</li>
-                                                <tr><td class="pom"><a title="Договор" href="?page=content_page&title=dogovor&spage=about">Договор управления МКД</a></td></tr>
-                                                <tr><td class="pom"><a title="План работ по содержанию и ремонту" href="?page=content_page&title=plan_rabot&spage=about">План работ по содержанию и ремонту</a></td></tr>
-                                                <tr><td class="pom"><a title="Меры по снижению расходов на работу" href="?page=content_page&title=meri_rashod&spage=about">Меры по снижению расходов на работу</a></td></tr>
-                                                <tr><td class="pom"><a title="Нарушения" href="?page=content_page&title=narusheni&spage=about">Нарушения</td></tr>
-                                                <tr><td class="pom"><a title="Соответствие качеству" href="?page=content_page&title=kachthestvo&spage=about">Соответствие качеству</td></tr>
+                                                <tr><td style="color:#aaaaaa">Порядок и условия оказания услуг по содержание и ремонт</li>
+                                                <tr><td class="pem"><a title="Договор" href="?page=content_page&title=dogovor&spage=about">Договор управления МКД</a></td></tr>
+                                                <tr><td class="pem"><a title="План работ по содержанию и ремонту" href="?page=content_page&title=plan_rabot&spage=about">План работ по содержанию и ремонту</a></td></tr>
+                                                <tr><td class="pem"><a title="Меры по снижению расходов на работу" href="?page=content_page&title=meri_rashod&spage=about">Меры по снижению расходов на работу</a></td></tr>
+                                                <tr><td class="pem"><a title="Нарушения" href="?page=content_page&title=narusheni&spage=about">Нарушения</td></tr>
+                                                <tr><td class="pem"><a title="Соответствие качеству" href="?page=content_page&title=kachthestvo&spage=about">Соответствие качеству</td></tr>
 
-                                                <tr><td class="pem">Содержание, периодичность, результат, стоимость работ по содержанию и ремонту</td></tr>
-                                                <tr><td class="pom"><a title="Тарифы на коммунальные ресурсы" href="?page=content_page&title=communal_resources&spage=rates">Тарифы на коммунальные ресурсы</a></td></tr>                                        
+                                                <tr><td style="color:#aaaaaa">Содержание, периодичность, результат, стоимость работ по содержанию и ремонту</td></tr>
+                                                <tr><td class="pem"><a title="Тарифы на коммунальные ресурсы" href="?page=content_page&title=communal_resources&spage=rates">Тарифы на коммунальные ресурсы</a></td></tr>                                        
                                                 
                                                 <tr><td class="pem"><a title="Случаи привлечения к ответственности" href="?page=content_page&title=otvetstv&spage=about">Случаи привлечения к ответственности</a></td></tr>
                                             
@@ -243,23 +261,29 @@ $_smarty_tpl->decodeProperties(array (
                                         <td width="32%" valign="top">
                                             <div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">Важная информация</div>
                                             <div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
+                                            
+                                            <table cellpadding="5" border="0">
+                                            
 
                                             <?php  $_smarty_tpl->tpl_vars['news'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('news_list')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['news']->key => $_smarty_tpl->tpl_vars['news']->value){
 ?> 
-                                            <div><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['news']->value['date'],"%d.%m.%Y");?>
- &nbsp; <?php echo $_smarty_tpl->tpl_vars['news']->value['title'];?>
-</div>
-                                            <div><?php echo $_smarty_tpl->tpl_vars['news']->value['short_text'];?>
- </div>
-                                            <?php if ($_smarty_tpl->tpl_vars['news']->value['full_text']){?><a href="<?php echo $_smarty_tpl->getVariable('siteurl')->value;?>
+                                            <tr><td style="color:#aaaaaa"><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['news']->value['date'],"%d.%m.%Y");?>
+ &nbsp;</tr></td>
+                                            <tr><td class="pem"><b><?php echo $_smarty_tpl->tpl_vars['news']->value['title'];?>
+</b><br><?php echo $_smarty_tpl->tpl_vars['news']->value['short_text'];?>
+
+                                            <?php if ($_smarty_tpl->tpl_vars['news']->value['full_text']){?><br><a href="<?php echo $_smarty_tpl->getVariable('siteurl')->value;?>
 ?page=news&action=view_news&id=<?php echo $_smarty_tpl->tpl_vars['news']->value['id'];?>
 &category=<?php echo $_smarty_tpl->tpl_vars['news']->value['news_category_id'];?>
-">подробнее...</a><br/><?php }?> 
-                                            <br/>
+">подробнее...</a><?php }?></tr></td>
+                                            
+                                             
+                                            
                                            <?php }} ?>
+                                           </table>
 
                                         </td>
                                     </tr>
@@ -271,7 +295,7 @@ if ($_smarty_tpl->_count($_from) > 0){
                             <td>&nbsp;</td>
                         </tr>
                     </table>
-
+<br><br>
                 </td>
             </tr>
             <tr>

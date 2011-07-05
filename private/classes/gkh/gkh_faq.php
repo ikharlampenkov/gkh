@@ -31,8 +31,8 @@ class gkh_faq extends gkh {
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
                 foreach ($result as &$res) {
-                    $res['question'] = str_replace('\"', '"', $res['question']);
-                    $res['answer'] = str_replace('\"', '"', $res['answer']);
+                    $res['question'] = stripslashes($res['question']);
+                    $res['answer'] = stripslashes($res['answer']);
                 }
                 return $result;
             } else
@@ -48,8 +48,8 @@ class gkh_faq extends gkh {
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
                 foreach ($result as &$res) {
-                    $res['question'] = str_replace('\"', '"', $res['question']);
-                    $res['answer'] = str_replace('\"', '"', $res['answer']);
+                    $res['question'] = stripslashes($res['question']);
+                    $res['answer'] = stripslashes($res['answer']);
                 }
                 return $result;
             } else
@@ -64,8 +64,8 @@ class gkh_faq extends gkh {
             $sql = 'SELECT * FROM faq WHERE id=' . (int)$id;
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
-                $result[0]['question'] = str_replace('\"', '"', $result[0]['question']);
-                $result[0]['answer'] = str_replace('\"', '"', $result[0]['answer']);
+                $result[0]['question'] = stripslashes($result[0]['question']);
+                $result[0]['answer'] = stripslashes($result[0]['answer']);
                 return $result[0];
             } else
                 return false;
@@ -82,6 +82,10 @@ class gkh_faq extends gkh {
                     ORDER BY is_folder DESC, question';
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
+                foreach ($result as &$res) {
+                    $res['question'] = stripslashes($res['question']);
+                    $res['answer'] = stripslashes($res['answer']);
+                }
                 return $result;
             } else
                 return false;
@@ -95,6 +99,10 @@ class gkh_faq extends gkh {
             $sql = 'SELECT * FROM faq WHERE is_folder=' . gkh_faq::IS_FOLDER;
             $result = $this->_db->query($sql, simo_db::QUERY_MOD_ASSOC);
             if (isset($result[0])) {
+                foreach ($result as &$res) {
+                    $res['question'] = stripslashes($res['question']);
+                    $res['answer'] = stripslashes($res['answer']);
+                }
                 return $result;
             } else
                 return false;

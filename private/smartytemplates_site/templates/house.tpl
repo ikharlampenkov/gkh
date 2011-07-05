@@ -1,37 +1,32 @@
-<div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">Дома</div>
+<div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">Ваш дом</div>
 <div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
 
 <br/>
-<div><b>Выберите улицу:</b></div><br/><br/>
+<div>Выберите улицу:</div><br/><br/>
 
 {if $action == "view"}
 
 <h4>Дом </h4>
 
-<div>
+
     {if !empty($house.file_repair_plan)}
     <a href="{$siteurl}temp_files/{$house.file_repair_plan}" target="_blank">План работ по содержанию и ремонту</a><br /><br />
     {/if}
 
 
 
-
-</div>
-
-
 {else}
 
-<table width="100%">
+<table width="100%" cellpadding="5" cellspacing="2">
     <tr valign="top">
 {foreach from=$house_list item=street name=_house_list}
-        <td>
+        <td class="pem" style="font-size:14px" width="33%">
             <span><a href="javascript:showHouse({$smarty.foreach._house_list.index})">{$street.street}</a></span>
             <div id="house_{$smarty.foreach._house_list.index}" style="display: none;">
-                <table border="1">
+                <table border="0" width="100%" cellspacing="2">
                     <tr>
-                        <td>Номер</td>
-                        <td>Буква</td>
-                        <td>Площадь</td>
+                        <td class="pim" align="center" style="color:#aaaaaa">Дом</td>
+                        <td class="pim" align="center" style="color:#aaaaaa">Площадь</td>
             {*
             {if $category=='all' || $category=='plan'}
             <td>План работ по содержанию и ремонту</td>
@@ -46,9 +41,8 @@
                     </tr>
 {foreach from=$street.houses item=house}
                     <tr>
-                        <td>{$house.number}</td>
-                        <td>{$house.subnumber}</td>
-                        <td>{$house.area}</td>
+                        <td class="pim" align="center">{$house.number}{$house.subnumber}</td> 
+                        <td class="pim" align="center">{$house.area}</td>
 
             {*
             {if $category=='all' || $category=='plan'}

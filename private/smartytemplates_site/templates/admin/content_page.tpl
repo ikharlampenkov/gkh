@@ -1,4 +1,5 @@
-<h1>Контентные страницы</h1>
+<div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;">Контентные страницы</div>
+                                            <div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
 
 
 {if $action=="add" || $action=="edit"}
@@ -44,18 +45,28 @@
 
 {else}
 
+<table cellpadding="5" border="0" style="font-size:14px;">
+<td class="pom" align="center">
+<a href="?page={$page}&action=add">ДОБАВИТЬ КОНТЕНТ СРАНИЦУ</a>
+</td>
+</table>
 {if $conpage_list!==false}
-<table>
+                                               
+<table cellpadding="5" border="0" style="font-size:14px;">
 {foreach from=$conpage_list item=conpage}
     <tr>
-        <td>{$conpage.page_title}</td>
-        <td>{$conpage.title}</td>
-        <td><a href="?page={$page}&action=edit&id={$conpage.id}">редактировать</a><br /><a href="?page={$page}&action=del&id={$conpage.id}">удалить</a> </td>
+        <td class="pem" style="color:#aaaaaa">{$conpage.page_title}</td>
+        <td class="pem">{$conpage.title}</td>
+        <td class="pom"><a href="?page={$page}&action=edit&id={$conpage.id}">редактировать</a></td>
+        <td class="pom"><a href="?page={$page}&action=del&id={$conpage.id}">удалить</a> </td>
     </tr>
 {/foreach}
 </table>
 {/if}
-
-<a href="?page={$page}&action=add">добавить</a>
-
+<table cellpadding="5" border="0" style="font-size:14px;">
+<td class="pom" align="center">
+<a href="?page={$page}&action=add">ДОБАВИТЬ КОНТЕНТ СРАНИЦУ</a>
+</td>
+</table>
+<br>
 {/if}

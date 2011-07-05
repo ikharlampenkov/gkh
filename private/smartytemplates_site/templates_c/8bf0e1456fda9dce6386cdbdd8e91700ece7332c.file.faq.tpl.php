@@ -1,28 +1,31 @@
-<?php /* Smarty version Smarty-3.0.7, created on 2011-06-26 23:55:37
+<?php /* Smarty version Smarty-3.0.7, created on 2011-07-05 23:32:59
          compiled from "H:/www/gkh/private/smartytemplates_site/templates/faq.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:181814e076489987d05-91728230%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:222414e133cbbdbc258-03030333%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8bf0e1456fda9dce6386cdbdd8e91700ece7332c' => 
     array (
       0 => 'H:/www/gkh/private/smartytemplates_site/templates/faq.tpl',
-      1 => 1309107324,
+      1 => 1309798560,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '181814e076489987d05-91728230',
+  'nocache_hash' => '222414e133cbbdbc258-03030333',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
 )); /*/%%SmartyHeaderCode%%*/?>
-<h1><?php if (isset($_smarty_tpl->getVariable('is_situation',null,true,false)->value)&&$_smarty_tpl->getVariable('is_situation')->value==1){?>Жизненные ситуации<?php }else{ ?>Вопрос-ответ<?php }?></h1>
 
+<div style="color: #838383; font-size: 21px; border-bottom: 2px solid #89b4be; padding-bottom: 10px;"><?php if (isset($_smarty_tpl->getVariable('is_situation',null,true,false)->value)&&$_smarty_tpl->getVariable('is_situation')->value==1){?>Жизненные ситуации<?php }else{ ?>Вопрос-ответ<?php }?></div>
+<div style="font-size: 5px; border-top: 1px dashed #89b4be; margin-top: 1px; ">&nbsp;</div>
+
+
+<table width="100%" cellpadding="5" cellspacing="2">
 <?php if (isset($_smarty_tpl->getVariable('path_to_faq',null,true,false)->value)){?>
-<div>
-    <a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
-">..</a> / 
+<tr><td class="pim"><a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+"><< Назад</a> 
 <?php unset($_smarty_tpl->tpl_vars['smarty']->value['section']['path_doc']);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['path_doc']['name'] = 'path_doc';
 $_smarty_tpl->tpl_vars['smarty']->value['section']['path_doc']['loop'] = is_array($_loop=count($_smarty_tpl->getVariable('path_to_faq')->value)) ? count($_loop) : max(0, (int)$_loop); unset($_loop);
@@ -54,34 +57,32 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['path_doc']['last']       = (
 "><?php echo $_smarty_tpl->getVariable('path_to_faq')->value[$_smarty_tpl->getVariable('smarty')->value['section']['path_doc']['index']]['question'];?>
 </a><?php if (!$_smarty_tpl->getVariable('smarty')->value['section']['path_doc']['last']){?> / <?php }?>
 <?php endfor; endif; ?>    
-</div><br />
+</td></tr>
 <?php }?>
 
 
 <?php if (isset($_smarty_tpl->getVariable('faq',null,true,false)->value)&&$_smarty_tpl->getVariable('faq')->value!=false){?>
-<h4><?php echo $_smarty_tpl->getVariable('faq')->value['question'];?>
-</h4>
+<tr><td class="pem"><b><?php echo $_smarty_tpl->getVariable('faq')->value['question'];?>
+</b></td></tr>
 <?php }?>
-
 
 <?php  $_smarty_tpl->tpl_vars['faq'] = new Smarty_Variable;
  $_from = $_smarty_tpl->getVariable('faq_list')->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 if ($_smarty_tpl->_count($_from) > 0){
     foreach ($_from as $_smarty_tpl->tpl_vars['faq']->key => $_smarty_tpl->tpl_vars['faq']->value){
 ?>
-
 <?php if ($_smarty_tpl->tpl_vars['faq']->value['is_folder']){?>
-<div><img src="/img/folder.png" /> <a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
+<tr><td class="pem"><img src="/img/folder.png" /> <a href="?page=<?php echo $_smarty_tpl->getVariable('page')->value;?>
 &root=<?php echo $_smarty_tpl->tpl_vars['faq']->value['id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['faq']->value['question'];?>
-</a></div>
+</a>
 <?php }else{ ?>
-<div><a href="javascript:showAnswer(<?php echo $_smarty_tpl->tpl_vars['faq']->value['id'];?>
+<tr><td class="pem"><a href="javascript:showAnswer(<?php echo $_smarty_tpl->tpl_vars['faq']->value['id'];?>
 );"><?php echo $_smarty_tpl->tpl_vars['faq']->value['question'];?>
 </a></div>
 <div id="question_<?php echo $_smarty_tpl->tpl_vars['faq']->value['id'];?>
-" style="display:none;"><?php echo nl2br($_smarty_tpl->tpl_vars['faq']->value['answer']);?>
+" style="display:none;background-color: #ffffff;padding:10px;"><?php echo nl2br($_smarty_tpl->tpl_vars['faq']->value['answer']);?>
 </div>
 <?php }?>
-<br/>
 <?php }} ?>
+</table>
