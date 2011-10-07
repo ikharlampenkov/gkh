@@ -1,0 +1,36 @@
+/*
+    Document   : main
+    Created on : 05.10.2011, 0:24:44
+    Author     : Moris
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+body {
+    background-color:#ffffff;
+    font-family: arial,helvetica,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-spacing: 0px;
+}
+
+tr {
+    vertical-align: top;
+}
+
+.rzdtitle {
+    font-size: 18pt;
+    color: #0d436c;
+
+}
+
+
+

@@ -428,8 +428,6 @@ if ($page == 'document') {
         $o_document->deleteDocument($_GET['id']);
         simo_functions::chLocation('?page=' . $page);
     } else {
-
-
         $o_smarty->assign('document_list', $o_document->getDocumentCatalog($root));  //$o_document->getAllDocument()
         $o_smarty->assign('path_to_document', $o_document->getFullPathToFolder($root));
     }

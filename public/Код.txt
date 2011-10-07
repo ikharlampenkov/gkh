@@ -1,0 +1,80 @@
+<?php
+	/**
+     * Проверка существования введенного PIN-кода
+     * 
+     * @return bool
+     */
+    private function _checkPin($pin)
+    {
+        $query = "SELECT * FROM `information_on_debt` WHERE `personal_account`= '$pin'";
+        $result = $this->_db->query($query);
+        if ($result->numRows()) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    
+    /**
+     * Проверка, привязан ли же номер телефона в БД к счету
+     * 
+     * @param string $ani
+     * @return bool
+     */
+    private function _isSubscriber($ani)
+    {
+        $query = "SELECT * FROM `personal_account` WHERE `ai_phone_number` <> '0' AND `ai_phone_number` LIKE '%$ani'";
+        $result = $this->_db->query($query);
+        //var_dump($result);exit;
+        if ($result->numRows()) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    
+    /**
+     * Получение данных о задолженности по PIN
+     * 
+     * @param string $pin
+     * @return bool
+     */
+    private function _getData($pin)
+    {
+        $query = "SELECT `amount_debt`,`amount_penalty`, `amount_debt_w_penalties`, `number_months`  FROM `information_on_debt` WHERE `personal_account` = '$pin'";
+        $result = $this->_db->query($query);
+        $data = array();
+        if ($result->numRows()) {
+            $data = $result->fetchRow(2);
+        }
+        $this->setVarSession(self::SVAR_DATA, $data);
+        return true;
+    }
+    
+    /**
+     * Привязка номера к PIN-коду
+     * 
+     * @param string $pin
+     * @param string $ani
+     * @return bool
+     */
+    private function _subscribeANI($pin, $ani)
+    {
+        $query = "UPDATE `personal_account` SET `ai_phone_number` = '$ani' WHERE `id` = '$pin'";
+        $this->_db->query($query);
+        return true;
+    }
+    
+    /*
+     * Получение PIN-кода по номеру телефона
+     */
+    private function _getPinByAni($ani)
+    {
+        $query = "SELECT `id` FROM `personal_account` WHERE `ai_phone_number` <> '0' AND `ai_phone_number` LIKE '%$ani' LIMIT 1";
+        $result = $this->_db->query($query);
+        $row = $result->fetchRow();
+        $this->setVarSession(self::SVAR_PIN, $row[0]);
+    }
+?>

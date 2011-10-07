@@ -27,48 +27,48 @@
                     <tr>
                         <td class="pim" align="center" style="color:#aaaaaa">Дом</td>
                         <td class="pim" align="center" style="color:#aaaaaa">Площадь</td>
-            {*
+
             {if $category=='all' || $category=='plan'}
-            <td>План работ по содержанию и ремонту</td>
+            <td class="pim" align="center" style="color:#aaaaaa">План работ по содержанию и ремонту</td>
             {/if}
             {if $category=='all'}
-            <td>Доходы и расходы</td>
+            <td class="pim" align="center" style="color:#aaaaaa">Доходы и расходы</td>
             {/if}
             {if $category=='all' || $category!='plan'}
-            <td>Выполненные работы</td>
+            <td class="pim" align="center" style="color:#aaaaaa">Выполненные работы</td>
             {/if}
-*}
+
                     </tr>
 {foreach from=$street.houses item=house}
                     <tr>
-                        <td class="pim" align="center">{$house.number}{$house.subnumber}</td> 
+                        <td class="pim" align="center">{$house.number}{$house.subnumber}</td>
                         <td class="pim" align="center">{$house.area}</td>
 
-            {*
+
             {if $category=='all' || $category=='plan'}
-            <td>
+            <td class="pim" align="center">
             {if !empty($house.file_repair_plan)}
             <a href="{$siteurl}temp_files/{$house.file_repair_plan}" target="_blank">Скачать</a>
             {/if}
             </td>
             {/if}
-            
+
             {if $category=='all'}
-            <td>
+            <td class="pim" align="center">
             {if !empty($house.file_costs_income)}
             <a href="{$siteurl}temp_files/{$house.file_costs_income}" target="_blank">Скачать</a>
             {/if}
             </td>
             {/if}
-            
+
             {if $category=='all' || $category!='plan'}
-            <td>
+            <td class="pim" align="center">
             {if !empty($house.file_performed_repair)}
             <a href="{$siteurl}temp_files/{$house.file_performed_repair}">Скачать</a>
             {/if}
             </td>
             {/if}
-*}
+
                     </tr>
 {/foreach}
                 </table>
